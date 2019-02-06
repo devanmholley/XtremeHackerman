@@ -116,6 +116,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 //  PURPOSE: Processes messages for the main window.
 //
+//  WM_CREATE	- create the stuff in the window
 //  WM_COMMAND  - process the application menu
 //  WM_PAINT    - Paint the main window
 //  WM_DESTROY  - post a quit message and return
@@ -127,10 +128,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
 	case WM_CREATE:
 	{
+
 		CreateWindowA(
-			TEST("BUTTON"), TEST("BEGIN"),
+			"STATIC","XTREEME HACKERMANN",
 			WS_VISIBLE | WS_CHILD,
-			540, 960,
+			10,10,
+			220, 30,
+			hWnd, (HMENU)NULL, NULL, NULL
+		);
+
+		CreateWindowA(
+			"BUTTON","BEGIN",
+			WS_VISIBLE | WS_CHILD,
+			10, 50,
 			80, 20,
 			hWnd, (HMENU)NULL, NULL, NULL
 			);
