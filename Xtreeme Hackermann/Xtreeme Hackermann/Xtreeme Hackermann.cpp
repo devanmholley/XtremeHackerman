@@ -98,7 +98,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    hInst = hInstance; // Store instance handle in our global variable
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+      CW_USEDEFAULT, 0, 1920, 1080, nullptr, nullptr, hInstance, nullptr);
 
    if (!hWnd)
    {
@@ -128,21 +128,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
 	case WM_CREATE:
 	{
-
 		CreateWindowA(
 			"STATIC","XTREEME HACKERMANN",
 			WS_VISIBLE | WS_CHILD,
-			10,10,
+			850,
+			425,
 			220, 30,
-			hWnd, (HMENU)NULL, NULL, NULL
+			hWnd, (HMENU)nullptr, nullptr, nullptr
 		);
 
 		CreateWindowA(
 			"BUTTON","BEGIN",
 			WS_VISIBLE | WS_CHILD,
-			10, 50,
+			920, 
+			515,
 			80, 20,
-			hWnd, (HMENU)NULL, NULL, NULL
+			hWnd, (HMENU)nullptr, nullptr, nullptr
 			);
 			break;
 	}
