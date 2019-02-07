@@ -1,4 +1,5 @@
 #pragma once
+#include "MyForm1.h"
 #include <stdlib.h>
 #include <stdio.h>
 namespace Title {
@@ -61,7 +62,7 @@ namespace Title {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(879, 472);
+			this->button1->Location = System::Drawing::Point(464, 448);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 0;
@@ -78,6 +79,7 @@ namespace Title {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Begin";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// label1
 			// 
@@ -114,5 +116,10 @@ namespace Title {
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		exit(0);
 	}
-	};
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->Hide();
+		MyForm1^ f2 = gcnew MyForm1();
+		f2->ShowDialog();
+	}
+};
 }
