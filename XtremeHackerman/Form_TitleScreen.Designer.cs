@@ -29,29 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_TitleScreen));
-            this.label_TitleText = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Buttons = new System.Windows.Forms.TableLayoutPanel();
             this.button_Admin = new System.Windows.Forms.Button();
             this.button_Hacker = new System.Windows.Forms.Button();
             this.button_Quit = new System.Windows.Forms.Button();
             this.button_About = new System.Windows.Forms.Button();
+            this.pictureBox_Title = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel_Buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Title)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label_TitleText
-            // 
-            this.label_TitleText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_TitleText.AutoSize = true;
-            this.label_TitleText.BackColor = System.Drawing.Color.Transparent;
-            this.label_TitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TitleText.ForeColor = System.Drawing.Color.White;
-            this.label_TitleText.Location = new System.Drawing.Point(191, 44);
-            this.label_TitleText.Name = "label_TitleText";
-            this.label_TitleText.Size = new System.Drawing.Size(725, 73);
-            this.label_TitleText.TabIndex = 0;
-            this.label_TitleText.Text = "XTREME HACKERMAN";
-            this.label_TitleText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel_Buttons
             // 
@@ -146,32 +132,45 @@
             this.button_About.Text = "ABOUT";
             this.button_About.UseVisualStyleBackColor = true;
             // 
+            // pictureBox_Title
+            // 
+            this.pictureBox_Title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_Title.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Title.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Title.Image")));
+            this.pictureBox_Title.Location = new System.Drawing.Point(142, 50);
+            this.pictureBox_Title.Name = "pictureBox_Title";
+            this.pictureBox_Title.Size = new System.Drawing.Size(725, 89);
+            this.pictureBox_Title.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox_Title.TabIndex = 2;
+            this.pictureBox_Title.TabStop = false;
+            // 
             // Form_TitleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pictureBox_Title);
             this.Controls.Add(this.tableLayoutPanel_Buttons);
-            this.Controls.Add(this.label_TitleText);
             this.MaximizeBox = false;
             this.Name = "Form_TitleScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xtreme Hackerman";
             this.Load += new System.EventHandler(this.Form_TitleScreen_Load);
             this.tableLayoutPanel_Buttons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Title)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label_TitleText;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Buttons;
         private System.Windows.Forms.Button button_Admin;
         private System.Windows.Forms.Button button_Hacker;
         private System.Windows.Forms.Button button_Quit;
         private System.Windows.Forms.Button button_About;
+        private System.Windows.Forms.PictureBox pictureBox_Title;
     }
 }

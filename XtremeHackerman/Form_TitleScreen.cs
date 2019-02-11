@@ -29,10 +29,6 @@ namespace XtremeHackerman
         /// <param name="e"></param>
         private void Form_TitleScreen_Load(object sender, EventArgs e)
         {
-            // Set location & formatting for label_TitleText, including custom font
-            label_TitleText.Font = CustomFonts.GetFont(VCRFont, 48.0F); ;
-            label_TitleText.Location = new Point((this.Size.Width - label_TitleText.Size.Width) / 2, 50); // set location to X=[middle of screen],Y=50
-
             // Set font format for each button on page, but retain existing font size
             foreach(Control button in tableLayoutPanel_Buttons.Controls)
             {
