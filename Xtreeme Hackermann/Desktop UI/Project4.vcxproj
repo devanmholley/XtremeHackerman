@@ -150,6 +150,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="background.png" />
+    <Image Include="browsericon.bmp" />
+    <Image Include="C:\Users\Davisync\Desktop\windows_95_logo_png_1523738.png.jpg" />
     <Image Include="vaporbackground.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
