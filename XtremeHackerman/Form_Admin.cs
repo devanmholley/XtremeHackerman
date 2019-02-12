@@ -16,5 +16,11 @@ namespace XtremeHackerman
         {
             InitializeComponent();
         }
+
+        private void btn_internet_Click(object sender, EventArgs e)
+        {
+            // This opens the internet browser
+            XtremeHackermanForms._formBrowser.ShowDialog();
+        }
     }
 }
