@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Desktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Desktop.Designer.cs">
+      <DependentUpon>Form_Desktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Desktop.resx">
+      <DependentUpon>Form_Desktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Hacker.resx">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
@@ -120,6 +129,44 @@
   <ItemGroup>
     <None Include="Resources\Background_TitleScreen.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vaporwarebackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startbutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet_png_712280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet_png_7122801.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commandlinebutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commandlinebutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explorerbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explorerbutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIcon2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
