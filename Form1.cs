@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace StartMenu
 {
@@ -20,40 +22,42 @@ namespace StartMenu
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Restart.Visible = true;
-            Shutdown.Visible = true;
-            AdminFileManager.Visible = true;
-            TaskManager.Visible = true;
-            InternetBrowser.Visible = true;
+            
         }
 
-        private void Restart_Click(object sender, EventArgs e)
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
-   
-        private void Shutdown_Click(object sender, EventArgs e)
+
+        private void shutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void AdminFileManager_Click(object sender, EventArgs e)
+        private void fileManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            const string message = "This is the File Manager";
+            const string message = "You have opened the File Manager";
             var result = MessageBox.Show(message);
         }
 
-        private void TaskManager_Click(object sender, EventArgs e)
+        private void taskManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            const string message = "This is the Task Manager";
+            const string message = "You have opened the Task Manager";
             var result = MessageBox.Show(message);
         }
 
-        private void InternetBrowser_Click(object sender, EventArgs e)
+        private void internetBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            const string message = "You have entered the Internet Browser";
-            var result = MessageBox.Show(message);
+            const string message = "You have opened the Internet Browser";
+            var result = MessageBox.Show(message); ;
+        }
+
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

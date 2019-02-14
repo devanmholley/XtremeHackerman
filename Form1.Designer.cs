@@ -28,115 +28,159 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Start = new System.Windows.Forms.Button();
-            this.Restart = new System.Windows.Forms.Button();
-            this.Shutdown = new System.Windows.Forms.Button();
-            this.AdminFileManager = new System.Windows.Forms.Button();
-            this.TaskManager = new System.Windows.Forms.Button();
-            this.InternetBrowser = new System.Windows.Forms.Button();
+            System.Windows.Forms.ToolStrip toolStrip1;
+            System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.shutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.taskManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.internetBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            toolStrip1 = new System.Windows.Forms.ToolStrip();
+            toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Start
+            // toolStrip1
             // 
-            this.Start.AutoSize = true;
-            this.Start.Font = new System.Drawing.Font("Script MT Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Start.Location = new System.Drawing.Point(12, 401);
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(122, 37);
-            this.Start.TabIndex = 0;
-            this.Start.Text = "Start";
-            this.Start.UseVisualStyleBackColor = true;
-            this.Start.Click += new System.EventHandler(this.Button1_Click);
+            toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            toolStripDropDownButton1});
+            toolStrip1.Location = new System.Drawing.Point(0, 625);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new System.Drawing.Size(1459, 100);
+            toolStrip1.TabIndex = 6;
+            toolStrip1.Text = "toolStrip1";
             // 
-            // Restart
+            // toolStripDropDownButton1
             // 
-            this.Restart.AutoSize = true;
-            this.Restart.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Restart.Location = new System.Drawing.Point(165, 401);
-            this.Restart.Name = "Restart";
-            this.Restart.Size = new System.Drawing.Size(134, 37);
-            this.Restart.TabIndex = 1;
-            this.Restart.Text = "Restart";
-            this.Restart.UseVisualStyleBackColor = true;
-            this.Restart.Visible = false;
-            this.Restart.Click += new System.EventHandler(this.Restart_Click);
+            toolStripDropDownButton1.AutoSize = false;
+            toolStripDropDownButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            toolStripDropDownButton1.DoubleClickEnabled = true;
+            toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.restartToolStripMenuItem,
+            this.shutdownToolStripMenuItem,
+            this.fileManagerToolStripMenuItem,
+            this.taskManagerToolStripMenuItem,
+            this.internetBrowserToolStripMenuItem});
+            toolStripDropDownButton1.Image = global::StartMenu.Properties.Resources.StartIcon;
+            toolStripDropDownButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Black;
+            toolStripDropDownButton1.Margin = new System.Windows.Forms.Padding(0);
+            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            toolStripDropDownButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            toolStripDropDownButton1.ShowDropDownArrow = false;
+            toolStripDropDownButton1.Size = new System.Drawing.Size(100, 100);
+            toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
-            // Shutdown
+            // restartToolStripMenuItem
             // 
-            this.Shutdown.AutoSize = true;
-            this.Shutdown.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shutdown.Location = new System.Drawing.Point(323, 401);
-            this.Shutdown.Name = "Shutdown";
-            this.Shutdown.Size = new System.Drawing.Size(124, 37);
-            this.Shutdown.TabIndex = 2;
-            this.Shutdown.Text = "Shutdown";
-            this.Shutdown.UseVisualStyleBackColor = true;
-            this.Shutdown.Visible = false;
-            this.Shutdown.Click += new System.EventHandler(this.Shutdown_Click);
+            this.restartToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.restartToolStripMenuItem.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
             // 
-            // AdminFileManager
+            // toolStripMenuItem2
             // 
-            this.AdminFileManager.AutoSize = true;
-            this.AdminFileManager.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminFileManager.Location = new System.Drawing.Point(12, 334);
-            this.AdminFileManager.Name = "AdminFileManager";
-            this.AdminFileManager.Size = new System.Drawing.Size(122, 45);
-            this.AdminFileManager.TabIndex = 3;
-            this.AdminFileManager.Text = "File Manager";
-            this.AdminFileManager.UseVisualStyleBackColor = true;
-            this.AdminFileManager.Visible = false;
-            this.AdminFileManager.Click += new System.EventHandler(this.AdminFileManager_Click);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(69, 22);
             // 
-            // TaskManager
+            // shutdownToolStripMenuItem
             // 
-            this.TaskManager.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaskManager.Location = new System.Drawing.Point(12, 271);
-            this.TaskManager.Name = "TaskManager";
-            this.TaskManager.Size = new System.Drawing.Size(122, 37);
-            this.TaskManager.TabIndex = 4;
-            this.TaskManager.Text = "Task Manager";
-            this.TaskManager.UseVisualStyleBackColor = true;
-            this.TaskManager.Visible = false;
-            this.TaskManager.Click += new System.EventHandler(this.TaskManager_Click);
+            this.shutdownToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.shutdownToolStripMenuItem.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shutdownToolStripMenuItem.Name = "shutdownToolStripMenuItem";
+            this.shutdownToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.shutdownToolStripMenuItem.Text = "Shutdown";
+            this.shutdownToolStripMenuItem.Click += new System.EventHandler(this.shutdownToolStripMenuItem_Click);
             // 
-            // InternetBrowser
+            // toolStripMenuItem1
             // 
-            this.InternetBrowser.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InternetBrowser.Location = new System.Drawing.Point(12, 200);
-            this.InternetBrowser.Name = "InternetBrowser";
-            this.InternetBrowser.Size = new System.Drawing.Size(122, 43);
-            this.InternetBrowser.TabIndex = 5;
-            this.InternetBrowser.Text = "Internet";
-            this.InternetBrowser.UseVisualStyleBackColor = true;
-            this.InternetBrowser.Visible = false;
-            this.InternetBrowser.Click += new System.EventHandler(this.InternetBrowser_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(69, 22);
+            // 
+            // fileManagerToolStripMenuItem
+            // 
+            this.fileManagerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3});
+            this.fileManagerToolStripMenuItem.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileManagerToolStripMenuItem.Name = "fileManagerToolStripMenuItem";
+            this.fileManagerToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.fileManagerToolStripMenuItem.Text = "File Manager";
+            this.fileManagerToolStripMenuItem.Click += new System.EventHandler(this.fileManagerToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(69, 22);
+            // 
+            // taskManagerToolStripMenuItem
+            // 
+            this.taskManagerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4});
+            this.taskManagerToolStripMenuItem.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskManagerToolStripMenuItem.Name = "taskManagerToolStripMenuItem";
+            this.taskManagerToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.taskManagerToolStripMenuItem.Text = "Task Manager";
+            this.taskManagerToolStripMenuItem.Click += new System.EventHandler(this.taskManagerToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(69, 22);
+            // 
+            // internetBrowserToolStripMenuItem
+            // 
+            this.internetBrowserToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5});
+            this.internetBrowserToolStripMenuItem.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.internetBrowserToolStripMenuItem.Name = "internetBrowserToolStripMenuItem";
+            this.internetBrowserToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.internetBrowserToolStripMenuItem.Text = "Internet Browser";
+            this.internetBrowserToolStripMenuItem.Click += new System.EventHandler(this.internetBrowserToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(69, 22);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.InternetBrowser);
-            this.Controls.Add(this.TaskManager);
-            this.Controls.Add(this.AdminFileManager);
-            this.Controls.Add(this.Shutdown);
-            this.Controls.Add(this.Restart);
-            this.Controls.Add(this.Start);
+            this.ClientSize = new System.Drawing.Size(1459, 725);
+            this.Controls.Add(toolStrip1);
             this.Name = "Form1";
             this.Text = "Form1";
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Start;
-        private System.Windows.Forms.Button Restart;
-        private System.Windows.Forms.Button Shutdown;
-        private System.Windows.Forms.Button AdminFileManager;
-        private System.Windows.Forms.Button TaskManager;
-        private System.Windows.Forms.Button InternetBrowser;
+        private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shutdownToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem taskManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem internetBrowserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
     }
 }
 
