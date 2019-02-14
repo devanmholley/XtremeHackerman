@@ -20,11 +20,6 @@ namespace StartMenu
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
 
