@@ -50,9 +50,9 @@
             toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             toolStripDropDownButton1});
-            toolStrip1.Location = new System.Drawing.Point(0, 625);
+            toolStrip1.Location = new System.Drawing.Point(0, 675);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new System.Drawing.Size(1459, 100);
+            toolStrip1.Size = new System.Drawing.Size(1459, 50);
             toolStrip1.TabIndex = 6;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -69,14 +69,14 @@
             this.taskManagerToolStripMenuItem,
             this.internetBrowserToolStripMenuItem});
             toolStripDropDownButton1.Image = global::StartMenu.Properties.Resources.StartIcon;
-            toolStripDropDownButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            toolStripDropDownButton1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Black;
             toolStripDropDownButton1.Margin = new System.Windows.Forms.Padding(0);
             toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             toolStripDropDownButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             toolStripDropDownButton1.ShowDropDownArrow = false;
-            toolStripDropDownButton1.Size = new System.Drawing.Size(100, 100);
+            toolStripDropDownButton1.Size = new System.Drawing.Size(50, 50);
             toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
