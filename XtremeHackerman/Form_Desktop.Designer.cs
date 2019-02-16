@@ -31,13 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Desktop));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
-            this.startButton = new System.Windows.Forms.Button();
             this.searchBar = new System.Windows.Forms.TextBox();
             this.internetExplorerIcon = new System.Windows.Forms.Button();
             this.cliButton = new System.Windows.Forms.Button();
             this.explorerIcon = new System.Windows.Forms.Button();
             this.emailIcon = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.internetBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taskManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -45,12 +52,12 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.dateTime);
-            this.panel1.Controls.Add(this.startButton);
             this.panel1.Controls.Add(this.searchBar);
+            this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(0, 689);
+            this.panel1.Location = new System.Drawing.Point(0, 676);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1009, 40);
+            this.panel1.Size = new System.Drawing.Size(1009, 53);
             this.panel1.TabIndex = 0;
             // 
             // dateTime
@@ -61,26 +68,12 @@
             this.dateTime.Size = new System.Drawing.Size(340, 31);
             this.dateTime.TabIndex = 9;
             // 
-            // startButton
-            // 
-            this.startButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.startButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.startButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.startButton.Image = global::XtremeHackerman.Properties.Resources.startbutton;
-            this.startButton.Location = new System.Drawing.Point(-2, -5);
-            this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(88, 43);
-            this.startButton.TabIndex = 8;
-            this.startButton.UseVisualStyleBackColor = false;
-            this.startButton.Click += new System.EventHandler(this.startButtonClick);
-            // 
             // searchBar
             // 
             this.searchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBar.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.searchBar.Location = new System.Drawing.Point(71, -3);
+            this.searchBar.Location = new System.Drawing.Point(157, -2);
             this.searchBar.MaxLength = 140;
             this.searchBar.Multiline = true;
             this.searchBar.Name = "searchBar";
@@ -141,17 +134,83 @@
             this.emailIcon.UseVisualStyleBackColor = false;
             this.emailIcon.Click += new System.EventHandler(this.emailButtonClick);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 2);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip1.Size = new System.Drawing.Size(1005, 47);
+            this.toolStrip1.TabIndex = 10;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DoubleClickEnabled = true;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileManagerToolStripMenuItem,
+            this.taskManagerToolStripMenuItem,
+            this.internetBrowserToolStripMenuItem,
+            this.shutdownToolStripMenuItem,
+            this.restartToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = global::XtremeHackerman.Properties.Resources.startbutton;
+            this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.ShowDropDownArrow = false;
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(97, 44);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // restartToolStripMenuItem
+            // 
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
+            // 
+            // shutdownToolStripMenuItem
+            // 
+            this.shutdownToolStripMenuItem.Name = "shutdownToolStripMenuItem";
+            this.shutdownToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.shutdownToolStripMenuItem.Text = "Shutdown";
+            this.shutdownToolStripMenuItem.Click += new System.EventHandler(this.shutdownToolStripMenuItem_Click);
+            // 
+            // internetBrowserToolStripMenuItem
+            // 
+            this.internetBrowserToolStripMenuItem.Name = "internetBrowserToolStripMenuItem";
+            this.internetBrowserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.internetBrowserToolStripMenuItem.Text = "Internet Browser";
+            this.internetBrowserToolStripMenuItem.Click += new System.EventHandler(this.internetBrowserToolStripMenuItem_Click);
+            // 
+            // taskManagerToolStripMenuItem
+            // 
+            this.taskManagerToolStripMenuItem.Name = "taskManagerToolStripMenuItem";
+            this.taskManagerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.taskManagerToolStripMenuItem.Text = "Task Manager";
+            this.taskManagerToolStripMenuItem.Click += new System.EventHandler(this.taskManagerToolStripMenuItem_Click);
+            // 
+            // fileManagerToolStripMenuItem
+            // 
+            this.fileManagerToolStripMenuItem.Name = "fileManagerToolStripMenuItem";
+            this.fileManagerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fileManagerToolStripMenuItem.Text = "File Manager";
+            this.fileManagerToolStripMenuItem.Click += new System.EventHandler(this.fileManagerToolStripMenuItem_Click);
+            // 
             // Form_Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.emailIcon);
             this.Controls.Add(this.explorerIcon);
             this.Controls.Add(this.cliButton);
             this.Controls.Add(this.internetExplorerIcon);
-            this.Controls.Add(this.panel1);
             this.Name = "Form_Desktop";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -159,6 +218,8 @@
             this.Load += new System.EventHandler(this.Form_Desktop_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -168,10 +229,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.Button internetExplorerIcon;
-        private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button cliButton;
         private System.Windows.Forms.Button explorerIcon;
         private System.Windows.Forms.Button emailIcon;
         private System.Windows.Forms.DateTimePicker dateTime;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem fileManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem taskManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem internetBrowserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shutdownToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
     }
 }

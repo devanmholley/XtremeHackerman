@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace XtremeHackerman
 {
@@ -32,10 +34,8 @@ namespace XtremeHackerman
             XtremeHackermanForms._formBrowser.ShowDialog();
         }
 
-        private void startButtonClick(object sender, EventArgs e)
-        {
-            // Start button implementation 
-        }
+
+
 
         private void explorerButtonClick(object sender, EventArgs e)
         {
@@ -51,5 +51,40 @@ namespace XtremeHackerman
         {
             // Email Browser implementation 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form_Desktop desktop = new Form_Desktop();
+
+        }
+
+        private void shutdownToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void internetBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XtremeHackermanForms._formBrowser.ShowDialog();
+        }
+
+        private void taskManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            const string message = "You have opened the Task Manager";
+            var result = MessageBox.Show(message);
+        }
+
+        private void fileManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            const string message = "You have opened the File Manager";
+            var result = MessageBox.Show(message);
+        }
     }
+      
 }
