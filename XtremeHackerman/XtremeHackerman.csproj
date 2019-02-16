@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49FF0C0C-8AA3-4F5B-B0BB-7DAC9615E205}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XtremeHackerman</RootNamespace>
+    <AssemblyName>XtremeHackerman</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>XtremeHackerman.XtremeHackermanAppContext</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Email_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_UI.Designer.cs">
+      <DependentUpon>Email_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Desktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Desktop.Designer.cs">
+      <DependentUpon>Form_Desktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Admin.Designer.cs">
+      <DependentUpon>Form_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Hacker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Hacker.Designer.cs">
+      <DependentUpon>Form_Hacker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InternetBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_InternetBrowser.Designer.cs">
+      <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TitleScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TitleScreen.Designer.cs">
+      <DependentUpon>Form_TitleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Email_UI.resx">
+      <DependentUpon>Email_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Admin.resx">
+      <DependentUpon>Form_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Desktop.resx">
+      <DependentUpon>Form_Desktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Hacker.resx">
+      <DependentUpon>Form_Hacker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_InternetBrowser.resx">
+      <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TitleScreen.resx">
+      <DependentUpon>Form_TitleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\VCR_OSD_MONO_1.001.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SardonicCreepyIndianrockpython-small.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_TitleScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vaporwarebackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startbutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet_png_712280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet_png_7122801.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commandlinebutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commandlinebutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explorerbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explorerbutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIcon2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
