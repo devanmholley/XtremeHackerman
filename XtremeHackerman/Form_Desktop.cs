@@ -29,12 +29,14 @@ namespace XtremeHackerman
 
         private void internetExplorerClick(object sender, EventArgs e)
         {
+            // Web Browser implementation
             XtremeHackermanForms._formBrowser.ShowDialog();
         }
 
         private void startButtonClick(object sender, EventArgs e)
         {
             // Start button implementation 
+
         }
 
         private void explorerButtonClick(object sender, EventArgs e)
@@ -45,6 +47,7 @@ namespace XtremeHackerman
         private void cliButtonClick(object sender, EventArgs e)
         {
             // Command Line implementation
+            XtremeHackermanForms._formCLI.ShowDialog();
         }
 
         private void emailButtonClick(object sender, EventArgs e)

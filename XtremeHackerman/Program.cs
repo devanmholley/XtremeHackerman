@@ -19,6 +19,8 @@ namespace XtremeHackerman
         public static Form_TitleScreen _formTitleScreen;
         public static Form_InternetBrowser _formBrowser;
         public static Form_Desktop _formDesktop;
+        public static Form_CLI _formCLI;
+
 
     }
 
@@ -60,6 +62,12 @@ namespace XtremeHackerman
             XtremeHackermanForms._formBrowser.Closed += new EventHandler(OnFormClosed);
             XtremeHackermanForms._formBrowser.Closing += new CancelEventHandler(OnFormClosing);
             XtremeHackermanForms._formBrowser.Load += new EventHandler(OnFormLoad);
+
+            XtremeHackermanForms._formCLI = new Form_CLI();
+            XtremeHackermanForms._formCLI.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms._formCLI.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms._formCLI.Load += new EventHandler(OnFormLoad);
+
             #endregion
 
             XtremeHackermanForms._formTitleScreen.Show();
