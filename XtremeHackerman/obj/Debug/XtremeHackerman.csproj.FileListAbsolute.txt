@@ -12,3 +12,18 @@ C:\Users\victor\source\repos\devanmholley\XtremeHackerman\XtremeHackerman\bin\De
 C:\Users\victor\source\repos\devanmholley\XtremeHackerman\XtremeHackerman\bin\Debug\XtremeHackerman.pdb
 C:\Users\victor\source\repos\devanmholley\XtremeHackerman\XtremeHackerman\obj\Debug\XtremeHackerman.exe
 C:\Users\victor\source\repos\devanmholley\XtremeHackerman\XtremeHackerman\obj\Debug\XtremeHackerman.pdb
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\bin\Debug\XtremeHackerman.exe.config
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\bin\Debug\XtremeHackerman.exe
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\bin\Debug\XtremeHackerman.pdb
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.csprojAssemblyReference.cache
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.Email_UI.resources
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.Form_Admin.resources
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.Form_Desktop.resources
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.Form_Hacker.resources
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.Form_InternetBrowser.resources
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.Form_TitleScreen.resources
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.Properties.Resources.resources
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.csproj.GenerateResource.cache
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.csproj.CoreCompileInputs.cache
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.exe
+C:\Users\victor\Documents\GitHub\XtremeHackermanbutforreal\XtremeHackerman - Copy\obj\Debug\XtremeHackerman.pdb

@@ -66,7 +66,7 @@ namespace XtremeHackerman
 
         private void shutdownToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void internetBrowserToolStripMenuItem_Click(object sender, EventArgs e)
