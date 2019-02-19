@@ -54,7 +54,8 @@ namespace XtremeHackerman
         private void button_Admin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            XtremeHackermanForms._formAdmin.ShowDialog();
+            XtremeHackermanForms._formDesktop.ShowDialog();
+          //XtremeHackermanForms._formAdmin.ShowDialog();
         }
 
         /// <summary>
