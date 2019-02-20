@@ -2,9 +2,9 @@
 
 namespace XtremeHackerman
 {
-    public partial class Email_UI : Form
+    public partial class Form_Email : Form
     {
-        public Email_UI()
+        public Form_Email()
         {
             InitializeComponent();
         }
@@ -25,6 +25,26 @@ namespace XtremeHackerman
         }
 
         private void textBox1_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, System.EventArgs e)
         {
 
         }
