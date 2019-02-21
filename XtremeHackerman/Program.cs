@@ -20,7 +20,6 @@ namespace XtremeHackerman
         public static Form_InternetBrowser _formBrowser;
         public static Form_Desktop _formDesktop;
         public static Form_Email _formEmail;
-        public static Email_UI _formEmail;
         public static Firewall _formFirewall;
         public static Landing_page _formLandingPage;
 
@@ -66,7 +65,7 @@ namespace XtremeHackerman
             XtremeHackermanForms._formBrowser.Closing += new CancelEventHandler(OnFormClosing);
             XtremeHackermanForms._formBrowser.Load += new EventHandler(OnFormLoad);
 
-            XtremeHackermanForms._formEmail = new Email_UI();
+            XtremeHackermanForms._formEmail = new Form_Email();
             XtremeHackermanForms._formEmail.Closed += new EventHandler(OnFormClosed);
             XtremeHackermanForms._formEmail.Closing += new CancelEventHandler(OnFormClosing);
             XtremeHackermanForms._formEmail.Load += new EventHandler(OnFormLoad);

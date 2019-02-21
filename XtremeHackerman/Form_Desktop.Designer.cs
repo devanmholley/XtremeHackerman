@@ -223,7 +223,6 @@
             this.EmailClient.Text = "Email";
             this.EmailClient.UseVisualStyleBackColor = false;
             this.EmailClient.Visible = false;
-            this.EmailClient.Click += new System.EventHandler(this.EmailClient_Click);
             // 
             // Form_Desktop
             // 
