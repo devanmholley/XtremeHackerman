@@ -70,7 +70,7 @@ namespace XtremeHackerman
 
         private void emailButtonClick(object sender, EventArgs e)
         {
-            // Email Browser implementation 
+            XtremeHackermanForms._formEmail.ShowDialog();
         }
 
         private void Restart_Click(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace XtremeHackerman
 
         private void EmailClient_Click(object sender, EventArgs e)
         {
-
+            XtremeHackermanForms._formEmail.ShowDialog();
         }
     }
 }
