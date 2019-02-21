@@ -52,12 +52,6 @@
     <Compile Include="Firewall.Designer.cs">
       <DependentUpon>Firewall.cs</DependentUpon>
     </Compile>
-    <Compile Include="Firewall_Permissions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Firewall_Permissions.Designer.cs">
-      <DependentUpon>Firewall_Permissions.cs</DependentUpon>
-    </Compile>
     <Compile Include="Landing_page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,9 +62,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Firewall.resx">
       <DependentUpon>Firewall.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Firewall_Permissions.resx">
-      <DependentUpon>Firewall_Permissions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Landing_page.resx">
       <DependentUpon>Landing_page.cs</DependentUpon>

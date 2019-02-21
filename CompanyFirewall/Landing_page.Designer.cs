@@ -1,4 +1,4 @@
-﻿namespace CompanyFirewall
+﻿namespace XtremeHackerman
 {
     partial class Landing_page
     {

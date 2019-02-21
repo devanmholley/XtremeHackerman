@@ -1,4 +1,4 @@
-﻿namespace CompanyFirewall
+﻿namespace XtremeHackerman
 {
     partial class Firewall
     {
@@ -37,13 +37,23 @@
             this.permissionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.blockIPwindow = new System.Windows.Forms.Panel();
+            this.testipWindow = new System.Windows.Forms.TextBox();
+            this.ipYeahweblocked = new System.Windows.Forms.Label();
+            this.pageMedian = new System.Windows.Forms.Button();
+            this.rightArrowforip = new System.Windows.Forms.Button();
+            this.ipEntry = new System.Windows.Forms.TextBox();
+            this.blockIP = new System.Windows.Forms.Label();
+            this.homeButton1perm = new System.Windows.Forms.Button();
+            this.permissionsPage = new System.Windows.Forms.PictureBox();
+            this.welcomeMessagelabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.blockIPwindow.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.permissionsPage)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -70,8 +80,12 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel2.BackgroundImage")));
-            this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.blockIPwindow);
+            this.splitContainer1.Panel2.Controls.Add(this.blockIP);
+            this.splitContainer1.Panel2.Controls.Add(this.homeButton1perm);
+            this.splitContainer1.Panel2.Controls.Add(this.permissionsPage);
+            this.splitContainer1.Panel2.Controls.Add(this.welcomeMessagelabel);
+            this.splitContainer1.Panel2.Tag = "homePagefire";
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1034, 502);
             this.splitContainer1.SplitterDistance = 91;
@@ -111,12 +125,14 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // permissionsToolStripMenuItem
             // 
             this.permissionsToolStripMenuItem.Name = "permissionsToolStripMenuItem";
             this.permissionsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.permissionsToolStripMenuItem.Text = "Permissions";
+            this.permissionsToolStripMenuItem.Click += new System.EventHandler(this.permissionsToolStripMenuItem_Click);
             // 
             // monitorToolStripMenuItem
             // 
@@ -130,21 +146,105 @@
             this.manageToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.manageToolStripMenuItem.Text = "Manage";
             // 
-            // label1
+            // blockIPwindow
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(465, 172);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome Mr. Anderson";
+            this.blockIPwindow.Controls.Add(this.testipWindow);
+            this.blockIPwindow.Controls.Add(this.ipYeahweblocked);
+            this.blockIPwindow.Controls.Add(this.pageMedian);
+            this.blockIPwindow.Controls.Add(this.rightArrowforip);
+            this.blockIPwindow.Controls.Add(this.ipEntry);
+            this.blockIPwindow.Location = new System.Drawing.Point(89, 208);
+            this.blockIPwindow.Name = "blockIPwindow";
+            this.blockIPwindow.Size = new System.Drawing.Size(657, 240);
+            this.blockIPwindow.TabIndex = 7;
             // 
-            // panel1
+            // testipWindow
             // 
-            this.panel1.Location = new System.Drawing.Point(165, 105);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 176);
-            this.panel1.TabIndex = 2;
+            this.testipWindow.AcceptsReturn = true;
+            this.testipWindow.Location = new System.Drawing.Point(438, 64);
+            this.testipWindow.Multiline = true;
+            this.testipWindow.Name = "testipWindow";
+            this.testipWindow.ReadOnly = true;
+            this.testipWindow.Size = new System.Drawing.Size(114, 20);
+            this.testipWindow.TabIndex = 4;
+            // 
+            // ipYeahweblocked
+            // 
+            this.ipYeahweblocked.AutoSize = true;
+            this.ipYeahweblocked.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ipYeahweblocked.Location = new System.Drawing.Point(575, 0);
+            this.ipYeahweblocked.Name = "ipYeahweblocked";
+            this.ipYeahweblocked.Size = new System.Drawing.Size(82, 13);
+            this.ipYeahweblocked.TabIndex = 3;
+            this.ipYeahweblocked.Text = "BlackListed IPS";
+            this.ipYeahweblocked.Click += new System.EventHandler(this.ipYeahweblocked_Click);
+            // 
+            // pageMedian
+            // 
+            this.pageMedian.Location = new System.Drawing.Point(324, 0);
+            this.pageMedian.Name = "pageMedian";
+            this.pageMedian.Size = new System.Drawing.Size(10, 240);
+            this.pageMedian.TabIndex = 2;
+            this.pageMedian.Text = "button3";
+            this.pageMedian.UseVisualStyleBackColor = true;
+            // 
+            // rightArrowforip
+            // 
+            this.rightArrowforip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightArrowforip.BackgroundImage")));
+            this.rightArrowforip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rightArrowforip.Location = new System.Drawing.Point(159, 64);
+            this.rightArrowforip.Name = "rightArrowforip";
+            this.rightArrowforip.Size = new System.Drawing.Size(28, 23);
+            this.rightArrowforip.TabIndex = 1;
+            this.rightArrowforip.UseVisualStyleBackColor = true;
+            this.rightArrowforip.Click += new System.EventHandler(this.rightArrowforip_Click);
+            // 
+            // ipEntry
+            // 
+            this.ipEntry.Location = new System.Drawing.Point(21, 67);
+            this.ipEntry.Name = "ipEntry";
+            this.ipEntry.Size = new System.Drawing.Size(118, 20);
+            this.ipEntry.TabIndex = 0;
+            this.ipEntry.TextChanged += new System.EventHandler(this.ipEntry_TextChanged);
+            // 
+            // blockIP
+            // 
+            this.blockIP.AutoSize = true;
+            this.blockIP.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.blockIP.Location = new System.Drawing.Point(86, 181);
+            this.blockIP.Name = "blockIP";
+            this.blockIP.Size = new System.Drawing.Size(67, 13);
+            this.blockIP.TabIndex = 6;
+            this.blockIP.Text = "Blocked IPs:";
+            this.blockIP.Click += new System.EventHandler(this.blockIP_Click);
+            // 
+            // homeButton1perm
+            // 
+            this.homeButton1perm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homeButton1perm.BackgroundImage")));
+            this.homeButton1perm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homeButton1perm.Location = new System.Drawing.Point(898, 463);
+            this.homeButton1perm.Name = "homeButton1perm";
+            this.homeButton1perm.Size = new System.Drawing.Size(38, 39);
+            this.homeButton1perm.TabIndex = 5;
+            this.homeButton1perm.UseVisualStyleBackColor = true;
+            // 
+            // permissionsPage
+            // 
+            this.permissionsPage.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.permissionsPage.Location = new System.Drawing.Point(-1, 0);
+            this.permissionsPage.Name = "permissionsPage";
+            this.permissionsPage.Size = new System.Drawing.Size(940, 502);
+            this.permissionsPage.TabIndex = 4;
+            this.permissionsPage.TabStop = false;
+            // 
+            // welcomeMessagelabel
+            // 
+            this.welcomeMessagelabel.AutoSize = true;
+            this.welcomeMessagelabel.Location = new System.Drawing.Point(465, 172);
+            this.welcomeMessagelabel.Name = "welcomeMessagelabel";
+            this.welcomeMessagelabel.Size = new System.Drawing.Size(118, 13);
+            this.welcomeMessagelabel.TabIndex = 1;
+            this.welcomeMessagelabel.Text = "Welcome Mr. Anderson";
             // 
             // Firewall
             // 
@@ -163,6 +263,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.blockIPwindow.ResumeLayout(false);
+            this.blockIPwindow.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.permissionsPage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,13 +273,21 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label welcomeMessagelabel;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem permissionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monitorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button homeButton1perm;
+        private System.Windows.Forms.PictureBox permissionsPage;
+        private System.Windows.Forms.Panel blockIPwindow;
+        private System.Windows.Forms.Label blockIP;
+        private System.Windows.Forms.Button pageMedian;
+        private System.Windows.Forms.Button rightArrowforip;
+        private System.Windows.Forms.TextBox ipEntry;
+        private System.Windows.Forms.Label ipYeahweblocked;
+        private System.Windows.Forms.TextBox testipWindow;
     }
 }

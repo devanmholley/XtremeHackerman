@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 
 
-namespace CompanyFirewall
+namespace XtremeHackerman
 {
     public partial class Landing_page : Form
     {
