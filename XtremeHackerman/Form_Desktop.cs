@@ -50,6 +50,8 @@ namespace XtremeHackerman
         private void emailButtonClick(object sender, EventArgs e)
         {
             // Email Browser implementation 
+            Form_Email Test = new Form_Email();
+            Test.Show();
         }
     }
 }
