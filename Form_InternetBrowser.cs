@@ -41,15 +41,5 @@ namespace XtremeHackerman
         {
             // code for home button here
         }
-
-        private void companyFirewallToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            XtremeHackermanForms._formLandingPage.Show();
-        }
-
-        private void Form_InternetBrowser_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

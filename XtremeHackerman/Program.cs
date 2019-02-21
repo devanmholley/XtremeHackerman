@@ -20,6 +20,10 @@ namespace XtremeHackerman
         public static Form_InternetBrowser _formBrowser;
         public static Form_Desktop _formDesktop;
         public static Form_Email _formEmail;
+        public static Email_UI _formEmail;
+        public static Firewall _formFirewall;
+        public static Landing_page _formLandingPage;
+
 
     }
 
@@ -61,6 +65,21 @@ namespace XtremeHackerman
             XtremeHackermanForms._formBrowser.Closed += new EventHandler(OnFormClosed);
             XtremeHackermanForms._formBrowser.Closing += new CancelEventHandler(OnFormClosing);
             XtremeHackermanForms._formBrowser.Load += new EventHandler(OnFormLoad);
+
+            XtremeHackermanForms._formEmail = new Email_UI();
+            XtremeHackermanForms._formEmail.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms._formEmail.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms._formEmail.Load += new EventHandler(OnFormLoad);
+
+            XtremeHackermanForms._formFirewall = new Firewall();
+            XtremeHackermanForms._formFirewall.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms._formFirewall.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms._formFirewall.Load += new EventHandler(OnFormLoad);
+
+            XtremeHackermanForms._formLandingPage = new Landing_page();
+            XtremeHackermanForms._formLandingPage.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms._formLandingPage.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms._formLandingPage.Load += new EventHandler(OnFormLoad);
             #endregion
 
             XtremeHackermanForms._formTitleScreen.Show();

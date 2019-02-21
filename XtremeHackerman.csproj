@@ -49,20 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Email_Logic.cs">
+    <Compile Include="Email_UI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Email.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Email.Designer.cs">
-      <DependentUpon>Form_Email.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Firewall.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Firewall.Designer.cs">
-      <DependentUpon>Firewall.cs</DependentUpon>
+    <Compile Include="Email_UI.Designer.cs">
+      <DependentUpon>Email_UI.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Desktop.cs">
       <SubType>Form</SubType>
@@ -94,19 +85,10 @@
     <Compile Include="Form_TitleScreen.Designer.cs">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Landing_page.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Landing_page.Designer.cs">
-      <DependentUpon>Landing_page.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form_Email.resx">
-      <DependentUpon>Form_Email.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Firewall.resx">
-      <DependentUpon>Firewall.cs</DependentUpon>
+    <EmbeddedResource Include="Email_UI.resx">
+      <DependentUpon>Email_UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
@@ -122,9 +104,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Landing_page.resx">
-      <DependentUpon>Landing_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -197,14 +176,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\emailIcon2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Mail\1.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Mail\2.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
