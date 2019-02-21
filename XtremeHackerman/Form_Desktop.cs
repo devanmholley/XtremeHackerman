@@ -34,7 +34,28 @@ namespace XtremeHackerman
 
         private void startButtonClick(object sender, EventArgs e)
         {
-            // Start button implementation 
+            
+            bool i = ! Restart.Visible;
+            if (i == true)
+            {
+                Restart.Visible = true;
+                Shutdown.Visible = true;
+                InternetBrowser.Visible = true;
+                FileManager.Visible = true;
+                TaskManager.Visible = true;
+                EmailClient.Visible = true;
+            }
+            else 
+            {
+                Restart.Visible = false;
+                Shutdown.Visible = false;
+                InternetBrowser.Visible = false;
+                FileManager.Visible = false;
+                TaskManager.Visible = false;
+                EmailClient.Visible = false;
+            }
+                
+
         }
 
         private void explorerButtonClick(object sender, EventArgs e)
@@ -50,6 +71,39 @@ namespace XtremeHackerman
         private void emailButtonClick(object sender, EventArgs e)
         {
             // Email Browser implementation 
+        }
+
+        private void Restart_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form_Desktop desktop = new Form_Desktop();
+        }
+
+        private void Shutdown_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void InternetBrowser_Click(object sender, EventArgs e)
+        {
+            XtremeHackermanForms._formBrowser.ShowDialog();
+        }
+
+        private void TaskManager_Click(object sender, EventArgs e)
+        {
+            const string message = "You have opened the Task Manager";
+            var result = MessageBox.Show(message);
+        }
+
+        private void FileManager_Click(object sender, EventArgs e)
+        {
+            const string message = "You have opened the File Manager";
+            var result = MessageBox.Show(message);
+        }
+
+        private void EmailClient_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
