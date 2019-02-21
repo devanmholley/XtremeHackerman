@@ -20,6 +20,7 @@ namespace XtremeHackerman
         private void Form_Desktop_Load(object sender, EventArgs e)
         {
             // LOADING THE DESKTOP
+           // toolStrip1.Hide();
         }
 
         private void searchEntry(object sender, EventArgs e)
@@ -34,27 +35,11 @@ namespace XtremeHackerman
 
         private void startButtonClick(object sender, EventArgs e)
         {
-            
-            bool i = ! Restart.Visible;
-            if (i == true)
-            {
-                Restart.Visible = true;
-                Shutdown.Visible = true;
-                InternetBrowser.Visible = true;
-                FileManager.Visible = true;
-                TaskManager.Visible = true;
-                EmailClient.Visible = true;
-            }
-            else 
-            {
-                Restart.Visible = false;
-                Shutdown.Visible = false;
-                InternetBrowser.Visible = false;
-                FileManager.Visible = false;
-                TaskManager.Visible = false;
-                EmailClient.Visible = false;
-            }
-                
+            Restart.Visible = true;
+            Shutdown.Visible = true;
+            InternetBrowser.Visible = true;
+            FileManager.Visible = true;
+            TaskManager.Visible = true;
 
         }
 
@@ -70,9 +55,10 @@ namespace XtremeHackerman
 
         private void emailButtonClick(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formEmail.ShowDialog();
+            // Email Browser implementation 
         }
 
+        
         private void Restart_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -99,11 +85,6 @@ namespace XtremeHackerman
         {
             const string message = "You have opened the File Manager";
             var result = MessageBox.Show(message);
-        }
-
-        private void EmailClient_Click(object sender, EventArgs e)
-        {
-            XtremeHackermanForms._formEmail.ShowDialog();
         }
     }
 }

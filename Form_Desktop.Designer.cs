@@ -42,7 +42,6 @@
             this.InternetBrowser = new System.Windows.Forms.Button();
             this.TaskManager = new System.Windows.Forms.Button();
             this.FileManager = new System.Windows.Forms.Button();
-            this.EmailClient = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,10 +150,10 @@
             // 
             this.Restart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.Restart.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Restart.Location = new System.Drawing.Point(0, 642);
+            this.Restart.Location = new System.Drawing.Point(0, 651);
             this.Restart.Name = "Restart";
-            this.Restart.Size = new System.Drawing.Size(88, 23);
-            this.Restart.TabIndex = 10;
+            this.Restart.Size = new System.Drawing.Size(88, 29);
+            this.Restart.TabIndex = 11;
             this.Restart.Text = "Restart";
             this.Restart.UseVisualStyleBackColor = false;
             this.Restart.Visible = false;
@@ -164,10 +163,10 @@
             // 
             this.Shutdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.Shutdown.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shutdown.Location = new System.Drawing.Point(0, 613);
+            this.Shutdown.Location = new System.Drawing.Point(0, 618);
             this.Shutdown.Name = "Shutdown";
-            this.Shutdown.Size = new System.Drawing.Size(88, 23);
-            this.Shutdown.TabIndex = 11;
+            this.Shutdown.Size = new System.Drawing.Size(88, 27);
+            this.Shutdown.TabIndex = 12;
             this.Shutdown.Text = "Shutdown";
             this.Shutdown.UseVisualStyleBackColor = false;
             this.Shutdown.Visible = false;
@@ -177,10 +176,10 @@
             // 
             this.InternetBrowser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.InternetBrowser.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InternetBrowser.Location = new System.Drawing.Point(0, 584);
+            this.InternetBrowser.Location = new System.Drawing.Point(0, 585);
             this.InternetBrowser.Name = "InternetBrowser";
-            this.InternetBrowser.Size = new System.Drawing.Size(88, 23);
-            this.InternetBrowser.TabIndex = 12;
+            this.InternetBrowser.Size = new System.Drawing.Size(88, 27);
+            this.InternetBrowser.TabIndex = 13;
             this.InternetBrowser.Text = "Internet Browser";
             this.InternetBrowser.UseVisualStyleBackColor = false;
             this.InternetBrowser.Visible = false;
@@ -190,11 +189,11 @@
             // 
             this.TaskManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.TaskManager.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaskManager.Location = new System.Drawing.Point(0, 555);
+            this.TaskManager.Location = new System.Drawing.Point(0, 552);
             this.TaskManager.Name = "TaskManager";
-            this.TaskManager.Size = new System.Drawing.Size(88, 23);
-            this.TaskManager.TabIndex = 13;
-            this.TaskManager.Text = "Task Manager ";
+            this.TaskManager.Size = new System.Drawing.Size(88, 27);
+            this.TaskManager.TabIndex = 14;
+            this.TaskManager.Text = "Task Manager";
             this.TaskManager.UseVisualStyleBackColor = false;
             this.TaskManager.Visible = false;
             this.TaskManager.Click += new System.EventHandler(this.TaskManager_Click);
@@ -203,27 +202,14 @@
             // 
             this.FileManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.FileManager.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FileManager.Location = new System.Drawing.Point(0, 526);
+            this.FileManager.Location = new System.Drawing.Point(0, 519);
             this.FileManager.Name = "FileManager";
-            this.FileManager.Size = new System.Drawing.Size(88, 23);
-            this.FileManager.TabIndex = 14;
+            this.FileManager.Size = new System.Drawing.Size(88, 27);
+            this.FileManager.TabIndex = 15;
             this.FileManager.Text = "File Manager";
             this.FileManager.UseVisualStyleBackColor = false;
             this.FileManager.Visible = false;
             this.FileManager.Click += new System.EventHandler(this.FileManager_Click);
-            // 
-            // EmailClient
-            // 
-            this.EmailClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.EmailClient.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailClient.Location = new System.Drawing.Point(0, 497);
-            this.EmailClient.Name = "EmailClient";
-            this.EmailClient.Size = new System.Drawing.Size(88, 23);
-            this.EmailClient.TabIndex = 15;
-            this.EmailClient.Text = "Email";
-            this.EmailClient.UseVisualStyleBackColor = false;
-            this.EmailClient.Visible = false;
-            this.EmailClient.Click += new System.EventHandler(this.EmailClient_Click);
             // 
             // Form_Desktop
             // 
@@ -231,12 +217,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.EmailClient);
-            this.Controls.Add(this.Restart);
-            this.Controls.Add(this.Shutdown);
-            this.Controls.Add(this.InternetBrowser);
-            this.Controls.Add(this.TaskManager);
             this.Controls.Add(this.FileManager);
+            this.Controls.Add(this.TaskManager);
+            this.Controls.Add(this.InternetBrowser);
+            this.Controls.Add(this.Shutdown);
+            this.Controls.Add(this.Restart);
             this.Controls.Add(this.emailIcon);
             this.Controls.Add(this.explorerIcon);
             this.Controls.Add(this.cliButton);
@@ -268,6 +253,5 @@
         private System.Windows.Forms.Button InternetBrowser;
         private System.Windows.Forms.Button TaskManager;
         private System.Windows.Forms.Button FileManager;
-        private System.Windows.Forms.Button EmailClient;
     }
 }
