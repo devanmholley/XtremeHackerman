@@ -19,9 +19,11 @@ namespace XtremeHackerman
         public static Form_TitleScreen _formTitleScreen;
         public static Form_InternetBrowser _formBrowser;
         public static Form_Desktop _formDesktop;
+        public static Form_Email _formEmail;
         public static Email_UI _formEmail;
         public static Firewall _formFirewall;
         public static Landing_page _formLandingPage;
+
 
     }
 

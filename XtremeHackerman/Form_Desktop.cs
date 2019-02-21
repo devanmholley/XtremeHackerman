@@ -70,6 +70,10 @@ namespace XtremeHackerman
 
         private void emailButtonClick(object sender, EventArgs e)
         {
+
+            // Email Browser implementation 
+            Form_Email Test = new Form_Email();
+            Test.Show();
             XtremeHackermanForms._formEmail.ShowDialog();
         }
 
@@ -99,11 +103,6 @@ namespace XtremeHackerman
         {
             const string message = "You have opened the File Manager";
             var result = MessageBox.Show(message);
-        }
-
-        private void EmailClient_Click(object sender, EventArgs e)
-        {
-            XtremeHackermanForms._formEmail.ShowDialog();
         }
     }
 }
