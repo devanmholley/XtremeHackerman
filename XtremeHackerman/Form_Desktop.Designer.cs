@@ -43,6 +43,7 @@
             this.TaskManager = new System.Windows.Forms.Button();
             this.FileManager = new System.Windows.Forms.Button();
             this.EmailClient = new System.Windows.Forms.Button();
+            this.TxtEditorIcon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,7 +151,7 @@
             // Restart
             // 
             this.Restart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.Restart.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Restart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Restart.Location = new System.Drawing.Point(0, 642);
             this.Restart.Name = "Restart";
             this.Restart.Size = new System.Drawing.Size(88, 23);
@@ -163,7 +164,7 @@
             // Shutdown
             // 
             this.Shutdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.Shutdown.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shutdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Shutdown.Location = new System.Drawing.Point(0, 613);
             this.Shutdown.Name = "Shutdown";
             this.Shutdown.Size = new System.Drawing.Size(88, 23);
@@ -176,7 +177,7 @@
             // InternetBrowser
             // 
             this.InternetBrowser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.InternetBrowser.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InternetBrowser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InternetBrowser.Location = new System.Drawing.Point(0, 584);
             this.InternetBrowser.Name = "InternetBrowser";
             this.InternetBrowser.Size = new System.Drawing.Size(88, 23);
@@ -189,7 +190,7 @@
             // TaskManager
             // 
             this.TaskManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.TaskManager.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaskManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskManager.Location = new System.Drawing.Point(0, 555);
             this.TaskManager.Name = "TaskManager";
             this.TaskManager.Size = new System.Drawing.Size(88, 23);
@@ -202,7 +203,7 @@
             // FileManager
             // 
             this.FileManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.FileManager.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FileManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileManager.Location = new System.Drawing.Point(0, 526);
             this.FileManager.Name = "FileManager";
             this.FileManager.Size = new System.Drawing.Size(88, 23);
@@ -215,7 +216,7 @@
             // EmailClient
             // 
             this.EmailClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.EmailClient.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailClient.Location = new System.Drawing.Point(0, 497);
             this.EmailClient.Name = "EmailClient";
             this.EmailClient.Size = new System.Drawing.Size(88, 23);
@@ -224,12 +225,24 @@
             this.EmailClient.UseVisualStyleBackColor = false;
             this.EmailClient.Visible = false;
             // 
+            // TxtEditorIcon
+            // 
+            this.TxtEditorIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TxtEditorIcon.BackgroundImage")));
+            this.TxtEditorIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TxtEditorIcon.Location = new System.Drawing.Point(202, 34);
+            this.TxtEditorIcon.Name = "TxtEditorIcon";
+            this.TxtEditorIcon.Size = new System.Drawing.Size(95, 79);
+            this.TxtEditorIcon.TabIndex = 16;
+            this.TxtEditorIcon.UseVisualStyleBackColor = true;
+            this.TxtEditorIcon.Click += new System.EventHandler(this.TxtEditorIcon_Click);
+            // 
             // Form_Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.TxtEditorIcon);
             this.Controls.Add(this.EmailClient);
             this.Controls.Add(this.Restart);
             this.Controls.Add(this.Shutdown);
@@ -268,5 +281,6 @@
         private System.Windows.Forms.Button TaskManager;
         private System.Windows.Forms.Button FileManager;
         private System.Windows.Forms.Button EmailClient;
+        private System.Windows.Forms.Button TxtEditorIcon;
     }
 }

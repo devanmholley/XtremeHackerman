@@ -22,7 +22,7 @@ namespace XtremeHackerman
         public static Form_Email _formEmail;
         public static Firewall _formFirewall;
         public static Landing_page _formLandingPage;
-
+        public static Form_txtEditor _formTxtEditor;
 
     }
 
@@ -79,6 +79,11 @@ namespace XtremeHackerman
             XtremeHackermanForms._formLandingPage.Closed += new EventHandler(OnFormClosed);
             XtremeHackermanForms._formLandingPage.Closing += new CancelEventHandler(OnFormClosing);
             XtremeHackermanForms._formLandingPage.Load += new EventHandler(OnFormLoad);
+
+            XtremeHackermanForms._formTxtEditor = new Form_txtEditor();
+            XtremeHackermanForms._formTxtEditor.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms._formTxtEditor.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms._formTxtEditor.Load += new EventHandler(OnFormLoad);
             #endregion
 
             XtremeHackermanForms._formTitleScreen.Show();

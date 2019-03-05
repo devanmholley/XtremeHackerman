@@ -94,6 +94,12 @@
     <Compile Include="Form_TitleScreen.Designer.cs">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_txtEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_txtEditor.Designer.cs">
+      <DependentUpon>Form_txtEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Landing_page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_txtEditor.resx">
+      <DependentUpon>Form_txtEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Landing_page.resx">
       <DependentUpon>Landing_page.cs</DependentUpon>
@@ -199,6 +208,7 @@
     <None Include="Resources\emailIcon2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\1.txt" />
     <Content Include="Resources\Mail\1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -104,5 +104,10 @@ namespace XtremeHackerman
             const string message = "You have opened the File Manager";
             var result = MessageBox.Show(message);
         }
+
+        private void TxtEditorIcon_Click(object sender, EventArgs e)
+        {
+            XtremeHackermanForms._formTxtEditor.ShowDialog();
+        }
     }
 }
