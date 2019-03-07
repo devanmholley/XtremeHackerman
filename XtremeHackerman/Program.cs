@@ -96,16 +96,18 @@ namespace XtremeHackerman
         /// <param name="e"></param>
         private void OnFormClosed(object sender, EventArgs e)
         {
-            // If closing form is not TitleScreen, restore hidden TitleScreen's visibility
-            if (!(sender is Form_TitleScreen))
-                XtremeHackermanForms._formTitleScreen.Show();
-
             // Remove closed form from _activeForms
             _activeForms.Remove(sender.ToString());
 
-            // If _activeForms is empty, exit program
-            if (_activeForms.Count == 0)
-                ExitThread();
+            switch (_activeForms.Count)
+            {
+                case 1:
+                    XtremeHackermanForms.FormTitleScreen.Show();
+                    break;
+                case 0:
+                    ExitThread();
+                    break;
+            }
         }
 
         /// <summary>
