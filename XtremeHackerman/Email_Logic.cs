@@ -37,5 +37,23 @@ namespace XtremeHackerman
             string body = File.ReadAllText(string.Join("","Resources/Mail/",mail.ToString(),".txt"));
             FormEmail.email_bodyTXT.Text = body;
         }
+
+        public static void Move_To_Trash(int mail)
+        {       // Moves the selected mail into the trash folder
+            string sourceFile = string.Join("", "Resources/Mail/", mail.ToString(), ".txt");
+            string targetFile = string.Join("", "Resources/Mail/Trash/", mail.ToString(), ".txt");
+
+            // this is the line that moves the File from the source to the target
+            System.IO.File.Move(sourceFile, targetFile);
+        }
+
+        public static void Move_To_Spam(int mail)
+        {       // Moves the selected mail into the spam folder
+            string sourceFile = string.Join("", "Resources/Mail/", mail.ToString(), ".txt");
+            string targetFile = string.Join("", "Resources/Mail/Spam/", mail.ToString(), ".txt");
+
+            // this is the line that moves the File from the source to the target
+            System.IO.File.Move(sourceFile, targetFile);
+        }
     }
 }

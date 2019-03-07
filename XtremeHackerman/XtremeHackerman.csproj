@@ -208,13 +208,16 @@
     <None Include="Resources\emailIcon2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\1.txt" />
     <Content Include="Resources\Mail\1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Mail\2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Mail\Spam\" />
+    <Folder Include="Resources\Mail\Trash\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

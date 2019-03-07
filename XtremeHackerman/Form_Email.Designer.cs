@@ -107,7 +107,7 @@
             this.email_composeBTN.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.email_composeBTN.FlatAppearance.BorderSize = 2;
             this.email_composeBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.email_composeBTN.Font = new System.Drawing.Font("Meiryo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_composeBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_composeBTN.Location = new System.Drawing.Point(152, 63);
             this.email_composeBTN.Name = "email_composeBTN";
             this.email_composeBTN.Size = new System.Drawing.Size(93, 30);
@@ -192,6 +192,7 @@
             this.email_mvtrashBTN.TabIndex = 5;
             this.email_mvtrashBTN.Text = "Trash";
             this.email_mvtrashBTN.UseVisualStyleBackColor = true;
+            this.email_mvtrashBTN.Click += new System.EventHandler(this.email_mvtrashBTN_Click);
             // 
             // email_mvspamBTN
             // 
@@ -202,6 +203,7 @@
             this.email_mvspamBTN.TabIndex = 4;
             this.email_mvspamBTN.Text = "Spam";
             this.email_mvspamBTN.UseVisualStyleBackColor = true;
+            this.email_mvspamBTN.Click += new System.EventHandler(this.email_mvspamBTN_Click);
             // 
             // email_rplyallBTN
             // 

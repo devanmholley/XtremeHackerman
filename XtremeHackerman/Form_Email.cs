@@ -75,5 +75,15 @@ namespace XtremeHackerman
         {
             BodyTextBox = text;
         }
+
+        private void email_mvtrashBTN_Click(object sender, System.EventArgs e)
+        {
+            Move_To_Trash(1);
+        }
+
+        private void email_mvspamBTN_Click(object sender, System.EventArgs e)
+        {
+            Move_To_Spam(1);
+        }
     }
 }
