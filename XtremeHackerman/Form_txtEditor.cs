@@ -32,40 +32,40 @@ namespace XtremeHackerman
 
         private void S_File1_Click(object sender, EventArgs e)
         {
-            TextWriter txt = new StreamWriter(string.Join("", "Resources/", "1", ".txt"));
+            TextWriter txt = new StreamWriter(string.Join("", "Resources/Text Editor/", "1", ".txt"));
             txt.Write(BodyTXT.Text);
             txt.Close();
         }
 
         private void S_File2_Click(object sender, EventArgs e)
         {
-            TextWriter txt = new StreamWriter(string.Join("", "Resources/", "2", ".txt"));
+            TextWriter txt = new StreamWriter(string.Join("", "Resources/Text Editor/", "2", ".txt"));
             txt.Write(BodyTXT.Text);
             txt.Close();
         }
 
         private void S_File3_Click(object sender, EventArgs e)
         {
-            TextWriter txt = new StreamWriter(string.Join("", "Resources/", "3", ".txt"));
+            TextWriter txt = new StreamWriter(string.Join("", "Resources/Text Editor/", "3", ".txt"));
             txt.Write(BodyTXT.Text);
             txt.Close();
         }
 
         private void L_File1_Click(object sender, EventArgs e)
         {
-            string strFileText = File.ReadAllText(string.Join("", "Resources/", "1", ".txt"));
+            string strFileText = File.ReadAllText(string.Join("", "Resources/Text Editor/", "1", ".txt"));
             BodyTXT.Text = strFileText;
         }
 
         private void L_File2_Click(object sender, EventArgs e)
         {
-            string strFileText = File.ReadAllText(string.Join("", "Resources/", "2", ".txt"));
+            string strFileText = File.ReadAllText(string.Join("", "Resources/Text Editor/", "2", ".txt"));
             BodyTXT.Text = strFileText;
         }
 
         private void L_File3_Click(object sender, EventArgs e)
         {
-            string strFileText = File.ReadAllText(string.Join("", "Resources/", "3", ".txt"));
+            string strFileText = File.ReadAllText(string.Join("", "Resources/Text Editor/", "3", ".txt"));
             BodyTXT.Text = strFileText;
         }
     }

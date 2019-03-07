@@ -38,7 +38,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.companyFirewallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.SubFrom = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,26 +127,24 @@
             // companyFirewallToolStripMenuItem
             // 
             this.companyFirewallToolStripMenuItem.Name = "companyFirewallToolStripMenuItem";
-            this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.companyFirewallToolStripMenuItem.Text = "Company Firewall";
             this.companyFirewallToolStripMenuItem.Click += new System.EventHandler(this.companyFirewallToolStripMenuItem_Click);
             // 
-            // label1
+            // SubFrom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(181, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "404 error";
-            this.label1.Visible = false;
+            this.SubFrom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SubFrom.Location = new System.Drawing.Point(0, 25);
+            this.SubFrom.Name = "SubFrom";
+            this.SubFrom.Size = new System.Drawing.Size(800, 425);
+            this.SubFrom.TabIndex = 1;
             // 
             // Form_InternetBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SubFrom);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_InternetBrowser";
             this.Text = "InternetBrowser";
@@ -169,6 +167,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem companyFirewallToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel SubFrom;
     }
 }
