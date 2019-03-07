@@ -45,7 +45,7 @@ namespace XtremeHackerman
 
             // this is the line that moves the File from the source to the target
             System.IO.File.Move(sourceFile, targetFile);
-            // Clear the text
+            // Clear the text                                                                   <--- This may be changed later
             FormEmail.email_sourceTXT.Text = "";
             FormEmail.email_subjectTXT.Text = "";
             FormEmail.email_bodyTXT.Text = "";
@@ -58,7 +58,7 @@ namespace XtremeHackerman
 
             // this is the line that moves the File from the source to the target
             System.IO.File.Move(sourceFile, targetFile);
-            // Clear the text
+            // Clear the text                                                                   <--- This may be changed later
             FormEmail.email_sourceTXT.Text = "";
             FormEmail.email_subjectTXT.Text = "";
             FormEmail.email_bodyTXT.Text = "";
