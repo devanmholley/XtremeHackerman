@@ -1,41 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.IO;
-using static XtremeHackerman.Form_Email;
+using Newtonsoft.Json;
 
 namespace XtremeHackerman
 {
-    public partial class Form_Email
+    public struct EmailStruct
     {
+        public readonly string Source;
+        public readonly string Destination;
+        public readonly string Subject;
+        public readonly string Body;
+
+        public EmailStruct(string emailSource,string emailDestination,string emailSubject, string emailBody)
+        {
+            Source = emailSource;
+            Destination = emailDestination;
+            Subject = emailSubject;
+            Body = emailBody;
+        }
+    }
+
+    public partial class FormEmail
+    {
+        private static Collection<EmailStruct> _emailList;
+
+        private static void RefreshEmailList()
+        {
+            _emailList = JsonConvert.DeserializeObject<Collection<EmailStruct>>(File.ReadAllText("Resources/Mail/Emails.json"));
+            _formEmail.email_inbox.Items.Clear();
+            foreach (var emailStruct in _emailList)
+            {
+                _formEmail.email_inbox.Items.Add(emailStruct);
+            }
+            _formEmail.email_inbox.Refresh();
+        }
+
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="mail"></param>
-        public static void Get_Body(int mail)
+        /// <param name="messageIndex"></param>
+        private static void LoadEmailContents(int messageIndex)
         {
-            int emailcase;
-            // Identify which email is being called
-            switch(mail)
-            {
-                case 1:
-                    // The welcome email.
-                    FormEmail.email_sourceTXT.Text = "sender@ma.il";
-                    FormEmail.email_subjectTXT.Text = "Welcome";
-                    emailcase = 1;
-                    break;
-                case 2:
-                    FormEmail.email_sourceTXT.Text = "NigerianPrince@phi.sh";
-                    FormEmail.email_subjectTXT.Text = "Want Free Money for Money";
-                    break;
-                default:
-                    break;
-            }
-            // Fetch the text of the email from the corresponding txt file
-            string body = File.ReadAllText(string.Join("","Resources/Mail/",mail.ToString(),".txt"));
-            FormEmail.email_bodyTXT.Text = body;
+            var currentEmail = _emailList[messageIndex];
+
+            _formEmail.email_sourceTXT.Text = currentEmail.Source;
+            _formEmail.email_destTXT.Text = currentEmail.Destination;
+            _formEmail.email_subjectTXT.Text = currentEmail.Subject;
+            _formEmail.email_bodyTXT.Text = currentEmail.Body;
+        }
+
+        public static void GetMail()
+        {
+            //FormEmail.email_inbox.Items.Add();
         }
     }
 }

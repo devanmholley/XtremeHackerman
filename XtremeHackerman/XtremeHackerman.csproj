@@ -159,6 +159,9 @@
     <None Include="Resources\Background.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Mail\Emails.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\SardonicCreepyIndianrockpython-small.gif" />
   </ItemGroup>
   <ItemGroup>

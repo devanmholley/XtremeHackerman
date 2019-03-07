@@ -3,76 +3,43 @@
 
 namespace XtremeHackerman
 {
-    public  partial class Form_Email : Form
+    public  partial class FormEmail : Form
     {
-        private static Form_Email FormEmail;
+        private static FormEmail _formEmail;
 
-        public Form_Email()
+        public FormEmail()
         {
             InitializeComponent();
-            FormEmail = this;
+            _formEmail = this;
         }
 
-        public void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        public string SourceTextBox
         {
-
-        }
-
-        public void toolStripMenuItem1_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        public void listBox1_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
-
-        }
-
-        public void textBox1_TextChanged(object sender, System.EventArgs e)
-        {
-
-        }
-
-        public void button1_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        public void button1_Click_1(object sender, System.EventArgs e)
-        {
-
-        }
-
-        public void button1_Click_2(object sender, System.EventArgs e)
-        {
-
-        }
-
-        public void textBox1_TextChanged_1(object sender, System.EventArgs e)
-        {
-
-        }
-
-        public string setFromTextBox
-        {
-            get { return email_sourceTXT.Text; }
-            set { email_sourceTXT.Text = value; }
+            get => email_sourceTXT.Text;
+            set => email_sourceTXT.Text = value;
         }
 
         public string BodyTextBox
         {
-            get{ return email_bodyTXT.Text; }
-            set{ email_bodyTXT.Text = value; }
+            get => email_bodyTXT.Text;
+            set => email_bodyTXT.Text = value;
         }
 
         private void Form_Email_Load(object sender, System.EventArgs e)
         {
-            Get_Body(1);
+            RefreshEmailList();
+            LoadEmailContents(0);
+            //EmailList.Add(new EmailStruct("sender@ma.il", "Welcome"));
         }
 
         public void SetBodyTextBox(string text)
         {
             BodyTextBox = text;
+        }
+
+        private void email_inbox_SelectedValueChanged(object sender, System.EventArgs e)
+        {
+            LoadEmailContents(email_inbox.SelectedIndex);
         }
     }
 }
