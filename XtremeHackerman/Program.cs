@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Text;
-using System.Drawing;
 using System.ComponentModel;
 
 namespace XtremeHackerman
@@ -12,16 +8,16 @@ namespace XtremeHackerman
     /// <summary>
     /// Static class containing the form variables; used for global access
     /// </summary>
-    static class XtremeHackermanForms
+    internal static class XtremeHackermanForms
     {
-        public static Form_Admin _formAdmin;
-        public static Form_Hacker _formHacker;
-        public static Form_TitleScreen _formTitleScreen;
-        public static Form_InternetBrowser _formBrowser;
-        public static Form_Desktop _formDesktop;
-        public static Form_Email _formEmail;
-        public static Firewall _formFirewall;
-        public static Landing_page _formLandingPage;
+        public static FormAdmin FormAdmin;
+        public static Form_Hacker FormHacker;
+        public static FormTitleScreen FormTitleScreen;
+        public static FormInternetBrowser FormBrowser;
+        public static Form_Desktop FormDesktop;
+        public static FormEmail FormEmail;
+        public static Firewall FormFirewall;
+        public static Landing_page FormLandingPage;
 
 
     }
@@ -32,7 +28,7 @@ namespace XtremeHackerman
     public class XtremeHackermanAppContext : ApplicationContext
     {
         //String list containing the names of the currently active forms
-        private List<string> _activeForms = new List<string>();
+        private readonly List<string> _activeForms = new List<string>();
 
         private XtremeHackermanAppContext()
         {
@@ -40,48 +36,48 @@ namespace XtremeHackerman
             Application.SetCompatibleTextRenderingDefault(false);
 
             #region Creates each form and appends event handlers to them.
-            XtremeHackermanForms._formTitleScreen = new Form_TitleScreen();
-            XtremeHackermanForms._formTitleScreen.Closed += new EventHandler(OnFormClosed);
-            XtremeHackermanForms._formTitleScreen.Closing += new CancelEventHandler(OnFormClosing);
-            XtremeHackermanForms._formTitleScreen.Load += new EventHandler(OnFormLoad);
+            XtremeHackermanForms.FormTitleScreen = new FormTitleScreen();
+            XtremeHackermanForms.FormTitleScreen.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms.FormTitleScreen.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms.FormTitleScreen.Load += new EventHandler(OnFormLoad);
 
-            XtremeHackermanForms._formAdmin = new Form_Admin();
-            XtremeHackermanForms._formAdmin.Closed += new EventHandler(OnFormClosed);
-            XtremeHackermanForms._formAdmin.Closing += new CancelEventHandler(OnFormClosing);
-            XtremeHackermanForms._formAdmin.Load += new EventHandler(OnFormLoad);
+            XtremeHackermanForms.FormAdmin = new FormAdmin();
+            XtremeHackermanForms.FormAdmin.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms.FormAdmin.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms.FormAdmin.Load += new EventHandler(OnFormLoad);
 
-            XtremeHackermanForms._formDesktop = new Form_Desktop();
-            XtremeHackermanForms._formDesktop.Closed += new EventHandler(OnFormClosed);
-            XtremeHackermanForms._formDesktop.Closing += new CancelEventHandler(OnFormClosing);
-            XtremeHackermanForms._formDesktop.Load += new EventHandler(OnFormLoad);
+            XtremeHackermanForms.FormDesktop = new Form_Desktop();
+            XtremeHackermanForms.FormDesktop.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms.FormDesktop.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms.FormDesktop.Load += new EventHandler(OnFormLoad);
 
-            XtremeHackermanForms._formHacker = new Form_Hacker();
-            XtremeHackermanForms._formHacker.Closed += new EventHandler(OnFormClosed);
-            XtremeHackermanForms._formHacker.Closing += new CancelEventHandler(OnFormClosing);
-            XtremeHackermanForms._formHacker.Load += new EventHandler(OnFormLoad);
+            XtremeHackermanForms.FormHacker = new Form_Hacker();
+            XtremeHackermanForms.FormHacker.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms.FormHacker.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms.FormHacker.Load += new EventHandler(OnFormLoad);
 
-            XtremeHackermanForms._formBrowser = new Form_InternetBrowser();
-            XtremeHackermanForms._formBrowser.Closed += new EventHandler(OnFormClosed);
-            XtremeHackermanForms._formBrowser.Closing += new CancelEventHandler(OnFormClosing);
-            XtremeHackermanForms._formBrowser.Load += new EventHandler(OnFormLoad);
+            XtremeHackermanForms.FormBrowser = new FormInternetBrowser();
+            XtremeHackermanForms.FormBrowser.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms.FormBrowser.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms.FormBrowser.Load += new EventHandler(OnFormLoad);
 
-            XtremeHackermanForms._formEmail = new Form_Email();
-            XtremeHackermanForms._formEmail.Closed += new EventHandler(OnFormClosed);
-            XtremeHackermanForms._formEmail.Closing += new CancelEventHandler(OnFormClosing);
-            XtremeHackermanForms._formEmail.Load += new EventHandler(OnFormLoad);
+            XtremeHackermanForms.FormEmail = new FormEmail();
+            XtremeHackermanForms.FormEmail.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms.FormEmail.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms.FormEmail.Load += new EventHandler(OnFormLoad);
 
-            XtremeHackermanForms._formFirewall = new Firewall();
-            XtremeHackermanForms._formFirewall.Closed += new EventHandler(OnFormClosed);
-            XtremeHackermanForms._formFirewall.Closing += new CancelEventHandler(OnFormClosing);
-            XtremeHackermanForms._formFirewall.Load += new EventHandler(OnFormLoad);
+            XtremeHackermanForms.FormFirewall = new Firewall();
+            XtremeHackermanForms.FormFirewall.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms.FormFirewall.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms.FormFirewall.Load += new EventHandler(OnFormLoad);
 
-            XtremeHackermanForms._formLandingPage = new Landing_page();
-            XtremeHackermanForms._formLandingPage.Closed += new EventHandler(OnFormClosed);
-            XtremeHackermanForms._formLandingPage.Closing += new CancelEventHandler(OnFormClosing);
-            XtremeHackermanForms._formLandingPage.Load += new EventHandler(OnFormLoad);
+            XtremeHackermanForms.FormLandingPage = new Landing_page();
+            XtremeHackermanForms.FormLandingPage.Closed += new EventHandler(OnFormClosed);
+            XtremeHackermanForms.FormLandingPage.Closing += new CancelEventHandler(OnFormClosing);
+            XtremeHackermanForms.FormLandingPage.Load += new EventHandler(OnFormLoad);
             #endregion
 
-            XtremeHackermanForms._formTitleScreen.Show();
+            XtremeHackermanForms.FormTitleScreen.Show();
         }
 
         /// <summary>

@@ -29,7 +29,7 @@ namespace XtremeHackerman
 
         private void internetExplorerClick(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formBrowser.ShowDialog();
+            XtremeHackermanForms.FormBrowser.ShowDialog();
         }
 
         private void startButtonClick(object sender, EventArgs e)
@@ -74,12 +74,12 @@ namespace XtremeHackerman
             // Email Browser implementation 
             Form_Email Test = new Form_Email();
             Test.Show();
-            XtremeHackermanForms._formEmail.ShowDialog();
+            XtremeHackermanForms.FormEmail.ShowDialog();
         }
 
         private void Restart_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             Form_Desktop desktop = new Form_Desktop();
         }
 
@@ -90,7 +90,7 @@ namespace XtremeHackerman
 
         private void InternetBrowser_Click(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formBrowser.ShowDialog();
+            XtremeHackermanForms.FormBrowser.ShowDialog();
         }
 
         private void TaskManager_Click(object sender, EventArgs e)

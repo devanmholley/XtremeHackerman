@@ -1,6 +1,6 @@
 ﻿namespace XtremeHackerman
 {
-    partial class Form_TitleScreen
+    partial class FormTitleScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_TitleScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTitleScreen));
             this.tableLayoutPanel_Buttons = new System.Windows.Forms.TableLayoutPanel();
             this.button_Admin = new System.Windows.Forms.Button();
             this.button_Hacker = new System.Windows.Forms.Button();
@@ -154,7 +154,7 @@
             this.Controls.Add(this.pictureBox_Title);
             this.Controls.Add(this.tableLayoutPanel_Buttons);
             this.MaximizeBox = false;
-            this.Name = "Form_TitleScreen";
+            this.Name = "FormTitleScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xtreme Hackerman";
             this.Load += new System.EventHandler(this.Form_TitleScreen_Load);

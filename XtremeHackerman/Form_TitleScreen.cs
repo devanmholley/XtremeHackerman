@@ -12,12 +12,12 @@ using System.Drawing.Text;
 
 namespace XtremeHackerman
 {
-    public partial class Form_TitleScreen : Form
+    public partial class FormTitleScreen : Form
     {
         // Define byte[] VCRFont as an embedded resource, to be used for custom font formatting
         private readonly byte[] _vcrFont = Properties.Resources.VCR_OSD_MONO_1_001;
 
-        public Form_TitleScreen()
+        public FormTitleScreen()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace XtremeHackerman
         /// <param name="e"></param>
         private void button_Quit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         /// <summary>
@@ -53,9 +53,8 @@ namespace XtremeHackerman
         /// <param name="e"></param>
         private void button_Admin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            XtremeHackermanForms._formDesktop.ShowDialog();
-          //XtremeHackermanForms._formAdmin.ShowDialog();
+            Hide();
+            XtremeHackermanForms.FormDesktop.ShowDialog();
         }
 
         /// <summary>
@@ -65,8 +64,8 @@ namespace XtremeHackerman
         /// <param name="e"></param>
         private void button_Hacker_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            XtremeHackermanForms._formHacker.ShowDialog();
+            Hide();
+            XtremeHackermanForms.FormHacker.ShowDialog();
         }
 
     }
