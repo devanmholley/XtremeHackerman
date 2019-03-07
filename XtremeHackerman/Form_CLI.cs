@@ -56,63 +56,56 @@ namespace XtremeHackerman
         {
             if (command.Contains("RUN "))
             {
-                string action = command;
-                MessageBox.Show("EVENT CHECK", "SUCCESSFUL");
-                MessageBox.Show(action, "COMMAND");
+                string[] action = command.Split(' ');
 
+                MessageBox.Show("EVENT CHECK", "SUCCESSFUL");
+                MessageBox.Show(action[1], "COMMAND");
+
+                switch (action[1])
+                {
+                    case "Form_Email":
+                        XtremeHackermanForms.FormEmail.Show();
+                        break;
+                    case "Form_InternetBrowser":
+                        XtremeHackermanForms.FormBrowser.Show();
+                        break;
+                    default:
+                        return;
+                }
             }
 
             if (command.Contains("DELETE "))
             {
-
+                // TBD: ONCE FILE MANAGEMENT IS IMPLEMENTED 
             }
             if (command.Contains("DIR "))
             {
-
+                string[] path = command.Split(' ');
+                string currentDir = path.Last();
+                cliDirectory += "\\" + currentDir;
+                cliText.AppendText(Environment.NewLine + cliDirectory);
+                cliCurrentLine += 1;
             }
             if (command.Contains("ECHO "))
             {
-
+                string[] output = command.Split(' ');
+                foreach (string segment in output)
+                {
+                    cliText.AppendText(Environment.NewLine + segment);
+                }
+                cliCurrentLine += output.Length;
             }
             if (command.Contains("EXIT "))
             {
-
+                Application.Exit();
             }
             if (command.Contains("IPCONFIG "))
             {
-
+                cliText.AppendText(Environment.NewLine + "IP Address. . . . . . . . . . . . : 192.168.201.245");
+                cliText.AppendText(Environment.NewLine + "Subnet Mask . . . . . . . . . . . : 255.255.255.0");
+                cliText.AppendText(Environment.NewLine + "Default Gateway . . . . . . . . . : 192.168.201.1");
+                cliCurrentLine += 3;
             }
-            if (command.Contains("EXIT"))
-            {
-
-            }
-
-            //switch(command)
-            //{
-            //    case "cd":
-            //        // Implementation
-            //        break;
-            //    case "delete":
-            //        // Implementation
-            //        break;
-            //    case "dir":
-            //        break;
-            //    case "echo":
-            //        // Implementation
-            //        break;
-            //    case "exit":
-            //        // Implementation
-            //        break;
-            //    case "ipconfig":
-            //       // Implementation 
-            //       break;
-            //    case "run":
-            //        // Implementation
-            //        MessageBox.Show("EVENT CHECK", "SUCCESSFUL");
-            //        break;
-            //    default:
-            //        break;
-            //}
         }
     }
 }
