@@ -15,7 +15,7 @@ namespace XtremeHackerman
     public partial class Form_TitleScreen : Form
     {
         // Define byte[] VCRFont as an embedded resource, to be used for custom font formatting
-        byte[] VCRFont = Properties.Resources.VCR_OSD_MONO_1_001;
+        private readonly byte[] _vcrFont = Properties.Resources.VCR_OSD_MONO_1_001;
 
         public Form_TitleScreen()
         {
@@ -32,7 +32,7 @@ namespace XtremeHackerman
             // Set font format for each button on page, but retain existing font size
             foreach(Control button in tableLayoutPanel_Buttons.Controls)
             {
-                button.Font = CustomFonts.GetFont(VCRFont, button.Font.Size);
+                button.Font = CustomFonts.GetFont(_vcrFont, button.Font.Size);
             }
         }
 

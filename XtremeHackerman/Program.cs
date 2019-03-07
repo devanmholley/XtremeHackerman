@@ -133,35 +133,4 @@ namespace XtremeHackerman
         }
 
  }
-
-    /// <summary>
-    /// This class implements custom fonts. Add a .ttf to Resources.resx to access it here.
-    /// Code taken/modified from this: https://stackoverflow.com/a/23519499
-    /// </summary>
-    abstract class CustomFonts
-    {
-        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
-            IntPtr pdv, [System.Runtime.InteropServices.In] ref uint pcFonts);
-        private static PrivateFontCollection fonts = new PrivateFontCollection();
-
-        /// <summary>
-        /// Retrieves a Font object using a custom embedded font.
-        /// </summary>
-        /// <param name="FontName">byte[] value representing the name of an embedded resource file.</param>
-        /// <param name="FontSize">Float value representing desired font size.</param>
-        /// <returns>Font object with custom font and specified size</returns>
-        public static Font GetFont(byte[] FontName, float FontSize)
-        {
-            byte[] fontData = FontName;
-            IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
-            System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
-            uint dummy = 0;
-            fonts.AddMemoryFont(fontPtr, FontName.Length);
-            AddFontMemResourceEx(fontPtr, (uint)FontName.Length, IntPtr.Zero, ref dummy);
-            System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
-
-            return new Font(fonts.Families[0], FontSize);
-        }
-    }
 }
