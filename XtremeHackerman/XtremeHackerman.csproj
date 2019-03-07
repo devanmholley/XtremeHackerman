@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Form_CLI.Designer.cs">
       <DependentUpon>Form_CLI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\CustomFonts.cs" />
     <Compile Include="Classes\EmailLogic.cs" />
     <Compile Include="Form_Email.cs">
