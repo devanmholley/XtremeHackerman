@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Drawing.Text;
 
-namespace XtremeHackerman
+namespace XtremeHackerman.Classes
 {
     /// <summary>
     /// This class implements custom fonts. Add a .ttf to Resources.resx to access it here.
