@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace XtremeHackerman
 {
-    public partial class Form_InternetBrowser : Form
+    public partial class FormInternetBrowser : Form
     {
-        public Form_InternetBrowser()
+        public FormInternetBrowser()
         {
             InitializeComponent();
         }
@@ -20,6 +20,7 @@ namespace XtremeHackerman
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             // code for "begin search here" button
+            label1.Visible = true;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -40,6 +41,16 @@ namespace XtremeHackerman
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             // code for home button here
+        }
+
+        private void companyFirewallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XtremeHackermanForms.FormLandingPage.Show();
+        }
+
+        private void Form_InternetBrowser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
