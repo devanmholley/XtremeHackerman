@@ -22,13 +22,21 @@ namespace XtremeHackerman
         {
             InitializeComponent();
             cliText.AppendText(introText);
-            cliText.AppendText(" - PRESS ENTER TO BEGIN - ");
+            cliText.AppendText( Environment.NewLine + "- PRESS ENTER TO BEGIN - ");
         }
 
         private void cliText_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (cliCurrentLine == 0) //If we are initializing the Command Line interface
+                { // Initialize CLI with default command
+                    cliText.Text = introText + "\r\n";
+                    cliText.AppendText("STARTING AT DEFAULT PATH || FOR A LIST OF COMMANDS VIEW (TBD) - PRESS ENTER TO BEGIN");
+                    cliText.Select(cliText.Text.Length, 0);
+                    cliCurrentLine = 2;
+                    return;
+                }
                 string cliInput = cliCommand;
                 checkCommand(cliInput);
                 string msg = String.Format("You have entered: {0}", cliInput);
@@ -48,7 +56,9 @@ namespace XtremeHackerman
         {
             if (command.Contains("RUN "))
             {
+                string action = command;
                 MessageBox.Show("EVENT CHECK", "SUCCESSFUL");
+                MessageBox.Show(action, "COMMAND");
 
             }
 
