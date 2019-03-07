@@ -32,14 +32,14 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.DDBtn_File = new System.Windows.Forms.ToolStripDropDownButton();
             this.DDBtn_save = new System.Windows.Forms.ToolStripMenuItem();
-            this.DDBtn_load = new System.Windows.Forms.ToolStripMenuItem();
-            this.BodyTXT = new System.Windows.Forms.TextBox();
             this.S_File1 = new System.Windows.Forms.ToolStripMenuItem();
             this.S_File2 = new System.Windows.Forms.ToolStripMenuItem();
             this.S_File3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DDBtn_load = new System.Windows.Forms.ToolStripMenuItem();
             this.L_File1 = new System.Windows.Forms.ToolStripMenuItem();
             this.L_File2 = new System.Windows.Forms.ToolStripMenuItem();
             this.L_File3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.BodyTXT = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,9 +72,30 @@
             this.S_File2,
             this.S_File3});
             this.DDBtn_save.Name = "DDBtn_save";
-            this.DDBtn_save.Size = new System.Drawing.Size(180, 22);
+            this.DDBtn_save.Size = new System.Drawing.Size(100, 22);
             this.DDBtn_save.Text = "Save";
             this.DDBtn_save.Click += new System.EventHandler(this.DDBtn_save_Click);
+            // 
+            // S_File1
+            // 
+            this.S_File1.Name = "S_File1";
+            this.S_File1.Size = new System.Drawing.Size(101, 22);
+            this.S_File1.Text = "File 1";
+            this.S_File1.Click += new System.EventHandler(this.S_File1_Click);
+            // 
+            // S_File2
+            // 
+            this.S_File2.Name = "S_File2";
+            this.S_File2.Size = new System.Drawing.Size(101, 22);
+            this.S_File2.Text = "File 2";
+            this.S_File2.Click += new System.EventHandler(this.S_File2_Click);
+            // 
+            // S_File3
+            // 
+            this.S_File3.Name = "S_File3";
+            this.S_File3.Size = new System.Drawing.Size(101, 22);
+            this.S_File3.Text = "File 3";
+            this.S_File3.Click += new System.EventHandler(this.S_File3_Click);
             // 
             // DDBtn_load
             // 
@@ -83,9 +104,30 @@
             this.L_File2,
             this.L_File3});
             this.DDBtn_load.Name = "DDBtn_load";
-            this.DDBtn_load.Size = new System.Drawing.Size(180, 22);
+            this.DDBtn_load.Size = new System.Drawing.Size(100, 22);
             this.DDBtn_load.Text = "Load";
             this.DDBtn_load.Click += new System.EventHandler(this.DDBtn_load_Click);
+            // 
+            // L_File1
+            // 
+            this.L_File1.Name = "L_File1";
+            this.L_File1.Size = new System.Drawing.Size(101, 22);
+            this.L_File1.Text = "File 1";
+            this.L_File1.Click += new System.EventHandler(this.L_File1_Click);
+            // 
+            // L_File2
+            // 
+            this.L_File2.Name = "L_File2";
+            this.L_File2.Size = new System.Drawing.Size(101, 22);
+            this.L_File2.Text = "File 2";
+            this.L_File2.Click += new System.EventHandler(this.L_File2_Click);
+            // 
+            // L_File3
+            // 
+            this.L_File3.Name = "L_File3";
+            this.L_File3.Size = new System.Drawing.Size(101, 22);
+            this.L_File3.Text = "File 3";
+            this.L_File3.Click += new System.EventHandler(this.L_File3_Click);
             // 
             // BodyTXT
             // 
@@ -96,48 +138,6 @@
             this.BodyTXT.Size = new System.Drawing.Size(292, 266);
             this.BodyTXT.TabIndex = 1;
             // 
-            // S_File1
-            // 
-            this.S_File1.Name = "S_File1";
-            this.S_File1.Size = new System.Drawing.Size(180, 22);
-            this.S_File1.Text = "File 1";
-            this.S_File1.Click += new System.EventHandler(this.S_File1_Click);
-            // 
-            // S_File2
-            // 
-            this.S_File2.Name = "S_File2";
-            this.S_File2.Size = new System.Drawing.Size(180, 22);
-            this.S_File2.Text = "File 2";
-            this.S_File2.Click += new System.EventHandler(this.S_File2_Click);
-            // 
-            // S_File3
-            // 
-            this.S_File3.Name = "S_File3";
-            this.S_File3.Size = new System.Drawing.Size(180, 22);
-            this.S_File3.Text = "File 3";
-            this.S_File3.Click += new System.EventHandler(this.S_File3_Click);
-            // 
-            // L_File1
-            // 
-            this.L_File1.Name = "L_File1";
-            this.L_File1.Size = new System.Drawing.Size(180, 22);
-            this.L_File1.Text = "File 1";
-            this.L_File1.Click += new System.EventHandler(this.L_File1_Click);
-            // 
-            // L_File2
-            // 
-            this.L_File2.Name = "L_File2";
-            this.L_File2.Size = new System.Drawing.Size(180, 22);
-            this.L_File2.Text = "File 2";
-            this.L_File2.Click += new System.EventHandler(this.L_File2_Click);
-            // 
-            // L_File3
-            // 
-            this.L_File3.Name = "L_File3";
-            this.L_File3.Size = new System.Drawing.Size(180, 22);
-            this.L_File3.Text = "File 3";
-            this.L_File3.Click += new System.EventHandler(this.L_File3_Click);
-            // 
             // Form_txtEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,7 +146,7 @@
             this.Controls.Add(this.BodyTXT);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_txtEditor";
-            this.Text = "Form_txtEditor";
+            this.Text = "Text Editor";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
