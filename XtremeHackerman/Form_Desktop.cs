@@ -74,7 +74,7 @@ namespace XtremeHackerman
             // Email Browser implementation 
             //FormEmail Test = new FormEmail();
             //Test.Show();
-            XtremeHackermanForms.FormEmail.ShowDialog();
+            XtremeHackermanForms.FormEmail.Show();
         }
 
         private void Restart_Click(object sender, EventArgs e)

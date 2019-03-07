@@ -14,33 +14,15 @@ namespace XtremeHackerman
             _formEmail = this;
         }
 
-        public string SourceTextBox
-        {
-            get => email_sourceTXT.Text;
-            set => email_sourceTXT.Text = value;
-        }
-
-        public string BodyTextBox
-        {
-            get => email_bodyTXT.Text;
-            set => email_bodyTXT.Text = value;
-        }
-
-        private void Form_Email_Load(object sender, System.EventArgs e)
-        {
-            RefreshEmailList();
-            LoadEmailContents(0);
-            //EmailList.Add(new EmailStruct("sender@ma.il", "Welcome"));
-        }
-
-        public void SetBodyTextBox(string text)
-        {
-            BodyTextBox = text;
-        }
-
-        private void email_inbox_SelectedValueChanged(object sender, System.EventArgs e)
-        {
-            LoadEmailContents(email_inbox.SelectedIndex);
+        private void FormEmail_Load(object sender, System.EventArgs e)
+        { 
+            emailInboxBindingSource.DataSource = EmailLogic.EmailList;
+            email_inbox.DisplayMember = "Subject";
+            email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
+            email_destTXT.DataBindings.Add("Text", emailInboxBindingSource, "Destination");
+            email_dateTXT.DataBindings.Add("Text", emailInboxBindingSource, "Date");
+            email_subjectTXT.DataBindings.Add("Text", emailInboxBindingSource, "Subject");
+            email_bodyTXT.DataBindings.Add("Text", emailInboxBindingSource, "Body");
         }
     }
 }
