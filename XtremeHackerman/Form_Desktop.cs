@@ -29,7 +29,7 @@ namespace XtremeHackerman
 
         private void internetExplorerClick(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formBrowser.ShowDialog();
+            XtremeHackermanForms.FormBrowser.ShowDialog();
         }
 
         private void startButtonClick(object sender, EventArgs e)
@@ -70,12 +70,16 @@ namespace XtremeHackerman
 
         private void emailButtonClick(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formEmail.ShowDialog();
+
+            // Email Browser implementation 
+            //FormEmail Test = new FormEmail();
+            //Test.Show();
+            XtremeHackermanForms.FormEmail.Show();
         }
 
         private void Restart_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             Form_Desktop desktop = new Form_Desktop();
         }
 
@@ -86,7 +90,7 @@ namespace XtremeHackerman
 
         private void InternetBrowser_Click(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formBrowser.ShowDialog();
+            XtremeHackermanForms.FormBrowser.ShowDialog();
         }
 
         private void TaskManager_Click(object sender, EventArgs e)
@@ -99,11 +103,6 @@ namespace XtremeHackerman
         {
             const string message = "You have opened the File Manager";
             var result = MessageBox.Show(message);
-        }
-
-        private void EmailClient_Click(object sender, EventArgs e)
-        {
-            XtremeHackermanForms._formEmail.ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace XtremeHackerman
 {
-    partial class Form_InternetBrowser
+    partial class FormInternetBrowser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_InternetBrowser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInternetBrowser));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -47,6 +47,7 @@
             this.urlIcon = new System.Windows.Forms.PictureBox();
             this.urlPopup = new System.Windows.Forms.Button();
             this.virusTotalLogo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.virusTotal.SuspendLayout();
             this.urlScan.SuspendLayout();
@@ -231,14 +232,25 @@
             this.virusTotalLogo.TabIndex = 0;
             this.virusTotalLogo.Text = "VirusTotals.com";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(181, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "404 error";
+            this.label1.Visible = false;
+            // 
             // Form_InternetBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.virusTotal);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Form_InternetBrowser";
+            this.Name = "FormInternetBrowser";
             this.Text = "InternetBrowser";
             this.Load += new System.EventHandler(this.Form_InternetBrowser_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -273,5 +285,6 @@
         private System.Windows.Forms.TextBox urlEntry;
         private System.Windows.Forms.PictureBox urlIcon;
         private System.Windows.Forms.Button urlPopup;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace XtremeHackerman
 {
-    partial class Form_Admin
+    partial class FormAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Admin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.btn_start = new System.Windows.Forms.Button();
             this.btn_Internet = new System.Windows.Forms.Button();
             this.btn_email = new System.Windows.Forms.Button();
@@ -109,7 +109,7 @@
             this.Controls.Add(this.btn_email);
             this.Controls.Add(this.btn_Internet);
             this.Controls.Add(this.btn_start);
-            this.Name = "Form_Admin";
+            this.Name = "FormAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin - Xtreme Hackerman";
             this.ResumeLayout(false);
