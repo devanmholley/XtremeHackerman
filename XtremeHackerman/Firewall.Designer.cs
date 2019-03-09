@@ -161,12 +161,13 @@
             // testipWindow
             // 
             this.testipWindow.AcceptsReturn = true;
-            this.testipWindow.Location = new System.Drawing.Point(438, 64);
+            this.testipWindow.Location = new System.Drawing.Point(438, 45);
             this.testipWindow.Multiline = true;
             this.testipWindow.Name = "testipWindow";
             this.testipWindow.ReadOnly = true;
             this.testipWindow.Size = new System.Drawing.Size(114, 20);
             this.testipWindow.TabIndex = 4;
+            this.testipWindow.TextChanged += new System.EventHandler(this.testipWindow_TextChanged);
             // 
             // ipYeahweblocked
             // 
@@ -192,7 +193,7 @@
             // 
             this.rightArrowforip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightArrowforip.BackgroundImage")));
             this.rightArrowforip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rightArrowforip.Location = new System.Drawing.Point(159, 64);
+            this.rightArrowforip.Location = new System.Drawing.Point(172, 42);
             this.rightArrowforip.Name = "rightArrowforip";
             this.rightArrowforip.Size = new System.Drawing.Size(28, 23);
             this.rightArrowforip.TabIndex = 1;
@@ -201,7 +202,7 @@
             // 
             // ipEntry
             // 
-            this.ipEntry.Location = new System.Drawing.Point(21, 67);
+            this.ipEntry.Location = new System.Drawing.Point(35, 45);
             this.ipEntry.Name = "ipEntry";
             this.ipEntry.Size = new System.Drawing.Size(118, 20);
             this.ipEntry.TabIndex = 0;

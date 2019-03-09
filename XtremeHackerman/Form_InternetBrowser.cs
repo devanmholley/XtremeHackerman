@@ -51,5 +51,15 @@ namespace XtremeHackerman
         {
 
         }
+
+        private void virusTotalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            virusTotal.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            urlScan.Show();
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace XtremeHackerman
 {
@@ -16,8 +17,9 @@ namespace XtremeHackerman
         {
             InitializeComponent();
         }
+        
         string[] ip = new string[20];
-        int currentIndex;
+        
         
         private void Firewall_Load(object sender, EventArgs e)
         {
@@ -81,18 +83,15 @@ namespace XtremeHackerman
 
         private void rightArrowforip_Click(object sender, EventArgs e)
         {
-            
-           // ipEntry.Enabled = true;
-                //string ips;
-                //ips = ipEntry.Text;
-               // ip = ips;
-               //testipWindow.Text += ip + "\r\n";
+
+            testipWindow.Text = ipEntry.Text;
                       
         }
 
         private void ipEntry_TextChanged(object sender, EventArgs e)
         {
-            string ip = (ipEntry.Text);
+
+            
             
         }
 
@@ -102,6 +101,11 @@ namespace XtremeHackerman
         }
 
         private void blockIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void testipWindow_TextChanged(object sender, EventArgs e)
         {
 
         }
