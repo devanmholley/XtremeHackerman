@@ -36,8 +36,12 @@
     <StartupObject>XtremeHackerman.XtremeHackermanAppContext</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,11 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Email_UI.cs">
+    <Compile Include="Classes\CustomFonts.cs" />
+    <Compile Include="Classes\EmailLogic.cs" />
+    <Compile Include="Form_Email.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Email_UI.Designer.cs">
-      <DependentUpon>Email_UI.cs</DependentUpon>
+    <Compile Include="Form_Email.Designer.cs">
+      <DependentUpon>Form_Email.cs</DependentUpon>
     </Compile>
     <Compile Include="Firewall.cs">
       <SubType>Form</SubType>
@@ -99,8 +105,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Email_UI.resx">
-      <DependentUpon>Email_UI.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Email.resx">
+      <DependentUpon>Form_Email.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Firewall.resx">
       <DependentUpon>Firewall.cs</DependentUpon>
@@ -128,6 +134,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\XtremeHackerman.Classes.EmailLogic.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -151,6 +159,9 @@
     <None Include="Resources\Background.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Mail\Emails.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\SardonicCreepyIndianrockpython-small.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -195,5 +206,6 @@
   <ItemGroup>
     <None Include="Resources\emailIcon2.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

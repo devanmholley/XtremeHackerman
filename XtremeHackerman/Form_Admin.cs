@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace XtremeHackerman
 {
-    public partial class Form_Admin : Form
+    public partial class FormAdmin : Form
     {
-        public Form_Admin()
+        public FormAdmin()
         {
             InitializeComponent();
         }
@@ -30,12 +30,12 @@ namespace XtremeHackerman
 
         private void btn_Internet_Click(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formBrowser.ShowDialog();
+            XtremeHackermanForms.FormBrowser.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formBrowser.ShowDialog();
+            XtremeHackermanForms.FormBrowser.ShowDialog();
         }
     }
 }
