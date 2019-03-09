@@ -40,17 +40,17 @@
             this.companyFirewallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.virusTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.virusTotal = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.urlScan = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.urlScanner = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.urlEntry = new System.Windows.Forms.TextBox();
+            this.urlIcon = new System.Windows.Forms.PictureBox();
+            this.urlPopup = new System.Windows.Forms.Button();
+            this.virusTotalLogo = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.virusTotal.SuspendLayout();
             this.urlScan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urlIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -139,14 +139,14 @@
             // companyFirewallToolStripMenuItem
             // 
             this.companyFirewallToolStripMenuItem.Name = "companyFirewallToolStripMenuItem";
-            this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.companyFirewallToolStripMenuItem.Text = "Company Firewall";
             this.companyFirewallToolStripMenuItem.Click += new System.EventHandler(this.companyFirewallToolStripMenuItem_Click);
             // 
             // virusTotalToolStripMenuItem
             // 
             this.virusTotalToolStripMenuItem.Name = "virusTotalToolStripMenuItem";
-            this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.virusTotalToolStripMenuItem.Text = "Virus Total";
             this.virusTotalToolStripMenuItem.Click += new System.EventHandler(this.virusTotalToolStripMenuItem_Click);
             // 
@@ -154,72 +154,26 @@
             // 
             this.virusTotal.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.virusTotal.Controls.Add(this.urlScan);
-            this.virusTotal.Controls.Add(this.button1);
-            this.virusTotal.Controls.Add(this.label1);
+            this.virusTotal.Controls.Add(this.urlPopup);
+            this.virusTotal.Controls.Add(this.virusTotalLogo);
             this.virusTotal.Location = new System.Drawing.Point(0, 28);
             this.virusTotal.Name = "virusTotal";
             this.virusTotal.Size = new System.Drawing.Size(800, 421);
             this.virusTotal.TabIndex = 1;
             this.virusTotal.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(340, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "VirusTotals.com";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(189, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "URL";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // urlScan
             // 
             this.urlScan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.urlScan.Controls.Add(this.urlScanner);
             this.urlScan.Controls.Add(this.textBox2);
-            this.urlScan.Controls.Add(this.textBox1);
-            this.urlScan.Controls.Add(this.pictureBox1);
+            this.urlScan.Controls.Add(this.urlEntry);
+            this.urlScan.Controls.Add(this.urlIcon);
             this.urlScan.Location = new System.Drawing.Point(186, 164);
             this.urlScan.Name = "urlScan";
             this.urlScan.Size = new System.Drawing.Size(406, 215);
             this.urlScan.TabIndex = 2;
             this.urlScan.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(209, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 17);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(30, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(148, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 13);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Scan your URL\'s here";
             // 
             // urlScanner
             // 
@@ -230,6 +184,52 @@
             this.urlScanner.Size = new System.Drawing.Size(44, 34);
             this.urlScanner.TabIndex = 3;
             this.urlScanner.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(148, 46);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(159, 13);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Scan your URL\'s here";
+            // 
+            // urlEntry
+            // 
+            this.urlEntry.Location = new System.Drawing.Point(30, 65);
+            this.urlEntry.Name = "urlEntry";
+            this.urlEntry.Size = new System.Drawing.Size(350, 20);
+            this.urlEntry.TabIndex = 1;
+            // 
+            // urlIcon
+            // 
+            this.urlIcon.BackColor = System.Drawing.SystemColors.Control;
+            this.urlIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("urlIcon.BackgroundImage")));
+            this.urlIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.urlIcon.Location = new System.Drawing.Point(209, 23);
+            this.urlIcon.Name = "urlIcon";
+            this.urlIcon.Size = new System.Drawing.Size(27, 17);
+            this.urlIcon.TabIndex = 0;
+            this.urlIcon.TabStop = false;
+            // 
+            // urlPopup
+            // 
+            this.urlPopup.Location = new System.Drawing.Point(189, 145);
+            this.urlPopup.Name = "urlPopup";
+            this.urlPopup.Size = new System.Drawing.Size(41, 23);
+            this.urlPopup.TabIndex = 1;
+            this.urlPopup.Text = "URL";
+            this.urlPopup.UseVisualStyleBackColor = true;
+            this.urlPopup.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // virusTotalLogo
+            // 
+            this.virusTotalLogo.AutoSize = true;
+            this.virusTotalLogo.Location = new System.Drawing.Point(340, 56);
+            this.virusTotalLogo.Name = "virusTotalLogo";
+            this.virusTotalLogo.Size = new System.Drawing.Size(82, 13);
+            this.virusTotalLogo.TabIndex = 0;
+            this.virusTotalLogo.Text = "VirusTotals.com";
             // 
             // Form_InternetBrowser
             // 
@@ -247,7 +247,7 @@
             this.virusTotal.PerformLayout();
             this.urlScan.ResumeLayout(false);
             this.urlScan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urlIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,12 +266,12 @@
         private System.Windows.Forms.ToolStripMenuItem companyFirewallToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem virusTotalToolStripMenuItem;
         private System.Windows.Forms.Panel virusTotal;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label virusTotalLogo;
         private System.Windows.Forms.Panel urlScan;
         private System.Windows.Forms.Button urlScanner;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox urlEntry;
+        private System.Windows.Forms.PictureBox urlIcon;
+        private System.Windows.Forms.Button urlPopup;
     }
 }
