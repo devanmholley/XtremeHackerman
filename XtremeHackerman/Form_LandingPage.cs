@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using XtremeHackerman.Classes;
 
 
 namespace XtremeHackerman
 {
-    public partial class Landing_page : Form
+    public partial class Form_LandingPage : Class_BaseForm
     {
-        public Landing_page()
+        public Form_LandingPage()
         {
             InitializeComponent();
         }
@@ -37,8 +37,8 @@ namespace XtremeHackerman
         private void loginButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Firewall firewall = new Firewall();
-            firewall.Show();
+            Form_Firewall formFirewall = new Form_Firewall();
+            formFirewall.Show();
             
             
         }

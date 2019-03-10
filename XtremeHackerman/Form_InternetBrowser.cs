@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
 {
-    public partial class FormInternetBrowser : Form
+    public partial class Form_InternetBrowser : Class_BaseForm
     {
-        public FormInternetBrowser()
+        public Form_InternetBrowser()
         {
             InitializeComponent();
         }
@@ -45,7 +46,8 @@ namespace XtremeHackerman
 
         private void companyFirewallToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            XtremeHackermanForms.FormLandingPage.Show();
+            var formLandingPage = new Form_LandingPage();
+            formLandingPage.Show();
         }
 
         private void Form_InternetBrowser_Load(object sender, EventArgs e)

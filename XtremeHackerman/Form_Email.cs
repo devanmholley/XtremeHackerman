@@ -4,19 +4,19 @@ using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
 {
-    public  partial class FormEmail : Form
+    public  partial class Form_Email : Class_BaseForm
     {
-        private static FormEmail _formEmail;
+        private static Form_Email _formEmail;
 
-        public FormEmail()
+        public Form_Email()
         {
             InitializeComponent();
             _formEmail = this;
         }
 
         private void FormEmail_Load(object sender, System.EventArgs e)
-        { 
-            emailInboxBindingSource.DataSource = EmailLogic.EmailList;
+        {
+            emailInboxBindingSource.DataSource = Class_Email.EmailList;
             email_inbox.DisplayMember = "Subject";
             email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
             email_destTXT.DataBindings.Add("Text", emailInboxBindingSource, "Destination");

@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
 {
-    public partial class Firewall : Form
+    public partial class Form_Firewall : Class_BaseForm
     {
-        public Firewall()
+        public Form_Firewall()
         {
             InitializeComponent();
         }

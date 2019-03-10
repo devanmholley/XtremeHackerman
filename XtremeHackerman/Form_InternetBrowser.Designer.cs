@@ -1,6 +1,6 @@
 ﻿namespace XtremeHackerman
 {
-    partial class FormInternetBrowser
+    partial class Form_InternetBrowser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInternetBrowser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_InternetBrowser));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -148,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "FormInternetBrowser";
+            this.Name = "Form_InternetBrowser";
             this.Text = "InternetBrowser";
             this.Load += new System.EventHandler(this.Form_InternetBrowser_Load);
             this.toolStrip1.ResumeLayout(false);

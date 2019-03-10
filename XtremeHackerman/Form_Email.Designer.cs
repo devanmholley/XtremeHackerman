@@ -1,6 +1,6 @@
 ﻿namespace XtremeHackerman
 {
-    partial class FormEmail
+    partial class Form_Email
     {
         /// <summary>
         /// Required designer variable.
@@ -171,7 +171,7 @@
             // 
             // emailInboxBindingSource
             // 
-            this.emailInboxBindingSource.DataSource = typeof(XtremeHackerman.Classes.EmailLogic);
+            this.emailInboxBindingSource.DataSource = typeof(XtremeHackerman.Classes.Class_Email);
             // 
             // panel1
             // 
@@ -336,13 +336,13 @@
             this.email_sourceTXT.Size = new System.Drawing.Size(437, 17);
             this.email_sourceTXT.TabIndex = 0;
             // 
-            // FormEmail
+            // Form_Email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "FormEmail";
+            this.Name = "Form_Email";
             this.Text = "Email Manager";
             this.Load += new System.EventHandler(this.FormEmail_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

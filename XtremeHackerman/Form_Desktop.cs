@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
 {
-    public partial class Form_Desktop : Form
+    public partial class Form_Desktop : Class_BaseForm
     {
         public Form_Desktop()
         {
@@ -29,7 +30,8 @@ namespace XtremeHackerman
 
         private void internetExplorerClick(object sender, EventArgs e)
         {
-            XtremeHackermanForms.FormBrowser.ShowDialog();
+            var formInternetBrowser = new Form_InternetBrowser();
+            formInternetBrowser.ShowDialog();
         }
 
         private void startButtonClick(object sender, EventArgs e)
@@ -72,15 +74,15 @@ namespace XtremeHackerman
         {
 
             // Email Browser implementation 
-            //FormEmail Test = new FormEmail();
+            //Form_Email Test = new Form_Email();
             //Test.Show();
-            XtremeHackermanForms.FormEmail.Show();
+            var formEmail = new Form_Email();
+            formEmail.ShowDialog();
         }
 
         private void Restart_Click(object sender, EventArgs e)
         {
             Close();
-            Form_Desktop desktop = new Form_Desktop();
         }
 
         private void Shutdown_Click(object sender, EventArgs e)
@@ -90,7 +92,8 @@ namespace XtremeHackerman
 
         private void InternetBrowser_Click(object sender, EventArgs e)
         {
-            XtremeHackermanForms.FormBrowser.ShowDialog();
+            var formInternetBrowser = new Form_InternetBrowser();
+            formInternetBrowser.ShowDialog();
         }
 
         private void TaskManager_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ namespace XtremeHackerman.Classes
     /// This class implements custom fonts. Add a .ttf to Resources.resx to access it here.
     /// Code taken/modified from this: https://stackoverflow.com/a/23519499
     /// </summary>
-    internal abstract class CustomFonts
+    internal abstract class Class_CustomFonts
     {
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,

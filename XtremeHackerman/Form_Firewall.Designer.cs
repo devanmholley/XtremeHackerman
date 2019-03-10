@@ -1,6 +1,6 @@
 ﻿namespace XtremeHackerman
 {
-    partial class Firewall
+    partial class Form_Firewall
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Firewall));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Firewall));
             this.button1 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -252,7 +252,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 506);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Firewall";
+            this.Name = "Form_Firewall";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Firewall_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
