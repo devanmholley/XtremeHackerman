@@ -159,56 +159,36 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Mail\Emails.json">
+    <EmbeddedResource Include="Resources\Form_Email\Emails.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="Resources\SardonicCreepyIndianrockpython-small.gif" />
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background_TitleScreen.jpg" />
+    <None Include="Resources\Form_TitleScreen\Background_TitleScreen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.jpg" />
+    <None Include="Resources\Form_Desktop\Background_Desktop.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\vaporwarebackground.jpg" />
+    <None Include="Resources\Form_Desktop\StartButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\startbutton1.png" />
+    <None Include="Resources\Form_Desktop\Icon_InternetExplorer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\startbutton.png" />
+    <None Include="Resources\Form_Desktop\Icon_CommandLine.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\internet_png_712280.jpg" />
+    <None Include="Resources\Form_Desktop\Icon_Explorer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\internet_png_7122801.jpg" />
+    <None Include="Resources\Form_Desktop\Icon_Email2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\commandlinebutton1.png" />
+    <None Include="Resources\Form_Desktop\Icon_Email1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\commandlinebutton.png" />
+    <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\explorerbutton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\explorerbutton1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon2.png" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
