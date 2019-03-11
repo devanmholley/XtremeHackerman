@@ -79,11 +79,23 @@
     <Compile Include="Form_InternetBrowser.Designer.cs">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TaskManager.Designer.cs">
+      <DependentUpon>Form_TaskManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_TitleScreen.Designer.cs">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRunTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRunTask.Designer.cs">
+      <DependentUpon>frmRunTask.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,8 +114,14 @@
     <EmbeddedResource Include="Form_InternetBrowser.resx">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_TaskManager.resx">
+      <DependentUpon>Form_TaskManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRunTask.resx">
+      <DependentUpon>frmRunTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

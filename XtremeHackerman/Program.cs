@@ -20,7 +20,7 @@ namespace XtremeHackerman
         public static Form_InternetBrowser _formBrowser;
         public static Form_Desktop _formDesktop;
         public static Email_UI _formEmail;
-
+        public static Form_TaskManager form_TaskManager;
     }
 
     /// <summary>

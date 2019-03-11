@@ -91,8 +91,7 @@ namespace XtremeHackerman
 
         private void TaskManager_Click(object sender, EventArgs e)
         {
-            const string message = "You have opened the Task Manager";
-            var result = MessageBox.Show(message);
+            XtremeHackermanForms.form_TaskManager.ShowDialog();
         }
 
         private void FileManager_Click(object sender, EventArgs e)
