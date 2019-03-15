@@ -179,9 +179,6 @@
     <None Include="Resources\Form_Desktop\Icon_CommandLine.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Form_Desktop\Icon_Explorer.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Form_Desktop\Icon_Email2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_Desktop\Icon_FileManager.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

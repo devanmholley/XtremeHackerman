@@ -60,9 +60,9 @@ namespace XtremeHackerman
 
         }
 
-        private void explorerButtonClick(object sender, EventArgs e)
+        private void FileManagerButtonClick(object sender, EventArgs e)
         {
-            // Explorer button implementation
+            // FileManager button implementation
         }
 
         private void cliButtonClick(object sender, EventArgs e)
