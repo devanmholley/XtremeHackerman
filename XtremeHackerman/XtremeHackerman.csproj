@@ -55,6 +55,12 @@
     <Compile Include="Email_UI.Designer.cs">
       <DependentUpon>Email_UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_EventLogic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EventLogic.Designer.cs">
+      <DependentUpon>Form_EventLogic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Desktop.cs">
       <SubType>Form</SubType>
     </Compile>
