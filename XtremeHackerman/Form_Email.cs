@@ -30,15 +30,24 @@ namespace XtremeHackerman
             // When the 'Compose' button is left-clicked, this action will take place.
             // lets just start with making the 'Send' button visible.
 
-            this.btn_Send.Visible = true;
+            btn_Send.Visible = true;
             Date_TXT.Text = System.DateTime.Now.ToString();
-            this.Date_TXT.Visible = true;
+            Date_TXT.Visible = true;
+            email_fromSTXT.Visible = false;
+            email_dateTXT.Visible = false;
+            email_destTXT.Visible = false;
+            email_sourceTXT.Visible = false;
+            targetTXT.Visible = true;
+            email_subjectTXT.Text = "";
+            email_bodyTXT.Text = "";
         }
 
         private void btn_Send_Click(object sender, System.EventArgs e)
         {
             //start by removing the 'send' button as you can't send the email twice.
             btn_Send.Visible = false;
+            targetTXT.Text = "";
+            targetTXT.Visible = false;
         }
     }
 }
