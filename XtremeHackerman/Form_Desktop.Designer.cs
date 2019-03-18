@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Desktop));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTime = new System.Windows.Forms.DateTimePicker();
+            this.toolbarTime = new System.Windows.Forms.Label();
+            this.toolbarDate = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
-            this.searchBar = new System.Windows.Forms.TextBox();
             this.internetExplorerIcon = new System.Windows.Forms.Button();
             this.cliButton = new System.Windows.Forms.Button();
             this.explorerIcon = new System.Windows.Forms.Button();
@@ -43,6 +42,7 @@
             this.TaskManager = new System.Windows.Forms.Button();
             this.FileManager = new System.Windows.Forms.Button();
             this.EmailClient = new System.Windows.Forms.Button();
+            this.toolbarNetworkBTN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,22 +50,34 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.dateTime);
+            this.panel1.Controls.Add(this.toolbarNetworkBTN);
+            this.panel1.Controls.Add(this.toolbarTime);
+            this.panel1.Controls.Add(this.toolbarDate);
             this.panel1.Controls.Add(this.startButton);
-            this.panel1.Controls.Add(this.searchBar);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 689);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1009, 40);
             this.panel1.TabIndex = 0;
             // 
-            // dateTime
+            // toolbarTime
             // 
-            this.dateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime.Location = new System.Drawing.Point(663, 2);
-            this.dateTime.Name = "dateTime";
-            this.dateTime.Size = new System.Drawing.Size(340, 31);
-            this.dateTime.TabIndex = 9;
+            this.toolbarTime.AutoSize = true;
+            this.toolbarTime.Location = new System.Drawing.Point(948, 0);
+            this.toolbarTime.Name = "toolbarTime";
+            this.toolbarTime.Size = new System.Drawing.Size(34, 13);
+            this.toolbarTime.TabIndex = 10;
+            this.toolbarTime.Text = "22:00";
+            // 
+            // toolbarDate
+            // 
+            this.toolbarDate.AutoSize = true;
+            this.toolbarDate.Location = new System.Drawing.Point(935, 16);
+            this.toolbarDate.Name = "toolbarDate";
+            this.toolbarDate.Size = new System.Drawing.Size(59, 13);
+            this.toolbarDate.TabIndex = 9;
+            this.toolbarDate.Text = "3/18/2019";
+            this.toolbarDate.Click += new System.EventHandler(this.label1_Click);
             // 
             // startButton
             // 
@@ -80,20 +92,6 @@
             this.startButton.TabIndex = 8;
             this.startButton.UseVisualStyleBackColor = false;
             this.startButton.Click += new System.EventHandler(this.startButtonClick);
-            // 
-            // searchBar
-            // 
-            this.searchBar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBar.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.searchBar.Location = new System.Drawing.Point(71, -3);
-            this.searchBar.MaxLength = 140;
-            this.searchBar.Multiline = true;
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(261, 40);
-            this.searchBar.TabIndex = 1;
-            this.searchBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.searchBar.TextChanged += new System.EventHandler(this.searchEntry);
             // 
             // internetExplorerIcon
             // 
@@ -150,7 +148,7 @@
             // Restart
             // 
             this.Restart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.Restart.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Restart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Restart.Location = new System.Drawing.Point(0, 642);
             this.Restart.Name = "Restart";
             this.Restart.Size = new System.Drawing.Size(88, 23);
@@ -163,7 +161,7 @@
             // Shutdown
             // 
             this.Shutdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.Shutdown.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shutdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Shutdown.Location = new System.Drawing.Point(0, 613);
             this.Shutdown.Name = "Shutdown";
             this.Shutdown.Size = new System.Drawing.Size(88, 23);
@@ -176,7 +174,7 @@
             // InternetBrowser
             // 
             this.InternetBrowser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.InternetBrowser.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InternetBrowser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InternetBrowser.Location = new System.Drawing.Point(0, 584);
             this.InternetBrowser.Name = "InternetBrowser";
             this.InternetBrowser.Size = new System.Drawing.Size(88, 23);
@@ -189,7 +187,7 @@
             // TaskManager
             // 
             this.TaskManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.TaskManager.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaskManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskManager.Location = new System.Drawing.Point(0, 555);
             this.TaskManager.Name = "TaskManager";
             this.TaskManager.Size = new System.Drawing.Size(88, 23);
@@ -202,7 +200,7 @@
             // FileManager
             // 
             this.FileManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.FileManager.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FileManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FileManager.Location = new System.Drawing.Point(0, 526);
             this.FileManager.Name = "FileManager";
             this.FileManager.Size = new System.Drawing.Size(88, 23);
@@ -215,7 +213,7 @@
             // EmailClient
             // 
             this.EmailClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.EmailClient.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailClient.Location = new System.Drawing.Point(0, 497);
             this.EmailClient.Name = "EmailClient";
             this.EmailClient.Size = new System.Drawing.Size(88, 23);
@@ -223,6 +221,18 @@
             this.EmailClient.Text = "Email";
             this.EmailClient.UseVisualStyleBackColor = false;
             this.EmailClient.Visible = false;
+            // 
+            // toolbarNetworkBTN
+            // 
+            this.toolbarNetworkBTN.BackgroundImage = global::XtremeHackerman.Properties.Resources.WifiIcon;
+            this.toolbarNetworkBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolbarNetworkBTN.FlatAppearance.BorderSize = 0;
+            this.toolbarNetworkBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toolbarNetworkBTN.Location = new System.Drawing.Point(886, 3);
+            this.toolbarNetworkBTN.Name = "toolbarNetworkBTN";
+            this.toolbarNetworkBTN.Size = new System.Drawing.Size(31, 26);
+            this.toolbarNetworkBTN.TabIndex = 11;
+            this.toolbarNetworkBTN.UseVisualStyleBackColor = true;
             // 
             // Form_Desktop
             // 
@@ -255,18 +265,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.Button internetExplorerIcon;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button cliButton;
         private System.Windows.Forms.Button explorerIcon;
         private System.Windows.Forms.Button emailIcon;
-        private System.Windows.Forms.DateTimePicker dateTime;
         private System.Windows.Forms.Button Restart;
         private System.Windows.Forms.Button Shutdown;
         private System.Windows.Forms.Button InternetBrowser;
         private System.Windows.Forms.Button TaskManager;
         private System.Windows.Forms.Button FileManager;
         private System.Windows.Forms.Button EmailClient;
+        private System.Windows.Forms.Label toolbarDate;
+        private System.Windows.Forms.Label toolbarTime;
+        private System.Windows.Forms.Button toolbarNetworkBTN;
     }
 }

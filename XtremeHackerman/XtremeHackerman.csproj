@@ -190,5 +190,8 @@
   <ItemGroup>
     <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WifiIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
