@@ -64,6 +64,12 @@
     <Compile Include="Form_Email.Designer.cs">
       <DependentUpon>Form_Email.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_FileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FileManager.Designer.cs">
+      <DependentUpon>Form_FileManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Firewall.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_FileManager.resx">
+      <DependentUpon>Form_FileManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Firewall.resx">
       <DependentUpon>Form_Firewall.cs</DependentUpon>
