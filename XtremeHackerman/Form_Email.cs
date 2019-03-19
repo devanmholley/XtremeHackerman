@@ -46,6 +46,24 @@ namespace XtremeHackerman
         {
             //start by removing the 'send' button as you can't send the email twice.
             btn_Send.Visible = false;
+
+            // check to see if the target field has a valid address
+
+            string target = targetTXT.Text;
+            if (target.Contains("@") && target.Contains("."))
+            {
+                // Valid Address
+            }
+
+            else
+            {
+                // Invalid Address
+                const string message = "You have entered an invalid email address";
+                var result = MessageBox.Show(message);
+            }
+
+            // now reset.
+
             targetTXT.Text = "";
             targetTXT.Visible = false;
         }
