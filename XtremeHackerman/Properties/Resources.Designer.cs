@@ -63,16 +63,6 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Background_Desktop {
-            get {
-                object obj = ResourceManager.GetObject("Background_Desktop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Background_TitleScreen {
             get {
                 object obj = ResourceManager.GetObject("Background_TitleScreen", resourceCulture);
@@ -81,21 +71,11 @@ namespace XtremeHackerman.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Emails {
-            get {
-                object obj = ResourceManager.GetObject("Emails", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_CommandLine {
+        internal static System.Drawing.Bitmap commandlinebutton {
             get {
-                object obj = ResourceManager.GetObject("Icon_CommandLine", resourceCulture);
+                object obj = ResourceManager.GetObject("commandlinebutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +83,9 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_Email1 {
+        internal static System.Drawing.Bitmap emailIcon {
             get {
-                object obj = ResourceManager.GetObject("Icon_Email1", resourceCulture);
+                object obj = ResourceManager.GetObject("emailIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +93,9 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_Email2 {
+        internal static System.Drawing.Bitmap emailIcon1 {
             get {
-                object obj = ResourceManager.GetObject("Icon_Email2", resourceCulture);
+                object obj = ResourceManager.GetObject("emailIcon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +103,9 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_Explorer {
+        internal static System.Drawing.Bitmap explorerbutton {
             get {
-                object obj = ResourceManager.GetObject("Icon_Explorer", resourceCulture);
+                object obj = ResourceManager.GetObject("explorerbutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +113,9 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_InternetExplorer {
+        internal static System.Drawing.Bitmap internet_png_712280 {
             get {
-                object obj = ResourceManager.GetObject("Icon_InternetExplorer", resourceCulture);
+                object obj = ResourceManager.GetObject("internet_png_712280", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,19 +123,9 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Picture_Title {
+        internal static System.Drawing.Bitmap startbutton {
             get {
-                object obj = ResourceManager.GetObject("Picture_Title", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StartButton {
-            get {
-                object obj = ResourceManager.GetObject("StartButton", resourceCulture);
+                object obj = ResourceManager.GetObject("startbutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

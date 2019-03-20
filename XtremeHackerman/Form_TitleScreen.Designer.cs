@@ -137,7 +137,7 @@
             this.pictureBox_Title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Title.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_Title.Image = global::XtremeHackerman.Properties.Resources.Picture_Title;
+            this.pictureBox_Title.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Title.Image")));
             this.pictureBox_Title.Location = new System.Drawing.Point(142, 50);
             this.pictureBox_Title.Name = "pictureBox_Title";
             this.pictureBox_Title.Size = new System.Drawing.Size(725, 89);
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_TitleScreen;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.pictureBox_Title);
             this.Controls.Add(this.tableLayoutPanel_Buttons);

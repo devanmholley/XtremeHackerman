@@ -7,11 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
 {
-    public partial class Form_Admin : Class_BaseForm
+    public partial class Form_Admin : Form
     {
         public Form_Admin()
         {
@@ -31,14 +30,12 @@ namespace XtremeHackerman
 
         private void btn_Internet_Click(object sender, EventArgs e)
         {
-            var formInternetBrowser = new Form_InternetBrowser();
-            formInternetBrowser.ShowDialog();
+            XtremeHackermanForms._formBrowser.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var formInternetBrowser = new Form_InternetBrowser();
-            formInternetBrowser.ShowDialog();
+            XtremeHackermanForms._formBrowser.ShowDialog();
         }
     }
 }

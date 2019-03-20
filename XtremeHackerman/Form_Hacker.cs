@@ -7,11 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
 {
-    public partial class Form_Hacker : Class_BaseForm
+    public partial class Form_Hacker : Form
     {
         public Form_Hacker()
         {
