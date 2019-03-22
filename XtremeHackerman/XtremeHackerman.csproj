@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Desktop_BKEND.cs" />
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WifiIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WifiIcon-OFF.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolbarNetworkBTN = new System.Windows.Forms.Button();
             this.toolbarTime = new System.Windows.Forms.Label();
             this.toolbarDate = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.TaskManager = new System.Windows.Forms.Button();
             this.FileManager = new System.Windows.Forms.Button();
             this.EmailClient = new System.Windows.Forms.Button();
-            this.toolbarNetworkBTN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1009, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // toolbarNetworkBTN
+            // 
+            this.toolbarNetworkBTN.BackgroundImage = global::XtremeHackerman.Properties.Resources.WifiIcon;
+            this.toolbarNetworkBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolbarNetworkBTN.FlatAppearance.BorderSize = 0;
+            this.toolbarNetworkBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toolbarNetworkBTN.Location = new System.Drawing.Point(886, 3);
+            this.toolbarNetworkBTN.Name = "toolbarNetworkBTN";
+            this.toolbarNetworkBTN.Size = new System.Drawing.Size(31, 26);
+            this.toolbarNetworkBTN.TabIndex = 11;
+            this.toolbarNetworkBTN.UseVisualStyleBackColor = true;
+            this.toolbarNetworkBTN.Click += new System.EventHandler(this.toolbarNetworkBTN_Click);
             // 
             // toolbarTime
             // 
@@ -221,18 +234,6 @@
             this.EmailClient.Text = "Email";
             this.EmailClient.UseVisualStyleBackColor = false;
             this.EmailClient.Visible = false;
-            // 
-            // toolbarNetworkBTN
-            // 
-            this.toolbarNetworkBTN.BackgroundImage = global::XtremeHackerman.Properties.Resources.WifiIcon;
-            this.toolbarNetworkBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolbarNetworkBTN.FlatAppearance.BorderSize = 0;
-            this.toolbarNetworkBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.toolbarNetworkBTN.Location = new System.Drawing.Point(886, 3);
-            this.toolbarNetworkBTN.Name = "toolbarNetworkBTN";
-            this.toolbarNetworkBTN.Size = new System.Drawing.Size(31, 26);
-            this.toolbarNetworkBTN.TabIndex = 11;
-            this.toolbarNetworkBTN.UseVisualStyleBackColor = true;
             // 
             // Form_Desktop
             // 
