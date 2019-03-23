@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
 {
-    public partial class Form_Desktop : Form
+    public partial class Form_Desktop : Class_BaseForm
     {
         public Form_Desktop()
         {
@@ -29,7 +30,8 @@ namespace XtremeHackerman
 
         private void internetExplorerClick(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formBrowser.ShowDialog();
+            var formInternetBrowser = new Form_InternetBrowser();
+            formInternetBrowser.ShowDialog();
         }
 
         private void startButtonClick(object sender, EventArgs e)
@@ -70,13 +72,17 @@ namespace XtremeHackerman
 
         private void emailButtonClick(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formEmail.ShowDialog();
+
+            // Email Browser implementation 
+            //Form_Email Test = new Form_Email();
+            //Test.Show();
+            var formEmail = new Form_Email();
+            formEmail.ShowDialog();
         }
 
         private void Restart_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form_Desktop desktop = new Form_Desktop();
+            Close();
         }
 
         private void Shutdown_Click(object sender, EventArgs e)
@@ -86,23 +92,20 @@ namespace XtremeHackerman
 
         private void InternetBrowser_Click(object sender, EventArgs e)
         {
-            XtremeHackermanForms._formBrowser.ShowDialog();
+            var formInternetBrowser = new Form_InternetBrowser();
+            formInternetBrowser.ShowDialog();
         }
 
         private void TaskManager_Click(object sender, EventArgs e)
         {
-            XtremeHackermanForms.form_TaskManager.ShowDialog();
+            const string message = "You have opened the Task Manager";
+            var result = MessageBox.Show(message);
         }
 
         private void FileManager_Click(object sender, EventArgs e)
         {
             const string message = "You have opened the File Manager";
             var result = MessageBox.Show(message);
-        }
-
-        private void EmailClient_Click(object sender, EventArgs e)
-        {
-            XtremeHackermanForms._formEmail.ShowDialog();
         }
     }
 }

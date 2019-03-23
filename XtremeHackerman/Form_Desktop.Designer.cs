@@ -73,7 +73,7 @@
             this.startButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.startButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.startButton.Image = global::XtremeHackerman.Properties.Resources.startbutton;
+            this.startButton.Image = global::XtremeHackerman.Properties.Resources.StartButton;
             this.startButton.Location = new System.Drawing.Point(-2, -5);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(88, 43);
@@ -98,7 +98,7 @@
             // internetExplorerIcon
             // 
             this.internetExplorerIcon.BackColor = System.Drawing.Color.Transparent;
-            this.internetExplorerIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("internetExplorerIcon.BackgroundImage")));
+            this.internetExplorerIcon.BackgroundImage = global::XtremeHackerman.Properties.Resources.Icon_InternetExplorer;
             this.internetExplorerIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.internetExplorerIcon.Cursor = System.Windows.Forms.Cursors.Default;
             this.internetExplorerIcon.Location = new System.Drawing.Point(73, 34);
@@ -111,7 +111,7 @@
             // cliButton
             // 
             this.cliButton.BackColor = System.Drawing.Color.Transparent;
-            this.cliButton.BackgroundImage = global::XtremeHackerman.Properties.Resources.commandlinebutton;
+            this.cliButton.BackgroundImage = global::XtremeHackerman.Properties.Resources.Icon_CommandLine;
             this.cliButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cliButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.cliButton.Location = new System.Drawing.Point(73, 144);
@@ -124,7 +124,7 @@
             // explorerIcon
             // 
             this.explorerIcon.BackColor = System.Drawing.Color.Transparent;
-            this.explorerIcon.BackgroundImage = global::XtremeHackerman.Properties.Resources.explorerbutton;
+            this.explorerIcon.BackgroundImage = global::XtremeHackerman.Properties.Resources.Icon_Explorer;
             this.explorerIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.explorerIcon.Cursor = System.Windows.Forms.Cursors.Default;
             this.explorerIcon.Location = new System.Drawing.Point(73, 256);
@@ -137,7 +137,7 @@
             // emailIcon
             // 
             this.emailIcon.BackColor = System.Drawing.Color.Transparent;
-            this.emailIcon.BackgroundImage = global::XtremeHackerman.Properties.Resources.emailIcon1;
+            this.emailIcon.BackgroundImage = global::XtremeHackerman.Properties.Resources.Icon_Email1;
             this.emailIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.emailIcon.Cursor = System.Windows.Forms.Cursors.Default;
             this.emailIcon.Location = new System.Drawing.Point(73, 371);
@@ -223,13 +223,12 @@
             this.EmailClient.Text = "Email";
             this.EmailClient.UseVisualStyleBackColor = false;
             this.EmailClient.Visible = false;
-            this.EmailClient.Click += new System.EventHandler(this.EmailClient_Click);
             // 
             // Form_Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_Desktop;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.EmailClient);
             this.Controls.Add(this.Restart);

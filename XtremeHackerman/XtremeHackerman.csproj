@@ -36,8 +36,12 @@
     <StartupObject>XtremeHackerman.XtremeHackermanAppContext</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,13 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Email_UI.cs">
+    <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Email_UI.Designer.cs">
-      <DependentUpon>Email_UI.cs</DependentUpon>
+    <Compile Include="Classes\Class_CustomFonts.cs" />
+    <Compile Include="Classes\Class_Email.cs" />
+    <Compile Include="Form_Email.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventLogic.cs" />
+    <Compile Include="Form_Email.Designer.cs">
+      <DependentUpon>Form_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Firewall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Firewall.Designer.cs">
+      <DependentUpon>Form_Firewall.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Desktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,28 +94,25 @@
     <Compile Include="Form_InternetBrowser.Designer.cs">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_TaskManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_TaskManager.Designer.cs">
-      <DependentUpon>Form_TaskManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form_TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_TitleScreen.Designer.cs">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRunTask.cs">
+    <Compile Include="Form_LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRunTask.Designer.cs">
-      <DependentUpon>frmRunTask.cs</DependentUpon>
+    <Compile Include="Form_LandingPage.Designer.cs">
+      <DependentUpon>Form_LandingPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Email_UI.resx">
-      <DependentUpon>Email_UI.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Email.resx">
+      <DependentUpon>Form_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Firewall.resx">
+      <DependentUpon>Form_Firewall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
@@ -115,20 +126,19 @@
     <EmbeddedResource Include="Form_InternetBrowser.resx">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_TaskManager.resx">
-      <DependentUpon>Form_TaskManager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRunTask.resx">
-      <DependentUpon>frmRunTask.cs</DependentUpon>
+    <EmbeddedResource Include="Form_LandingPage.resx">
+      <DependentUpon>Form_LandingPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\XtremeHackerman.Classes.EmailLogic.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,52 +159,36 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.png" />
+    <EmbeddedResource Include="Resources\Form_Email\Emails.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SardonicCreepyIndianrockpython-small.gif" />
+    <None Include="Resources\Form_TitleScreen\Background_TitleScreen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background_TitleScreen.jpg" />
+    <None Include="Resources\Form_Desktop\Background_Desktop.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.jpg" />
+    <None Include="Resources\Form_Desktop\StartButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\vaporwarebackground.jpg" />
+    <None Include="Resources\Form_Desktop\Icon_InternetExplorer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\startbutton1.png" />
+    <None Include="Resources\Form_Desktop\Icon_CommandLine.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\startbutton.png" />
+    <None Include="Resources\Form_Desktop\Icon_Explorer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\internet_png_712280.jpg" />
+    <None Include="Resources\Form_Desktop\Icon_Email2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\internet_png_7122801.jpg" />
+    <None Include="Resources\Form_Desktop\Icon_Email1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\commandlinebutton1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\commandlinebutton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\explorerbutton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\explorerbutton1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon2.png" />
+    <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
