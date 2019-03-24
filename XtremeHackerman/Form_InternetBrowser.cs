@@ -20,7 +20,7 @@ namespace XtremeHackerman
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             // code for "begin search here" button
-            label1.Visible = true;
+            errorLabel.Visible = true;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

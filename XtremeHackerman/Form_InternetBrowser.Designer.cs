@@ -47,7 +47,7 @@
             this.urlIcon = new System.Windows.Forms.PictureBox();
             this.urlPopup = new System.Windows.Forms.Button();
             this.virusTotalLogo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.virusTotal.SuspendLayout();
             this.urlScan.SuspendLayout();
@@ -140,14 +140,14 @@
             // companyFirewallToolStripMenuItem
             // 
             this.companyFirewallToolStripMenuItem.Name = "companyFirewallToolStripMenuItem";
-            this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.companyFirewallToolStripMenuItem.Text = "Company Firewall";
             this.companyFirewallToolStripMenuItem.Click += new System.EventHandler(this.companyFirewallToolStripMenuItem_Click);
             // 
             // virusTotalToolStripMenuItem
             // 
             this.virusTotalToolStripMenuItem.Name = "virusTotalToolStripMenuItem";
-            this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.virusTotalToolStripMenuItem.Text = "Virus Total";
             this.virusTotalToolStripMenuItem.Click += new System.EventHandler(this.virusTotalToolStripMenuItem_Click);
             // 
@@ -232,24 +232,24 @@
             this.virusTotalLogo.TabIndex = 0;
             this.virusTotalLogo.Text = "VirusTotals.com";
             // 
-            // label1
+            // errorLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(181, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "404 error";
-            this.label1.Visible = false;
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Location = new System.Drawing.Point(181, 139);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(49, 13);
+            this.errorLabel.TabIndex = 1;
+            this.errorLabel.Text = "404 error";
+            this.errorLabel.Visible = false;
             // 
             // FormInternetBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.virusTotal);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.virusTotal);
             this.Name = "FormInternetBrowser";
             this.Text = "InternetBrowser";
             this.Load += new System.EventHandler(this.Form_InternetBrowser_Load);
@@ -285,6 +285,6 @@
         private System.Windows.Forms.TextBox urlEntry;
         private System.Windows.Forms.PictureBox urlIcon;
         private System.Windows.Forms.Button urlPopup;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label errorLabel;
     }
 }
