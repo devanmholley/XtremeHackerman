@@ -18,7 +18,7 @@ namespace XtremeHackerman
             InitializeComponent();
         }
         string[] ip = new string[20];
-        int currentIndex;
+        //int currentIndex;
         
         private void Firewall_Load(object sender, EventArgs e)
         {
