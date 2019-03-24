@@ -13,6 +13,8 @@ namespace XtremeHackerman
 {
     public partial class Form_Desktop : Class_BaseForm
     {
+	public static Form_FileManager formFileManager; //declare my form once -KN
+
         public Form_Desktop()
         {
             InitializeComponent();
@@ -20,8 +22,9 @@ namespace XtremeHackerman
 
         private void Form_Desktop_Load(object sender, EventArgs e)
         {
-            // LOADING THE DESKTOP
-        }
+	    // LOADING THE DESKTOP
+	    formFileManager = new Form_FileManager(); //declare my form once -KN
+	}
 
         private void searchEntry(object sender, EventArgs e)
         {
@@ -62,8 +65,7 @@ namespace XtremeHackerman
 
         private void FileManagerButtonClick(object sender, EventArgs e)
         {
-	    // FileManager button implementation
-	    var formFileManager = new Form_FileManager();
+	    // FileManager icon button implementation
 	    formFileManager.ShowDialog();
     }
 
@@ -106,7 +108,6 @@ namespace XtremeHackerman
 
         private void FileManager_Click(object sender, EventArgs e)
         {
-	    var formFileManager = new Form_FileManager();
 	    formFileManager.ShowDialog();
     }
     }
