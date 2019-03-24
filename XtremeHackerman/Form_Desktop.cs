@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XtremeHackerman.Classes;
+using Tulpep.NotificationWindow;
+
 
 namespace XtremeHackerman
 {
@@ -70,6 +72,9 @@ namespace XtremeHackerman
         private void cliButtonClick(object sender, EventArgs e)
         {
             // Command Line implementation
+
+            // Initialization of Notification Popup 
+
         }
 
         private void emailButtonClick(object sender, EventArgs e)

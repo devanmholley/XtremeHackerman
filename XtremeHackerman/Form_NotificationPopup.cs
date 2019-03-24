@@ -23,12 +23,14 @@ namespace XtremeHackerman
         private void testNotificationButton_Click(object sender, EventArgs e)
         {
             // Initialization of Notification Popup 
-
+            string messagetime = System.DateTime.Now.ToString("ddd  HH:mm:ss");
+            string messageBody = "[SAMPLE TEXT]";
             var popupNotifier = new PopupNotifier();
-            popupNotifier.TitleText = "He who desires, but acts not, breeds pestilence.";
-            popupNotifier.ContentText = "The Mysterious One, V";
+            popupNotifier.TitleText = messagetime;
+            popupNotifier.ContentText = messageBody;
             popupNotifier.IsRightToLeft = false;
             popupNotifier.BodyColor = Color.Purple;
+            popupNotifier.Delay = 10000;
             popupNotifier.Popup();
 
         }
