@@ -37,6 +37,16 @@
             this.permissionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.managePage = new System.Windows.Forms.Panel();
+            this.homeButton2 = new System.Windows.Forms.Button();
+            this.emailDomainWindow = new System.Windows.Forms.Panel();
+            this.domainADD = new System.Windows.Forms.Button();
+            this.domainEntered = new System.Windows.Forms.TextBox();
+            this.domainEntry = new System.Windows.Forms.TextBox();
+            this.labelManageAdd = new System.Windows.Forms.Label();
+            this.discMessage = new System.Windows.Forms.Label();
+            this.webpageUsage = new System.Windows.Forms.Button();
+            this.domainSwitch = new System.Windows.Forms.Button();
             this.blockIPwindow = new System.Windows.Forms.Panel();
             this.testipWindow = new System.Windows.Forms.TextBox();
             this.ipYeahweblocked = new System.Windows.Forms.Label();
@@ -47,13 +57,27 @@
             this.homeButton1perm = new System.Windows.Forms.Button();
             this.permissionsPage = new System.Windows.Forms.PictureBox();
             this.welcomeMessagelabel = new System.Windows.Forms.Label();
+            this.webaccessPanel = new System.Windows.Forms.Panel();
+            this.webPanelAccess2 = new System.Windows.Forms.Panel();
+            this.webmessageLabel = new System.Windows.Forms.Label();
+            this.clearedWebLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.webaccessBtnMedian = new System.Windows.Forms.Button();
+            this.blacklistWebLabel = new System.Windows.Forms.Label();
+            this.waccessTextEntry = new System.Windows.Forms.TextBox();
+            this.waccessBLEntry = new System.Windows.Forms.TextBox();
+            this.waccessInBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.managePage.SuspendLayout();
+            this.emailDomainWindow.SuspendLayout();
             this.blockIPwindow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.permissionsPage)).BeginInit();
+            this.webaccessPanel.SuspendLayout();
+            this.webPanelAccess2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -80,6 +104,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel2.BackgroundImage")));
+            this.splitContainer1.Panel2.Controls.Add(this.managePage);
             this.splitContainer1.Panel2.Controls.Add(this.blockIPwindow);
             this.splitContainer1.Panel2.Controls.Add(this.blockIP);
             this.splitContainer1.Panel2.Controls.Add(this.homeButton1perm);
@@ -145,6 +170,113 @@
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
             this.manageToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.manageToolStripMenuItem.Text = "Manage";
+            this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
+            // 
+            // managePage
+            // 
+            this.managePage.Controls.Add(this.homeButton2);
+            this.managePage.Controls.Add(this.emailDomainWindow);
+            this.managePage.Controls.Add(this.webpageUsage);
+            this.managePage.Controls.Add(this.domainSwitch);
+            this.managePage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managePage.Location = new System.Drawing.Point(0, 0);
+            this.managePage.Name = "managePage";
+            this.managePage.Size = new System.Drawing.Size(939, 502);
+            this.managePage.TabIndex = 8;
+            this.managePage.Visible = false;
+            // 
+            // homeButton2
+            // 
+            this.homeButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homeButton2.BackgroundImage")));
+            this.homeButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homeButton2.Location = new System.Drawing.Point(885, 451);
+            this.homeButton2.Name = "homeButton2";
+            this.homeButton2.Size = new System.Drawing.Size(51, 48);
+            this.homeButton2.TabIndex = 3;
+            this.homeButton2.UseVisualStyleBackColor = true;
+            this.homeButton2.Click += new System.EventHandler(this.homeButton2_Click);
+            // 
+            // emailDomainWindow
+            // 
+            this.emailDomainWindow.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.emailDomainWindow.Controls.Add(this.webaccessPanel);
+            this.emailDomainWindow.Controls.Add(this.domainADD);
+            this.emailDomainWindow.Controls.Add(this.domainEntered);
+            this.emailDomainWindow.Controls.Add(this.domainEntry);
+            this.emailDomainWindow.Controls.Add(this.labelManageAdd);
+            this.emailDomainWindow.Controls.Add(this.discMessage);
+            this.emailDomainWindow.Location = new System.Drawing.Point(100, 54);
+            this.emailDomainWindow.Name = "emailDomainWindow";
+            this.emailDomainWindow.Size = new System.Drawing.Size(749, 391);
+            this.emailDomainWindow.TabIndex = 2;
+            this.emailDomainWindow.Visible = false;
+            // 
+            // domainADD
+            // 
+            this.domainADD.Location = new System.Drawing.Point(313, 101);
+            this.domainADD.Name = "domainADD";
+            this.domainADD.Size = new System.Drawing.Size(75, 23);
+            this.domainADD.TabIndex = 5;
+            this.domainADD.Text = "Add";
+            this.domainADD.UseVisualStyleBackColor = true;
+            this.domainADD.Click += new System.EventHandler(this.domainADD_Click);
+            // 
+            // domainEntered
+            // 
+            this.domainEntered.AllowDrop = true;
+            this.domainEntered.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.domainEntered.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.domainEntered.Location = new System.Drawing.Point(40, 128);
+            this.domainEntered.Multiline = true;
+            this.domainEntered.Name = "domainEntered";
+            this.domainEntered.Size = new System.Drawing.Size(226, 199);
+            this.domainEntered.TabIndex = 4;
+            // 
+            // domainEntry
+            // 
+            this.domainEntry.Location = new System.Drawing.Point(40, 101);
+            this.domainEntry.Name = "domainEntry";
+            this.domainEntry.Size = new System.Drawing.Size(200, 20);
+            this.domainEntry.TabIndex = 3;
+            // 
+            // labelManageAdd
+            // 
+            this.labelManageAdd.AutoSize = true;
+            this.labelManageAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelManageAdd.Location = new System.Drawing.Point(40, 62);
+            this.labelManageAdd.Name = "labelManageAdd";
+            this.labelManageAdd.Size = new System.Drawing.Size(106, 15);
+            this.labelManageAdd.TabIndex = 2;
+            this.labelManageAdd.Text = "Add Domains below:";
+            // 
+            // discMessage
+            // 
+            this.discMessage.AutoSize = true;
+            this.discMessage.Location = new System.Drawing.Point(375, 0);
+            this.discMessage.Name = "discMessage";
+            this.discMessage.Size = new System.Drawing.Size(374, 13);
+            this.discMessage.TabIndex = 1;
+            this.discMessage.Text = "Disclaimer: Adding Domains to this page will blacklist the domain until removal.";
+            // 
+            // webpageUsage
+            // 
+            this.webpageUsage.Location = new System.Drawing.Point(167, 34);
+            this.webpageUsage.Name = "webpageUsage";
+            this.webpageUsage.Size = new System.Drawing.Size(92, 23);
+            this.webpageUsage.TabIndex = 1;
+            this.webpageUsage.Text = "Web Access";
+            this.webpageUsage.UseVisualStyleBackColor = true;
+            this.webpageUsage.Click += new System.EventHandler(this.webpageUsage_Click);
+            // 
+            // domainSwitch
+            // 
+            this.domainSwitch.Location = new System.Drawing.Point(100, 34);
+            this.domainSwitch.Name = "domainSwitch";
+            this.domainSwitch.Size = new System.Drawing.Size(75, 23);
+            this.domainSwitch.TabIndex = 0;
+            this.domainSwitch.Text = "Domain";
+            this.domainSwitch.UseVisualStyleBackColor = true;
+            this.domainSwitch.Click += new System.EventHandler(this.domainSwitch_Click);
             // 
             // blockIPwindow
             // 
@@ -161,12 +293,14 @@
             // testipWindow
             // 
             this.testipWindow.AcceptsReturn = true;
-            this.testipWindow.Location = new System.Drawing.Point(438, 45);
+            this.testipWindow.AllowDrop = true;
+            this.testipWindow.Location = new System.Drawing.Point(424, 45);
             this.testipWindow.Multiline = true;
             this.testipWindow.Name = "testipWindow";
             this.testipWindow.ReadOnly = true;
-            this.testipWindow.Size = new System.Drawing.Size(114, 20);
+            this.testipWindow.Size = new System.Drawing.Size(128, 160);
             this.testipWindow.TabIndex = 4;
+            this.testipWindow.Text = "\r\n";
             this.testipWindow.TextChanged += new System.EventHandler(this.testipWindow_TextChanged);
             // 
             // ipYeahweblocked
@@ -228,6 +362,7 @@
             this.homeButton1perm.Size = new System.Drawing.Size(38, 39);
             this.homeButton1perm.TabIndex = 5;
             this.homeButton1perm.UseVisualStyleBackColor = true;
+            this.homeButton1perm.Click += new System.EventHandler(this.homeButton1perm_Click);
             // 
             // permissionsPage
             // 
@@ -247,6 +382,107 @@
             this.welcomeMessagelabel.TabIndex = 1;
             this.welcomeMessagelabel.Text = "Welcome Mr. Anderson";
             // 
+            // webaccessPanel
+            // 
+            this.webaccessPanel.Controls.Add(this.webmessageLabel);
+            this.webaccessPanel.Controls.Add(this.webPanelAccess2);
+            this.webaccessPanel.Location = new System.Drawing.Point(0, 0);
+            this.webaccessPanel.Name = "webaccessPanel";
+            this.webaccessPanel.Size = new System.Drawing.Size(749, 394);
+            this.webaccessPanel.TabIndex = 6;
+            this.webaccessPanel.Visible = false;
+            // 
+            // webPanelAccess2
+            // 
+            this.webPanelAccess2.BackColor = System.Drawing.SystemColors.Control;
+            this.webPanelAccess2.Controls.Add(this.waccessInBtn);
+            this.webPanelAccess2.Controls.Add(this.waccessBLEntry);
+            this.webPanelAccess2.Controls.Add(this.waccessTextEntry);
+            this.webPanelAccess2.Controls.Add(this.blacklistWebLabel);
+            this.webPanelAccess2.Controls.Add(this.webaccessBtnMedian);
+            this.webPanelAccess2.Controls.Add(this.textBox1);
+            this.webPanelAccess2.Controls.Add(this.clearedWebLabel);
+            this.webPanelAccess2.Location = new System.Drawing.Point(72, 90);
+            this.webPanelAccess2.Name = "webPanelAccess2";
+            this.webPanelAccess2.Size = new System.Drawing.Size(538, 261);
+            this.webPanelAccess2.TabIndex = 0;
+            // 
+            // webmessageLabel
+            // 
+            this.webmessageLabel.AutoSize = true;
+            this.webmessageLabel.Location = new System.Drawing.Point(435, 74);
+            this.webmessageLabel.Name = "webmessageLabel";
+            this.webmessageLabel.Size = new System.Drawing.Size(175, 13);
+            this.webmessageLabel.TabIndex = 1;
+            this.webmessageLabel.Text = "Add sites users cannot go to below.";
+            // 
+            // clearedWebLabel
+            // 
+            this.clearedWebLabel.AutoSize = true;
+            this.clearedWebLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.clearedWebLabel.Location = new System.Drawing.Point(3, 11);
+            this.clearedWebLabel.Name = "clearedWebLabel";
+            this.clearedWebLabel.Size = new System.Drawing.Size(46, 13);
+            this.clearedWebLabel.TabIndex = 0;
+            this.clearedWebLabel.Text = "Cleared:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(6, 38);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(131, 178);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "VirusTotals.com\r\n<filler>\r\n<filler>";
+            // 
+            // webaccessBtnMedian
+            // 
+            this.webaccessBtnMedian.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.webaccessBtnMedian.Location = new System.Drawing.Point(235, 0);
+            this.webaccessBtnMedian.Name = "webaccessBtnMedian";
+            this.webaccessBtnMedian.Size = new System.Drawing.Size(15, 261);
+            this.webaccessBtnMedian.TabIndex = 2;
+            this.webaccessBtnMedian.UseVisualStyleBackColor = true;
+            // 
+            // blacklistWebLabel
+            // 
+            this.blacklistWebLabel.AutoSize = true;
+            this.blacklistWebLabel.Location = new System.Drawing.Point(267, 15);
+            this.blacklistWebLabel.Name = "blacklistWebLabel";
+            this.blacklistWebLabel.Size = new System.Drawing.Size(61, 13);
+            this.blacklistWebLabel.TabIndex = 3;
+            this.blacklistWebLabel.Text = "Blacklisted:";
+            // 
+            // waccessTextEntry
+            // 
+            this.waccessTextEntry.Location = new System.Drawing.Point(334, 12);
+            this.waccessTextEntry.Name = "waccessTextEntry";
+            this.waccessTextEntry.Size = new System.Drawing.Size(100, 20);
+            this.waccessTextEntry.TabIndex = 4;
+            // 
+            // waccessBLEntry
+            // 
+            this.waccessBLEntry.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.waccessBLEntry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.waccessBLEntry.Location = new System.Drawing.Point(270, 37);
+            this.waccessBLEntry.Multiline = true;
+            this.waccessBLEntry.Name = "waccessBLEntry";
+            this.waccessBLEntry.Size = new System.Drawing.Size(141, 179);
+            this.waccessBLEntry.TabIndex = 5;
+            // 
+            // waccessInBtn
+            // 
+            this.waccessInBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.waccessInBtn.Location = new System.Drawing.Point(440, 11);
+            this.waccessInBtn.Name = "waccessInBtn";
+            this.waccessInBtn.Size = new System.Drawing.Size(75, 23);
+            this.waccessInBtn.TabIndex = 6;
+            this.waccessInBtn.Text = "Add:";
+            this.waccessInBtn.UseVisualStyleBackColor = false;
+            this.waccessInBtn.Click += new System.EventHandler(this.waccessInBtn_Click);
+            // 
             // Firewall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,9 +500,16 @@
             this.splitContainer1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.managePage.ResumeLayout(false);
+            this.emailDomainWindow.ResumeLayout(false);
+            this.emailDomainWindow.PerformLayout();
             this.blockIPwindow.ResumeLayout(false);
             this.blockIPwindow.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.permissionsPage)).EndInit();
+            this.webaccessPanel.ResumeLayout(false);
+            this.webaccessPanel.PerformLayout();
+            this.webPanelAccess2.ResumeLayout(false);
+            this.webPanelAccess2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +533,25 @@
         private System.Windows.Forms.TextBox ipEntry;
         private System.Windows.Forms.Label ipYeahweblocked;
         private System.Windows.Forms.TextBox testipWindow;
+        private System.Windows.Forms.Panel managePage;
+        private System.Windows.Forms.Panel emailDomainWindow;
+        private System.Windows.Forms.Button webpageUsage;
+        private System.Windows.Forms.Button domainSwitch;
+        private System.Windows.Forms.Button homeButton2;
+        private System.Windows.Forms.Label discMessage;
+        private System.Windows.Forms.Label labelManageAdd;
+        private System.Windows.Forms.Button domainADD;
+        private System.Windows.Forms.TextBox domainEntered;
+        private System.Windows.Forms.TextBox domainEntry;
+        private System.Windows.Forms.Panel webaccessPanel;
+        private System.Windows.Forms.Label webmessageLabel;
+        private System.Windows.Forms.Panel webPanelAccess2;
+        private System.Windows.Forms.Button webaccessBtnMedian;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label clearedWebLabel;
+        private System.Windows.Forms.Label blacklistWebLabel;
+        private System.Windows.Forms.Button waccessInBtn;
+        private System.Windows.Forms.TextBox waccessBLEntry;
+        private System.Windows.Forms.TextBox waccessTextEntry;
     }
 }

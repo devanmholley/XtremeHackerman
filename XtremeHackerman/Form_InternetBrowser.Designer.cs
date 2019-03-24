@@ -207,7 +207,7 @@
             this.urlIcon.BackColor = System.Drawing.SystemColors.Control;
             this.urlIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("urlIcon.BackgroundImage")));
             this.urlIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.urlIcon.Location = new System.Drawing.Point(209, 23);
+            this.urlIcon.Location = new System.Drawing.Point(183, 23);
             this.urlIcon.Name = "urlIcon";
             this.urlIcon.Size = new System.Drawing.Size(27, 17);
             this.urlIcon.TabIndex = 0;
@@ -242,7 +242,7 @@
             this.label1.Text = "404 error";
             this.label1.Visible = false;
             // 
-            // Form_InternetBrowser
+            // FormInternetBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
