@@ -68,6 +68,12 @@
     <Compile Include="Form_Email.Designer.cs">
       <DependentUpon>Form_Email.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_FileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FileManager.Designer.cs">
+      <DependentUpon>Form_FileManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Firewall.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_FileManager.resx">
+      <DependentUpon>Form_FileManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Firewall.resx">
       <DependentUpon>Form_Firewall.cs</DependentUpon>
@@ -192,9 +201,6 @@
     <None Include="Resources\Form_Desktop\Icon_CommandLine.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Form_Desktop\Icon_Explorer.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Form_Desktop\Icon_Email2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form_Desktop\Icon_FileManager.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
