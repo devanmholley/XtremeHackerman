@@ -140,14 +140,14 @@
             // companyFirewallToolStripMenuItem
             // 
             this.companyFirewallToolStripMenuItem.Name = "companyFirewallToolStripMenuItem";
-            this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.companyFirewallToolStripMenuItem.Text = "Company Firewall";
             this.companyFirewallToolStripMenuItem.Click += new System.EventHandler(this.companyFirewallToolStripMenuItem_Click);
             // 
             // virusTotalToolStripMenuItem
             // 
             this.virusTotalToolStripMenuItem.Name = "virusTotalToolStripMenuItem";
-            this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.virusTotalToolStripMenuItem.Text = "Virus Total";
             this.virusTotalToolStripMenuItem.Click += new System.EventHandler(this.virusTotalToolStripMenuItem_Click);
             // 
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 469);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.virusTotal);
