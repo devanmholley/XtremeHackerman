@@ -30,11 +30,6 @@
     {
 	    this.components = new System.ComponentModel.Container();
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_FileManager));
-	    System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Documents");
-	    System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Downloads");
-	    System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("This PC", 5, 5, new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
 	    this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 	    this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
 	    this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -144,16 +139,6 @@
 	    this.treeView1.LabelEdit = true;
 	    this.treeView1.Location = new System.Drawing.Point(0, 49);
 	    this.treeView1.Name = "treeView1";
-	    treeNode1.Name = "Node1";
-	    treeNode1.Text = "Documents";
-	    treeNode2.Name = "Node2";
-	    treeNode2.Text = "Downloads";
-	    treeNode3.ImageIndex = 5;
-	    treeNode3.Name = "Node0";
-	    treeNode3.SelectedImageIndex = 5;
-	    treeNode3.Text = "This PC";
-	    this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
 	    this.treeView1.SelectedImageIndex = 1;
 	    this.treeView1.Size = new System.Drawing.Size(751, 836);
 	    this.treeView1.TabIndex = 1;
@@ -239,14 +224,15 @@
 	    // folderToolStripMenuItem
 	    // 
 	    this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
-	    this.folderToolStripMenuItem.Size = new System.Drawing.Size(216, 46);
+	    this.folderToolStripMenuItem.Size = new System.Drawing.Size(332, 46);
 	    this.folderToolStripMenuItem.Text = "Folder";
 	    // 
 	    // fileToolStripMenuItem
 	    // 
 	    this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-	    this.fileToolStripMenuItem.Size = new System.Drawing.Size(216, 46);
-	    this.fileToolStripMenuItem.Text = "File";
+	    this.fileToolStripMenuItem.Size = new System.Drawing.Size(332, 46);
+	    this.fileToolStripMenuItem.Text = "Text Document";
+	    this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
 	    // 
 	    // renameToolStripMenuItem1
 	    // 
