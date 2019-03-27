@@ -53,9 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="Classes\Desktop_BKEND.cs" />
-
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,12 +198,21 @@
     <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\WifiIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WifiIcon-OFF.png" />
-
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Form_Desktop\Icon_FileManager.png" />
+    <Content Include="Resources\Form_FileManager\addfile.png" />
+    <Content Include="Resources\Form_FileManager\addfolder.png" />
+    <Content Include="Resources\Form_FileManager\doc.PNG" />
+    <Content Include="Resources\Form_FileManager\file.PNG" />
+    <Content Include="Resources\Form_FileManager\folder.PNG" />
+    <Content Include="Resources\Form_FileManager\img.PNG" />
+    <Content Include="Resources\Form_FileManager\openfolder.PNG" />
+    <Content Include="Resources\Form_FileManager\thispc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
