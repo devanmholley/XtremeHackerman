@@ -53,7 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventLogic.cs" />
+
+    <Compile Include="Classes\Desktop_BKEND.cs" />
+
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,7 +200,12 @@
     <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Form_Desktop\Icon_FileManager.png" />
+
+    <None Include="Resources\WifiIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WifiIcon-OFF.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
