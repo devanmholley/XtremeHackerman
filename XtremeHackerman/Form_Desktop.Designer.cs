@@ -48,20 +48,24 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.toolbarNetworkBTN);
             this.panel1.Controls.Add(this.toolbarTime);
             this.panel1.Controls.Add(this.toolbarDate);
             this.panel1.Controls.Add(this.startButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(0, 689);
+            this.panel1.Location = new System.Drawing.Point(0, 684);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1009, 40);
+            this.panel1.Size = new System.Drawing.Size(1008, 45);
             this.panel1.TabIndex = 0;
             // 
             // toolbarNetworkBTN
             // 
+            this.toolbarNetworkBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.toolbarNetworkBTN.AutoSize = true;
             this.toolbarNetworkBTN.BackgroundImage = global::XtremeHackerman.Properties.Resources.WifiIcon;
             this.toolbarNetworkBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.toolbarNetworkBTN.FlatAppearance.BorderSize = 0;
@@ -75,6 +79,7 @@
             // 
             // toolbarTime
             // 
+            this.toolbarTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.toolbarTime.AutoSize = true;
             this.toolbarTime.Location = new System.Drawing.Point(948, 0);
             this.toolbarTime.Name = "toolbarTime";
@@ -84,6 +89,7 @@
             // 
             // toolbarDate
             // 
+            this.toolbarDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.toolbarDate.AutoSize = true;
             this.toolbarDate.Location = new System.Drawing.Point(935, 16);
             this.toolbarDate.Name = "toolbarDate";
@@ -260,6 +266,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

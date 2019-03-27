@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
 using XtremeHackerman.Classes;
+using XtremeHackerman.Properties;
 
 namespace XtremeHackerman
 {
@@ -119,7 +122,7 @@ namespace XtremeHackerman
             if (Desktop_BKEND.net_ON)
             {
                 // Change the network icon to the 'Wifi Off' icon
-                toolbarNetworkBTN.BackgroundImage =Image.FromFile("WifiIcon_OFF.png");
+                toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
                 // Change the public status of the network to off
                 Desktop_BKEND.net_ON = false;
             }
@@ -127,7 +130,7 @@ namespace XtremeHackerman
             else
             {
                 // Change the network icon to the 'Wifi on; icon
-                toolbarNetworkBTN.BackgroundImage = Image.FromFile("WifiIcon.png");
+                toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon;
                 // Change the public status of the network on on
                 Desktop_BKEND.net_ON = true;
             }
