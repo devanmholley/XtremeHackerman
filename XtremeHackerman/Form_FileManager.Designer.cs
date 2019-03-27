@@ -142,6 +142,7 @@
 	    this.treeView1.SelectedImageIndex = 1;
 	    this.treeView1.Size = new System.Drawing.Size(751, 836);
 	    this.treeView1.TabIndex = 1;
+	    this.treeView1.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeView1_AfterLabelEdit);
 	    this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
 	    // 
 	    // contextMenuStrip1

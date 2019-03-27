@@ -48,7 +48,7 @@ namespace XtremeHackerman
 
 	private void toolStripButton4_Click(object sender, EventArgs e)
 	{
-	    // Add New Folder Button
+	    // Add New Folder Button from icon/toolbar
 	    TreeNode parentFolder, newFolder;
 	    parentFolder = treeView1.SelectedNode;
 	    newFolder = parentFolder.Nodes.Add("New Folder"); //add new folder under parent folder
@@ -58,7 +58,7 @@ namespace XtremeHackerman
 
 	private void newFolderToolStripMenuItem_Click(object sender, EventArgs e)
 	{
-	    // Add New Folder from Right Click menu
+	    // Add New Folder from Right Click menu in TREEVIEW
 	    TreeNode parentFolder, newFolder;
 	    parentFolder = treeView1.SelectedNode;
 	    newFolder = parentFolder.Nodes.Add("New Folder"); //add new folder under parent folder
@@ -66,10 +66,22 @@ namespace XtremeHackerman
 	    newFolder.BeginEdit(); //prompt for new folder name
 	}
 
-	private void renameToolStripMenuItem_Click(object sender, EventArgs e)
+	private void renameToolStripMenuItem_Click(object sender, System.EventArgs e)
 	{
 	    // Rename folder from Right Click menu
-	    treeView1.SelectedNode.BeginEdit();
+	    //treeView1.SelectedNode.BeginEdit();
+	    if (treeView1.SelectedNode != null && treeView1.SelectedNode.Parent != null)
+	    {
+		if (!treeView1.SelectedNode.IsEditing)
+		{
+		    treeView1.SelectedNode.BeginEdit();
+		}
+	    }
+	    else
+	    {
+		MessageBox.Show("No tree node selected or selected node is a root node.\n" +
+		   "Editing of root nodes is not allowed.", "Invalid selection");
+	    }
 	}
 
 	private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,6 +93,36 @@ namespace XtremeHackerman
 	private void fileToolStripMenuItem_Click(object sender, EventArgs e)
 	{
 	    //Create New Text Document
+	}
+
+	private void treeView1_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
+	{
+	    // Validate folder name, no empty name, no invalid characters
+	    //Code Attribution: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.treeview.afterlabeledit?view=netframework-4.7.2
+
+	    if (e.Label != null)
+	    {
+		if (e.Label.Length > 0)
+		{
+		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) == -1) //cannot contain invalid characters
+			// Stop editing without canceling the label change.
+			e.Node.EndEdit(false);
+		    else
+		    {
+			// Cancel the label edit action, inform the user, and place the node in edit mode again
+			e.CancelEdit = true;
+			MessageBox.Show("A file name can't contain any of the following characters:\n \\ / : * ? \" < > |"); //mimicing windows invalid characters message
+			e.Node.BeginEdit();
+		    }
+		}
+		else
+		{
+		    // Cancel the label edit action, inform the user, and place the node in edit mode again
+		    e.CancelEdit = true;
+		    MessageBox.Show("A file name can't be blank"); //cannot be blank name
+		    e.Node.BeginEdit();
+		}
+	    }
 	}
     }
 }
