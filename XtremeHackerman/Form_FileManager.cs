@@ -69,25 +69,20 @@ namespace XtremeHackerman
 	private void renameToolStripMenuItem_Click(object sender, System.EventArgs e)
 	{
 	    // Rename folder from Right Click menu
-	    //treeView1.SelectedNode.BeginEdit();
-	    if (treeView1.SelectedNode != null && treeView1.SelectedNode.Parent != null)
-	    {
-		if (!treeView1.SelectedNode.IsEditing)
-		{
-		    treeView1.SelectedNode.BeginEdit();
-		}
-	    }
-	    else
-	    {
-		MessageBox.Show("No tree node selected or selected node is a root node.\n" +
-		   "Editing of root nodes is not allowed.", "Invalid selection");
-	    }
+	    treeView1.SelectedNode.BeginEdit();
 	}
 
 	private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
 	{
 	    //Delete folder from Right Click menu
-	    treeView1.SelectedNode.Remove();
+	    if (treeView1.SelectedNode.Parent != null) //Not allowed to delete "ThisPC" aka root node (ThisPC will have null parent)
+	    {
+		treeView1.SelectedNode.Remove();
+	    }
+	    else
+	    {
+		MessageBox.Show("Deletion of Root Folder not allowed");
+	    }
 	}
 
 	private void fileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,7 +99,16 @@ namespace XtremeHackerman
 	    {
 		if (e.Label.Length > 0)
 		{
-		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) == -1) //cannot contain invalid characters
+		    foreach (TreeNode folder in e.Node.Parent.Nodes) // check that there are no other similar named folders within current level
+		    {
+			if (!folder.Equals(e.Node) && folder.Text == e.Label)
+			    {
+			    MessageBox.Show("This destination already contains a folder named '" + e.Label + "'");
+			    e.CancelEdit = true;
+			    } 
+		    }
+
+		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) == -1) //does not contain any invalid characters
 			// Stop editing without canceling the label change.
 			e.Node.EndEdit(false);
 		    else
