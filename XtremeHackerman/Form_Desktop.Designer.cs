@@ -276,7 +276,7 @@
         private System.Windows.Forms.Button internetExplorerIcon;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button cliButton;
-        private System.Windows.Forms.Button explorerIcon;
+        private System.Windows.Forms.Button FileManagerIcon;
         private System.Windows.Forms.Button emailIcon;
         private System.Windows.Forms.Button Restart;
         private System.Windows.Forms.Button Shutdown;

@@ -123,9 +123,9 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_Explorer {
+        internal static System.Drawing.Bitmap Icon_FileManager {
             get {
-                object obj = ResourceManager.GetObject("Icon_Explorer", resourceCulture);
+                object obj = ResourceManager.GetObject("Icon_FileManager", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -16,15 +16,18 @@ namespace XtremeHackerman
 {
     public partial class Form_Desktop : Class_BaseForm
     {
+	public static Form_FileManager formFileManager; //declare my form once -KN
+
         public Form_Desktop()
         {
             InitializeComponent();
-        }
+	}
 
         private void Form_Desktop_Load(object sender, EventArgs e)
         {
-            // LOADING THE DESKTOP
-        }
+	    // LOADING THE DESKTOP
+	    formFileManager = new Form_FileManager(); //declare my form once -KN
+	}
 
         private void searchEntry(object sender, EventArgs e)
         {
@@ -63,10 +66,11 @@ namespace XtremeHackerman
 
         }
 
-        private void explorerButtonClick(object sender, EventArgs e)
+        private void FileManagerButtonClick(object sender, EventArgs e)
         {
-            // Explorer button implementation
-        }
+	    // FileManager icon button implementation
+	    formFileManager.ShowDialog();
+    }
 
         private void cliButtonClick(object sender, EventArgs e)
         {
@@ -107,6 +111,7 @@ namespace XtremeHackerman
 
         private void FileManager_Click(object sender, EventArgs e)
         {
+
             const string message = "You have opened the File Manager";
             var result = MessageBox.Show(message);
         }
