@@ -7,21 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
 using XtremeHackerman.Classes;
+using XtremeHackerman.Properties;
 
 namespace XtremeHackerman
 {
     public partial class Form_Desktop : Class_BaseForm
     {
+	public static Form_FileManager formFileManager; //declare my form once -KN
+
         public Form_Desktop()
         {
             InitializeComponent();
-        }
+	}
 
         private void Form_Desktop_Load(object sender, EventArgs e)
         {
-            // LOADING THE DESKTOP
-        }
+	    // LOADING THE DESKTOP
+	    formFileManager = new Form_FileManager(); //declare my form once -KN
+	}
 
         private void searchEntry(object sender, EventArgs e)
         {
@@ -60,10 +66,11 @@ namespace XtremeHackerman
 
         }
 
-        private void explorerButtonClick(object sender, EventArgs e)
+        private void FileManagerButtonClick(object sender, EventArgs e)
         {
-            // Explorer button implementation
-        }
+	    // FileManager icon button implementation
+	    formFileManager.ShowDialog();
+    }
 
         private void cliButtonClick(object sender, EventArgs e)
         {
@@ -104,8 +111,34 @@ namespace XtremeHackerman
 
         private void FileManager_Click(object sender, EventArgs e)
         {
+
             const string message = "You have opened the File Manager";
             var result = MessageBox.Show(message);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolbarNetworkBTN_Click(object sender, EventArgs e)
+        {
+            // If the network Icon shows that the network is currently on
+            if (Desktop_BKEND.net_ON)
+            {
+                // Change the network icon to the 'Wifi Off' icon
+                toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
+                // Change the public status of the network to off
+                Desktop_BKEND.net_ON = false;
+            }
+            // If the network icon shows that the network is currently off
+            else
+            {
+                // Change the network icon to the 'Wifi on; icon
+                toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon;
+                // Change the public status of the network on on
+                Desktop_BKEND.net_ON = true;
+            }
         }
     }
 }

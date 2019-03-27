@@ -123,9 +123,9 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_Explorer {
+        internal static System.Drawing.Bitmap Icon_FileManager {
             get {
-                object obj = ResourceManager.GetObject("Icon_Explorer", resourceCulture);
+                object obj = ResourceManager.GetObject("Icon_FileManager", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -167,6 +167,26 @@ namespace XtremeHackerman.Properties {
             get {
                 object obj = ResourceManager.GetObject("VCR_OSD_MONO_1_001", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WifiIcon {
+            get {
+                object obj = ResourceManager.GetObject("WifiIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WifiIcon_OFF {
+            get {
+                object obj = ResourceManager.GetObject("WifiIcon_OFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
