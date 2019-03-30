@@ -1,6 +1,6 @@
 ﻿namespace XtremeHackerman
 {
-    partial class Landing_page
+    partial class Form_LandingPage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Landing_page));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_LandingPage));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.username_field = new System.Windows.Forms.TextBox();
@@ -97,7 +97,7 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Password:";
             // 
-            // Landing_page
+            // Form_LandingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,7 +108,7 @@
             this.Controls.Add(this.password_field);
             this.Controls.Add(this.username_field);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Landing_page";
+            this.Name = "Form_LandingPage";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -1,24 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Text;
 using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
 {
-    public partial class FormTitleScreen : Form
+    public partial class Form_TitleScreen : Class_BaseForm
     {
         // Define byte[] VCRFont as an embedded resource, to be used for custom font formatting
         private readonly byte[] _vcrFont = Properties.Resources.VCR_OSD_MONO_1_001;
 
-        public FormTitleScreen()
+        public Form_TitleScreen()
         {
             InitializeComponent();
         }
@@ -33,7 +24,7 @@ namespace XtremeHackerman
             // Set font format for each button on page, but retain existing font size
             foreach(Control button in tableLayoutPanel_Buttons.Controls)
             {
-                button.Font = CustomFonts.GetFont(_vcrFont, button.Font.Size);
+                button.Font = Class_CustomFonts.GetFont(_vcrFont, button.Font.Size);
             }
         }
 
@@ -55,7 +46,8 @@ namespace XtremeHackerman
         private void button_Admin_Click(object sender, EventArgs e)
         {
             Hide();
-            XtremeHackermanForms.FormDesktop.ShowDialog();
+            var formDesktop = new Form_Desktop();
+            formDesktop.ShowDialog();
         }
 
         /// <summary>
@@ -66,7 +58,8 @@ namespace XtremeHackerman
         private void button_Hacker_Click(object sender, EventArgs e)
         {
             Hide();
-            XtremeHackermanForms.FormHacker.ShowDialog();
+            var formHacker = new Form_Hacker();
+            formHacker.ShowDialog();
         }
 
     }

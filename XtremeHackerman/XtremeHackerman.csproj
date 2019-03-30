@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Desktop_BKEND.cs" />
+    <Compile Include="Classes\Class_BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Class_CustomFonts.cs" />
+    <Compile Include="Classes\Class_Email.cs" />
     <Compile Include="Form_CLI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +71,17 @@
     <Compile Include="Form_Email.Designer.cs">
       <DependentUpon>Form_Email.cs</DependentUpon>
     </Compile>
-    <Compile Include="Firewall.cs">
+    <Compile Include="Form_FileManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Firewall.Designer.cs">
-      <DependentUpon>Firewall.cs</DependentUpon>
+    <Compile Include="Form_FileManager.Designer.cs">
+      <DependentUpon>Form_FileManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Firewall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Firewall.Designer.cs">
+      <DependentUpon>Form_Firewall.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Desktop.cs">
       <SubType>Form</SubType>
@@ -101,19 +113,22 @@
     <Compile Include="Form_TitleScreen.Designer.cs">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Landing_page.cs">
+    <Compile Include="Form_LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Landing_page.Designer.cs">
-      <DependentUpon>Landing_page.cs</DependentUpon>
+    <Compile Include="Form_LandingPage.Designer.cs">
+      <DependentUpon>Form_LandingPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Firewall.resx">
-      <DependentUpon>Firewall.cs</DependentUpon>
+    <EmbeddedResource Include="Form_FileManager.resx">
+      <DependentUpon>Form_FileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Firewall.resx">
+      <DependentUpon>Form_Firewall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
@@ -133,8 +148,8 @@
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Landing_page.resx">
-      <DependentUpon>Landing_page.cs</DependentUpon>
+    <EmbeddedResource Include="Form_LandingPage.resx">
+      <DependentUpon>Form_LandingPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,58 +178,50 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Mail\Emails.json">
+    <EmbeddedResource Include="Resources\Form_Email\Emails.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="Resources\SardonicCreepyIndianrockpython-small.gif" />
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background_TitleScreen.jpg" />
+    <None Include="Resources\Form_TitleScreen\Background_TitleScreen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.jpg" />
+    <None Include="Resources\Form_Desktop\Background_Desktop.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\vaporwarebackground.jpg" />
+    <None Include="Resources\Form_Desktop\StartButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\startbutton1.png" />
+    <None Include="Resources\Form_Desktop\Icon_InternetExplorer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\startbutton.png" />
+    <None Include="Resources\Form_Desktop\Icon_CommandLine.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\internet_png_712280.jpg" />
+    <None Include="Resources\Form_Desktop\Icon_Email2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\internet_png_7122801.jpg" />
+    <None Include="Resources\Form_Desktop\Icon_Email1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\commandlinebutton1.png" />
+    <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\commandlinebutton.png" />
+    <None Include="Resources\WifiIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\explorerbutton.png" />
+    <None Include="Resources\WifiIcon-OFF.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\explorerbutton1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\emailIcon2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
+    <Content Include="Resources\Form_Desktop\Icon_FileManager.png" />
+    <Content Include="Resources\Form_FileManager\addfile.png" />
+    <Content Include="Resources\Form_FileManager\addfolder.png" />
+    <Content Include="Resources\Form_FileManager\doc.PNG" />
+    <Content Include="Resources\Form_FileManager\file.PNG" />
+    <Content Include="Resources\Form_FileManager\folder.PNG" />
+    <Content Include="Resources\Form_FileManager\img.PNG" />
+    <Content Include="Resources\Form_FileManager\openfolder.PNG" />
+    <Content Include="Resources\Form_FileManager\thispc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

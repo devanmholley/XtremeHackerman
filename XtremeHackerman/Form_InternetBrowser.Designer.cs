@@ -1,6 +1,6 @@
 ﻿namespace XtremeHackerman
 {
-    partial class FormInternetBrowser
+    partial class Form_InternetBrowser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInternetBrowser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_InternetBrowser));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -38,8 +38,20 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.companyFirewallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.virusTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.virusTotal = new System.Windows.Forms.Panel();
+            this.urlScan = new System.Windows.Forms.Panel();
+            this.urlScanner = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.urlEntry = new System.Windows.Forms.TextBox();
+            this.urlIcon = new System.Windows.Forms.PictureBox();
+            this.urlPopup = new System.Windows.Forms.Button();
+            this.virusTotalLogo = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
+            this.virusTotal.SuspendLayout();
+            this.urlScan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.urlIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -117,7 +129,8 @@
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.companyFirewallToolStripMenuItem});
+            this.companyFirewallToolStripMenuItem,
+            this.virusTotalToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -131,28 +144,123 @@
             this.companyFirewallToolStripMenuItem.Text = "Company Firewall";
             this.companyFirewallToolStripMenuItem.Click += new System.EventHandler(this.companyFirewallToolStripMenuItem_Click);
             // 
-            // label1
+            // virusTotalToolStripMenuItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(181, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "404 error";
-            this.label1.Visible = false;
+            this.virusTotalToolStripMenuItem.Name = "virusTotalToolStripMenuItem";
+            this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.virusTotalToolStripMenuItem.Text = "Virus Total";
+            this.virusTotalToolStripMenuItem.Click += new System.EventHandler(this.virusTotalToolStripMenuItem_Click);
             // 
-            // Form_InternetBrowser
+            // virusTotal
+            // 
+            this.virusTotal.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.virusTotal.Controls.Add(this.urlScan);
+            this.virusTotal.Controls.Add(this.urlPopup);
+            this.virusTotal.Controls.Add(this.virusTotalLogo);
+            this.virusTotal.Location = new System.Drawing.Point(0, 28);
+            this.virusTotal.Name = "virusTotal";
+            this.virusTotal.Size = new System.Drawing.Size(800, 421);
+            this.virusTotal.TabIndex = 1;
+            this.virusTotal.Visible = false;
+            // 
+            // urlScan
+            // 
+            this.urlScan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.urlScan.Controls.Add(this.urlScanner);
+            this.urlScan.Controls.Add(this.textBox2);
+            this.urlScan.Controls.Add(this.urlEntry);
+            this.urlScan.Controls.Add(this.urlIcon);
+            this.urlScan.Location = new System.Drawing.Point(186, 164);
+            this.urlScan.Name = "urlScan";
+            this.urlScan.Size = new System.Drawing.Size(406, 215);
+            this.urlScan.TabIndex = 2;
+            this.urlScan.Visible = false;
+            // 
+            // urlScanner
+            // 
+            this.urlScanner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("urlScanner.BackgroundImage")));
+            this.urlScanner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.urlScanner.Location = new System.Drawing.Point(362, 64);
+            this.urlScanner.Name = "urlScanner";
+            this.urlScanner.Size = new System.Drawing.Size(44, 34);
+            this.urlScanner.TabIndex = 3;
+            this.urlScanner.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(148, 46);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(159, 13);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Scan your URL\'s here";
+            // 
+            // urlEntry
+            // 
+            this.urlEntry.Location = new System.Drawing.Point(30, 65);
+            this.urlEntry.Name = "urlEntry";
+            this.urlEntry.Size = new System.Drawing.Size(350, 20);
+            this.urlEntry.TabIndex = 1;
+            // 
+            // urlIcon
+            // 
+            this.urlIcon.BackColor = System.Drawing.SystemColors.Control;
+            this.urlIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("urlIcon.BackgroundImage")));
+            this.urlIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.urlIcon.Location = new System.Drawing.Point(183, 23);
+            this.urlIcon.Name = "urlIcon";
+            this.urlIcon.Size = new System.Drawing.Size(27, 17);
+            this.urlIcon.TabIndex = 0;
+            this.urlIcon.TabStop = false;
+            // 
+            // urlPopup
+            // 
+            this.urlPopup.Location = new System.Drawing.Point(189, 145);
+            this.urlPopup.Name = "urlPopup";
+            this.urlPopup.Size = new System.Drawing.Size(41, 23);
+            this.urlPopup.TabIndex = 1;
+            this.urlPopup.Text = "URL";
+            this.urlPopup.UseVisualStyleBackColor = true;
+            this.urlPopup.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // virusTotalLogo
+            // 
+            this.virusTotalLogo.AutoSize = true;
+            this.virusTotalLogo.Location = new System.Drawing.Point(340, 56);
+            this.virusTotalLogo.Name = "virusTotalLogo";
+            this.virusTotalLogo.Size = new System.Drawing.Size(82, 13);
+            this.virusTotalLogo.TabIndex = 0;
+            this.virusTotalLogo.Text = "VirusTotals.com";
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Location = new System.Drawing.Point(181, 139);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(49, 13);
+            this.errorLabel.TabIndex = 1;
+            this.errorLabel.Text = "404 error";
+            this.errorLabel.Visible = false;
+            // 
+            // FormInternetBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(800, 469);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.virusTotal);
             this.Name = "FormInternetBrowser";
+            this.Name = "Form_InternetBrowser";
             this.Text = "InternetBrowser";
             this.Load += new System.EventHandler(this.Form_InternetBrowser_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.virusTotal.ResumeLayout(false);
+            this.virusTotal.PerformLayout();
+            this.urlScan.ResumeLayout(false);
+            this.urlScan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.urlIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +277,15 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem companyFirewallToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem virusTotalToolStripMenuItem;
+        private System.Windows.Forms.Panel virusTotal;
+        private System.Windows.Forms.Label virusTotalLogo;
+        private System.Windows.Forms.Panel urlScan;
+        private System.Windows.Forms.Button urlScanner;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox urlEntry;
+        private System.Windows.Forms.PictureBox urlIcon;
+        private System.Windows.Forms.Button urlPopup;
+        private System.Windows.Forms.Label errorLabel;
     }
 }
