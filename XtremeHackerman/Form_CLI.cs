@@ -64,10 +64,12 @@ namespace XtremeHackerman
                 switch (action[1])
                 {
                     case "Form_Email":
-                        XtremeHackermanForms.FormEmail.Show();
+			var formEmail = new Form_Email();
+			formEmail.Show();
                         break;
                     case "Form_InternetBrowser":
-                        XtremeHackermanForms.FormBrowser.Show();
+			var formInternetBrowser = new Form_InternetBrowser();
+			formInternetBrowser.Show();
                         break;
                     default:
                         return;
