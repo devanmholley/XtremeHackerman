@@ -12,7 +12,7 @@ namespace XtremeHackerman
 
 	    //Create Basic Folders: ThisPC, Documents, and Downloads
 	    TreeNode pc;
-	    pc = treeView1.Nodes.Add("ThisPC");
+	    pc = folderView.Nodes.Add("ThisPC");
 	    pc.ImageIndex = 5; //set PC icon
 	    pc.SelectedImageIndex = 5; //set PC icon
 
@@ -22,35 +22,35 @@ namespace XtremeHackerman
 
 	private void Form_FileManager_Load(object sender, EventArgs e)
 	{
-	    treeView1.Nodes[0].Expand(); // Automatically expands to show all subfolders of "ThisPC"
+	    folderView.Nodes[0].Expand(); // Automatically expands to show all subfolders of "ThisPC"
 	}
 
-	private void toolStripComboBox1_Click(object sender, EventArgs e)
+	private void filePathComboBox_Click(object sender, EventArgs e)
 	{
 	    //ComboBox to display or select file path
 	}
 
-	private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+	private void folderView_AfterSelect(object sender, TreeViewEventArgs e)
 	{
 	    //Click on folder in treeview, show subdirectories of selected folder in listview
 
-	    listView1.Items.Clear(); //clear list view everytime new folder is selected
+	    fileView.Items.Clear(); //clear list view everytime new folder is selected
 
 	    TreeNode folder = e.Node; //click on folder
 	    foreach (TreeNode childNode in folder.Nodes) //for all subdirectories in the folder
 	    {
 	    ListViewItem newItem;
-	    newItem = listView1.Items.Add(childNode.Text); //add child folders into listview
+	    newItem = fileView.Items.Add(childNode.Text); //add child folders into listview
 	    newItem.SubItems.Add("File Folder"); //set file type
 	    }
     
 	}
 
-	private void toolStripButton4_Click(object sender, EventArgs e)
+	private void newFolderButton_Click(object sender, EventArgs e)
 	{
 	    // Add New Folder Button from icon/toolbar
 	    TreeNode parentFolder, newFolder;
-	    parentFolder = treeView1.SelectedNode;
+	    parentFolder = folderView.SelectedNode;
 	    newFolder = parentFolder.Nodes.Add("New Folder"); //add new folder under parent folder
 	    parentFolder.Expand(); //show all child folders of parent
 	    newFolder.BeginEdit(); //prompt for new folder name
@@ -60,7 +60,7 @@ namespace XtremeHackerman
 	{
 	    // Add New Folder from Right Click menu in TREEVIEW
 	    TreeNode parentFolder, newFolder;
-	    parentFolder = treeView1.SelectedNode;
+	    parentFolder = folderView.SelectedNode;
 	    newFolder = parentFolder.Nodes.Add("New Folder"); //add new folder under parent folder
 	    parentFolder.Expand(); //show all child folders of parent
 	    newFolder.BeginEdit(); //prompt for new folder name
@@ -69,15 +69,15 @@ namespace XtremeHackerman
 	private void renameToolStripMenuItem_Click(object sender, System.EventArgs e)
 	{
 	    // Rename folder from Right Click menu
-	    treeView1.SelectedNode.BeginEdit();
+	    folderView.SelectedNode.BeginEdit();
 	}
 
 	private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
 	{
 	    //Delete folder from Right Click menu
-	    if (treeView1.SelectedNode.Parent != null) //Not allowed to delete "ThisPC" aka root node (ThisPC will have null parent)
+	    if (folderView.SelectedNode.Parent != null) //Not allowed to delete "ThisPC" aka root node (ThisPC will have null parent)
 	    {
-		treeView1.SelectedNode.Remove();
+		folderView.SelectedNode.Remove();
 	    }
 	    else
 	    {
@@ -90,7 +90,7 @@ namespace XtremeHackerman
 	    //Create New Text Document
 	}
 
-	private void treeView1_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
+	private void folderView_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
 	{
 	    // Validate folder name, no empty name, no invalid characters
 	    //Code Attribution: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.treeview.afterlabeledit?view=netframework-4.7.2
