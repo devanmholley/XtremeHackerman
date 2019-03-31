@@ -74,7 +74,9 @@ namespace XtremeHackerman
 
         private void cliButtonClick(object sender, EventArgs e)
         {
-            // Command Line implementation
+	    // Command Line implementation
+	    var formCLI = new Form_CLI();
+            formCLI.ShowDialog();
         }
 
         private void emailButtonClick(object sender, EventArgs e)
@@ -111,10 +113,8 @@ namespace XtremeHackerman
 
         private void FileManager_Click(object sender, EventArgs e)
         {
-
-            const string message = "You have opened the File Manager";
-            var result = MessageBox.Show(message);
-        }
+	    formFileManager.ShowDialog();
+	}
 
         private void label1_Click(object sender, EventArgs e)
         {

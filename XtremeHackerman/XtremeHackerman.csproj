@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Classes\Class_CustomFonts.cs" />
     <Compile Include="Classes\Class_Email.cs" />
+    <Compile Include="Form_CLI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CLI.Designer.cs">
+      <DependentUpon>Form_CLI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Email.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CLI.resx">
+      <DependentUpon>Form_CLI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Desktop.resx">
       <DependentUpon>Form_Desktop.cs</DependentUpon>
