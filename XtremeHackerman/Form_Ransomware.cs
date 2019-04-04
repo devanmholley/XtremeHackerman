@@ -15,8 +15,7 @@ namespace XtremeHackerman
         public Form_Ransomware()
         {
             InitializeComponent();
-            
-            this.Refresh();
+
             // Create and set the expiration date.
             DateTime currentDate = DateTime.Now;            // this current date will be used to create the timer later.
             DateTime expiryDate = DateTime.Now.AddDays(3);
