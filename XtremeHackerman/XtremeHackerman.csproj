@@ -107,6 +107,12 @@
     <Compile Include="Form_InternetBrowser.Designer.cs">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Ransomware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ransomware.Designer.cs">
+      <DependentUpon>Form_Ransomware.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_InternetBrowser.resx">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ransomware.resx">
+      <DependentUpon>Form_Ransomware.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
@@ -222,6 +231,7 @@
     <Content Include="Resources\Form_FileManager\img.PNG" />
     <Content Include="Resources\Form_FileManager\openfolder.PNG" />
     <Content Include="Resources\Form_FileManager\thispc.png" />
+    <None Include="Resources\From_Ransomware\ransomware-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
