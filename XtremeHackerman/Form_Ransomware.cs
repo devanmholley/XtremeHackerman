@@ -23,8 +23,14 @@ namespace XtremeHackerman
 
             // Create the timer using the expiration date and current date created earlier.
             TimeSpan timer = expiryDate - currentDate;
+            //var timeleft = Math.Truncate(timer.TotalSeconds);
             Label_timer.Text = Math.Truncate(timer.TotalHours) + " : " + Math.Truncate(timer.TotalMinutes % 60) + " : " + Math.Truncate(timer.TotalSeconds % 60);
             
+        }
+
+        private void Btn_Next_Ransom_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

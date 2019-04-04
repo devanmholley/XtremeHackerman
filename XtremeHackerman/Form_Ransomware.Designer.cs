@@ -36,6 +36,7 @@
             this.Label_Time_Left = new System.Windows.Forms.Label();
             this.Label_date = new System.Windows.Forms.Label();
             this.Label_timer = new System.Windows.Forms.Label();
+            this.Btn_Next_Ransom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Ransom_Icon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,14 +66,18 @@
             // 
             // TB_Ransomeware_Description
             // 
+            this.TB_Ransomeware_Description.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.TB_Ransomeware_Description.BackColor = System.Drawing.Color.White;
             this.TB_Ransomeware_Description.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Ransomeware_Description.HideSelection = false;
             this.TB_Ransomeware_Description.Location = new System.Drawing.Point(491, 72);
             this.TB_Ransomeware_Description.Multiline = true;
             this.TB_Ransomeware_Description.Name = "TB_Ransomeware_Description";
             this.TB_Ransomeware_Description.ReadOnly = true;
-            this.TB_Ransomeware_Description.Size = new System.Drawing.Size(702, 634);
+            this.TB_Ransomeware_Description.ShortcutsEnabled = false;
+            this.TB_Ransomeware_Description.Size = new System.Drawing.Size(702, 564);
             this.TB_Ransomeware_Description.TabIndex = 3;
+            this.TB_Ransomeware_Description.TabStop = false;
             this.TB_Ransomeware_Description.Text = resources.GetString("TB_Ransomeware_Description.Text");
             // 
             // PB_Ransom_Icon
@@ -122,12 +127,26 @@
             this.Label_timer.Text = "4/4/2019 10:44:43 AM";
             this.Label_timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Btn_Next_Ransom
+            // 
+            this.Btn_Next_Ransom.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Next_Ransom.Location = new System.Drawing.Point(1020, 642);
+            this.Btn_Next_Ransom.Name = "Btn_Next_Ransom";
+            this.Btn_Next_Ransom.Size = new System.Drawing.Size(123, 49);
+            this.Btn_Next_Ransom.TabIndex = 7;
+            this.Btn_Next_Ransom.Text = "Next";
+            this.Btn_Next_Ransom.UseVisualStyleBackColor = true;
+            this.Btn_Next_Ransom.Click += new System.EventHandler(this.Btn_Next_Ransom_Click);
+            // 
             // Form_Ransomware
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1205, 718);
+            this.ControlBox = false;
+            this.Controls.Add(this.Btn_Next_Ransom);
             this.Controls.Add(this.Label_timer);
             this.Controls.Add(this.Label_date);
             this.Controls.Add(this.Label_Time_Left);
@@ -137,6 +156,7 @@
             this.Controls.Add(this.label_Warning);
             this.Name = "Form_Ransomware";
             this.Text = "Form_Ransomware";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.PB_Ransom_Icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -152,5 +172,6 @@
         private System.Windows.Forms.Label Label_Time_Left;
         private System.Windows.Forms.Label Label_date;
         private System.Windows.Forms.Label Label_timer;
+        private System.Windows.Forms.Button Btn_Next_Ransom;
     }
 }
