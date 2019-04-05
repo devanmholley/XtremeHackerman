@@ -143,6 +143,16 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Wireshark {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Wireshark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Picture_Title {
             get {
                 object obj = ResourceManager.GetObject("Picture_Title", resourceCulture);
@@ -187,6 +197,16 @@ namespace XtremeHackerman.Properties {
             get {
                 object obj = ResourceManager.GetObject("WifiIcon_OFF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon wiresharktoolicon {
+            get {
+                object obj = ResourceManager.GetObject("wiresharktoolicon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

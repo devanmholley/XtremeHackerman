@@ -140,5 +140,11 @@ namespace XtremeHackerman
                 Desktop_BKEND.net_ON = true;
             }
         }
+
+        private void Wireshark_Click(object sender, EventArgs e)
+        {
+            var formWireshark = new Form_Wireshark();
+            formWireshark.ShowDialog();
+        }
     }
 }

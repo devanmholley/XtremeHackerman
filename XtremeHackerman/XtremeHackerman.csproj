@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Classes\Class_CustomFonts.cs" />
     <Compile Include="Classes\Class_Email.cs" />
+    <Compile Include="Form_Wireshark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Wireshark.Designer.cs">
+      <DependentUpon>Form_Wireshark.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_CLI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="Form_LandingPage.resx">
       <DependentUpon>Form_LandingPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Wireshark.resx">
+      <DependentUpon>Form_Wireshark.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -222,6 +231,8 @@
     <Content Include="Resources\Form_FileManager\img.PNG" />
     <Content Include="Resources\Form_FileManager\openfolder.PNG" />
     <Content Include="Resources\Form_FileManager\thispc.png" />
+    <None Include="Resources\wiresharktoolicon.ico" />
+    <None Include="Resources\wiresharklogo.png" />
     <None Include="Resources\ieicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
