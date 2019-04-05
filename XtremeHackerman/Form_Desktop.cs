@@ -74,7 +74,16 @@ namespace XtremeHackerman
             // Command Line implementation
 
             // Initialization of Notification Popup 
-
+            // Initialization of Notification Popup 
+            string messagetime = System.DateTime.Now.ToString("ddd  HH:mm:ss");
+            string messageBody = "[SAMPLE TEXT]";
+            var popupNotifier = new PopupNotifier();
+            popupNotifier.TitleText = messagetime;
+            popupNotifier.ContentText = messageBody;
+            popupNotifier.IsRightToLeft = false;
+            popupNotifier.BodyColor = Color.Purple;
+            popupNotifier.Delay = 10000;
+            popupNotifier.Popup();
         }
 
         private void emailButtonClick(object sender, EventArgs e)
