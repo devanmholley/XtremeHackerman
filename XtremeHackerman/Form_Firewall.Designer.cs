@@ -167,6 +167,7 @@
             this.testipWindow.ReadOnly = true;
             this.testipWindow.Size = new System.Drawing.Size(114, 20);
             this.testipWindow.TabIndex = 4;
+            this.testipWindow.TextChanged += new System.EventHandler(this.testipWindow_TextChanged);
             // 
             // ipYeahweblocked
             // 
@@ -246,7 +247,7 @@
             this.welcomeMessagelabel.TabIndex = 1;
             this.welcomeMessagelabel.Text = "Welcome Mr. Anderson";
             // 
-            // Firewall
+            // Form_Firewall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

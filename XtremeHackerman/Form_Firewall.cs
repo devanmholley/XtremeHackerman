@@ -104,6 +104,17 @@ namespace XtremeHackerman
 
         private void blockIP_Click(object sender, EventArgs e)
         {
+            // Add the IP entered to the list of blocked IPs when clicked.
+            // First, ensure that there is text in the box
+            if (ipEntry.Text != "")
+            {
+                Class_Firewall.blockedIPs.Add(ipEntry.Text);
+            }
+            
+        }
+
+        private void testipWindow_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

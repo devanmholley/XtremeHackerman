@@ -127,14 +127,16 @@ namespace XtremeHackerman
         private static void PhishingEmailAttack()
         {
             //Add the phishing email to the inbox.
-            AddMail(
+            AddMail
+                (
                 "ChaseBank@fake.com",
                 "SysAdmin@meganopoly.com",
                 "April 10, 2019",
                 "Problem with your bank account",
                 "We have noticed suspicious activity on your account. Please reply with your " +
                 "credit card number as well as the expiration date and 3 numbers on the " +
-                "back to validate your identity.");
+                "back to validate your identity."
+                );
 
         }
         private static void PhishingEmailRecovery()

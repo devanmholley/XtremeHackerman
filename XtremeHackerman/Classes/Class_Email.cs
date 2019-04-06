@@ -13,6 +13,7 @@ namespace XtremeHackerman.Classes
         // Adds new mail into the JSON file so it appears in the inbox.
         public void AddMail(string src, string dst, string dt, string sbjt, string bdy)
         {
+            //If the email source hasn't been blocked on the firewall
             if (Class_Firewall.blockedIPs.Contains(src)== false) { 
                 EmailStruct newMail = new EmailStruct
                 {
