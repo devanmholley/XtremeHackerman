@@ -13,21 +13,23 @@ namespace XtremeHackerman.Classes
         // Adds new mail into the JSON file so it appears in the inbox.
         public void AddMail(string src, string dst, string dt, string sbjt, string bdy)
         {
-            EmailStruct newMail = new EmailStruct
-            {
-                // Creates a new email with the passed in values.
-                Source = src,
-                Destination = dst,
-                Date = dt,
-                Subject = sbjt,
-                Body = bdy
-            };
+            if (src in blockedIPs) { 
+                EmailStruct newMail = new EmailStruct
+                {
+                    // Creates a new email with the passed in values.
+                    Source = src,
+                    Destination = dst,
+                    Date = dt,
+                    Subject = sbjt,
+                    Body = bdy
+                };
 
-            //Then we add the new email to the inbox.
-            EmailList.Add(newMail);
+                //Then we add the new email to the inbox.
+                EmailList.Add(newMail);
 
-            //Serialize the new object into the JSON file.
-            JsonConvert.SerializeObject(EmailList, Formatting.Indented);
+                //Serialize the new object into the JSON file.
+                JsonConvert.SerializeObject(EmailList, Formatting.Indented);
+            }
         }
 
 
