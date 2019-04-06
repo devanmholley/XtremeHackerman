@@ -222,6 +222,7 @@
     <Content Include="Resources\Form_FileManager\img.PNG" />
     <Content Include="Resources\Form_FileManager\openfolder.PNG" />
     <Content Include="Resources\Form_FileManager\thispc.png" />
+    <None Include="Resources\ieicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
