@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace XtremeHackerman.Classes
 {
-    class Class_Firewall
+    public static class Class_Firewall
     {
         // The firewall contains the variable for IPs and maintains a list of
         // blocked IPs.
-        public string IP;
+        public static string IP;
         public static IList<String> blockedIPs;
     }
 }
