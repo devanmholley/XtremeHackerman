@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -125,6 +126,8 @@
     <Compile Include="Form_LandingPage.Designer.cs">
       <DependentUpon>Form_LandingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlaceHolderText.cs" />
+    <Compile Include="PlaceHolderTextBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Email.resx">
@@ -156,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_LandingPage.resx">
       <DependentUpon>Form_LandingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Wireshark.en-US.resx">
+      <DependentUpon>Form_Wireshark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Wireshark.resx">
       <DependentUpon>Form_Wireshark.cs</DependentUpon>
@@ -222,6 +228,8 @@
     <None Include="Resources\WifiIcon-OFF.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\foldericon.png" />
+    <Content Include="Resources\foldericon.bmp" />
     <Content Include="Resources\Form_Desktop\Icon_FileManager.png" />
     <Content Include="Resources\Form_FileManager\addfile.png" />
     <Content Include="Resources\Form_FileManager\addfolder.png" />

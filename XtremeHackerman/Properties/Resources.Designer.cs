@@ -93,6 +93,16 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap foldericon {
+            get {
+                object obj = ResourceManager.GetObject("foldericon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_CommandLine {
             get {
                 object obj = ResourceManager.GetObject("Icon_CommandLine", resourceCulture);

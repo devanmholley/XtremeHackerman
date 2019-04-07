@@ -21,5 +21,20 @@ namespace XtremeHackerman
         {
 
         }
+
+        private void DisplayFilterText_TextChanged(object sender, EventArgs e)
+        {
+            // If the text is empty
+            if (string.IsNullOrEmpty(DisplayFilterText.Text))
+            {
+                // Set Default Message
+                DisplayFilterText.Text = "Apply a display filter...";
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
