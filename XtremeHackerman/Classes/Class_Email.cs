@@ -16,19 +16,23 @@ namespace XtremeHackerman.Classes
             /// <summary>
             /// 
             /// </summary>
+            /// <param name="emailLocation"></param>
             /// <param name="emailSource"></param>
             /// <param name="emailDestination"></param>
             /// <param name="emailDate"></param>
             /// <param name="emailSubject"></param>
             /// <param name="emailBody"></param>
-            public EmailStruct(string emailSource, string emailDestination, string emailDate, string emailSubject, string emailBody)
+            public EmailStruct(string emailLocation, string emailSource, string emailDestination, string emailDate, string emailSubject, string emailBody)
             {
+                Location = emailLocation;
                 Source = emailSource;
                 Destination = emailDestination;
                 Date = emailDate;
                 Subject = emailSubject;
                 Body = emailBody;
             }
+
+            public string Location { get; set; }
 
             public string Source { get; set; }
 

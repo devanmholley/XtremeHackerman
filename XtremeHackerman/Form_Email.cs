@@ -16,13 +16,7 @@ namespace XtremeHackerman
 
         private void FormEmail_Load(object sender, System.EventArgs e)
         {
-            emailInboxBindingSource.DataSource = Class_Email.EmailList;
-            email_inbox.DisplayMember = "Subject";
-            email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
-            email_destTXT.DataBindings.Add("Text", emailInboxBindingSource, "Destination");
-            email_dateTXT.DataBindings.Add("Text", emailInboxBindingSource, "Date");
-            email_subjectTXT.DataBindings.Add("Text", emailInboxBindingSource, "Subject");
-            email_bodyTXT.DataBindings.Add("Text", emailInboxBindingSource, "Body");
+            email_inboxBTN_Click(sender, e);
         }
 
         private void email_composeBTN_Click(object sender, System.EventArgs e)
@@ -52,7 +46,6 @@ namespace XtremeHackerman
         private void btn_Send_Click(object sender, System.EventArgs e)
         {
             /// check to see if the target field has a valid address
-
             string target = targetTXT.Text;
             if (target.Contains("@") && target.Contains("."))
             {
@@ -73,7 +66,6 @@ namespace XtremeHackerman
                         // Valid Address
                         const string message = "Email has been sent.";
                         var result = MessageBox.Show(message);
-
                         this.Dispose();
                         var formEmail = new Form_Email();
                         formEmail.ShowDialog();
@@ -86,6 +78,72 @@ namespace XtremeHackerman
                 // Invalid Address
                 const string message = "You have entered an invalid email address";
                 var result = MessageBox.Show(message);
+            }
+        }
+
+        private void email_trashBTN_Click(object sender, System.EventArgs e)
+        {
+            emailInboxBindingSource.DataSource = Class_Email.EmailList;
+
+            email_inbox.DisplayMember = "";
+            email_sourceTXT.DataBindings.Clear();
+            email_destTXT.DataBindings.Clear();
+            email_dateTXT.DataBindings.Clear();
+            email_subjectTXT.DataBindings.Clear();
+            email_bodyTXT.DataBindings.Clear();
+
+            if (true == true)
+            {
+                email_inbox.DisplayMember = "Subject";
+                email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
+                email_destTXT.DataBindings.Add("Text", emailInboxBindingSource, "Destination");
+                email_dateTXT.DataBindings.Add("Text", emailInboxBindingSource, "Date");
+                email_subjectTXT.DataBindings.Add("Text", emailInboxBindingSource, "Subject");
+                email_bodyTXT.DataBindings.Add("Text", emailInboxBindingSource, "Body");
+            }
+        }
+
+        private void email_inboxBTN_Click(object sender, System.EventArgs e)
+        {
+            emailInboxBindingSource.DataSource = Class_Email.EmailList;
+
+            email_inbox.DisplayMember = "";
+            email_sourceTXT.DataBindings.Clear();
+            email_destTXT.DataBindings.Clear();
+            email_dateTXT.DataBindings.Clear();
+            email_subjectTXT.DataBindings.Clear();
+            email_bodyTXT.DataBindings.Clear();
+
+            if (true == true)
+            {
+                email_inbox.DisplayMember = "Subject";
+                email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
+                email_destTXT.DataBindings.Add("Text", emailInboxBindingSource, "Destination");
+                email_dateTXT.DataBindings.Add("Text", emailInboxBindingSource, "Date");
+                email_subjectTXT.DataBindings.Add("Text", emailInboxBindingSource, "Subject");
+                email_bodyTXT.DataBindings.Add("Text", emailInboxBindingSource, "Body");
+            }
+        }
+
+        private void email_spamBTN_Click(object sender, System.EventArgs e)
+        {
+            emailInboxBindingSource.DataSource = Class_Email.EmailList;
+
+            email_inbox.DisplayMember = "";
+            email_sourceTXT.DataBindings.Clear();
+            email_destTXT.DataBindings.Clear();
+            email_dateTXT.DataBindings.Clear();
+            email_subjectTXT.DataBindings.Clear();
+            email_bodyTXT.DataBindings.Clear();
+
+            if (true == true)
+            {
+                email_inbox.DisplayMember = "Subject";
+                email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
+                email_destTXT.DataBindings.Add("Text", emailInboxBindingSource, "Destination");
+                email_dateTXT.DataBindings.Add("Text", emailInboxBindingSource, "Date");
+                email_subjectTXT.DataBindings.Add("Text", emailInboxBindingSource, "Subject");
+                email_bodyTXT.DataBindings.Add("Text", emailInboxBindingSource, "Body");
             }
         }
     }
