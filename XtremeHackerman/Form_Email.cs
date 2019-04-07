@@ -85,14 +85,14 @@ namespace XtremeHackerman
         {
             emailInboxBindingSource.DataSource = Class_Email.EmailList;
 
-            email_inbox.DisplayMember = "";
+            email_inbox.DisplayMember = null;
             email_sourceTXT.DataBindings.Clear();
             email_destTXT.DataBindings.Clear();
             email_dateTXT.DataBindings.Clear();
             email_subjectTXT.DataBindings.Clear();
             email_bodyTXT.DataBindings.Clear();
 
-            if (true == true)
+            if (true == true)   // Replace this with the location flag.
             {
                 email_inbox.DisplayMember = "Subject";
                 email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
@@ -107,14 +107,14 @@ namespace XtremeHackerman
         {
             emailInboxBindingSource.DataSource = Class_Email.EmailList;
 
-            email_inbox.DisplayMember = "";
+            email_inbox.DisplayMember = null;
             email_sourceTXT.DataBindings.Clear();
             email_destTXT.DataBindings.Clear();
             email_dateTXT.DataBindings.Clear();
             email_subjectTXT.DataBindings.Clear();
             email_bodyTXT.DataBindings.Clear();
 
-            if (true == true)
+            if (true == true)   // Replace this with the location flag.
             {
                 email_inbox.DisplayMember = "Subject";
                 email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
@@ -129,14 +129,14 @@ namespace XtremeHackerman
         {
             emailInboxBindingSource.DataSource = Class_Email.EmailList;
 
-            email_inbox.DisplayMember = "";
+            email_inbox.DisplayMember = null;
             email_sourceTXT.DataBindings.Clear();
             email_destTXT.DataBindings.Clear();
             email_dateTXT.DataBindings.Clear();
             email_subjectTXT.DataBindings.Clear();
             email_bodyTXT.DataBindings.Clear();
 
-            if (true == true)
+            if (true == true)   // Replace this with the location flag.
             {
                 email_inbox.DisplayMember = "Subject";
                 email_sourceTXT.DataBindings.Add("Text", emailInboxBindingSource, "Source");
