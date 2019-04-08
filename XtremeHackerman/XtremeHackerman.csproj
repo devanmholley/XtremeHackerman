@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Classes\Class_CustomFonts.cs" />
     <Compile Include="Classes\Class_Email.cs" />
+    <Compile Include="Form_Anitvirus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Anitvirus.Designer.cs">
+      <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_CLI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Anitvirus.resx">
+      <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
     </EmbeddedResource>
