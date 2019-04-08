@@ -13,6 +13,7 @@ namespace XtremeHackerman
 {
     public partial class Form_InternetBrowser : Class_BaseForm
     {
+        List<string> safeUrls = new List<string>(15) { "viruses.com", "thebest.com" };
         public Form_InternetBrowser()
         {
             InitializeComponent();
@@ -63,6 +64,38 @@ namespace XtremeHackerman
         private void button1_Click(object sender, EventArgs e)
         {
             urlScan.Show();
+        }
+
+        //this the code behind making the button work for shifting between virus totals panels
+        private void urlScanner_Click(object sender, EventArgs e)
+        {
+            
+               if (safeUrls.Contains(urlEntry.Text))
+                {
+                    urlResults.Show();
+                    urlTextbox.Text = "https://" + urlEntry.Text + ".com";
+                    hostTextbox.Text = urlEntry.Text;
+                }
+               else
+               {
+                    safeUrlpanel.Show();
+                    safe_url_Display_Txb.Text = "https://" + urlEntry.Text + ".com";
+                    safe_url_Host_Txb.Text = urlEntry.Text;
+                    safe_final_url_Txtb.Text = safe_url_Display_Txb.Text;
+                }
+              
+            
+                
+        }
+         // button click events under here are for showing the various details between the safe and non safe urls
+        private void urlDetailsbtn_Click(object sender, EventArgs e)
+        {
+            urlDetailsview.Show();
+        }
+
+        private void safeurlDetailsbtn_Click(object sender, EventArgs e)
+        {
+            safe_URL_details_Pnl.Show();
         }
     }
 }
