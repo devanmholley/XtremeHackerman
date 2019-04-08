@@ -73,13 +73,13 @@ namespace XtremeHackerman
                if (safeUrls.Contains(urlEntry.Text))
                 {
                     urlResults.Show();
-                    urlTextbox.Text = "https://" + urlEntry.Text + ".com";
+                    urlTextbox.Text = "https://" + urlEntry.Text;
                     hostTextbox.Text = urlEntry.Text;
                 }
                else
                {
                     safeUrlpanel.Show();
-                    safe_url_Display_Txb.Text = "https://" + urlEntry.Text + ".com";
+                    safe_url_Display_Txb.Text = "https://" + urlEntry.Text;
                     safe_url_Host_Txb.Text = urlEntry.Text;
                     safe_final_url_Txtb.Text = safe_url_Display_Txb.Text;
                 }
@@ -96,6 +96,18 @@ namespace XtremeHackerman
         private void safeurlDetailsbtn_Click(object sender, EventArgs e)
         {
             safe_URL_details_Pnl.Show();
+        }
+
+        private void url_home_Btn_Click(object sender, EventArgs e)
+        {
+            urlResults.Hide();
+            virusTotal.Show();
+        }
+
+        private void safe_url_Btn_Click(object sender, EventArgs e)
+        {
+            safeUrlpanel.Hide();
+            virusTotal.Show();
         }
     }
 }

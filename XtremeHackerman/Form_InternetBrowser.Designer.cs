@@ -41,22 +41,6 @@
             this.virusTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.virusTotal = new System.Windows.Forms.Panel();
             this.urlResults = new System.Windows.Forms.Panel();
-            this.safeUrlpanel = new System.Windows.Forms.Panel();
-            this.safe_url_Host_Txb = new System.Windows.Forms.TextBox();
-            this.safe_url_Display_Txb = new System.Windows.Forms.TextBox();
-            this.safe_URL_details_Pnl = new System.Windows.Forms.Panel();
-            this.safe_url_Comm_Txb = new System.Windows.Forms.TextBox();
-            this.safe_url_Comm_lbl = new System.Windows.Forms.Label();
-            this.safe_url_ip_Txb = new System.Windows.Forms.TextBox();
-            this.safe_serving_IP_lbl = new System.Windows.Forms.Label();
-            this.safe_final_url_Txtb = new System.Windows.Forms.TextBox();
-            this.safe_final_URL_lbl = new System.Windows.Forms.Label();
-            this.safeHTTPlbl = new System.Windows.Forms.Label();
-            this.safeURLhostlb = new System.Windows.Forms.Label();
-            this.safeUrllbl = new System.Windows.Forms.Label();
-            this.safeurlDetailsbtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.safeURlpicture = new System.Windows.Forms.PictureBox();
             this.urlDetailsview = new System.Windows.Forms.Panel();
             this.commentTextb = new System.Windows.Forms.TextBox();
             this.commentLBL = new System.Windows.Forms.Label();
@@ -80,19 +64,37 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.urlEntry = new System.Windows.Forms.TextBox();
             this.urlIcon = new System.Windows.Forms.PictureBox();
+            this.safeUrlpanel = new System.Windows.Forms.Panel();
+            this.safe_url_Host_Txb = new System.Windows.Forms.TextBox();
+            this.safe_url_Display_Txb = new System.Windows.Forms.TextBox();
+            this.safe_URL_details_Pnl = new System.Windows.Forms.Panel();
+            this.safe_url_Comm_Txb = new System.Windows.Forms.TextBox();
+            this.safe_url_Comm_lbl = new System.Windows.Forms.Label();
+            this.safe_url_ip_Txb = new System.Windows.Forms.TextBox();
+            this.safe_serving_IP_lbl = new System.Windows.Forms.Label();
+            this.safe_final_url_Txtb = new System.Windows.Forms.TextBox();
+            this.safe_final_URL_lbl = new System.Windows.Forms.Label();
+            this.safeHTTPlbl = new System.Windows.Forms.Label();
+            this.safeURLhostlb = new System.Windows.Forms.Label();
+            this.safeUrllbl = new System.Windows.Forms.Label();
+            this.safeurlDetailsbtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.safeURlpicture = new System.Windows.Forms.PictureBox();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.url_home_Btn = new System.Windows.Forms.Button();
+            this.safe_url_Btn = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.virusTotal.SuspendLayout();
             this.urlResults.SuspendLayout();
-            this.safeUrlpanel.SuspendLayout();
-            this.safe_URL_details_Pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.safeURlpicture)).BeginInit();
             this.urlDetailsview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urlResultsicon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.urlBackground)).BeginInit();
             this.urlScan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urlIcon)).BeginInit();
+            this.safeUrlpanel.SuspendLayout();
+            this.safe_URL_details_Pnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeURlpicture)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -107,7 +109,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(808, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -208,7 +210,6 @@
             // urlResults
             // 
             this.urlResults.BackColor = System.Drawing.SystemColors.Control;
-            this.urlResults.Controls.Add(this.safeUrlpanel);
             this.urlResults.Controls.Add(this.urlDetailsview);
             this.urlResults.Controls.Add(this.hostTextbox);
             this.urlResults.Controls.Add(this.urlTextbox);
@@ -225,169 +226,10 @@
             this.urlResults.TabIndex = 3;
             this.urlResults.Visible = false;
             // 
-            // safeUrlpanel
-            // 
-            this.safeUrlpanel.Controls.Add(this.safe_url_Host_Txb);
-            this.safeUrlpanel.Controls.Add(this.safe_url_Display_Txb);
-            this.safeUrlpanel.Controls.Add(this.safe_URL_details_Pnl);
-            this.safeUrlpanel.Controls.Add(this.safeURLhostlb);
-            this.safeUrlpanel.Controls.Add(this.safeUrllbl);
-            this.safeUrlpanel.Controls.Add(this.safeurlDetailsbtn);
-            this.safeUrlpanel.Controls.Add(this.pictureBox1);
-            this.safeUrlpanel.Controls.Add(this.safeURlpicture);
-            this.safeUrlpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.safeUrlpanel.Location = new System.Drawing.Point(0, 0);
-            this.safeUrlpanel.Name = "safeUrlpanel";
-            this.safeUrlpanel.Size = new System.Drawing.Size(800, 421);
-            this.safeUrlpanel.TabIndex = 9;
-            this.safeUrlpanel.Visible = false;
-            // 
-            // safe_url_Host_Txb
-            // 
-            this.safe_url_Host_Txb.Location = new System.Drawing.Point(180, 44);
-            this.safe_url_Host_Txb.Name = "safe_url_Host_Txb";
-            this.safe_url_Host_Txb.Size = new System.Drawing.Size(132, 20);
-            this.safe_url_Host_Txb.TabIndex = 7;
-            // 
-            // safe_url_Display_Txb
-            // 
-            this.safe_url_Display_Txb.Location = new System.Drawing.Point(180, 12);
-            this.safe_url_Display_Txb.Name = "safe_url_Display_Txb";
-            this.safe_url_Display_Txb.Size = new System.Drawing.Size(132, 20);
-            this.safe_url_Display_Txb.TabIndex = 6;
-            // 
-            // safe_URL_details_Pnl
-            // 
-            this.safe_URL_details_Pnl.Controls.Add(this.safe_url_Comm_Txb);
-            this.safe_URL_details_Pnl.Controls.Add(this.safe_url_Comm_lbl);
-            this.safe_URL_details_Pnl.Controls.Add(this.safe_url_ip_Txb);
-            this.safe_URL_details_Pnl.Controls.Add(this.safe_serving_IP_lbl);
-            this.safe_URL_details_Pnl.Controls.Add(this.safe_final_url_Txtb);
-            this.safe_URL_details_Pnl.Controls.Add(this.safe_final_URL_lbl);
-            this.safe_URL_details_Pnl.Controls.Add(this.safeHTTPlbl);
-            this.safe_URL_details_Pnl.Location = new System.Drawing.Point(3, 96);
-            this.safe_URL_details_Pnl.Name = "safe_URL_details_Pnl";
-            this.safe_URL_details_Pnl.Size = new System.Drawing.Size(797, 325);
-            this.safe_URL_details_Pnl.TabIndex = 5;
-            this.safe_URL_details_Pnl.Visible = false;
-            // 
-            // safe_url_Comm_Txb
-            // 
-            this.safe_url_Comm_Txb.Location = new System.Drawing.Point(340, 76);
-            this.safe_url_Comm_Txb.Multiline = true;
-            this.safe_url_Comm_Txb.Name = "safe_url_Comm_Txb";
-            this.safe_url_Comm_Txb.Size = new System.Drawing.Size(429, 207);
-            this.safe_url_Comm_Txb.TabIndex = 6;
-            this.safe_url_Comm_Txb.Text = "user: Admin\r\n      Due to the metrix algorithm on the backend of our site, virust" +
-    "otals views the website as a safe website to visit.\r\n";
-            // 
-            // safe_url_Comm_lbl
-            // 
-            this.safe_url_Comm_lbl.AutoSize = true;
-            this.safe_url_Comm_lbl.Location = new System.Drawing.Point(337, 59);
-            this.safe_url_Comm_lbl.Name = "safe_url_Comm_lbl";
-            this.safe_url_Comm_lbl.Size = new System.Drawing.Size(56, 13);
-            this.safe_url_Comm_lbl.TabIndex = 5;
-            this.safe_url_Comm_lbl.Text = "Comments";
-            // 
-            // safe_url_ip_Txb
-            // 
-            this.safe_url_ip_Txb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.safe_url_ip_Txb.Location = new System.Drawing.Point(66, 140);
-            this.safe_url_ip_Txb.Name = "safe_url_ip_Txb";
-            this.safe_url_ip_Txb.Size = new System.Drawing.Size(141, 13);
-            this.safe_url_ip_Txb.TabIndex = 4;
-            this.safe_url_ip_Txb.Text = "156.115.12.36";
-            // 
-            // safe_serving_IP_lbl
-            // 
-            this.safe_serving_IP_lbl.AutoSize = true;
-            this.safe_serving_IP_lbl.Location = new System.Drawing.Point(66, 121);
-            this.safe_serving_IP_lbl.Name = "safe_serving_IP_lbl";
-            this.safe_serving_IP_lbl.Size = new System.Drawing.Size(97, 13);
-            this.safe_serving_IP_lbl.TabIndex = 3;
-            this.safe_serving_IP_lbl.Text = "Serving IP Address";
-            // 
-            // safe_final_url_Txtb
-            // 
-            this.safe_final_url_Txtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.safe_final_url_Txtb.Location = new System.Drawing.Point(66, 71);
-            this.safe_final_url_Txtb.Name = "safe_final_url_Txtb";
-            this.safe_final_url_Txtb.Size = new System.Drawing.Size(143, 13);
-            this.safe_final_url_Txtb.TabIndex = 2;
-            // 
-            // safe_final_URL_lbl
-            // 
-            this.safe_final_URL_lbl.AutoSize = true;
-            this.safe_final_URL_lbl.Location = new System.Drawing.Point(66, 54);
-            this.safe_final_URL_lbl.Name = "safe_final_URL_lbl";
-            this.safe_final_URL_lbl.Size = new System.Drawing.Size(54, 13);
-            this.safe_final_URL_lbl.TabIndex = 1;
-            this.safe_final_URL_lbl.Text = "Final URL";
-            // 
-            // safeHTTPlbl
-            // 
-            this.safeHTTPlbl.AutoSize = true;
-            this.safeHTTPlbl.Location = new System.Drawing.Point(24, 15);
-            this.safeHTTPlbl.Name = "safeHTTPlbl";
-            this.safeHTTPlbl.Size = new System.Drawing.Size(87, 13);
-            this.safeHTTPlbl.TabIndex = 0;
-            this.safeHTTPlbl.Text = "HTTP Response";
-            // 
-            // safeURLhostlb
-            // 
-            this.safeURLhostlb.AutoSize = true;
-            this.safeURLhostlb.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.safeURLhostlb.Location = new System.Drawing.Point(138, 48);
-            this.safeURLhostlb.Name = "safeURLhostlb";
-            this.safeURLhostlb.Size = new System.Drawing.Size(35, 13);
-            this.safeURLhostlb.TabIndex = 4;
-            this.safeURLhostlb.Text = "Host :";
-            // 
-            // safeUrllbl
-            // 
-            this.safeUrllbl.AutoSize = true;
-            this.safeUrllbl.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.safeUrllbl.Location = new System.Drawing.Point(137, 15);
-            this.safeUrllbl.Name = "safeUrllbl";
-            this.safeUrllbl.Size = new System.Drawing.Size(35, 13);
-            this.safeUrllbl.TabIndex = 3;
-            this.safeUrllbl.Text = "URL :";
-            // 
-            // safeurlDetailsbtn
-            // 
-            this.safeurlDetailsbtn.BackColor = System.Drawing.SystemColors.Control;
-            this.safeurlDetailsbtn.Location = new System.Drawing.Point(69, 67);
-            this.safeurlDetailsbtn.Name = "safeurlDetailsbtn";
-            this.safeurlDetailsbtn.Size = new System.Drawing.Size(57, 23);
-            this.safeurlDetailsbtn.TabIndex = 2;
-            this.safeurlDetailsbtn.Text = "Details";
-            this.safeurlDetailsbtn.UseVisualStyleBackColor = false;
-            this.safeurlDetailsbtn.Click += new System.EventHandler(this.safeurlDetailsbtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(69, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // safeURlpicture
-            // 
-            this.safeURlpicture.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.safeURlpicture.Location = new System.Drawing.Point(3, 3);
-            this.safeURlpicture.Name = "safeURlpicture";
-            this.safeURlpicture.Size = new System.Drawing.Size(797, 88);
-            this.safeURlpicture.TabIndex = 0;
-            this.safeURlpicture.TabStop = false;
-            // 
             // urlDetailsview
             // 
             this.urlDetailsview.BackColor = System.Drawing.SystemColors.Menu;
+            this.urlDetailsview.Controls.Add(this.url_home_Btn);
             this.urlDetailsview.Controls.Add(this.commentTextb);
             this.urlDetailsview.Controls.Add(this.commentLBL);
             this.urlDetailsview.Controls.Add(this.servingIPtxb);
@@ -539,9 +381,9 @@
             // urlBackground
             // 
             this.urlBackground.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.urlBackground.Location = new System.Drawing.Point(0, 3);
+            this.urlBackground.Location = new System.Drawing.Point(3, 3);
             this.urlBackground.Name = "urlBackground";
-            this.urlBackground.Size = new System.Drawing.Size(800, 105);
+            this.urlBackground.Size = new System.Drawing.Size(797, 105);
             this.urlBackground.TabIndex = 0;
             this.urlBackground.TabStop = false;
             // 
@@ -615,6 +457,167 @@
             this.urlIcon.TabIndex = 0;
             this.urlIcon.TabStop = false;
             // 
+            // safeUrlpanel
+            // 
+            this.safeUrlpanel.Controls.Add(this.safe_url_Host_Txb);
+            this.safeUrlpanel.Controls.Add(this.safe_url_Display_Txb);
+            this.safeUrlpanel.Controls.Add(this.safe_URL_details_Pnl);
+            this.safeUrlpanel.Controls.Add(this.safeURLhostlb);
+            this.safeUrlpanel.Controls.Add(this.safeUrllbl);
+            this.safeUrlpanel.Controls.Add(this.safeurlDetailsbtn);
+            this.safeUrlpanel.Controls.Add(this.pictureBox1);
+            this.safeUrlpanel.Controls.Add(this.safeURlpicture);
+            this.safeUrlpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.safeUrlpanel.Location = new System.Drawing.Point(0, 25);
+            this.safeUrlpanel.Name = "safeUrlpanel";
+            this.safeUrlpanel.Size = new System.Drawing.Size(808, 444);
+            this.safeUrlpanel.TabIndex = 9;
+            this.safeUrlpanel.Visible = false;
+            // 
+            // safe_url_Host_Txb
+            // 
+            this.safe_url_Host_Txb.Location = new System.Drawing.Point(180, 44);
+            this.safe_url_Host_Txb.Name = "safe_url_Host_Txb";
+            this.safe_url_Host_Txb.Size = new System.Drawing.Size(132, 20);
+            this.safe_url_Host_Txb.TabIndex = 7;
+            // 
+            // safe_url_Display_Txb
+            // 
+            this.safe_url_Display_Txb.Location = new System.Drawing.Point(180, 12);
+            this.safe_url_Display_Txb.Name = "safe_url_Display_Txb";
+            this.safe_url_Display_Txb.Size = new System.Drawing.Size(132, 20);
+            this.safe_url_Display_Txb.TabIndex = 6;
+            // 
+            // safe_URL_details_Pnl
+            // 
+            this.safe_URL_details_Pnl.Controls.Add(this.safe_url_Btn);
+            this.safe_URL_details_Pnl.Controls.Add(this.safe_url_Comm_Txb);
+            this.safe_URL_details_Pnl.Controls.Add(this.safe_url_Comm_lbl);
+            this.safe_URL_details_Pnl.Controls.Add(this.safe_url_ip_Txb);
+            this.safe_URL_details_Pnl.Controls.Add(this.safe_serving_IP_lbl);
+            this.safe_URL_details_Pnl.Controls.Add(this.safe_final_url_Txtb);
+            this.safe_URL_details_Pnl.Controls.Add(this.safe_final_URL_lbl);
+            this.safe_URL_details_Pnl.Controls.Add(this.safeHTTPlbl);
+            this.safe_URL_details_Pnl.Location = new System.Drawing.Point(3, 96);
+            this.safe_URL_details_Pnl.Name = "safe_URL_details_Pnl";
+            this.safe_URL_details_Pnl.Size = new System.Drawing.Size(797, 325);
+            this.safe_URL_details_Pnl.TabIndex = 5;
+            this.safe_URL_details_Pnl.Visible = false;
+            // 
+            // safe_url_Comm_Txb
+            // 
+            this.safe_url_Comm_Txb.Location = new System.Drawing.Point(340, 76);
+            this.safe_url_Comm_Txb.Multiline = true;
+            this.safe_url_Comm_Txb.Name = "safe_url_Comm_Txb";
+            this.safe_url_Comm_Txb.Size = new System.Drawing.Size(429, 207);
+            this.safe_url_Comm_Txb.TabIndex = 6;
+            this.safe_url_Comm_Txb.Text = "user: Admin\r\n      Due to the metrix algorithm on the backend of our site, virust" +
+    "otals views the website as a safe website to visit.\r\n";
+            // 
+            // safe_url_Comm_lbl
+            // 
+            this.safe_url_Comm_lbl.AutoSize = true;
+            this.safe_url_Comm_lbl.Location = new System.Drawing.Point(337, 59);
+            this.safe_url_Comm_lbl.Name = "safe_url_Comm_lbl";
+            this.safe_url_Comm_lbl.Size = new System.Drawing.Size(56, 13);
+            this.safe_url_Comm_lbl.TabIndex = 5;
+            this.safe_url_Comm_lbl.Text = "Comments";
+            // 
+            // safe_url_ip_Txb
+            // 
+            this.safe_url_ip_Txb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.safe_url_ip_Txb.Location = new System.Drawing.Point(66, 140);
+            this.safe_url_ip_Txb.Name = "safe_url_ip_Txb";
+            this.safe_url_ip_Txb.Size = new System.Drawing.Size(141, 13);
+            this.safe_url_ip_Txb.TabIndex = 4;
+            this.safe_url_ip_Txb.Text = "156.115.12.36";
+            // 
+            // safe_serving_IP_lbl
+            // 
+            this.safe_serving_IP_lbl.AutoSize = true;
+            this.safe_serving_IP_lbl.Location = new System.Drawing.Point(66, 121);
+            this.safe_serving_IP_lbl.Name = "safe_serving_IP_lbl";
+            this.safe_serving_IP_lbl.Size = new System.Drawing.Size(97, 13);
+            this.safe_serving_IP_lbl.TabIndex = 3;
+            this.safe_serving_IP_lbl.Text = "Serving IP Address";
+            // 
+            // safe_final_url_Txtb
+            // 
+            this.safe_final_url_Txtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.safe_final_url_Txtb.Location = new System.Drawing.Point(66, 71);
+            this.safe_final_url_Txtb.Name = "safe_final_url_Txtb";
+            this.safe_final_url_Txtb.Size = new System.Drawing.Size(143, 13);
+            this.safe_final_url_Txtb.TabIndex = 2;
+            // 
+            // safe_final_URL_lbl
+            // 
+            this.safe_final_URL_lbl.AutoSize = true;
+            this.safe_final_URL_lbl.Location = new System.Drawing.Point(66, 54);
+            this.safe_final_URL_lbl.Name = "safe_final_URL_lbl";
+            this.safe_final_URL_lbl.Size = new System.Drawing.Size(54, 13);
+            this.safe_final_URL_lbl.TabIndex = 1;
+            this.safe_final_URL_lbl.Text = "Final URL";
+            // 
+            // safeHTTPlbl
+            // 
+            this.safeHTTPlbl.AutoSize = true;
+            this.safeHTTPlbl.Location = new System.Drawing.Point(24, 15);
+            this.safeHTTPlbl.Name = "safeHTTPlbl";
+            this.safeHTTPlbl.Size = new System.Drawing.Size(87, 13);
+            this.safeHTTPlbl.TabIndex = 0;
+            this.safeHTTPlbl.Text = "HTTP Response";
+            // 
+            // safeURLhostlb
+            // 
+            this.safeURLhostlb.AutoSize = true;
+            this.safeURLhostlb.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.safeURLhostlb.Location = new System.Drawing.Point(138, 48);
+            this.safeURLhostlb.Name = "safeURLhostlb";
+            this.safeURLhostlb.Size = new System.Drawing.Size(35, 13);
+            this.safeURLhostlb.TabIndex = 4;
+            this.safeURLhostlb.Text = "Host :";
+            // 
+            // safeUrllbl
+            // 
+            this.safeUrllbl.AutoSize = true;
+            this.safeUrllbl.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.safeUrllbl.Location = new System.Drawing.Point(137, 15);
+            this.safeUrllbl.Name = "safeUrllbl";
+            this.safeUrllbl.Size = new System.Drawing.Size(35, 13);
+            this.safeUrllbl.TabIndex = 3;
+            this.safeUrllbl.Text = "URL :";
+            // 
+            // safeurlDetailsbtn
+            // 
+            this.safeurlDetailsbtn.BackColor = System.Drawing.SystemColors.Control;
+            this.safeurlDetailsbtn.Location = new System.Drawing.Point(69, 67);
+            this.safeurlDetailsbtn.Name = "safeurlDetailsbtn";
+            this.safeurlDetailsbtn.Size = new System.Drawing.Size(57, 23);
+            this.safeurlDetailsbtn.TabIndex = 2;
+            this.safeurlDetailsbtn.Text = "Details";
+            this.safeurlDetailsbtn.UseVisualStyleBackColor = false;
+            this.safeurlDetailsbtn.Click += new System.EventHandler(this.safeurlDetailsbtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(69, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 50);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // safeURlpicture
+            // 
+            this.safeURlpicture.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.safeURlpicture.Location = new System.Drawing.Point(3, 3);
+            this.safeURlpicture.Name = "safeURlpicture";
+            this.safeURlpicture.Size = new System.Drawing.Size(797, 88);
+            this.safeURlpicture.TabIndex = 0;
+            this.safeURlpicture.TabStop = false;
+            // 
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
@@ -625,11 +628,32 @@
             this.errorLabel.Text = "404 error";
             this.errorLabel.Visible = false;
             // 
+            // url_home_Btn
+            // 
+            this.url_home_Btn.Location = new System.Drawing.Point(687, 284);
+            this.url_home_Btn.Name = "url_home_Btn";
+            this.url_home_Btn.Size = new System.Drawing.Size(75, 23);
+            this.url_home_Btn.TabIndex = 7;
+            this.url_home_Btn.Text = "Scan Again";
+            this.url_home_Btn.UseVisualStyleBackColor = true;
+            this.url_home_Btn.Click += new System.EventHandler(this.url_home_Btn_Click);
+            // 
+            // safe_url_Btn
+            // 
+            this.safe_url_Btn.Location = new System.Drawing.Point(50, 284);
+            this.safe_url_Btn.Name = "safe_url_Btn";
+            this.safe_url_Btn.Size = new System.Drawing.Size(75, 23);
+            this.safe_url_Btn.TabIndex = 7;
+            this.safe_url_Btn.Text = "Scan Again";
+            this.safe_url_Btn.UseVisualStyleBackColor = true;
+            this.safe_url_Btn.Click += new System.EventHandler(this.safe_url_Btn_Click);
+            // 
             // Form_InternetBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 469);
+            this.ClientSize = new System.Drawing.Size(808, 469);
+            this.Controls.Add(this.safeUrlpanel);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.virusTotal);
             this.Controls.Add(this.errorLabel);
@@ -642,12 +666,6 @@
             this.virusTotal.PerformLayout();
             this.urlResults.ResumeLayout(false);
             this.urlResults.PerformLayout();
-            this.safeUrlpanel.ResumeLayout(false);
-            this.safeUrlpanel.PerformLayout();
-            this.safe_URL_details_Pnl.ResumeLayout(false);
-            this.safe_URL_details_Pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.safeURlpicture)).EndInit();
             this.urlDetailsview.ResumeLayout(false);
             this.urlDetailsview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urlResultsicon)).EndInit();
@@ -655,6 +673,12 @@
             this.urlScan.ResumeLayout(false);
             this.urlScan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urlIcon)).EndInit();
+            this.safeUrlpanel.ResumeLayout(false);
+            this.safeUrlpanel.PerformLayout();
+            this.safe_URL_details_Pnl.ResumeLayout(false);
+            this.safe_URL_details_Pnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safeURlpicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,5 +738,7 @@
         private System.Windows.Forms.Label safeHTTPlbl;
         private System.Windows.Forms.TextBox safe_url_Host_Txb;
         private System.Windows.Forms.TextBox safe_url_Display_Txb;
+        private System.Windows.Forms.Button url_home_Btn;
+        private System.Windows.Forms.Button safe_url_Btn;
     }
 }
