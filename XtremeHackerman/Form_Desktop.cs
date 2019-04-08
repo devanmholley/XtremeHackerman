@@ -140,5 +140,13 @@ namespace XtremeHackerman
                 Desktop_BKEND.net_ON = true;
             }
         }
+
+        private void Btn_Ransom_Debug_Click(object sender, EventArgs e)
+        {
+            /// This is JUST a debug button for doing testing on the Ransomware Form.
+            /// It should be Deleted or Hidden When the Ransomware event is added.
+            var formRansomware = new Form_Ransomware();
+            formRansomware.ShowDialog();
+        }
     }
 }
