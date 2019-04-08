@@ -129,7 +129,7 @@ namespace XtremeHackerman
 		    e.Node.BeginEdit();
 		}
 	    }
-	    refreshFileView();
+	    this.BeginInvoke(new Action(() => refreshFileView())); //refresh file view AFTER label has finished editing
 	}
 
 	private void CreateFolder()
@@ -149,6 +149,7 @@ namespace XtremeHackerman
 	    newFolder.BeginEdit(); //prompt for new folder name
 
 	    FolderFiles.Add(newFolder, files); //Add it into the dictionary
+	    refreshFileView(); //show new folder in fileview
 	}
 
 	private void folderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -162,7 +163,7 @@ namespace XtremeHackerman
 	    ///<summary>
 	    ///Show subfolders and files of current selected folder
 	    ///</summary>
-	    ///
+
 	    fileView.Items.Clear(); //clear list view everytime new folder is selected
 	    TreeNode folder = folderView.SelectedNode; //click on folder
 
