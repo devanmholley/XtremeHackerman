@@ -68,9 +68,10 @@ namespace XtremeHackerman
 
 	private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
 	{
-	    //Delete folder from Right Click menu
+	    //Delete folder from Right Click menu in folderView
 	    if (folderView.SelectedNode.Parent != null) //Not allowed to delete "ThisPC" aka root node (ThisPC will have null parent)
 	    {
+		FolderFiles.Remove(folderView.SelectedNode);
 		folderView.SelectedNode.Remove();
 	    }
 	    else
@@ -232,15 +233,16 @@ namespace XtremeHackerman
 		//Time to reflect changes in dictionary
 		ListViewItem currFile = fileView.SelectedItems[0];
 		TreeNode currFolder = folderView.SelectedNode; //current folder	
-		int numFolders = currFolder.GetNodeCount(false);
+		int numFolders = currFolder.Nodes.Count; //get num of folders currently listed in fileview
 
 		//Change appropiate file to reflect in the dictionary
-		if (currFile.SubItems[0].Text == "Text Document")
+		if (currFile.SubItems[1].Text == "Text Document")
 		{
-		    int fileIndex = currFile.Index + numFolders; //calculate index of what the file index would be in the dictionary		   
+		    int fileIndex = currFile.Index - numFolders; //calculate index of what the file index would be in the dictionary		   
 		    FolderFiles[currFolder].Items[fileIndex].Text = e.Label; //renames the file in the Dictionary
 		}
-		else if (currFile.SubItems[0].Text == "File Folder")
+		//Changing Folder Name in fileView: reflect appropriate folder name in folderView
+		else if (currFile.SubItems[1].Text == "File Folder")
 		{
 		    int fileIndex = currFile.Index; //get index of folder
 		    currFolder.Nodes[fileIndex].Text = e.Label; //rename the folder in folderView
@@ -267,7 +269,25 @@ namespace XtremeHackerman
 
 	private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
 	{
-	    //fileView.SelectedItems[0]
+	    //Delete file or folder from fileView
+	    ListViewItem currFile = fileView.SelectedItems[0];
+	    TreeNode currFolder = folderView.SelectedNode;
+	    int numFolders = currFolder.Nodes.Count;
+
+	    if (currFile.SubItems[1].Text == "Text Document")
+	    {
+		int fileIndex = currFile.Index - numFolders;
+		FolderFiles[currFolder].Items[fileIndex].Remove(); //delete from dictionary
+		currFile.Remove(); //delete from fileview
+
+	    }
+	    else if (currFile.SubItems[1].Text == "File Folder")
+	    {
+		int fileIndex = currFile.Index; //get index of what is selected in fileview
+		FolderFiles.Remove(currFolder.Nodes[fileIndex]); //delete selected folder from dictionary
+		currFolder.Nodes[fileIndex].Remove(); //delete from folderview
+		refreshFileView(); //refresh to disappear from fileview
+	    }
 	}
     }
 }
