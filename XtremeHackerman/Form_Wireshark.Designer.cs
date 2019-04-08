@@ -73,11 +73,22 @@
             this.EthernetConnectionDisplay = new System.Windows.Forms.PictureBox();
             this.BluetoothConnectionTrack = new System.Windows.Forms.PictureBox();
             this.WiFIConnectionTrack = new System.Windows.Forms.PictureBox();
+            this.EthernetConnectionPanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Source = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Protocol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Length = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Info = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EthernetConnectionDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BluetoothConnectionTrack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiFIConnectionTrack)).BeginInit();
+            this.EthernetConnectionPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -284,6 +295,7 @@
             resources.ApplyResources(this.EthernetConnectionBTN, "EthernetConnectionBTN");
             this.EthernetConnectionBTN.Name = "EthernetConnectionBTN";
             this.EthernetConnectionBTN.UseVisualStyleBackColor = false;
+            this.EthernetConnectionBTN.Click += new System.EventHandler(this.EthernetConnectionBTN_Click);
             // 
             // WiFIConnectionBTN
             // 
@@ -339,10 +351,78 @@
             this.WiFIConnectionTrack.Name = "WiFIConnectionTrack";
             this.WiFIConnectionTrack.TabStop = false;
             // 
+            // EthernetConnectionPanel
+            // 
+            this.EthernetConnectionPanel.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.EthernetConnectionPanel, "EthernetConnectionPanel");
+            this.EthernetConnectionPanel.Name = "EthernetConnectionPanel";
+            this.EthernetConnectionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EthernetConnectionPanel_Paint_1);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Number,
+            this.Time,
+            this.Source,
+            this.Destination,
+            this.Protocol,
+            this.Length,
+            this.Info});
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Number
+            // 
+            resources.ApplyResources(this.Number, "Number");
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            // 
+            // Time
+            // 
+            resources.ApplyResources(this.Time, "Time");
+            this.Time.Name = "Time";
+            this.Time.ReadOnly = true;
+            // 
+            // Source
+            // 
+            resources.ApplyResources(this.Source, "Source");
+            this.Source.Name = "Source";
+            this.Source.ReadOnly = true;
+            // 
+            // Destination
+            // 
+            resources.ApplyResources(this.Destination, "Destination");
+            this.Destination.Name = "Destination";
+            this.Destination.ReadOnly = true;
+            // 
+            // Protocol
+            // 
+            resources.ApplyResources(this.Protocol, "Protocol");
+            this.Protocol.Name = "Protocol";
+            this.Protocol.ReadOnly = true;
+            // 
+            // Length
+            // 
+            resources.ApplyResources(this.Length, "Length");
+            this.Length.Name = "Length";
+            this.Length.ReadOnly = true;
+            // 
+            // Info
+            // 
+            resources.ApplyResources(this.Info, "Info");
+            this.Info.Name = "Info";
+            this.Info.ReadOnly = true;
+            // 
             // Form_Wireshark
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.EthernetConnectionPanel);
             this.Controls.Add(this.WiFIConnectionTrack);
             this.Controls.Add(this.BluetoothConnectionTrack);
             this.Controls.Add(this.EthernetConnectionDisplay);
@@ -366,6 +446,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.EthernetConnectionDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BluetoothConnectionTrack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiFIConnectionTrack)).EndInit();
+            this.EthernetConnectionPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,5 +499,14 @@
         private System.Windows.Forms.PictureBox EthernetConnectionDisplay;
         private System.Windows.Forms.PictureBox BluetoothConnectionTrack;
         private System.Windows.Forms.PictureBox WiFIConnectionTrack;
+        private System.Windows.Forms.Panel EthernetConnectionPanel;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Source;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Protocol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Length;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Info;
     }
 }
