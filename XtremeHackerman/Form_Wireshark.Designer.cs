@@ -68,8 +68,16 @@
             this.WiFIConnectionBTN = new System.Windows.Forms.Button();
             this.BluetoothConnectionBTN = new System.Windows.Forms.Button();
             this.CaptureLBL = new System.Windows.Forms.Label();
+            this.ProfileStatusLabel = new System.Windows.Forms.Label();
+            this.ReadyState = new System.Windows.Forms.Label();
+            this.EthernetConnectionDisplay = new System.Windows.Forms.PictureBox();
+            this.BluetoothConnectionTrack = new System.Windows.Forms.PictureBox();
+            this.WiFIConnectionTrack = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EthernetConnectionDisplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BluetoothConnectionTrack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiFIConnectionTrack)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -91,6 +99,7 @@
             // 
             // fileToolStripMenuItem1
             // 
+            this.fileToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
             resources.ApplyResources(this.fileToolStripMenuItem1, "fileToolStripMenuItem1");
             // 
@@ -282,6 +291,7 @@
             resources.ApplyResources(this.WiFIConnectionBTN, "WiFIConnectionBTN");
             this.WiFIConnectionBTN.Name = "WiFIConnectionBTN";
             this.WiFIConnectionBTN.UseVisualStyleBackColor = false;
+            this.WiFIConnectionBTN.Click += new System.EventHandler(this.WiFIConnectionBTN_Click);
             // 
             // BluetoothConnectionBTN
             // 
@@ -293,13 +303,51 @@
             // CaptureLBL
             // 
             resources.ApplyResources(this.CaptureLBL, "CaptureLBL");
+            this.CaptureLBL.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.CaptureLBL.Name = "CaptureLBL";
             this.CaptureLBL.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // ProfileStatusLabel
+            // 
+            resources.ApplyResources(this.ProfileStatusLabel, "ProfileStatusLabel");
+            this.ProfileStatusLabel.Name = "ProfileStatusLabel";
+            // 
+            // ReadyState
+            // 
+            resources.ApplyResources(this.ReadyState, "ReadyState");
+            this.ReadyState.Name = "ReadyState";
+            // 
+            // EthernetConnectionDisplay
+            // 
+            this.EthernetConnectionDisplay.Image = global::XtremeHackerman.Properties.Resources.EthernetConnectionTrack2;
+            resources.ApplyResources(this.EthernetConnectionDisplay, "EthernetConnectionDisplay");
+            this.EthernetConnectionDisplay.Name = "EthernetConnectionDisplay";
+            this.EthernetConnectionDisplay.TabStop = false;
+            this.EthernetConnectionDisplay.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // BluetoothConnectionTrack
+            // 
+            this.BluetoothConnectionTrack.Image = global::XtremeHackerman.Properties.Resources.WiFiConnectionTrack;
+            resources.ApplyResources(this.BluetoothConnectionTrack, "BluetoothConnectionTrack");
+            this.BluetoothConnectionTrack.Name = "BluetoothConnectionTrack";
+            this.BluetoothConnectionTrack.TabStop = false;
+            // 
+            // WiFIConnectionTrack
+            // 
+            this.WiFIConnectionTrack.Image = global::XtremeHackerman.Properties.Resources.WiFiConnectionTrack;
+            resources.ApplyResources(this.WiFIConnectionTrack, "WiFIConnectionTrack");
+            this.WiFIConnectionTrack.Name = "WiFIConnectionTrack";
+            this.WiFIConnectionTrack.TabStop = false;
             // 
             // Form_Wireshark
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.WiFIConnectionTrack);
+            this.Controls.Add(this.BluetoothConnectionTrack);
+            this.Controls.Add(this.EthernetConnectionDisplay);
+            this.Controls.Add(this.ReadyState);
+            this.Controls.Add(this.ProfileStatusLabel);
             this.Controls.Add(this.CaptureLBL);
             this.Controls.Add(this.BluetoothConnectionBTN);
             this.Controls.Add(this.WiFIConnectionBTN);
@@ -315,6 +363,9 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EthernetConnectionDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BluetoothConnectionTrack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WiFIConnectionTrack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +412,10 @@
         private System.Windows.Forms.Button WiFIConnectionBTN;
         private System.Windows.Forms.Button BluetoothConnectionBTN;
         private System.Windows.Forms.Label CaptureLBL;
+        private System.Windows.Forms.Label ProfileStatusLabel;
+        private System.Windows.Forms.Label ReadyState;
+        private System.Windows.Forms.PictureBox EthernetConnectionDisplay;
+        private System.Windows.Forms.PictureBox BluetoothConnectionTrack;
+        private System.Windows.Forms.PictureBox WiFIConnectionTrack;
     }
 }

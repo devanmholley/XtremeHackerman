@@ -93,6 +93,16 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EthernetConnectionTrack2 {
+            get {
+                object obj = ResourceManager.GetObject("EthernetConnectionTrack2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap foldericon {
             get {
                 object obj = ResourceManager.GetObject("foldericon", resourceCulture);
@@ -187,6 +197,16 @@ namespace XtremeHackerman.Properties {
             get {
                 object obj = ResourceManager.GetObject("VCR_OSD_MONO_1_001", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WiFiConnectionTrack {
+            get {
+                object obj = ResourceManager.GetObject("WiFiConnectionTrack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

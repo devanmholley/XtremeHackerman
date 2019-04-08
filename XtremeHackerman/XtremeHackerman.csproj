@@ -228,7 +228,10 @@
     <None Include="Resources\WifiIcon-OFF.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\WiFiConnectionTrack.png" />
     <None Include="Resources\foldericon.png" />
+    <None Include="Resources\EthernetConnectionTrack.png" />
+    <None Include="Resources\EthernetConnectionTrack2.png" />
     <Content Include="Resources\foldericon.bmp" />
     <Content Include="Resources\Form_Desktop\Icon_FileManager.png" />
     <Content Include="Resources\Form_FileManager\addfile.png" />
