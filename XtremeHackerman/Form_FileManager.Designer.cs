@@ -67,7 +67,7 @@
             this.filePathComboBox});
 	    this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 	    this.toolStrip1.Name = "toolStrip1";
-	    this.toolStrip1.Size = new System.Drawing.Size(1890, 49);
+	    this.toolStrip1.Size = new System.Drawing.Size(1890, 47);
 	    this.toolStrip1.TabIndex = 0;
 	    this.toolStrip1.Text = "toolStrip1";
 	    // 
@@ -77,7 +77,7 @@
 	    this.backFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("backFolderButton.Image")));
 	    this.backFolderButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 	    this.backFolderButton.Name = "backFolderButton";
-	    this.backFolderButton.Size = new System.Drawing.Size(44, 46);
+	    this.backFolderButton.Size = new System.Drawing.Size(44, 44);
 	    this.backFolderButton.Text = "Back";
 	    // 
 	    // forwardFolderButton
@@ -110,12 +110,9 @@
 	    // 
 	    // filePathComboBox
 	    // 
-	    this.filePathComboBox.Items.AddRange(new object[] {
-            "This PC",
-            "This PC > Documents",
-            "This PC > Downloads"});
+	    this.filePathComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.filePathComboBox.Name = "filePathComboBox";
-	    this.filePathComboBox.Size = new System.Drawing.Size(1000, 49);
+	    this.filePathComboBox.Size = new System.Drawing.Size(1000, 48);
 	    this.filePathComboBox.Click += new System.EventHandler(this.filePathComboBox_Click);
 	    // 
 	    // imageList1
@@ -137,11 +134,12 @@
 	    this.folderView.ImageIndex = 0;
 	    this.folderView.ImageList = this.imageList1;
 	    this.folderView.LabelEdit = true;
-	    this.folderView.Location = new System.Drawing.Point(0, 49);
+	    this.folderView.Location = new System.Drawing.Point(0, 47);
 	    this.folderView.Name = "folderView";
 	    this.folderView.SelectedImageIndex = 1;
-	    this.folderView.Size = new System.Drawing.Size(751, 836);
+	    this.folderView.Size = new System.Drawing.Size(751, 838);
 	    this.folderView.TabIndex = 1;
+	    this.folderView.BeforeLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.folderView_BeforeLabelEdit);
 	    this.folderView.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.folderView_AfterLabelEdit);
 	    this.folderView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.folderView_AfterSelect);
 	    // 
@@ -185,13 +183,15 @@
 	    this.fileView.ContextMenuStrip = this.fileViewMenuStrip;
 	    this.fileView.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.fileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.fileView.Location = new System.Drawing.Point(751, 49);
+	    this.fileView.LabelEdit = true;
+	    this.fileView.Location = new System.Drawing.Point(751, 47);
 	    this.fileView.Name = "fileView";
-	    this.fileView.Size = new System.Drawing.Size(1139, 836);
+	    this.fileView.Size = new System.Drawing.Size(1139, 838);
 	    this.fileView.SmallImageList = this.imageList1;
 	    this.fileView.TabIndex = 2;
 	    this.fileView.UseCompatibleStateImageBehavior = false;
 	    this.fileView.View = System.Windows.Forms.View.Details;
+	    this.fileView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.fileView_AfterLabelEdit);
 	    // 
 	    // columnHeader1
 	    // 
@@ -211,7 +211,7 @@
             this.renameToolStripMenuItem1,
             this.deleteToolStripMenuItem1});
 	    this.fileViewMenuStrip.Name = "contextMenuStrip2";
-	    this.fileViewMenuStrip.Size = new System.Drawing.Size(204, 142);
+	    this.fileViewMenuStrip.Size = new System.Drawing.Size(361, 197);
 	    // 
 	    // newToolStripMenuItem
 	    // 
@@ -227,6 +227,7 @@
 	    this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
 	    this.folderToolStripMenuItem.Size = new System.Drawing.Size(332, 46);
 	    this.folderToolStripMenuItem.Text = "Folder";
+	    this.folderToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
 	    // 
 	    // fileToolStripMenuItem
 	    // 
@@ -240,12 +241,14 @@
 	    this.renameToolStripMenuItem1.Name = "renameToolStripMenuItem1";
 	    this.renameToolStripMenuItem1.Size = new System.Drawing.Size(203, 46);
 	    this.renameToolStripMenuItem1.Text = "Rename";
+	    this.renameToolStripMenuItem1.Click += new System.EventHandler(this.renameToolStripMenuItem1_Click);
 	    // 
 	    // deleteToolStripMenuItem1
 	    // 
 	    this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-	    this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(203, 46);
+	    this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(360, 46);
 	    this.deleteToolStripMenuItem1.Text = "Delete";
+	    this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
 	    // 
 	    // Form_FileManager
 	    // 

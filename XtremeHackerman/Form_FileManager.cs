@@ -1,23 +1,33 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace XtremeHackerman
 {
     public partial class Form_FileManager : Form
     {
+	Dictionary<TreeNode, ListView> FolderFiles = new Dictionary<TreeNode, ListView>();
+
 	public Form_FileManager()
 	{
 	    InitializeComponent();
 
 	    //Create Basic Folders: ThisPC, Documents, and Downloads
-	    TreeNode pc;
-	    pc = folderView.Nodes.Add("ThisPC");
+	    TreeNode pc, folder;
+	    ListView pcfiles = new ListView();
+	    ListView files = new ListView();
+
+	    pc = folderView.Nodes.Add("ThisPC"); //Create "ThisPC" folder
 	    pc.ImageIndex = 5; //set PC icon
 	    pc.SelectedImageIndex = 5; //set PC icon
+	    FolderFiles.Add(pc, pcfiles); //add to dictionary
 
-	    pc.Nodes.Add("Documents"); //add as child node under ThisPC
-	    pc.Nodes.Add("Downloads"); //add as child node under ThisPC
+	    folder = pc.Nodes.Add("Documents"); //add as child node under ThisPC
+	    FolderFiles.Add(folder, files); //add to dictionary
+
+	    files = new ListView();
+	    folder = pc.Nodes.Add("Downloads"); //add as child node under ThisPC
+	    FolderFiles.Add(folder, files); // add to dictionary
 	}
 
 	private void Form_FileManager_Load(object sender, EventArgs e)
@@ -33,43 +43,27 @@ namespace XtremeHackerman
 	private void folderView_AfterSelect(object sender, TreeViewEventArgs e)
 	{
 	    //Click on folder in treeview, show subdirectories of selected folder in listview
-
-	    fileView.Items.Clear(); //clear list view everytime new folder is selected
-
-	    TreeNode folder = e.Node; //click on folder
-	    foreach (TreeNode childNode in folder.Nodes) //for all subdirectories in the folder
-	    {
-	    ListViewItem newItem;
-	    newItem = fileView.Items.Add(childNode.Text); //add child folders into listview
-	    newItem.SubItems.Add("File Folder"); //set file type
-	    }
-    
+	    refreshFileView();
+	    filePathComboBox.Text = getFilePath(); //update combobox to display current path
 	}
 
 	private void newFolderButton_Click(object sender, EventArgs e)
 	{
-	    // Add New Folder Button from icon/toolbar
-	    TreeNode parentFolder, newFolder;
-	    parentFolder = folderView.SelectedNode;
-	    newFolder = parentFolder.Nodes.Add("New Folder"); //add new folder under parent folder
-	    parentFolder.Expand(); //show all child folders of parent
-	    newFolder.BeginEdit(); //prompt for new folder name
+	    // Create New Folder Button from icon/toolbar
+	    CreateFolder();
 	}
 
 	private void newFolderToolStripMenuItem_Click(object sender, EventArgs e)
 	{
-	    // Add New Folder from Right Click menu in TREEVIEW
-	    TreeNode parentFolder, newFolder;
-	    parentFolder = folderView.SelectedNode;
-	    newFolder = parentFolder.Nodes.Add("New Folder"); //add new folder under parent folder
-	    parentFolder.Expand(); //show all child folders of parent
-	    newFolder.BeginEdit(); //prompt for new folder name
+	    // Create New Folder from Right Click menu in TREEVIEW
+	    CreateFolder();
 	}
 
 	private void renameToolStripMenuItem_Click(object sender, System.EventArgs e)
 	{
 	    // Rename folder from Right Click menu
 	    folderView.SelectedNode.BeginEdit();
+	    refreshFileView();
 	}
 
 	private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -88,13 +82,21 @@ namespace XtremeHackerman
 	private void fileToolStripMenuItem_Click(object sender, EventArgs e)
 	{
 	    //Create New Text Document
+	    ListViewItem newDoc = new ListViewItem();
+	    newDoc.Text = "New Text Document";
+	    newDoc.SubItems.Add("Text Document");
+	    newDoc.Tag = getFilePath(); //set file location path
+	    FolderFiles[folderView.SelectedNode].Items.Add(newDoc); //add it to the dictionary
+
+	    newDoc = fileView.Items.Add("New Text Document");
+	    newDoc.SubItems.Add("Text Document");
+	    newDoc.BeginEdit(); //prompt for new file name
 	}
 
 	private void folderView_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
 	{
 	    // Validate folder name, no empty name, no invalid characters
 	    //Code Attribution: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.treeview.afterlabeledit?view=netframework-4.7.2
-
 	    if (e.Label != null)
 	    {
 		if (e.Label.Length > 0)
@@ -102,12 +104,11 @@ namespace XtremeHackerman
 		    foreach (TreeNode folder in e.Node.Parent.Nodes) // check that there are no other similar named folders within current level
 		    {
 			if (!folder.Equals(e.Node) && folder.Text == e.Label)
-			    {
+			{
 			    MessageBox.Show("This destination already contains a folder named '" + e.Label + "'");
 			    e.CancelEdit = true;
-			    } 
+			} 
 		    }
-
 		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) == -1) //does not contain any invalid characters
 			// Stop editing without canceling the label change.
 			e.Node.EndEdit(false);
@@ -127,6 +128,146 @@ namespace XtremeHackerman
 		    e.Node.BeginEdit();
 		}
 	    }
+	    refreshFileView();
+	}
+
+	private void CreateFolder()
+	{
+	    /// <summary>
+	    /// Create a new folder through UI
+	    /// </summary>
+	   
+	    TreeNode parentFolder, newFolder;
+	    ListView files = new ListView();
+	    ListViewItem newFolderItem = new ListViewItem();
+
+	    //folderView side of things
+	    parentFolder = folderView.SelectedNode; //whatever folder is currently clicked on
+	    newFolder = parentFolder.Nodes.Add("New Folder"); //add new folder under parent folder
+	    parentFolder.Expand(); //show all child folders of parent
+	    newFolder.BeginEdit(); //prompt for new folder name
+
+	    FolderFiles.Add(newFolder, files); //Add it into the dictionary
+	}
+
+	private void folderToolStripMenuItem_Click(object sender, EventArgs e)
+	{
+	    // Create New Folder from right click menu in LISTVIEW
+	    CreateFolder();
+	}
+
+	private void refreshFileView()
+	{
+	    ///<summary>
+	    ///Show subfolders and files of current selected folder
+	    ///</summary>
+	    ///
+	    fileView.Items.Clear(); //clear list view everytime new folder is selected
+	    TreeNode folder = folderView.SelectedNode; //click on folder
+
+	    // if folder is "ThicPC", don't allow creation of new text document
+	    if (folder.Parent == null)
+	    {
+		fileToolStripMenuItem.Visible = false;
+	    }
+	    else
+		fileToolStripMenuItem.Visible = true;
+
+	    //populate folders first
+	    foreach (TreeNode subfolder in folder.Nodes)
+	    {
+		ListViewItem newFolderItem;
+		newFolderItem = fileView.Items.Add(subfolder.Text);
+		newFolderItem.SubItems.Add("File Folder");
+	    }
+
+	    //populate files from dictionary
+	    foreach (ListViewItem file in FolderFiles[folder].Items)
+	    {
+		var clone = file.Clone() as ListViewItem;
+		clone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16);
+		fileView.Items.Add(clone);
+	    }
+	}
+
+	private void renameToolStripMenuItem1_Click(object sender, EventArgs e)
+	{
+	    //Rename text document file from RIGHT CLICK
+	    if (fileView.SelectedItems.Count > 0) //make sure something is selected
+	    {
+		fileView.SelectedItems[0].BeginEdit();
+	    }
+	}
+
+	private void fileView_AfterLabelEdit(object sender, LabelEditEventArgs e)
+	{
+	    // Validate file name, no empty name, no invalid characters
+	    //Code Attribution: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.treeview.afterlabeledit?view=netframework-4.7.2
+	    if (e.Label != null)
+	    {
+		if (e.Label.Length > 0)
+		{
+		    foreach (ListViewItem file in fileView.Items) // check that there are no other similar named folders within current level
+		    {
+			if (!file.Equals(e.Item) && file.Text == e.Label)
+			{
+			    MessageBox.Show("This destination already contains a file named '" + e.Label + "'");
+			    e.CancelEdit = true;
+			}
+		    }
+		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) != -1) //contains invalid characters
+		    {
+			// Cancel the label edit action and inform the user
+			e.CancelEdit = true;
+			MessageBox.Show("A file name can't contain any of the following characters:\n \\ / : * ? \" < > |"); //mimicing windows invalid characters message
+		    }
+		}
+		else
+		{
+		    // Cancel the label edit action and inform the user
+		    e.CancelEdit = true;
+		    MessageBox.Show("A file name can't be blank"); //cannot be blank name
+		}
+
+		//Time to reflect changes in dictionary
+		ListViewItem currFile = fileView.SelectedItems[0];
+		TreeNode currFolder = folderView.SelectedNode; //current folder	
+		int numFolders = currFolder.GetNodeCount(false);
+
+		//Change appropiate file to reflect in the dictionary
+		if (currFile.SubItems[0].Text == "Text Document")
+		{
+		    int fileIndex = currFile.Index + numFolders; //calculate index of what the file index would be in the dictionary		   
+		    FolderFiles[currFolder].Items[fileIndex].Text = e.Label; //renames the file in the Dictionary
+		}
+		else if (currFile.SubItems[0].Text == "File Folder")
+		{
+		    int fileIndex = currFile.Index; //get index of folder
+		    currFolder.Nodes[fileIndex].Text = e.Label; //rename the folder in folderView
+		}
+
+	    }
+	}
+
+	private void folderView_BeforeLabelEdit(object sender, NodeLabelEditEventArgs e)
+	{
+	    //Does not allow renaming of root folder "ThicPC"
+	    if (e.Node.Parent == null)
+	    {
+		e.CancelEdit = true;
+		MessageBox.Show("Edit of Root Folder is not allowed");
+	    }
+	}
+
+	private string getFilePath()
+	{
+	    string path = folderView.SelectedNode.FullPath;
+	    return path;
+	}
+
+	private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
+	{
+	    //fileView.SelectedItems[0]
 	}
     }
 }
