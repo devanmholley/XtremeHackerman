@@ -300,7 +300,10 @@
             this.testipWindow.ReadOnly = true;
             this.testipWindow.Size = new System.Drawing.Size(128, 160);
             this.testipWindow.TabIndex = 4;
+
+
             this.testipWindow.Text = "\r\n";
+
             this.testipWindow.TextChanged += new System.EventHandler(this.testipWindow_TextChanged);
             // 
             // ipYeahweblocked
@@ -382,6 +385,9 @@
             this.welcomeMessagelabel.TabIndex = 1;
             this.welcomeMessagelabel.Text = "Welcome Mr. Anderson";
             // 
+
+            // Form_Firewall
+
             // webaccessPanel
             // 
             this.webaccessPanel.Controls.Add(this.webmessageLabel);
@@ -484,6 +490,7 @@
             this.waccessInBtn.Click += new System.EventHandler(this.waccessInBtn_Click);
             // 
             // Firewall
+
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

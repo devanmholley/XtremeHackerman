@@ -6,21 +6,37 @@ using Newtonsoft.Json;
 
 namespace XtremeHackerman.Classes
 {
+    // Allows us to add Emails to the Json file.
+    [JsonObject(MemberSerialization.OptIn)]
     internal class Class_Email
     {
-        /// <summary>
-        /// 
-        /// </summary>
+        // Adds new mail into the JSON file so it appears in the inbox.
+        public void AddMail(string src, string dst, string dt, string sbjt, string bdy)
+        {
+            //If the email source hasn't been blocked on the firewall
+            if (Class_Firewall.blockedIPs.Contains(src)== false) { 
+                EmailStruct newMail = new EmailStruct
+                {
+                    // Creates a new email with the passed in values.
+                    Source = src,
+                    Destination = dst,
+                    Date = dt,
+                    Subject = sbjt,
+                    Body = bdy
+                };
+
+                //Then we add the new email to the inbox.
+                EmailList.Add(newMail);
+
+                //Serialize the new object into the JSON file.
+                JsonConvert.SerializeObject(EmailList, Formatting.Indented);
+            }
+        }
+
+
         public struct EmailStruct
         {
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="emailSource"></param>
-            /// <param name="emailDestination"></param>
-            /// <param name="emailDate"></param>
-            /// <param name="emailSubject"></param>
-            /// <param name="emailBody"></param>
+            // Set the values of 
             public EmailStruct(string emailSource, string emailDestination, string emailDate, string emailSubject, string emailBody)
             {
                 Source = emailSource;
@@ -29,6 +45,8 @@ namespace XtremeHackerman.Classes
                 Subject = emailSubject;
                 Body = emailBody;
             }
+
+            //Establishes the objects as properties of a Json file.
 
             public string Source { get; set; }
 
@@ -41,6 +59,7 @@ namespace XtremeHackerman.Classes
             public string Body { get; set; }
         }
 
+        //Pulls the information from the Json file and adds it to the email inbox.
         public static IList<EmailStruct> EmailList { get; set; } = JsonConvert.DeserializeObject<IList<EmailStruct>>(File.ReadAllText("Resources/Form_Email/Emails.json"));
     }
 }
