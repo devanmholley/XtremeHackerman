@@ -118,10 +118,6 @@ namespace XtremeHackerman
 
         }
 
-        private void testipWindow_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         // Home button set to hide all the individual components
         private void homeButton1perm_Click(object sender, EventArgs e)
         {
