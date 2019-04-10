@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
 using XtremeHackerman.Classes;
+using XtremeHackerman.Properties;
 
 namespace XtremeHackerman
 {
@@ -71,7 +74,9 @@ namespace XtremeHackerman
 
         private void cliButtonClick(object sender, EventArgs e)
         {
-            // Command Line implementation
+	    // Command Line implementation
+	    var formCLI = new Form_CLI();
+            formCLI.ShowDialog();
         }
 
         private void emailButtonClick(object sender, EventArgs e)
@@ -109,6 +114,39 @@ namespace XtremeHackerman
         private void FileManager_Click(object sender, EventArgs e)
         {
 	    formFileManager.ShowDialog();
-    }
+	}
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolbarNetworkBTN_Click(object sender, EventArgs e)
+        {
+            // If the network Icon shows that the network is currently on
+            if (Desktop_BKEND.net_ON)
+            {
+                // Change the network icon to the 'Wifi Off' icon
+                toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
+                // Change the public status of the network to off
+                Desktop_BKEND.net_ON = false;
+            }
+            // If the network icon shows that the network is currently off
+            else
+            {
+                // Change the network icon to the 'Wifi on; icon
+                toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon;
+                // Change the public status of the network on on
+                Desktop_BKEND.net_ON = true;
+            }
+        }
+
+        private void Btn_Ransom_Debug_Click(object sender, EventArgs e)
+        {
+            /// This is JUST a debug button for doing testing on the Ransomware Form.
+            /// It should be Deleted or Hidden When the Ransomware event is added.
+            var formRansomware = new Form_Ransomware();
+            formRansomware.ShowDialog();
+        }
     }
 }

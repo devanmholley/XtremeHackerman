@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 using XtremeHackerman.Classes;
 
 namespace XtremeHackerman
@@ -17,9 +18,11 @@ namespace XtremeHackerman
         {
             InitializeComponent();
         }
-        string[] ip = new string[20];
-        int currentIndex;
         
+        List<string> blacklistIPS = new List<string>(20);
+        List<string> blacklistDomains = new List<string>(10);
+        List<string> blacklistWebpages = new List<string>(15);
+
         private void Firewall_Load(object sender, EventArgs e)
         {
            permissionsPage.Hide();
@@ -79,21 +82,18 @@ namespace XtremeHackerman
             pageMedian.Show();
             rightArrowforip.Show();
         }
-
+        // This is the code behind storing the ip addresses that can be called later 
         private void rightArrowforip_Click(object sender, EventArgs e)
         {
-            
-           // ipEntry.Enabled = true;
-                //string ips;
-                //ips = ipEntry.Text;
-               // ip = ips;
-               //testipWindow.Text += ip + "\r\n";
-                      
+            blacklistIPS.Add(ipEntry.Text);
+            testipWindow.Text = "";
+            blacklistIPS.ForEach(i => testipWindow.Text += i + Environment.NewLine);
         }
 
         private void ipEntry_TextChanged(object sender, EventArgs e)
         {
-            string ip = (ipEntry.Text);
+
+            
             
         }
 
@@ -114,6 +114,64 @@ namespace XtremeHackerman
         }
 
         private void testipWindow_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void testipWindow_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        // Home button set to hide all the individual components
+        private void homeButton1perm_Click(object sender, EventArgs e)
+        {
+            permissionsPage.Hide();
+            blockIP.Hide();
+            blockIPwindow.Hide();
+            homeButton1perm.Hide();
+            ipEntry.Hide();
+            pageMedian.Hide();
+            rightArrowforip.Hide();
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            managePage.Show();
+        }
+
+        private void homeButton2_Click(object sender, EventArgs e)
+        {
+            managePage.Hide();
+        }
+        // Will work with the Domain button to display the window for user email domain permissions 
+        private void domainSwitch_Click(object sender, EventArgs e)
+        {
+            emailDomainWindow.Show();
+            webaccessPanel.Hide();
+        }
+
+        private void domainADD_Click(object sender, EventArgs e)
+        {
+            blacklistDomains.Add(domainEntry.Text);
+            domainEntered.Text = "";
+            blacklistDomains.ForEach(i => domainEntered.Text += i + Environment.NewLine);
+        }
+
+        private void webpageUsage_Click(object sender, EventArgs e)
+        {
+            webaccessPanel.Show();
+            
+            
+        }
+
+        private void waccessInBtn_Click(object sender, EventArgs e)
+        {
+            blacklistWebpages.Add(waccessTextEntry.Text);
+            waccessBLEntry.Text = "";
+            blacklistWebpages.ForEach(i => waccessBLEntry.Text += i + Environment.NewLine);
+        }
+        //useless an idea i had that did not work out DJ 3/19
+        private void waccessTextEntry_KeyDown(object sender, KeyEventArgs e)
         {
 
         }
