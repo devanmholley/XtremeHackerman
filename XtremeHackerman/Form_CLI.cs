@@ -39,6 +39,10 @@ namespace XtremeHackerman
                 }
                 string cliInput = cliCommand;
                 checkCommand(cliInput);
+                if (cliInput == "phish")
+                {
+                    EventLogic.PhishingEmailAttack();
+                };
                 string msg = String.Format("You have entered: {0}", cliInput);
                 MessageBox.Show(msg, "COMMAND LINE ARGUMENT");
                 cliText.AppendText(cliDirectory);
