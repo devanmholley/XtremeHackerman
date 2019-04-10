@@ -65,5 +65,16 @@ namespace XtremeHackerman.Classes
 	    string path = currFolder.FullPath;
 	    return path;
 	}
+
+	/// <summary>
+	/// A files tag = file path
+	/// After folder is renamed, updates all the file's tag with the new path
+	/// </summary>
+	/// <param name="currFolder"></param>
+	public static void updateFilePath(TreeNode currFolder)
+	{
+	    foreach (ListViewItem file in FolderFiles[currFolder].Items)
+		file.Tag = getFilePath(currFolder);
+	}
     }
 }

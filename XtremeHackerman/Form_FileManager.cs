@@ -115,7 +115,7 @@ namespace XtremeHackerman
 			    e.CancelEdit = true;
 			}
 		    }
-		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) == -1) //does not contain any invalid characters
+		    if (e.Label.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) == -1) //does not contain any invalid characters
 													  // Stop editing without canceling the label change.
 			e.Node.EndEdit(false);
 		    else
@@ -135,6 +135,7 @@ namespace XtremeHackerman
 		}
 	    }
 	    this.BeginInvoke(new Action(() => Class_FileManager.refreshFileView(fileView, folderView.SelectedNode))); //refresh file view AFTER label has finished editing
+	    this.BeginInvoke(new Action(() => Class_FileManager.updateFilePath(folderView.SelectedNode))); //update all files' tags AFTER label has finished editing
 	}
 
 /************************************************************************************************
@@ -216,7 +217,7 @@ namespace XtremeHackerman
 			    e.CancelEdit = true;
 			}
 		    }
-		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) != -1) //contains invalid characters
+		    if (e.Label.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) != -1) //contains invalid characters
 		    {
 			// Cancel the label edit action and inform the user
 			e.CancelEdit = true;
