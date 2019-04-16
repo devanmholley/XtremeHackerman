@@ -88,5 +88,25 @@ namespace XtremeHackerman
                 var result = MessageBox.Show(message);
             }
         }
+
+        private void LL_Phish_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            /// this is where we download the attachment.
+            EventLogic.PhishingEmailAttack();
+        }
+
+        private void email_inbox_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if (this.email_sourceTXT.Text == "ChaseBank@fake.com")
+            {
+                this.LL_Phish.Visible = true;
+                this.LL_Phish.Enabled = true;
+            }
+            else
+            {
+                this.LL_Phish.Visible = false;
+                this.LL_Phish.Enabled = false;
+            }
+        }
     }
 }
