@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Desktop));
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolbarNetworkBTN = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.FileManager = new System.Windows.Forms.Button();
             this.EmailClient = new System.Windows.Forms.Button();
             this.Btn_Ransom_Debug = new System.Windows.Forms.Button();
+            this.DesktopPermissions = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,9 +61,9 @@
             this.panel1.Controls.Add(this.startButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(0, 324);
+            this.panel1.Location = new System.Drawing.Point(0, 645);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(602, 45);
+            this.panel1.Size = new System.Drawing.Size(1076, 45);
             this.panel1.TabIndex = 0;
             // 
             // toolbarNetworkBTN
@@ -72,7 +74,7 @@
             this.toolbarNetworkBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.toolbarNetworkBTN.FlatAppearance.BorderSize = 0;
             this.toolbarNetworkBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.toolbarNetworkBTN.Location = new System.Drawing.Point(481, 3);
+            this.toolbarNetworkBTN.Location = new System.Drawing.Point(955, 3);
             this.toolbarNetworkBTN.Name = "toolbarNetworkBTN";
             this.toolbarNetworkBTN.Size = new System.Drawing.Size(31, 26);
             this.toolbarNetworkBTN.TabIndex = 11;
@@ -83,7 +85,7 @@
             // 
             this.toolbarTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.toolbarTime.AutoSize = true;
-            this.toolbarTime.Location = new System.Drawing.Point(543, 0);
+            this.toolbarTime.Location = new System.Drawing.Point(1017, 0);
             this.toolbarTime.Name = "toolbarTime";
             this.toolbarTime.Size = new System.Drawing.Size(34, 13);
             this.toolbarTime.TabIndex = 10;
@@ -93,7 +95,7 @@
             // 
             this.toolbarDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.toolbarDate.AutoSize = true;
-            this.toolbarDate.Location = new System.Drawing.Point(530, 16);
+            this.toolbarDate.Location = new System.Drawing.Point(1004, 16);
             this.toolbarDate.Name = "toolbarDate";
             this.toolbarDate.Size = new System.Drawing.Size(59, 13);
             this.toolbarDate.TabIndex = 9;
@@ -255,13 +257,18 @@
             this.Btn_Ransom_Debug.UseVisualStyleBackColor = true;
             this.Btn_Ransom_Debug.Click += new System.EventHandler(this.Btn_Ransom_Debug_Click);
             // 
+            // DesktopPermissions
+            // 
+            this.DesktopPermissions.Enabled = true;
+            this.DesktopPermissions.Tick += new System.EventHandler(this.DesktopPermissions_Tick);
+            // 
             // Form_Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_Desktop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(602, 369);
+            this.ClientSize = new System.Drawing.Size(1076, 690);
             this.Controls.Add(this.Btn_Ransom_Debug);
             this.Controls.Add(this.EmailClient);
             this.Controls.Add(this.Restart);
@@ -305,5 +312,6 @@
         private System.Windows.Forms.Label toolbarTime;
         private System.Windows.Forms.Button toolbarNetworkBTN;
         private System.Windows.Forms.Button Btn_Ransom_Debug;
+        private System.Windows.Forms.Timer DesktopPermissions;
     }
 }

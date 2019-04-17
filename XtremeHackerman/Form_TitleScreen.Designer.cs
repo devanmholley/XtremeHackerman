@@ -39,16 +39,16 @@
             this.safeModeContextStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.safeModeOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bootInSafeModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bootInNormalModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.securityOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyrightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enableSafeModeWithCommandPromptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bootInNormalModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enableToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.disableToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.enableSafeModeWithCommandPromptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enableToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.disableToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.securityOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyrightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SafeModeStatus = new System.Windows.Forms.Label();
             this.NetworkingStatus = new System.Windows.Forms.Label();
             this.CMDAccessStatus = new System.Windows.Forms.Label();
@@ -73,7 +73,6 @@
             this.tableLayoutPanel_Buttons.Controls.Add(this.button_Hacker, 3, 0);
             this.tableLayoutPanel_Buttons.Controls.Add(this.button_Quit, 2, 2);
             this.tableLayoutPanel_Buttons.Controls.Add(this.button_About, 2, 1);
-            this.tableLayoutPanel_Buttons.Controls.Add(this.safeModeIconButton, 0, 0);
             this.tableLayoutPanel_Buttons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel_Buttons.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel_Buttons.Location = new System.Drawing.Point(0, 262);
@@ -155,8 +154,9 @@
             // 
             // safeModeIconButton
             // 
+            this.safeModeIconButton.BackColor = System.Drawing.Color.Transparent;
             this.safeModeIconButton.Image = global::XtremeHackerman.Properties.Resources.StartModeLockIcon;
-            this.safeModeIconButton.Location = new System.Drawing.Point(3, 3);
+            this.safeModeIconButton.Location = new System.Drawing.Point(0, 86);
             this.safeModeIconButton.Name = "safeModeIconButton";
             this.safeModeIconButton.Size = new System.Drawing.Size(45, 37);
             this.safeModeIconButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -184,7 +184,7 @@
             this.securityOptionsToolStripMenuItem,
             this.copyrightToolStripMenuItem});
             this.safeModeContextStrip.Name = "contextMenuStrip1";
-            this.safeModeContextStrip.Size = new System.Drawing.Size(162, 70);
+            this.safeModeContextStrip.Size = new System.Drawing.Size(181, 92);
             // 
             // safeModeOptionsToolStripMenuItem
             // 
@@ -193,7 +193,7 @@
             this.bootInNormalModeToolStripMenuItem,
             this.enableSafeModeWithCommandPromptToolStripMenuItem});
             this.safeModeOptionsToolStripMenuItem.Name = "safeModeOptionsToolStripMenuItem";
-            this.safeModeOptionsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.safeModeOptionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.safeModeOptionsToolStripMenuItem.Text = "Boot Options";
             this.safeModeOptionsToolStripMenuItem.Click += new System.EventHandler(this.safeModeOptionsToolStripMenuItem_Click);
             // 
@@ -203,9 +203,22 @@
             this.enableToolStripMenuItem,
             this.disableToolStripMenuItem});
             this.bootInSafeModeToolStripMenuItem.Name = "bootInSafeModeToolStripMenuItem";
-            this.bootInSafeModeToolStripMenuItem.Size = new System.Drawing.Size(297, 22);
+            this.bootInSafeModeToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.bootInSafeModeToolStripMenuItem.Text = "Enable Safe Mode";
-            this.bootInSafeModeToolStripMenuItem.Click += new System.EventHandler(this.bootInSafeModeToolStripMenuItem_Click);
+            // 
+            // enableToolStripMenuItem
+            // 
+            this.enableToolStripMenuItem.Name = "enableToolStripMenuItem";
+            this.enableToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.enableToolStripMenuItem.Text = "Enable";
+            this.enableToolStripMenuItem.Click += new System.EventHandler(this.enableToolStripMenuItem_Click);
+            // 
+            // disableToolStripMenuItem
+            // 
+            this.disableToolStripMenuItem.Name = "disableToolStripMenuItem";
+            this.disableToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.disableToolStripMenuItem.Text = "Disable";
+            this.disableToolStripMenuItem.Click += new System.EventHandler(this.disableToolStripMenuItem_Click);
             // 
             // bootInNormalModeToolStripMenuItem
             // 
@@ -213,20 +226,22 @@
             this.enableToolStripMenuItem1,
             this.disableToolStripMenuItem1});
             this.bootInNormalModeToolStripMenuItem.Name = "bootInNormalModeToolStripMenuItem";
-            this.bootInNormalModeToolStripMenuItem.Size = new System.Drawing.Size(297, 22);
-            this.bootInNormalModeToolStripMenuItem.Text = "Enable Safe Mode with Networking";
+            this.bootInNormalModeToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.bootInNormalModeToolStripMenuItem.Text = "Networking Options";
             // 
-            // securityOptionsToolStripMenuItem
+            // enableToolStripMenuItem1
             // 
-            this.securityOptionsToolStripMenuItem.Name = "securityOptionsToolStripMenuItem";
-            this.securityOptionsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.securityOptionsToolStripMenuItem.Text = "Security Options";
+            this.enableToolStripMenuItem1.Name = "enableToolStripMenuItem1";
+            this.enableToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
+            this.enableToolStripMenuItem1.Text = "Enable";
+            this.enableToolStripMenuItem1.Click += new System.EventHandler(this.enableToolStripMenuItem1_Click);
             // 
-            // copyrightToolStripMenuItem
+            // disableToolStripMenuItem1
             // 
-            this.copyrightToolStripMenuItem.Name = "copyrightToolStripMenuItem";
-            this.copyrightToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.copyrightToolStripMenuItem.Text = "Copyright";
+            this.disableToolStripMenuItem1.Name = "disableToolStripMenuItem1";
+            this.disableToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
+            this.disableToolStripMenuItem1.Text = "Disable";
+            this.disableToolStripMenuItem1.Click += new System.EventHandler(this.disableToolStripMenuItem1_Click);
             // 
             // enableSafeModeWithCommandPromptToolStripMenuItem
             // 
@@ -234,46 +249,34 @@
             this.enableToolStripMenuItem2,
             this.disableToolStripMenuItem2});
             this.enableSafeModeWithCommandPromptToolStripMenuItem.Name = "enableSafeModeWithCommandPromptToolStripMenuItem";
-            this.enableSafeModeWithCommandPromptToolStripMenuItem.Size = new System.Drawing.Size(297, 22);
-            this.enableSafeModeWithCommandPromptToolStripMenuItem.Text = "Enable Safe Mode with Command Prompt";
-            // 
-            // enableToolStripMenuItem
-            // 
-            this.enableToolStripMenuItem.Name = "enableToolStripMenuItem";
-            this.enableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.enableToolStripMenuItem.Text = "Enable";
-            this.enableToolStripMenuItem.Click += new System.EventHandler(this.enableToolStripMenuItem_Click);
-            // 
-            // disableToolStripMenuItem
-            // 
-            this.disableToolStripMenuItem.Name = "disableToolStripMenuItem";
-            this.disableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.disableToolStripMenuItem.Text = "Disable";
-            this.disableToolStripMenuItem.Click += new System.EventHandler(this.disableToolStripMenuItem_Click);
-            // 
-            // enableToolStripMenuItem1
-            // 
-            this.enableToolStripMenuItem1.Name = "enableToolStripMenuItem1";
-            this.enableToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.enableToolStripMenuItem1.Text = "Enable";
-            // 
-            // disableToolStripMenuItem1
-            // 
-            this.disableToolStripMenuItem1.Name = "disableToolStripMenuItem1";
-            this.disableToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.disableToolStripMenuItem1.Text = "Disable";
+            this.enableSafeModeWithCommandPromptToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.enableSafeModeWithCommandPromptToolStripMenuItem.Text = "Command Prompt";
             // 
             // enableToolStripMenuItem2
             // 
             this.enableToolStripMenuItem2.Name = "enableToolStripMenuItem2";
             this.enableToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.enableToolStripMenuItem2.Text = "Enable";
+            this.enableToolStripMenuItem2.Click += new System.EventHandler(this.enableToolStripMenuItem2_Click);
             // 
             // disableToolStripMenuItem2
             // 
             this.disableToolStripMenuItem2.Name = "disableToolStripMenuItem2";
             this.disableToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.disableToolStripMenuItem2.Text = "Disable";
+            this.disableToolStripMenuItem2.Click += new System.EventHandler(this.disableToolStripMenuItem2_Click);
+            // 
+            // securityOptionsToolStripMenuItem
+            // 
+            this.securityOptionsToolStripMenuItem.Name = "securityOptionsToolStripMenuItem";
+            this.securityOptionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.securityOptionsToolStripMenuItem.Text = "Security Options";
+            // 
+            // copyrightToolStripMenuItem
+            // 
+            this.copyrightToolStripMenuItem.Name = "copyrightToolStripMenuItem";
+            this.copyrightToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyrightToolStripMenuItem.Text = "Copyright";
             // 
             // SafeModeStatus
             // 
@@ -332,6 +335,7 @@
             this.Controls.Add(this.CMDAccessStatus);
             this.Controls.Add(this.NetworkingStatus);
             this.Controls.Add(this.SafeModeStatus);
+            this.Controls.Add(this.safeModeIconButton);
             this.Controls.Add(this.pictureBox_Title);
             this.Controls.Add(this.tableLayoutPanel_Buttons);
             this.MaximizeBox = false;

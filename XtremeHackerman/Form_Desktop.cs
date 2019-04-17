@@ -21,6 +21,7 @@ namespace XtremeHackerman
         public Form_Desktop()
         {
             InitializeComponent();
+            desktopBootOptions();
 	}
 
         private void Form_Desktop_Load(object sender, EventArgs e)
@@ -75,7 +76,15 @@ namespace XtremeHackerman
         private void cliButtonClick(object sender, EventArgs e)
         {
 	    // Command Line implementation
-	    var formCLI = new Form_CLI();
+
+            if (Desktop_BKEND.CMD_ON == false)
+            {
+                const string message = "Command Prompt Access Restricted in Current Boot Options.";
+                var result = MessageBox.Show(message);
+                return;
+                
+            }
+	        var formCLI = new Form_CLI();
             formCLI.ShowDialog();
         }
 
@@ -147,6 +156,35 @@ namespace XtremeHackerman
             /// It should be Deleted or Hidden When the Ransomware event is added.
             var formRansomware = new Form_Ransomware();
             formRansomware.ShowDialog();
+        }
+
+        private void desktopBootOptions()
+        {   // This function will handle enabling/disabling certain settings based on Boot Options
+            
+            //Disables the Background when in SAFE MODE
+            if(BootOptions.enableSafeMode == true)
+            {
+                BackgroundImage = null;
+                BackColor = Color.Black;
+            }
+            
+            // Enables or disables Network access as defined by the system boot options 
+            if(BootOptions.enableNetworking == false)
+            {
+                Desktop_BKEND.net_ON = false;
+                toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
+            }
+
+            // Enables or disables CMD access as defined by the system boot options
+            if(BootOptions.enableCommandPrompt == false)
+            {
+                Desktop_BKEND.CMD_ON = false;
+            }
+        }
+
+        private void DesktopPermissions_Tick(object sender, EventArgs e)
+        { // This simple Tick will refresh the permissions of the Desktop form over time 
+            desktopBootOptions();
         }
     }
 }

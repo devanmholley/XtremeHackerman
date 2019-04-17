@@ -80,11 +80,6 @@ namespace XtremeHackerman
 
         }
 
-        private void bootInSafeModeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void safeModeOptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -97,13 +92,12 @@ namespace XtremeHackerman
 
         private void enableToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // This will set the global Safe Mode boolean to TRUE upon click
+            // Enable Safe Mode Usage 
             BootOptions.enableSafeMode = true;
         }
 
         private void disableToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // This function will set the global Safe Mode boolean to FALSE upon click
+        {   // Disallow Safe Mode Usage 
             BootOptions.enableSafeMode = false;
 
         }
@@ -151,6 +145,28 @@ namespace XtremeHackerman
                 CMDAccessStatus.Text = "Command Prompt Access: Disabled";
             }
             
+        }
+
+        // Conext Menu Options for Network Persmissions
+        private void enableToolStripMenuItem1_Click(object sender, EventArgs e)
+        {   // Allow Network Usage
+            BootOptions.enableNetworking = true;
+        }
+            // Disallow Network Usage 
+        private void disableToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BootOptions.enableNetworking = false;
+        }
+
+        // Context Menu Options for Command Prompt Access
+        private void enableToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            BootOptions.enableCommandPrompt = true;
+        }
+
+        private void disableToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            BootOptions.enableCommandPrompt = false;
         }
     }
 }
