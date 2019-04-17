@@ -61,6 +61,96 @@ namespace XtremeHackerman
             var formHacker = new Form_Hacker();
             formHacker.ShowDialog();
         }
+        /// <summary>
+        /// Enables the selection of the Safe Mode Conext Menu upon click of the image button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void safeModeIconButton_MouseClick(object sender, MouseEventArgs e)
+        {   
+            if (e.Button is MouseButtons.Left)
+            {
+                safeModeContextStrip.ContextMenu = new ContextMenu();
+                safeModeContextStrip.Show(Cursor.Position);
+            }
+        }
 
+        private void safeModeContextStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void bootInSafeModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void safeModeOptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+
+        }
+
+        private void enableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // This will set the global Safe Mode boolean to TRUE upon click
+            BootOptions.enableSafeMode = true;
+        }
+
+        private void disableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // This function will set the global Safe Mode boolean to FALSE upon click
+            BootOptions.enableSafeMode = false;
+
+        }
+
+        private void BootOptionsDisplay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BootStatusSettings()
+        {
+            // This function is in charge of updating the statuses of the Boot Options and updating
+            // their status in real time on the initial window
+
+
+        }
+
+        private void BootStatusTimer_Tick(object sender, EventArgs e)
+        {
+            // Safe Mode Settings
+            if (BootOptions.enableSafeMode == true)
+            {
+                SafeModeStatus.Text = "Safe Mode: Enabled";
+            }
+            else
+            {
+                SafeModeStatus.Text = "Safe Mode: Disabled";
+            }
+            // Network Settings
+            if (BootOptions.enableNetworking == true)
+            {
+                NetworkingStatus.Text = "Network: Enabled";
+            }
+            else
+            {
+                NetworkingStatus.Text = "Network: Disabled";
+            }
+            // Command Prompt Settings
+            if (BootOptions.enableCommandPrompt == true)
+            {
+                CMDAccessStatus.Text = "Command Prompt Access: Enabled";
+            }
+            else
+            {
+                CMDAccessStatus.Text = "Command Prompt Access: Disabled";
+            }
+            
+        }
     }
 }

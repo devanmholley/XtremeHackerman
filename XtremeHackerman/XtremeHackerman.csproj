@@ -53,13 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
+    <Compile Include="Classes\Class_BootOptions.cs" />
     <Compile Include="Classes\Class_Firewall.cs" />
     <Compile Include="EventLogic.cs" />
-
     <Compile Include="Classes\Class_FileManager.cs" />
     <Compile Include="Classes\Desktop_BKEND.cs" />
-
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,11 +235,9 @@
     <Content Include="Resources\Form_FileManager\img.PNG" />
     <Content Include="Resources\Form_FileManager\openfolder.PNG" />
     <Content Include="Resources\Form_FileManager\thispc.png" />
-
+    <None Include="Resources\StartModeLockIcon.png" />
     <None Include="Resources\From_Ransomware\ransomware-512.png" />
-
     <None Include="Resources\ieicon.png" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
