@@ -13,12 +13,12 @@ namespace XtremeHackerman.Classes
     /// </summary>
     class Class_File
     {
-	public TreeNode Folder { get; set; }
-	public string FilePath { get; set; }
-	public string FileName { get; set; }
-	public string FileType { get; set; }
-	public bool IsMalicious { get; set; }
-	public object Content { get; set; }
+	public static TreeNode Folder { get; set; }
+	public static string FilePath { get; set; }
+	public static string FileName { get; set; }
+	public static string FileType { get; set; }
+	public static bool IsMalicious { get; set; }
+	public static object Content { get; set; }
 
 	public Class_File(TreeNode folder, string filename, string filetype, bool ismalicious, object content)
 	{
@@ -37,10 +37,13 @@ namespace XtremeHackerman.Classes
 	/// <param name="filetype"></param>
 	/// <param name="ismalicious"></param>
 	/// <param name="content"></param>
-	public static void Save(string filename, string filetype, bool ismalicious, object content)
+	public static void Save(TreeNode folder, string filename, string filetype, bool ismalicious, object content)
 	{
-	    TreeNode folder = Class_FileManager.down; //choose downloads folder
-
+	    if (folder == null)
+	    {
+		folder = Class_FileManager.down; //choose downloads folder
+	    }
+	    
 	    //Create new ListViewItem
 	    ListViewItem newFile = new ListViewItem();
 	    newFile.Text = filename;
@@ -60,17 +63,16 @@ namespace XtremeHackerman.Classes
 	/// <param name="filetype"></param>
 	/// <param name="ismalicious"></param>
 	/// <param name="content"></param>
-	public static void SaveAs(TreeNode folder, string filename, string filetype, bool ismalicious, object content)
+	public static void SaveAs(string filename, string filetype, bool ismalicious, object content)
 	{
-	    //Create new ListViewItem
-	    ListViewItem newFile = new ListViewItem();
-	    newFile.Text = filename;
-	    newFile.SubItems.Add(filetype);
+	    FileName = filename;
+	    FileType = filetype;
+	    IsMalicious = ismalicious;
+	    Content = content;
 
-	    Class_File fileTag = new Class_File(folder, filename, filetype, ismalicious, content); //Create new File
-	    newFile.Tag = fileTag;
-
-	    Class_FileManager.FolderFiles[folder].Items.Add(newFile);//add to dictionary
+	    //Pop up folder selecting dialog
+	    var formSaveAs = new Form_SaveAs();
+	    formSaveAs.ShowDialog();
 	}
     }
 }

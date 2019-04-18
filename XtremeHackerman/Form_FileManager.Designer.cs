@@ -38,7 +38,7 @@
 	    this.filePathComboBox = new System.Windows.Forms.ToolStripComboBox();
 	    this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 	    this.folderView = new System.Windows.Forms.TreeView();
-	    this.folderView = XtremeHackerman.Classes.Class_FileManager.Folders; //set it to be our folders
+	    this.folderView = XtremeHackerman.Classes.Class_FileManager.Folders; //set to our dictionary
 	    this.folderViewMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
 	    this.newFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 	    this.renameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,10 +121,10 @@
 	    this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
 	    this.imageList1.Images.SetKeyName(0, "folder.PNG");
 	    this.imageList1.Images.SetKeyName(1, "openfolder.PNG");
-	    this.imageList1.Images.SetKeyName(2, "doc.PNG");
-	    this.imageList1.Images.SetKeyName(3, "file.PNG");
-	    this.imageList1.Images.SetKeyName(4, "img.PNG");
-	    this.imageList1.Images.SetKeyName(5, "thispc.png");
+	    this.imageList1.Images.SetKeyName(2, "thispc.png");
+	    this.imageList1.Images.SetKeyName(3, "doc.PNG");
+	    this.imageList1.Images.SetKeyName(4, "file.PNG");
+	    this.imageList1.Images.SetKeyName(5, "img.PNG");
 	    // 
 	    // folderView
 	    // 
@@ -156,14 +156,14 @@
 	    // newFolderToolStripMenuItem
 	    // 
 	    this.newFolderToolStripMenuItem.Name = "newFolderToolStripMenuItem";
-	    this.newFolderToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
+	    this.newFolderToolStripMenuItem.Size = new System.Drawing.Size(248, 46);
 	    this.newFolderToolStripMenuItem.Text = "New Folder";
 	    this.newFolderToolStripMenuItem.Click += new System.EventHandler(this.newFolderToolStripMenuItem_Click);
 	    // 
 	    // renameToolStripMenuItem
 	    // 
 	    this.renameToolStripMenuItem.Name = "renameToolStripMenuItem";
-	    this.renameToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
+	    this.renameToolStripMenuItem.Size = new System.Drawing.Size(248, 46);
 	    this.renameToolStripMenuItem.Text = "Rename";
 	    this.renameToolStripMenuItem.Click += new System.EventHandler(this.renameToolStripMenuItem_Click);
 	    // 
@@ -171,7 +171,7 @@
 	    // 
 	    this.deleteToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 	    this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-	    this.deleteToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
+	    this.deleteToolStripMenuItem.Size = new System.Drawing.Size(248, 46);
 	    this.deleteToolStripMenuItem.Text = "Delete";
 	    this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
 	    // 
