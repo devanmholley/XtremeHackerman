@@ -31,6 +31,7 @@
 	    this.components = new System.ComponentModel.Container();
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SaveAs));
 	    this.folderView = new System.Windows.Forms.TreeView();
+	    this.folderView = XtremeHackerman.Classes.Class_FileManager.Folders; //set to our folders
 	    this.textBox1 = new System.Windows.Forms.TextBox();
 	    this.SaveButton = new System.Windows.Forms.Button();
 	    this.CancelButton = new System.Windows.Forms.Button();

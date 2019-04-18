@@ -38,7 +38,7 @@
 	    this.filePathComboBox = new System.Windows.Forms.ToolStripComboBox();
 	    this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 	    this.folderView = new System.Windows.Forms.TreeView();
-	    this.folderView = XtremeHackerman.Classes.Class_FileManager.Folders; //set to our dictionary
+	    this.folderView = XtremeHackerman.Classes.Class_FileManager.Folders; //set to our folders
 	    this.folderViewMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
 	    this.newFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 	    this.renameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
