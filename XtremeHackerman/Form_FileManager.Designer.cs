@@ -38,6 +38,7 @@
 	    this.filePathComboBox = new System.Windows.Forms.ToolStripComboBox();
 	    this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 	    this.folderView = new System.Windows.Forms.TreeView();
+	    this.folderView = XtremeHackerman.Classes.Class_FileManager.Folders; //set it to be our folders
 	    this.folderViewMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
 	    this.newFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 	    this.renameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,7 @@
             this.filePathComboBox});
 	    this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 	    this.toolStrip1.Name = "toolStrip1";
-	    this.toolStrip1.Size = new System.Drawing.Size(1890, 48);
+	    this.toolStrip1.Size = new System.Drawing.Size(1890, 47);
 	    this.toolStrip1.TabIndex = 0;
 	    this.toolStrip1.Text = "toolStrip1";
 	    // 
@@ -77,7 +78,7 @@
 	    this.backFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("backFolderButton.Image")));
 	    this.backFolderButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 	    this.backFolderButton.Name = "backFolderButton";
-	    this.backFolderButton.Size = new System.Drawing.Size(44, 45);
+	    this.backFolderButton.Size = new System.Drawing.Size(44, 44);
 	    this.backFolderButton.Text = "Back";
 	    // 
 	    // forwardFolderButton
@@ -86,7 +87,7 @@
 	    this.forwardFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("forwardFolderButton.Image")));
 	    this.forwardFolderButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 	    this.forwardFolderButton.Name = "forwardFolderButton";
-	    this.forwardFolderButton.Size = new System.Drawing.Size(44, 45);
+	    this.forwardFolderButton.Size = new System.Drawing.Size(44, 44);
 	    this.forwardFolderButton.Text = "Forward";
 	    // 
 	    // upFolderButton
@@ -95,7 +96,7 @@
 	    this.upFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("upFolderButton.Image")));
 	    this.upFolderButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 	    this.upFolderButton.Name = "upFolderButton";
-	    this.upFolderButton.Size = new System.Drawing.Size(44, 45);
+	    this.upFolderButton.Size = new System.Drawing.Size(44, 44);
 	    this.upFolderButton.Text = "Up";
 	    // 
 	    // newFolderButton
@@ -104,7 +105,7 @@
 	    this.newFolderButton.Image = ((System.Drawing.Image)(resources.GetObject("newFolderButton.Image")));
 	    this.newFolderButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 	    this.newFolderButton.Name = "newFolderButton";
-	    this.newFolderButton.Size = new System.Drawing.Size(44, 45);
+	    this.newFolderButton.Size = new System.Drawing.Size(44, 44);
 	    this.newFolderButton.Text = "New Folder";
 	    this.newFolderButton.Click += new System.EventHandler(this.newFolderButton_Click);
 	    // 
@@ -112,7 +113,7 @@
 	    // 
 	    this.filePathComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.filePathComboBox.Name = "filePathComboBox";
-	    this.filePathComboBox.Size = new System.Drawing.Size(1000, 48);
+	    this.filePathComboBox.Size = new System.Drawing.Size(1000, 47);
 	    // 
 	    // imageList1
 	    // 
@@ -133,12 +134,11 @@
 	    this.folderView.ImageIndex = 0;
 	    this.folderView.ImageList = this.imageList1;
 	    this.folderView.LabelEdit = true;
-	    this.folderView.Location = new System.Drawing.Point(0, 48);
+	    this.folderView.Location = new System.Drawing.Point(0, 47);
 	    this.folderView.Name = "folderView";
 	    this.folderView.SelectedImageIndex = 1;
-	    this.folderView.Size = new System.Drawing.Size(751, 837);
+	    this.folderView.Size = new System.Drawing.Size(751, 838);
 	    this.folderView.TabIndex = 1;
-	    this.folderView.BeforeLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.folderView_BeforeLabelEdit);
 	    this.folderView.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.folderView_AfterLabelEdit);
 	    this.folderView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.folderView_AfterSelect);
 	    // 
@@ -151,18 +151,19 @@
             this.deleteToolStripMenuItem});
 	    this.folderViewMenuStrip.Name = "contextMenuStrip1";
 	    this.folderViewMenuStrip.Size = new System.Drawing.Size(249, 142);
+	    this.folderViewMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.folderViewMenuStrip_Opening);
 	    // 
 	    // newFolderToolStripMenuItem
 	    // 
 	    this.newFolderToolStripMenuItem.Name = "newFolderToolStripMenuItem";
-	    this.newFolderToolStripMenuItem.Size = new System.Drawing.Size(248, 46);
+	    this.newFolderToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
 	    this.newFolderToolStripMenuItem.Text = "New Folder";
 	    this.newFolderToolStripMenuItem.Click += new System.EventHandler(this.newFolderToolStripMenuItem_Click);
 	    // 
 	    // renameToolStripMenuItem
 	    // 
 	    this.renameToolStripMenuItem.Name = "renameToolStripMenuItem";
-	    this.renameToolStripMenuItem.Size = new System.Drawing.Size(248, 46);
+	    this.renameToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
 	    this.renameToolStripMenuItem.Text = "Rename";
 	    this.renameToolStripMenuItem.Click += new System.EventHandler(this.renameToolStripMenuItem_Click);
 	    // 
@@ -170,7 +171,7 @@
 	    // 
 	    this.deleteToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 	    this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-	    this.deleteToolStripMenuItem.Size = new System.Drawing.Size(248, 46);
+	    this.deleteToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
 	    this.deleteToolStripMenuItem.Text = "Delete";
 	    this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
 	    // 
@@ -183,9 +184,9 @@
 	    this.fileView.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.fileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.fileView.LabelEdit = true;
-	    this.fileView.Location = new System.Drawing.Point(751, 48);
+	    this.fileView.Location = new System.Drawing.Point(751, 47);
 	    this.fileView.Name = "fileView";
-	    this.fileView.Size = new System.Drawing.Size(1139, 837);
+	    this.fileView.Size = new System.Drawing.Size(1139, 838);
 	    this.fileView.SmallImageList = this.imageList1;
 	    this.fileView.TabIndex = 2;
 	    this.fileView.UseCompatibleStateImageBehavior = false;
