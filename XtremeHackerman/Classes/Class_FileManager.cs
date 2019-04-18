@@ -11,9 +11,9 @@ namespace XtremeHackerman.Classes
     {
 
 	//Initalize basic folders
-	static TreeNode root = new TreeNode("This PC", 5, 5);
-	static TreeNode docs = new TreeNode("Documents");
-	static TreeNode down = new TreeNode("Downloads");
+	public static TreeNode root = new TreeNode("This PC", 5, 5);
+	public static TreeNode docs = new TreeNode("Documents");
+	public static TreeNode down = new TreeNode("Downloads");
 
 	public static TreeView Folders = InitFolders();
 
