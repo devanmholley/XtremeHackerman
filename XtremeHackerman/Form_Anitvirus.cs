@@ -19,6 +19,14 @@ namespace XtremeHackerman
 
         private void antivirusScan_BTN_Click(object sender, EventArgs e)
         {
+            //When the scan button is clicked, hide the start screen.
+            AntivirusStart_PNL.Visible = false;
+            //Show the scanning screen.
+            AntiVirus_scanPNL.Visible = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
