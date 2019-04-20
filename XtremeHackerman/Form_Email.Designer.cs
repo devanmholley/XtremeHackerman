@@ -37,6 +37,7 @@
             this.email_inboxBTN = new System.Windows.Forms.Button();
             this.email_inbox = new System.Windows.Forms.ListBox();
             this.emailInboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LL_Phish = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Send = new System.Windows.Forms.Button();
             this.email_mvtrashBTN = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.email_subjectTXT = new System.Windows.Forms.TextBox();
             this.email_bodyTXT = new System.Windows.Forms.TextBox();
             this.email_header = new System.Windows.Forms.Panel();
+            this.targetTXT = new System.Windows.Forms.TextBox();
             this.Date_TXT = new System.Windows.Forms.Label();
             this.email_dateSTXT = new System.Windows.Forms.TextBox();
             this.email_toSTXT = new System.Windows.Forms.TextBox();
@@ -54,7 +56,6 @@
             this.email_dateTXT = new System.Windows.Forms.TextBox();
             this.email_destTXT = new System.Windows.Forms.TextBox();
             this.email_sourceTXT = new System.Windows.Forms.TextBox();
-            this.targetTXT = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.LL_Phish);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.email_bodyTXT);
             this.splitContainer1.Panel2.Controls.Add(this.email_header);
@@ -172,10 +174,23 @@
             this.email_inbox.Name = "email_inbox";
             this.email_inbox.Size = new System.Drawing.Size(263, 329);
             this.email_inbox.TabIndex = 0;
+            this.email_inbox.SelectedIndexChanged += new System.EventHandler(this.email_inbox_SelectedIndexChanged);
             // 
             // emailInboxBindingSource
             // 
             this.emailInboxBindingSource.DataSource = typeof(XtremeHackerman.Classes.Class_Email);
+            // 
+            // LL_Phish
+            // 
+            this.LL_Phish.AutoSize = true;
+            this.LL_Phish.Enabled = false;
+            this.LL_Phish.Location = new System.Drawing.Point(171, 384);
+            this.LL_Phish.Name = "LL_Phish";
+            this.LL_Phish.Size = new System.Drawing.Size(170, 13);
+            this.LL_Phish.TabIndex = 3;
+            this.LL_Phish.TabStop = true;
+            this.LL_Phish.Text = "notphishing.com/ebneoKI23jdfn03";
+            this.LL_Phish.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LL_Phish_LinkClicked);
             // 
             // panel1
             // 
@@ -288,6 +303,14 @@
             this.email_header.Size = new System.Drawing.Size(515, 105);
             this.email_header.TabIndex = 0;
             // 
+            // targetTXT
+            // 
+            this.targetTXT.Location = new System.Drawing.Point(68, 44);
+            this.targetTXT.Name = "targetTXT";
+            this.targetTXT.Size = new System.Drawing.Size(409, 20);
+            this.targetTXT.TabIndex = 7;
+            this.targetTXT.Visible = false;
+            // 
             // Date_TXT
             // 
             this.Date_TXT.AutoSize = true;
@@ -366,14 +389,6 @@
             this.email_sourceTXT.Size = new System.Drawing.Size(437, 17);
             this.email_sourceTXT.TabIndex = 0;
             // 
-            // targetTXT
-            // 
-            this.targetTXT.Location = new System.Drawing.Point(68, 44);
-            this.targetTXT.Name = "targetTXT";
-            this.targetTXT.Size = new System.Drawing.Size(409, 20);
-            this.targetTXT.TabIndex = 7;
-            this.targetTXT.Visible = false;
-            // 
             // Form_Email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,5 +440,6 @@
         private System.Windows.Forms.Button btn_Send;
         private System.Windows.Forms.Label Date_TXT;
         private System.Windows.Forms.TextBox targetTXT;
+        private System.Windows.Forms.LinkLabel LL_Phish;
     }
 }

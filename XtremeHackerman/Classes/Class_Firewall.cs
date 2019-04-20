@@ -11,6 +11,6 @@ namespace XtremeHackerman.Classes
         // The firewall contains the variable for IPs and maintains a list of
         // blocked IPs.
         public static string IP;
-        public static IList<String> blockedIPs;
+        public static List<String> blockedIPs = new List<String>();
     }
 }

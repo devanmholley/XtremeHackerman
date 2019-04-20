@@ -11,7 +11,7 @@ namespace XtremeHackerman.Classes
     internal class Class_Email
     {
         // Adds new mail into the JSON file so it appears in the inbox.
-        public void AddMail(string src, string dst, string dt, string sbjt, string bdy)
+        public static void AddMail(string src, string dst, string dt, string sbjt, string bdy)
         {
             //If the email source hasn't been blocked on the firewall
             if (Class_Firewall.blockedIPs.Contains(src)== false) { 
@@ -29,7 +29,7 @@ namespace XtremeHackerman.Classes
                 EmailList.Add(newMail);
 
                 //Serialize the new object into the JSON file.
-                JsonConvert.SerializeObject(EmailList, Formatting.Indented);
+                // JsonConvert.SerializeObject(EmailList, Formatting.Indented);
             }
         }
 

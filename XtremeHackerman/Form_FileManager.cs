@@ -7,28 +7,11 @@ namespace XtremeHackerman
 {
     public partial class Form_FileManager : Form
     {
-	public Dictionary<TreeNode, ListView> FolderFiles = Class_FileManager.FolderFiles;
+	public Dictionary<TreeNode, ListView> FolderFiles = Class_FileManager.FolderFiles; //folders and files from class_filemanager
 
 	public Form_FileManager()
 	{
 	    InitializeComponent();
-
-	    //Create Basic Folders: ThisPC, Documents, and Downloads
-	    TreeNode pc, folder;
-	    ListView pcfiles = new ListView();
-	    ListView files = new ListView();
-
-	    pc = folderView.Nodes.Add("ThisPC"); //Create "ThisPC" folder
-	    pc.ImageIndex = 5; //set PC icon
-	    pc.SelectedImageIndex = 5; //set PC icon
-	    FolderFiles.Add(pc, pcfiles); //add to dictionary
-
-	    folder = pc.Nodes.Add("Documents"); //add as child node under ThisPC
-	    FolderFiles.Add(folder, files); //add to dictionary
-
-	    files = new ListView(); 
-	    folder = pc.Nodes.Add("Downloads"); //add as child node under ThisPC
-	    FolderFiles.Add(folder, files); // add to dictionary
 	}
 
 	private void Form_FileManager_Load(object sender, EventArgs e)
@@ -57,6 +40,21 @@ namespace XtremeHackerman
 
 	    Class_FileManager.refreshFileView(fileView, currFolder); //populate files
 	    filePathComboBox.Text = Class_FileManager.getFilePath(folderView.SelectedNode); //update combobox to display current path
+	}
+
+	private void folderViewMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+	{
+	    //do not show rename and delete right click menu items for ThisPC folder
+	    if (folderView.SelectedNode.Parent == null)
+	    {
+		renameToolStripMenuItem.Visible = false;
+		deleteToolStripMenuItem.Visible = false;
+	    }
+	    else
+	    {
+		renameToolStripMenuItem.Visible = true;
+		deleteToolStripMenuItem.Visible = true;
+	    }
 	}
 
 	private void newFolderButton_Click(object sender, EventArgs e)
@@ -88,19 +86,14 @@ namespace XtremeHackerman
 	private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
 	{
 	    //Delete folder from Right Click menu in folderView
-	    if (folderView.SelectedNode.Parent != null) //Not allowed to delete "ThisPC" aka root node (ThisPC will have null parent)
-	    {
-		FolderFiles.Remove(folderView.SelectedNode);
-		folderView.SelectedNode.Remove();
-	    }
-	    else
-	    {
-		MessageBox.Show("Deletion of Root Folder not allowed");
-	    }
+	    FolderFiles.Remove(folderView.SelectedNode);
+	    folderView.SelectedNode.Remove();
+
 	}
 
 	private void folderView_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
 	{
+	    
 	    // Validate folder name, no empty name, no invalid characters
 	    //Code Attribution: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.treeview.afterlabeledit?view=netframework-4.7.2
 	    if (e.Label != null)
@@ -115,9 +108,11 @@ namespace XtremeHackerman
 			    e.CancelEdit = true;
 			}
 		    }
-		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) == -1) //does not contain any invalid characters
-													  // Stop editing without canceling the label change.
-			e.Node.EndEdit(false);
+		    if (e.Label.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) == -1)//does not contain any invalid characters
+		    {
+			e.Node.EndEdit(false); // Stop editing without canceling the label change.
+			fileView.Items[e.Node.Index].Text = e.Label; //reflect folder name update in FileView
+		    }
 		    else
 		    {
 			// Cancel the label edit action, inform the user, and place the node in edit mode again
@@ -134,7 +129,8 @@ namespace XtremeHackerman
 		    e.Node.BeginEdit();
 		}
 	    }
-	    this.BeginInvoke(new Action(() => Class_FileManager.refreshFileView(fileView, folderView.SelectedNode))); //refresh file view AFTER label has finished editing
+
+	    //this.BeginInvoke(new Action(() => Class_FileManager.updateFilePath(folderView.SelectedNode))); //update all files' tags AFTER label has finished editing
 	}
 
 /************************************************************************************************
@@ -190,16 +186,6 @@ namespace XtremeHackerman
 	    }
 	}
 
-	private void folderView_BeforeLabelEdit(object sender, NodeLabelEditEventArgs e)
-	{
-	    //Does not allow renaming of root folder "ThicPC"
-	    if (e.Node.Parent == null)
-	    {
-	    e.CancelEdit = true;
-	    MessageBox.Show("Edit of Root Folder is not allowed");
-	    }
-	}
-
 	private void fileView_AfterLabelEdit(object sender, LabelEditEventArgs e)
 	{
 	    // Validate file name, no empty name, no invalid characters
@@ -216,7 +202,27 @@ namespace XtremeHackerman
 			    e.CancelEdit = true;
 			}
 		    }
-		    if (e.Label.IndexOfAny(new char[] { '\\', '/', '*', '?', '"', '<', '>', '|' }) != -1) //contains invalid characters
+		    if (e.Label.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) == -1) //does not contain invalid characters
+		    {
+			//Time to reflect changes in dictionary
+			ListViewItem currFile = fileView.SelectedItems[0];
+			TreeNode currFolder = folderView.SelectedNode; //current folder	
+			int numFolders = currFolder.Nodes.Count; //get num of folders currently listed in fileview
+
+			//Change appropiate file to reflect in the dictionary
+			if (currFile.SubItems[1].Text == "Text Document")
+			{
+			    int fileIndex = currFile.Index - numFolders; //calculate index of what the file index would be in the dictionary		   
+			    FolderFiles[currFolder].Items[fileIndex].Text = e.Label; //renames the file in the Dictionary
+			}
+			//Changing Folder Name in fileView: reflect appropriate folder name in folderView
+			else if (currFile.SubItems[1].Text == "File Folder")
+			{
+			    int fileIndex = currFile.Index; //get index of folder
+			    currFolder.Nodes[fileIndex].Text = e.Label; //rename the folder in folderView
+			}
+		    }
+		    else //contains invalid characters
 		    {
 			// Cancel the label edit action and inform the user
 			e.CancelEdit = true;
@@ -229,25 +235,6 @@ namespace XtremeHackerman
 		    e.CancelEdit = true;
 		    MessageBox.Show("A file name can't be blank"); //cannot be blank name
 		}
-
-		//Time to reflect changes in dictionary
-		ListViewItem currFile = fileView.SelectedItems[0];
-		TreeNode currFolder = folderView.SelectedNode; //current folder	
-		int numFolders = currFolder.Nodes.Count; //get num of folders currently listed in fileview
-
-		//Change appropiate file to reflect in the dictionary
-		if (currFile.SubItems[1].Text == "Text Document")
-		{
-		    int fileIndex = currFile.Index - numFolders; //calculate index of what the file index would be in the dictionary		   
-		    FolderFiles[currFolder].Items[fileIndex].Text = e.Label; //renames the file in the Dictionary
-		}
-		//Changing Folder Name in fileView: reflect appropriate folder name in folderView
-		else if (currFile.SubItems[1].Text == "File Folder")
-		{
-		    int fileIndex = currFile.Index; //get index of folder
-		    currFolder.Nodes[fileIndex].Text = e.Label; //rename the folder in folderView
-		}
-
 	    }
 	}
     }

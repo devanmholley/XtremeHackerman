@@ -53,13 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
+    <Compile Include="Classes\Class_File.cs" />
     <Compile Include="Classes\Class_Firewall.cs" />
     <Compile Include="EventLogic.cs" />
-
     <Compile Include="Classes\Class_FileManager.cs" />
     <Compile Include="Classes\Desktop_BKEND.cs" />
-
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +117,12 @@
     <Compile Include="Form_Ransomware.Designer.cs">
       <DependentUpon>Form_Ransomware.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_SaveAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SaveAs.Designer.cs">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +164,9 @@
     <EmbeddedResource Include="Form_Ransomware.resx">
       <DependentUpon>Form_Ransomware.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_SaveAs.resx">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +179,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\XtremeHackerman.Classes.Class_FileManager.datasource" />
     <None Include="Properties\DataSources\XtremeHackerman.Classes.EmailLogic.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -237,11 +245,8 @@
     <Content Include="Resources\Form_FileManager\img.PNG" />
     <Content Include="Resources\Form_FileManager\openfolder.PNG" />
     <Content Include="Resources\Form_FileManager\thispc.png" />
-
     <None Include="Resources\From_Ransomware\ransomware-512.png" />
-
     <None Include="Resources\ieicon.png" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
