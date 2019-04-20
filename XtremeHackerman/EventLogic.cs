@@ -197,7 +197,7 @@ namespace XtremeHackerman
             //Steps for recovering in the system for this event.
         }
 
-        private static void RansomewareAttack()
+        public static void RansomewareAttack()
         {
             //Event Trigger
         }
