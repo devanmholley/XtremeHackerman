@@ -47,7 +47,7 @@ namespace XtremeHackerman
 	    //Click on folder in treeview, show folders and files in listView
 	    TreeNode currFolder = folderView.SelectedNode;
 
-	    // if folder is "ThicPC", don't allow creation of new text document
+	    // if folder is "ThisPC", don't allow creation of new text document
 	    if (currFolder.Parent == null) //PC has null parent
 	    {
 		fileToolStripMenuItem.Visible = false; //do not allow new files to be created

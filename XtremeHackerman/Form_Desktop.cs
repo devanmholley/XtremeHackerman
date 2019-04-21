@@ -12,6 +12,7 @@ using System.Reflection;
 using XtremeHackerman.Classes;
 using XtremeHackerman.Properties;
 
+
 namespace XtremeHackerman
 {
     public partial class Form_Desktop : Class_BaseForm
@@ -26,8 +27,8 @@ namespace XtremeHackerman
 
         private void Form_Desktop_Load(object sender, EventArgs e)
         {
-	    // LOADING THE DESKTOP
-	    formFileManager = new Form_FileManager(); //declare my form once -KN
+            // LOADING THE DESKTOP
+            formFileManager = new Form_FileManager(); //declare my form once -KN
 	}
 
         private void searchEntry(object sender, EventArgs e)
@@ -168,7 +169,6 @@ namespace XtremeHackerman
                 BackgroundImage = null;
                 BackColor = Color.Black;
             }
-            
             //// Enables or disables Network access as defined by the system boot options 
             //if(BootOptions.enableNetworking == false)
             //{
@@ -181,6 +181,10 @@ namespace XtremeHackerman
             {
                 Desktop_BKEND.CMD_ON = false;
             }
+            else
+            {
+                Desktop_BKEND.CMD_ON = true;
+            }
         }
 
         private void DesktopPermissions_Tick(object sender, EventArgs e)
@@ -188,20 +192,32 @@ namespace XtremeHackerman
             desktopBootOptions();
         }
 
-        private void restartNoChangesToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void restartNoChangesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Handles simulation of a restart in the Desktop form by hiding the form for a few frames, updating, and then making it visible again
             BootOptions.enableSafeMode = false;
             BootOptions.enableNetworking = true;
-            BootOptions.enableCommandPrompt = true;
-            Close();
+            BootOptions.enableCommandPrompt = false;
+            this.Opacity = 0;
+            await Task.Delay(300);
+            desktopBootOptions();
+            BackgroundImage = Resources.Background_Desktop;
+            this.Opacity = 100;
+            RestartBootOptions.Close();
+            
         }
 
-        private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Handles simulation of a restart (Safe Mode) in the Desktop form by hiding the form for a few frames, updating, and then making it visible again
             BootOptions.enableSafeMode = true;
             BootOptions.enableNetworking = false;
             BootOptions.enableCommandPrompt = true;
-            Close();
+            this.Opacity = 0;
+            await Task.Delay(300);
+            desktopBootOptions();
+            this.Opacity = 100;
+            RestartBootOptions.Close();
         }
     }
 }

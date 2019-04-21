@@ -264,6 +264,7 @@
             // DesktopPermissions
             // 
             this.DesktopPermissions.Enabled = true;
+            this.DesktopPermissions.Interval = 1000;
             this.DesktopPermissions.Tick += new System.EventHandler(this.DesktopPermissions_Tick);
             // 
             // RestartBootOptions
@@ -273,19 +274,19 @@
             this.restartNoChangesToolStripMenuItem,
             this.safeModeToolStripMenuItem});
             this.RestartBootOptions.Name = "RestartBootOptions";
-            this.RestartBootOptions.Size = new System.Drawing.Size(181, 70);
+            this.RestartBootOptions.Size = new System.Drawing.Size(131, 48);
             // 
             // restartNoChangesToolStripMenuItem
             // 
             this.restartNoChangesToolStripMenuItem.Name = "restartNoChangesToolStripMenuItem";
-            this.restartNoChangesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restartNoChangesToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.restartNoChangesToolStripMenuItem.Text = "Restart";
             this.restartNoChangesToolStripMenuItem.Click += new System.EventHandler(this.restartNoChangesToolStripMenuItem_Click);
             // 
             // safeModeToolStripMenuItem
             // 
             this.safeModeToolStripMenuItem.Name = "safeModeToolStripMenuItem";
-            this.safeModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.safeModeToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.safeModeToolStripMenuItem.Text = "Safe Mode";
             this.safeModeToolStripMenuItem.Click += new System.EventHandler(this.safeModeToolStripMenuItem_Click);
             // 
