@@ -100,7 +100,8 @@ namespace XtremeHackerman
 
         private void Restart_Click(object sender, EventArgs e)
         {
-            Close();
+            RestartBootOptions.ContextMenu = new ContextMenu();
+            RestartBootOptions.Show(Cursor.Position);
         }
 
         private void Shutdown_Click(object sender, EventArgs e)
@@ -168,12 +169,12 @@ namespace XtremeHackerman
                 BackColor = Color.Black;
             }
             
-            // Enables or disables Network access as defined by the system boot options 
-            if(BootOptions.enableNetworking == false)
-            {
-                Desktop_BKEND.net_ON = false;
-                toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
-            }
+            //// Enables or disables Network access as defined by the system boot options 
+            //if(BootOptions.enableNetworking == false)
+            //{
+            //    Desktop_BKEND.net_ON = false;
+            //    toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
+            //}
 
             // Enables or disables CMD access as defined by the system boot options
             if(BootOptions.enableCommandPrompt == false)
@@ -185,6 +186,22 @@ namespace XtremeHackerman
         private void DesktopPermissions_Tick(object sender, EventArgs e)
         { // This simple Tick will refresh the permissions of the Desktop form over time 
             desktopBootOptions();
+        }
+
+        private void restartNoChangesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BootOptions.enableSafeMode = false;
+            BootOptions.enableNetworking = true;
+            BootOptions.enableCommandPrompt = true;
+            Close();
+        }
+
+        private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BootOptions.enableSafeMode = true;
+            BootOptions.enableNetworking = false;
+            BootOptions.enableCommandPrompt = true;
+            Close();
         }
     }
 }

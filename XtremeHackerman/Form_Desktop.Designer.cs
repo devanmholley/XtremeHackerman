@@ -47,7 +47,11 @@
             this.EmailClient = new System.Windows.Forms.Button();
             this.Btn_Ransom_Debug = new System.Windows.Forms.Button();
             this.DesktopPermissions = new System.Windows.Forms.Timer(this.components);
+            this.RestartBootOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.restartNoChangesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.safeModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.RestartBootOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -262,6 +266,29 @@
             this.DesktopPermissions.Enabled = true;
             this.DesktopPermissions.Tick += new System.EventHandler(this.DesktopPermissions_Tick);
             // 
+            // RestartBootOptions
+            // 
+            this.RestartBootOptions.BackColor = System.Drawing.Color.Violet;
+            this.RestartBootOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.restartNoChangesToolStripMenuItem,
+            this.safeModeToolStripMenuItem});
+            this.RestartBootOptions.Name = "RestartBootOptions";
+            this.RestartBootOptions.Size = new System.Drawing.Size(181, 70);
+            // 
+            // restartNoChangesToolStripMenuItem
+            // 
+            this.restartNoChangesToolStripMenuItem.Name = "restartNoChangesToolStripMenuItem";
+            this.restartNoChangesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restartNoChangesToolStripMenuItem.Text = "Restart";
+            this.restartNoChangesToolStripMenuItem.Click += new System.EventHandler(this.restartNoChangesToolStripMenuItem_Click);
+            // 
+            // safeModeToolStripMenuItem
+            // 
+            this.safeModeToolStripMenuItem.Name = "safeModeToolStripMenuItem";
+            this.safeModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.safeModeToolStripMenuItem.Text = "Safe Mode";
+            this.safeModeToolStripMenuItem.Click += new System.EventHandler(this.safeModeToolStripMenuItem_Click);
+            // 
             // Form_Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +316,7 @@
             this.Load += new System.EventHandler(this.Form_Desktop_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.RestartBootOptions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +341,8 @@
         private System.Windows.Forms.Button toolbarNetworkBTN;
         private System.Windows.Forms.Button Btn_Ransom_Debug;
         private System.Windows.Forms.Timer DesktopPermissions;
+        private System.Windows.Forms.ContextMenuStrip RestartBootOptions;
+        private System.Windows.Forms.ToolStripMenuItem restartNoChangesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
     }
 }
