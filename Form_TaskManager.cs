@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,55 +10,69 @@ using System.Windows.Forms;
 
 namespace XtremeHackerman
 {
-    public partial class Form_TaskManager : Form
-    {
-        public Form_TaskManager()
+    public partial class TaskManager : Form
         {
-            InitializeComponent();
-        }
+            public static List<Process> tasks;
+            public static List<Process> history;
 
-        Process[] proc;
+            
 
-        void GetAllProcess()
+            private Process process;
+
+
+            public TaskManager()
+            {
+                InitializeComponent();
+                tasks = new List<Process>();
+                history = new List<Process>();
+            }
+
+            private void timer1_Tick(object sender, EventArgs e)
+            {
+                TaskView.Items.Clear();
+                foreach (Process p in tasks)
+                {
+                    TaskView.Items.Add(p.Name + " " + p.SpawnTime);
+                    int elapsed = (int)DateTime.Now.Subtract(p.SpawnTime).TotalSeconds;
+                }
+            }
+
+            
+
+            private void TaskManager_Load(object sender, EventArgs e)
+            {
+                process = new Process();
+                tasks.Add(process);
+            }
+
+            private void TaskView_SelectedIndexChanged(object sender, EventArgs e)
+            {
+                foreach (Process p in tasks)
+                    TaskView.Columns[0].ListView.Items.Add(p.Name);
+
+
+            }
+
+            private void HistoryView_SelectedIndexChanged(object sender, EventArgs e)
+            {
+                foreach (Process p in history)
+                    HistoryView.Columns[0].ListView.Items.Add(p.Name);
+            }
+
+        private void BtnEndTask_Click_1(object sender, EventArgs e)
         {
-            proc = Process.GetProcesses();
-            listBox1.Items.Clear();
-            foreach(Process p in proc)
-            {
-                listBox1.Items.Add(p.ProcessName);
-                listBox1.Items.Add(p.PagedMemorySize64);
-                //listBox1.Items.Add(item: p.StartTime);
-                
-                    
-            }
-            listBox2.Items.Clear();
-            foreach (Process p in proc)
-            {
-                listBox2.Items.Add(p.ProcessName);
-                listBox2.Items.Add(p.PagedMemorySize64);
-                //listBox2.Items.Add(item: p.StartTime);
-                
-
-            }
-        }
-
-        private void Form_TaskManager_Load(object sender, EventArgs e)
-        {
-            GetAllProcess();
-        }
-
-        private void BtnEndTask_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                proc[listBox1.SelectedIndex].Kill();
-                proc[listBox2.SelectedIndex].Kill();
-                GetAllProcess();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            tasks.Remove(process);
+            history.Add(process);
         }
     }
-}
+
+    public class Process
+        {
+            public string Name;
+            public DateTime Spawntime;
+            public DateTime StopTime;
+
+        }
+    }
+
+
