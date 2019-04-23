@@ -42,6 +42,7 @@
             this.HackerTerminal_TXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.HackerTerminal_TXT.Size = new System.Drawing.Size(933, 507);
             this.HackerTerminal_TXT.TabIndex = 0;
+            this.HackerTerminal_TXT.TextChanged += new System.EventHandler(this.HackerTerminal_TXT_TextChanged);
             // 
             // Form_HackerTerminal
             // 
@@ -62,6 +63,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox HackerTerminal_TXT;
+        public System.Windows.Forms.TextBox HackerTerminal_TXT;
     }
 }
