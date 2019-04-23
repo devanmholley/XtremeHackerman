@@ -23,6 +23,7 @@ namespace XtremeHackerman
 
         }
 
+        // Open a new terminal
         private void toolStripDropDownTerminal_Click(object sender, EventArgs e)
         {
             var formTerminal = new Form_HackerTerminal();

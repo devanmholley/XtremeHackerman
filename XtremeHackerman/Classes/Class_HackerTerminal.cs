@@ -22,6 +22,7 @@ namespace XtremeHackerman.Classes
         // of the terminal. It's not static since multiple terminals can have 
         // unique IPs.
         public string UserIP;
+        public string wirelessModule = "";
 
         public void Set_Password()
         {
