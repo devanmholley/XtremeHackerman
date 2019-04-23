@@ -53,13 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="Classes\Class_Firewall.cs" />
+    <Compile Include="Classes\Class_HackerDesktop.cs" />
+    <Compile Include="Classes\Class_HackerTerminal.cs" />
     <Compile Include="EventLogic.cs" />
-
     <Compile Include="Classes\Class_FileManager.cs" />
     <Compile Include="Classes\Desktop_BKEND.cs" />
-
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +106,12 @@
     <Compile Include="Form_Hacker.Designer.cs">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_HackerTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HackerTerminal.Designer.cs">
+      <DependentUpon>Form_HackerTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_InternetBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Hacker.resx">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HackerTerminal.resx">
+      <DependentUpon>Form_HackerTerminal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_InternetBrowser.resx">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
@@ -237,11 +245,8 @@
     <Content Include="Resources\Form_FileManager\img.PNG" />
     <Content Include="Resources\Form_FileManager\openfolder.PNG" />
     <Content Include="Resources\Form_FileManager\thispc.png" />
-
     <None Include="Resources\From_Ransomware\ransomware-512.png" />
-
     <None Include="Resources\ieicon.png" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
