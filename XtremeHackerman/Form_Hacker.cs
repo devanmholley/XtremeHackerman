@@ -17,5 +17,27 @@ namespace XtremeHackerman
         {
             InitializeComponent();
         }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripDropDownTerminal_Click(object sender, EventArgs e)
+        {
+            var formTerminal = new Form_HackerTerminal();
+            formTerminal.ShowDialog();
+        }
+
+        private void toolStripDropDownShutdown_Click(object sender, EventArgs e)
+        {
+            // Shut down the program
+            this.Close();
+        }
+
+        private void toolStripDropDownRestart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

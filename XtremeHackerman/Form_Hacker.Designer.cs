@@ -59,12 +59,14 @@
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // terminalToolStripMenuItem
             // 
             this.terminalToolStripMenuItem.Name = "terminalToolStripMenuItem";
             this.terminalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.terminalToolStripMenuItem.Text = "Terminal";
+            this.terminalToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownTerminal_Click);
             // 
             // powerToolStripMenuItem
             // 
@@ -80,12 +82,14 @@
             this.shutDownToolStripMenuItem.Name = "shutDownToolStripMenuItem";
             this.shutDownToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.shutDownToolStripMenuItem.Text = "Shut Down";
+            this.shutDownToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownShutdown_Click);
             // 
             // restartToolStripMenuItem
             // 
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
             this.restartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownRestart_Click);
             // 
             // Form_Hacker
             // 
