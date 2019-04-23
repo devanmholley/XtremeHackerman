@@ -16,7 +16,7 @@ namespace XtremeHackerman.Classes
         public static List<String> CommandHistory;
 
         // If IP forwarding is set to true then see the setting as enabled.
-        public static Boolean ipforwarding;
+        public static bool ipforwarding;
 
         // The UserIP object keeps track of the IP of the user on that instance
         // of the terminal. It's not static since multiple terminals can have 
@@ -25,6 +25,16 @@ namespace XtremeHackerman.Classes
 
         public void Set_Password()
         {
+        }
+
+        // Check that the given password is equal to the root password
+        public bool Check_Pass(string password)
+        {
+            if(password == Root_password)
+            {
+                return true;
+            }
+            return false;
         }
 
     }
