@@ -41,8 +41,6 @@ namespace XtremeHackerman.Classes
             // Convert Object to JSON string format
             string jsonData = JsonConvert.SerializeObject(ethernetData);
 
-            System.Diagnostics.Debug.WriteLine(jsonData);
-
             return jsonData;
         }
 
@@ -60,8 +58,7 @@ namespace XtremeHackerman.Classes
             }";
             //WiresharkEthernetData ethernetJSONData = JsonConvert.DeserializeObject<WiresharkEthernetData>(File.ReadAllText("Resources/Form_Wireshark/EthernetConnectionData.json"));
             WiresharkEthernetData ethernetJSONData = JsonConvert.DeserializeObject<WiresharkEthernetData>(json);
-            System.Diagnostics.Debug.WriteLine(ethernetJSONData);
-            System.Diagnostics.Debug.WriteLine("Test");
+
 
             return ethernetJSONData.ToString();
         }
