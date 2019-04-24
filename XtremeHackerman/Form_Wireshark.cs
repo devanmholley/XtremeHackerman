@@ -47,7 +47,17 @@ namespace XtremeHackerman
 
         private void WiFIConnectionBTN_Click(object sender, EventArgs e)
         {
-
+            WiresharkwifiData.JSONSerialize();
+            //WiresharkEthernetData.JSONDeserialize();
+            dynamic source = WiresharkwifiData.JSONSerialize();
+            var entry = JsonConvert.DeserializeObject<WiresharkEthernetData>(source);
+            NumberFieldEntry.Text = entry.No;
+            TimeFieldEntry.Text = entry.Time;
+            SourceFieldEntry.Text = entry.Source;
+            DestinationFieldEntry.Text = entry.Destination;
+            ProtocolFieldEntry.Text = entry.Protocol;
+            LengthFieldEntry.Text = entry.Length;
+            InfoFieldEntry.Text = entry.Info;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -103,6 +113,21 @@ namespace XtremeHackerman
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
+        }
+
+        private void BluetoothConnectionBTN_Click(object sender, EventArgs e)
+        {
+            WiresharkbluetoothData.JSONSerialize();
+            //WiresharkEthernetData.JSONDeserialize();
+            dynamic source = WiresharkbluetoothData.JSONSerialize();
+            var entry = JsonConvert.DeserializeObject<WiresharkbluetoothData>(source);
+            NumberFieldEntry.Text = entry.No;
+            TimeFieldEntry.Text = entry.Time;
+            SourceFieldEntry.Text = entry.Source;
+            DestinationFieldEntry.Text = entry.Destination;
+            ProtocolFieldEntry.Text = entry.Protocol;
+            LengthFieldEntry.Text = entry.Length;
+            InfoFieldEntry.Text = entry.Info;
         }
     }
 }

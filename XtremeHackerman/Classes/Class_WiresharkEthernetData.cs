@@ -36,7 +36,7 @@ namespace XtremeHackerman.Classes
             ethernetData.Destination = "192.166.4.5";
             ethernetData.Protocol = "TCP";
             ethernetData.Length = "221";
-            ethernetData.Info = "Application Data";
+            ethernetData.Info = "Application Data - Ethernet";
 
             // Convert Object to JSON string format
             string jsonData = JsonConvert.SerializeObject(ethernetData);
@@ -54,7 +54,7 @@ namespace XtremeHackerman.Classes
                 'Destination': '192.166.4.5',
                 'Protocol': 'TCP',
                 'Length': '221',
-                'Info': 'Application Data',
+                'Info': 'Application Data - Ethernet',
             }";
             //WiresharkEthernetData ethernetJSONData = JsonConvert.DeserializeObject<WiresharkEthernetData>(File.ReadAllText("Resources/Form_Wireshark/EthernetConnectionData.json"));
             WiresharkEthernetData ethernetJSONData = JsonConvert.DeserializeObject<WiresharkEthernetData>(json);

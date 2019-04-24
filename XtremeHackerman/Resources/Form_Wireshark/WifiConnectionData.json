@@ -1,0 +1,9 @@
+{
+  "No.": "1",
+  "Time": "0.0001",
+  "Source": "104.55.87.96",
+  "Destination": "192.166.4.5",
+  "Protocol": "TCP",
+  "Length": "221",
+  "Info": "Application Data"
+}

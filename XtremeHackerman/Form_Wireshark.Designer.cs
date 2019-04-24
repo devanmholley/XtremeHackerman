@@ -307,8 +307,8 @@
             // 
             // WiFIConnectionBTN
             // 
-            this.WiFIConnectionBTN.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.WiFIConnectionBTN, "WiFIConnectionBTN");
+            this.WiFIConnectionBTN.BackColor = System.Drawing.Color.Transparent;
             this.WiFIConnectionBTN.Name = "WiFIConnectionBTN";
             this.WiFIConnectionBTN.UseVisualStyleBackColor = false;
             this.WiFIConnectionBTN.Click += new System.EventHandler(this.WiFIConnectionBTN_Click);
@@ -319,6 +319,7 @@
             resources.ApplyResources(this.BluetoothConnectionBTN, "BluetoothConnectionBTN");
             this.BluetoothConnectionBTN.Name = "BluetoothConnectionBTN";
             this.BluetoothConnectionBTN.UseVisualStyleBackColor = false;
+            this.BluetoothConnectionBTN.Click += new System.EventHandler(this.BluetoothConnectionBTN_Click);
             // 
             // CaptureLBL
             // 
@@ -470,7 +471,10 @@
             this.Controls.Add(this.DisplayFilterText);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Wireshark";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form_Wireshark_Load);

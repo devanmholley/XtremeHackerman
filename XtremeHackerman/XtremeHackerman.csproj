@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Class_WiresharkBluetoothData.cs" />
+    <Compile Include="Classes\Class_WiresharkWifiData.cs" />
     <Compile Include="Classes\Class_WiresharkEthernetData.cs" />
     <Compile Include="Classes\Desktop_BKEND.cs" />
     <Compile Include="Classes\Class_BaseForm.cs">
@@ -229,6 +231,7 @@
     <EmbeddedResource Include="Resources\Form_Wireshark\EthernetConnectionData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="Resources\Form_Wireshark\WifiConnectionData.json" />
     <None Include="Resources\WifiIcon.png" />
   </ItemGroup>
   <ItemGroup>
