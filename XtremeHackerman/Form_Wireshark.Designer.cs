@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Wireshark));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,6 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.DisplayFilterText = new System.Windows.Forms.RichTextBox();
             this.EthernetConnectionBTN = new System.Windows.Forms.Button();
@@ -73,22 +73,30 @@
             this.EthernetConnectionDisplay = new System.Windows.Forms.PictureBox();
             this.BluetoothConnectionTrack = new System.Windows.Forms.PictureBox();
             this.WiFIConnectionTrack = new System.Windows.Forms.PictureBox();
-            this.EthernetConnectionPanel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Source = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Protocol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Length = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ConnectionDisplayTable = new System.Windows.Forms.TableLayoutPanel();
+            this.NoTableLabel = new System.Windows.Forms.Label();
+            this.TimeTableLabel = new System.Windows.Forms.Label();
+            this.SourceTableLabel = new System.Windows.Forms.Label();
+            this.DestinationTableLabel = new System.Windows.Forms.Label();
+            this.ProtocolTableLabel = new System.Windows.Forms.Label();
+            this.LengthTableLabel = new System.Windows.Forms.Label();
+            this.InfoTableLabel = new System.Windows.Forms.Label();
+            this.NumberFieldEntry = new System.Windows.Forms.Label();
+            this.TimeFieldEntry = new System.Windows.Forms.Label();
+            this.SourceFieldEntry = new System.Windows.Forms.Label();
+            this.DestinationFieldEntry = new System.Windows.Forms.Label();
+            this.ProtocolFieldEntry = new System.Windows.Forms.Label();
+            this.LengthFieldEntry = new System.Windows.Forms.Label();
+            this.InfoFieldEntry = new System.Windows.Forms.Label();
+            this.wiresharkEthernetDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EthernetConnectionDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BluetoothConnectionTrack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiFIConnectionTrack)).BeginInit();
-            this.EthernetConnectionPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ConnectionDisplayTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wiresharkEthernetDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -351,78 +359,105 @@
             this.WiFIConnectionTrack.Name = "WiFIConnectionTrack";
             this.WiFIConnectionTrack.TabStop = false;
             // 
-            // EthernetConnectionPanel
+            // ConnectionDisplayTable
             // 
-            this.EthernetConnectionPanel.Controls.Add(this.dataGridView1);
-            resources.ApplyResources(this.EthernetConnectionPanel, "EthernetConnectionPanel");
-            this.EthernetConnectionPanel.Name = "EthernetConnectionPanel";
-            this.EthernetConnectionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EthernetConnectionPanel_Paint_1);
+            resources.ApplyResources(this.ConnectionDisplayTable, "ConnectionDisplayTable");
+            this.ConnectionDisplayTable.Controls.Add(this.InfoFieldEntry, 6, 1);
+            this.ConnectionDisplayTable.Controls.Add(this.LengthFieldEntry, 5, 1);
+            this.ConnectionDisplayTable.Controls.Add(this.ProtocolFieldEntry, 4, 1);
+            this.ConnectionDisplayTable.Controls.Add(this.DestinationFieldEntry, 3, 1);
+            this.ConnectionDisplayTable.Controls.Add(this.NoTableLabel, 0, 0);
+            this.ConnectionDisplayTable.Controls.Add(this.TimeTableLabel, 1, 0);
+            this.ConnectionDisplayTable.Controls.Add(this.SourceTableLabel, 2, 0);
+            this.ConnectionDisplayTable.Controls.Add(this.DestinationTableLabel, 3, 0);
+            this.ConnectionDisplayTable.Controls.Add(this.ProtocolTableLabel, 4, 0);
+            this.ConnectionDisplayTable.Controls.Add(this.LengthTableLabel, 5, 0);
+            this.ConnectionDisplayTable.Controls.Add(this.InfoTableLabel, 6, 0);
+            this.ConnectionDisplayTable.Controls.Add(this.NumberFieldEntry, 0, 1);
+            this.ConnectionDisplayTable.Controls.Add(this.TimeFieldEntry, 1, 1);
+            this.ConnectionDisplayTable.Controls.Add(this.SourceFieldEntry, 2, 1);
+            this.ConnectionDisplayTable.Name = "ConnectionDisplayTable";
             // 
-            // dataGridView1
+            // NoTableLabel
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Number,
-            this.Time,
-            this.Source,
-            this.Destination,
-            this.Protocol,
-            this.Length,
-            this.Info});
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            resources.ApplyResources(this.NoTableLabel, "NoTableLabel");
+            this.NoTableLabel.Name = "NoTableLabel";
             // 
-            // Number
+            // TimeTableLabel
             // 
-            resources.ApplyResources(this.Number, "Number");
-            this.Number.Name = "Number";
-            this.Number.ReadOnly = true;
+            resources.ApplyResources(this.TimeTableLabel, "TimeTableLabel");
+            this.TimeTableLabel.Name = "TimeTableLabel";
             // 
-            // Time
+            // SourceTableLabel
             // 
-            resources.ApplyResources(this.Time, "Time");
-            this.Time.Name = "Time";
-            this.Time.ReadOnly = true;
+            resources.ApplyResources(this.SourceTableLabel, "SourceTableLabel");
+            this.SourceTableLabel.Name = "SourceTableLabel";
             // 
-            // Source
+            // DestinationTableLabel
             // 
-            resources.ApplyResources(this.Source, "Source");
-            this.Source.Name = "Source";
-            this.Source.ReadOnly = true;
+            resources.ApplyResources(this.DestinationTableLabel, "DestinationTableLabel");
+            this.DestinationTableLabel.Name = "DestinationTableLabel";
             // 
-            // Destination
+            // ProtocolTableLabel
             // 
-            resources.ApplyResources(this.Destination, "Destination");
-            this.Destination.Name = "Destination";
-            this.Destination.ReadOnly = true;
+            resources.ApplyResources(this.ProtocolTableLabel, "ProtocolTableLabel");
+            this.ProtocolTableLabel.Name = "ProtocolTableLabel";
             // 
-            // Protocol
+            // LengthTableLabel
             // 
-            resources.ApplyResources(this.Protocol, "Protocol");
-            this.Protocol.Name = "Protocol";
-            this.Protocol.ReadOnly = true;
+            resources.ApplyResources(this.LengthTableLabel, "LengthTableLabel");
+            this.LengthTableLabel.Name = "LengthTableLabel";
             // 
-            // Length
+            // InfoTableLabel
             // 
-            resources.ApplyResources(this.Length, "Length");
-            this.Length.Name = "Length";
-            this.Length.ReadOnly = true;
+            resources.ApplyResources(this.InfoTableLabel, "InfoTableLabel");
+            this.InfoTableLabel.Name = "InfoTableLabel";
             // 
-            // Info
+            // NumberFieldEntry
             // 
-            resources.ApplyResources(this.Info, "Info");
-            this.Info.Name = "Info";
-            this.Info.ReadOnly = true;
+            resources.ApplyResources(this.NumberFieldEntry, "NumberFieldEntry");
+            this.NumberFieldEntry.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wiresharkEthernetDataBindingSource, "No", true));
+            this.NumberFieldEntry.Name = "NumberFieldEntry";
+            // 
+            // TimeFieldEntry
+            // 
+            resources.ApplyResources(this.TimeFieldEntry, "TimeFieldEntry");
+            this.TimeFieldEntry.Name = "TimeFieldEntry";
+            // 
+            // SourceFieldEntry
+            // 
+            resources.ApplyResources(this.SourceFieldEntry, "SourceFieldEntry");
+            this.SourceFieldEntry.Name = "SourceFieldEntry";
+            // 
+            // DestinationFieldEntry
+            // 
+            resources.ApplyResources(this.DestinationFieldEntry, "DestinationFieldEntry");
+            this.DestinationFieldEntry.Name = "DestinationFieldEntry";
+            // 
+            // ProtocolFieldEntry
+            // 
+            resources.ApplyResources(this.ProtocolFieldEntry, "ProtocolFieldEntry");
+            this.ProtocolFieldEntry.Name = "ProtocolFieldEntry";
+            // 
+            // LengthFieldEntry
+            // 
+            resources.ApplyResources(this.LengthFieldEntry, "LengthFieldEntry");
+            this.LengthFieldEntry.Name = "LengthFieldEntry";
+            // 
+            // InfoFieldEntry
+            // 
+            resources.ApplyResources(this.InfoFieldEntry, "InfoFieldEntry");
+            this.InfoFieldEntry.Name = "InfoFieldEntry";
+            // 
+            // wiresharkEthernetDataBindingSource
+            // 
+            this.wiresharkEthernetDataBindingSource.DataSource = typeof(XtremeHackerman.Classes.WiresharkEthernetData);
             // 
             // Form_Wireshark
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.EthernetConnectionPanel);
+            this.Controls.Add(this.ConnectionDisplayTable);
             this.Controls.Add(this.WiFIConnectionTrack);
             this.Controls.Add(this.BluetoothConnectionTrack);
             this.Controls.Add(this.EthernetConnectionDisplay);
@@ -446,8 +481,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.EthernetConnectionDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BluetoothConnectionTrack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WiFIConnectionTrack)).EndInit();
-            this.EthernetConnectionPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ConnectionDisplayTable.ResumeLayout(false);
+            this.ConnectionDisplayTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wiresharkEthernetDataBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,7 +510,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
@@ -499,14 +534,22 @@
         private System.Windows.Forms.PictureBox EthernetConnectionDisplay;
         private System.Windows.Forms.PictureBox BluetoothConnectionTrack;
         private System.Windows.Forms.PictureBox WiFIConnectionTrack;
-        private System.Windows.Forms.Panel EthernetConnectionPanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Source;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Protocol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Length;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Info;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TableLayoutPanel ConnectionDisplayTable;
+        private System.Windows.Forms.Label NoTableLabel;
+        private System.Windows.Forms.Label TimeTableLabel;
+        private System.Windows.Forms.Label SourceTableLabel;
+        private System.Windows.Forms.Label DestinationTableLabel;
+        private System.Windows.Forms.Label ProtocolTableLabel;
+        private System.Windows.Forms.Label LengthTableLabel;
+        private System.Windows.Forms.Label InfoTableLabel;
+        private System.Windows.Forms.Label InfoFieldEntry;
+        private System.Windows.Forms.Label LengthFieldEntry;
+        private System.Windows.Forms.Label ProtocolFieldEntry;
+        private System.Windows.Forms.Label DestinationFieldEntry;
+        private System.Windows.Forms.Label NumberFieldEntry;
+        private System.Windows.Forms.Label TimeFieldEntry;
+        private System.Windows.Forms.Label SourceFieldEntry;
+        private System.Windows.Forms.BindingSource wiresharkEthernetDataBindingSource;
     }
 }

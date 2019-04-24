@@ -47,6 +47,7 @@
             this.email_subjectTXT = new System.Windows.Forms.TextBox();
             this.email_bodyTXT = new System.Windows.Forms.TextBox();
             this.email_header = new System.Windows.Forms.Panel();
+            this.targetTXT = new System.Windows.Forms.TextBox();
             this.Date_TXT = new System.Windows.Forms.Label();
             this.email_dateSTXT = new System.Windows.Forms.TextBox();
             this.email_toSTXT = new System.Windows.Forms.TextBox();
@@ -54,7 +55,6 @@
             this.email_dateTXT = new System.Windows.Forms.TextBox();
             this.email_destTXT = new System.Windows.Forms.TextBox();
             this.email_sourceTXT = new System.Windows.Forms.TextBox();
-            this.targetTXT = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -288,6 +288,14 @@
             this.email_header.Size = new System.Drawing.Size(515, 105);
             this.email_header.TabIndex = 0;
             // 
+            // targetTXT
+            // 
+            this.targetTXT.Location = new System.Drawing.Point(68, 44);
+            this.targetTXT.Name = "targetTXT";
+            this.targetTXT.Size = new System.Drawing.Size(409, 20);
+            this.targetTXT.TabIndex = 7;
+            this.targetTXT.Visible = false;
+            // 
             // Date_TXT
             // 
             this.Date_TXT.AutoSize = true;
@@ -365,14 +373,6 @@
             this.email_sourceTXT.ReadOnly = true;
             this.email_sourceTXT.Size = new System.Drawing.Size(437, 17);
             this.email_sourceTXT.TabIndex = 0;
-            // 
-            // targetTXT
-            // 
-            this.targetTXT.Location = new System.Drawing.Point(68, 44);
-            this.targetTXT.Name = "targetTXT";
-            this.targetTXT.Size = new System.Drawing.Size(409, 20);
-            this.targetTXT.TabIndex = 7;
-            this.targetTXT.Visible = false;
             // 
             // Form_Email
             // 

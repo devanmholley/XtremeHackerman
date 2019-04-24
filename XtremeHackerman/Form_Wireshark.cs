@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XtremeHackerman.Classes;
+using XtremeHackerman.Properties;
+using Newtonsoft.Json;
 
 namespace XtremeHackerman
 {
@@ -84,7 +87,22 @@ namespace XtremeHackerman
 
         private void EthernetConnectionBTN_Click(object sender, EventArgs e)
         {
-            EthernetConnectionPanel.Visible = true;
+            WiresharkEthernetData.JSONSerialize();
+            //WiresharkEthernetData.JSONDeserialize();
+            dynamic source = WiresharkEthernetData.JSONSerialize();
+            var entry = JsonConvert.DeserializeObject<WiresharkEthernetData>(source);
+            NumberFieldEntry.Text = entry.No;
+            TimeFieldEntry.Text = entry.Time;
+            SourceFieldEntry.Text = entry.Source;
+            DestinationFieldEntry.Text = entry.Destination;
+            ProtocolFieldEntry.Text = entry.Protocol;
+            LengthFieldEntry.Text = entry.Length;
+            InfoFieldEntry.Text = entry.Info;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }

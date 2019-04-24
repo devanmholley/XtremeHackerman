@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Class_WiresharkEthernetData.cs" />
     <Compile Include="Classes\Desktop_BKEND.cs" />
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
@@ -129,9 +130,6 @@
     <Compile Include="Form_LandingPage.Designer.cs">
       <DependentUpon>Form_LandingPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="NetworkActivity.cs" />
-    <Compile Include="PlaceHolderText.cs" />
-    <Compile Include="PlaceHolderTextBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Email.resx">
@@ -177,6 +175,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\XtremeHackerman.Classes.EmailLogic.datasource" />
+    <None Include="Properties\DataSources\XtremeHackerman.Classes.WiresharkEthernetData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -227,6 +226,9 @@
     <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Form_Wireshark\EthernetConnectionData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Resources\WifiIcon.png" />
   </ItemGroup>
   <ItemGroup>
