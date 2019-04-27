@@ -21,8 +21,11 @@ namespace XtremeHackerman
 	private void Form_SaveAs_Load(object sender, EventArgs e)
 	{
 	    //Show name and type upon opening 
-	    FileNameLabel.Text = Class_File.FileName;  
-	    FileTypeLabel.Text = Class_File.FileType;
+	    fileNameTextBox.Text = Class_File.SaveAsFileName;  
+	    fileTypeComboBox.Text = Class_File.SaveAsFileType;
+
+	    //Show all folders of Root
+	    folderView.Nodes[0].Expand(); 
 	}
 
 	private void SaveButton_Click(object sender, EventArgs e)
@@ -31,20 +34,21 @@ namespace XtremeHackerman
 	    ListView fileView = Class_FileManager.FolderFiles[folderView.SelectedNode];
 
 	    // Validate file name, no empty name, no invalid characters
-	    if (FileNameLabel.Text != null)
+	    if (fileNameTextBox.Text != null)
 	    {
-		if (FileNameLabel.Text.Length > 0)
+		if (fileNameTextBox.Text.Length > 0)
 		{
 		    foreach (ListViewItem file in fileView.Items) // check that there are no other similar named files within current level
 		    {
-			if (file.Text == FileNameLabel.Text)
+			if (file.Text == fileNameTextBox.Text)
 			{
-			    MessageBox.Show("This destination already contains a file named '" + FileNameLabel.Text + "'");
+			    MessageBox.Show("This destination already contains a file named '" + fileNameTextBox.Text + "'");
 			}
 		    }
-		    if (FileNameLabel.Text.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) == -1) //does not contain invalid characters
+		    if (fileNameTextBox.Text.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) == -1) //does not contain invalid characters
 		    {
-			Class_File.Save(folderView.SelectedNode, FileNameLabel.Text, FileTypeLabel.Text, Class_File.IsMalicious, Class_File.Content);
+			Class_File.Save(folderView.SelectedNode, fileNameTextBox.Text, fileTypeComboBox.Text, Class_File.SaveAsIsMalicious, Class_File.SaveAsContent);
+			Close();
 		    }
 		    else //contains invalid characters
 		    {
@@ -60,7 +64,7 @@ namespace XtremeHackerman
 
 	private void CancelButton_Click(object sender, EventArgs e)
 	{
-	    this.Close();
+	    Close();
 	}
     }
 }

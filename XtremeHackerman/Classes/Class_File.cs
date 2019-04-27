@@ -13,18 +13,21 @@ namespace XtremeHackerman.Classes
     /// </summary>
     class Class_File
     {
-	public static TreeNode Folder { get; set; }
-	public static string FilePath { get; set; }
-	public static string FileName { get; set; }
-	public static string FileType { get; set; }
-	public static bool IsMalicious { get; set; }
-	public static object Content { get; set; }
+	public static string SaveAsFileName { get; set; }
+	public static string SaveAsFileType { get; set; }
+	public static bool SaveAsIsMalicious { get; set; }
+	public static object SaveAsContent { get; set; }
 
-	public Class_File(TreeNode folder, string filename, string filetype, bool ismalicious, object content)
+	public TreeNode Folder { get; set; }
+	public string FilePath { get; set; }
+	public string FileType { get; set; }
+	public bool IsMalicious { get; set; }
+	public object Content { get; set; }
+
+	public Class_File(TreeNode folder, string filetype, bool ismalicious, object content)
 	{
 	    Folder = folder;
 	    FilePath = folder.FullPath;
-	    FileName = filename;
 	    FileType = filetype;
 	    IsMalicious = ismalicious;
 	    Content = content;
@@ -49,7 +52,7 @@ namespace XtremeHackerman.Classes
 	    newFile.Text = filename;
 	    newFile.SubItems.Add(filetype);
 
-	    Class_File fileTag = new Class_File(folder, filename, filetype, ismalicious, content); //Create new File
+	    var fileTag = new Class_File(folder, filetype, ismalicious, content); //Create new File
 	    newFile.Tag = fileTag;
 
 	    Class_FileManager.FolderFiles[folder].Items.Add(newFile);//add to dictionary
@@ -65,10 +68,10 @@ namespace XtremeHackerman.Classes
 	/// <param name="content"></param>
 	public static void SaveAs(string filename, string filetype, bool ismalicious, object content)
 	{
-	    FileName = filename;
-	    FileType = filetype;
-	    IsMalicious = ismalicious;
-	    Content = content;
+	    SaveAsFileName = filename;
+	    SaveAsFileType = filetype;
+	    SaveAsIsMalicious = ismalicious;
+	    SaveAsContent = content;
 
 	    //Pop up folder selecting dialog
 	    var formSaveAs = new Form_SaveAs();

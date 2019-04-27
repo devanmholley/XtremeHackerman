@@ -111,7 +111,11 @@ namespace XtremeHackerman
 		    if (e.Label.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) == -1)//does not contain any invalid characters
 		    {
 			e.Node.EndEdit(false); // Stop editing without canceling the label change.
-			fileView.Items[e.Node.Index].Text = e.Label; //reflect folder name update in FileView
+			if (!IsHandleCreated)
+			{
+			    CreateHandle();
+			}
+			BeginInvoke(new Action(() => Class_FileManager.refreshFileView(fileView, folderView.SelectedNode))); //update all files' tags AFTER label has finished editing
 		    }
 		    else
 		    {
@@ -129,8 +133,6 @@ namespace XtremeHackerman
 		    e.Node.BeginEdit();
 		}
 	    }
-
-	    //this.BeginInvoke(new Action(() => Class_FileManager.updateFilePath(folderView.SelectedNode))); //update all files' tags AFTER label has finished editing
 	}
 
 /************************************************************************************************
@@ -145,7 +147,7 @@ namespace XtremeHackerman
 	    ListViewItem newDoc = new ListViewItem();
 	    newDoc.Text = "New Text Document";
 	    newDoc.SubItems.Add("Text Document");
-	    newDoc.Tag = Class_FileManager.getFilePath(folderView.SelectedNode); //set file location path
+	    newDoc.Tag = new Class_File(folderView.SelectedNode, "Text Document", false, null); //
 	    FolderFiles[folderView.SelectedNode].Items.Add(newDoc); //add it to the dictionary
 
 	    newDoc = fileView.Items.Add("New Text Document");
@@ -210,7 +212,7 @@ namespace XtremeHackerman
 			int numFolders = currFolder.Nodes.Count; //get num of folders currently listed in fileview
 
 			//Change appropiate file to reflect in the dictionary
-			if (currFile.SubItems[1].Text == "Text Document")
+			if (currFile.SubItems[1].Text != "File Folder")
 			{
 			    int fileIndex = currFile.Index - numFolders; //calculate index of what the file index would be in the dictionary		   
 			    FolderFiles[currFolder].Items[fileIndex].Text = e.Label; //renames the file in the Dictionary

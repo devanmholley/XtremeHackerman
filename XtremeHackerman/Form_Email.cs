@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using XtremeHackerman.Classes;
 
 
@@ -92,7 +93,7 @@ namespace XtremeHackerman
         private void LL_Phish_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             /// this is where we download the attachment.
-            EventLogic.PhishingEmailAttack();
+            //EventLogic.PhishingEmailAttack();
         }
 
         private void email_inbox_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -108,5 +109,17 @@ namespace XtremeHackerman
                 this.LL_Phish.Enabled = false;
             }
         }
+
+	private void saveLinkToolStripMenuItem_Click(object sender, System.EventArgs e)
+	{
+	    string fileName = String.Join("", LL_Phish.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
+	    Class_File.Save(null, fileName, "HTML Document", true, null); // save into downloads
+	}
+
+	private void saveLinkAsToolStripMenuItem_Click(object sender, System.EventArgs e)
+	{
+	    string fileName = String.Join("", LL_Phish.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
+	    Class_File.SaveAs(fileName, "HTML Document", true, null); //save into chosen folder, and allow user to edit filename
+	}
     }
 }

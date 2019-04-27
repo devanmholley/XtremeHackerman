@@ -32,11 +32,11 @@
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SaveAs));
 	    this.folderView = new System.Windows.Forms.TreeView();
 	    this.folderView = XtremeHackerman.Classes.Class_FileManager.Folders; //set to our folders
-	    this.textBox1 = new System.Windows.Forms.TextBox();
+	    this.fileNameTextBox = new System.Windows.Forms.TextBox();
 	    this.SaveButton = new System.Windows.Forms.Button();
 	    this.CancelButton = new System.Windows.Forms.Button();
 	    this.FileNameLabel = new System.Windows.Forms.Label();
-	    this.comboBox1 = new System.Windows.Forms.ComboBox();
+	    this.fileTypeComboBox = new System.Windows.Forms.ComboBox();
 	    this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 	    this.FileTypeLabel = new System.Windows.Forms.Label();
 	    this.SuspendLayout();
@@ -55,10 +55,10 @@
 	    // 
 	    // textBox1
 	    // 
-	    this.textBox1.Location = new System.Drawing.Point(170, 618);
-	    this.textBox1.Name = "textBox1";
-	    this.textBox1.Size = new System.Drawing.Size(613, 38);
-	    this.textBox1.TabIndex = 1;
+	    this.fileNameTextBox.Location = new System.Drawing.Point(170, 618);
+	    this.fileNameTextBox.Name = "textBox1";
+	    this.fileNameTextBox.Size = new System.Drawing.Size(613, 38);
+	    this.fileNameTextBox.TabIndex = 1;
 	    // 
 	    // SaveButton
 	    // 
@@ -91,11 +91,11 @@
 	    // 
 	    // comboBox1
 	    // 
-	    this.comboBox1.FormattingEnabled = true;
-	    this.comboBox1.Location = new System.Drawing.Point(170, 672);
-	    this.comboBox1.Name = "comboBox1";
-	    this.comboBox1.Size = new System.Drawing.Size(612, 39);
-	    this.comboBox1.TabIndex = 6;
+	    this.fileTypeComboBox.FormattingEnabled = true;
+	    this.fileTypeComboBox.Location = new System.Drawing.Point(170, 672);
+	    this.fileTypeComboBox.Name = "comboBox1";
+	    this.fileTypeComboBox.Size = new System.Drawing.Size(612, 39);
+	    this.fileTypeComboBox.TabIndex = 6;
 	    // 
 	    // imageList1
 	    // 
@@ -120,11 +120,11 @@
 	    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 	    this.ClientSize = new System.Drawing.Size(782, 823);
 	    this.Controls.Add(this.FileTypeLabel);
-	    this.Controls.Add(this.comboBox1);
+	    this.Controls.Add(this.fileTypeComboBox);
 	    this.Controls.Add(this.FileNameLabel);
 	    this.Controls.Add(this.CancelButton);
 	    this.Controls.Add(this.SaveButton);
-	    this.Controls.Add(this.textBox1);
+	    this.Controls.Add(this.fileNameTextBox);
 	    this.Controls.Add(this.folderView);
 	    this.Name = "Form_SaveAs";
 	    this.Text = "Form_SaveAs";
@@ -137,11 +137,11 @@
 	#endregion
 
 	private System.Windows.Forms.TreeView folderView;
-	private System.Windows.Forms.TextBox textBox1;
+	private System.Windows.Forms.TextBox fileNameTextBox;
 	private System.Windows.Forms.Button SaveButton;
 	private System.Windows.Forms.Button CancelButton;
 	private System.Windows.Forms.Label FileNameLabel;
-	private System.Windows.Forms.ComboBox comboBox1;
+	private System.Windows.Forms.ComboBox fileTypeComboBox;
 	private System.Windows.Forms.ImageList imageList1;
 	private System.Windows.Forms.Label FileTypeLabel;
     }
