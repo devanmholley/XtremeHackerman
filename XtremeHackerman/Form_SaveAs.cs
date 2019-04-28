@@ -20,6 +20,8 @@ namespace XtremeHackerman
 
 	private void Form_SaveAs_Load(object sender, EventArgs e)
 	{
+	    folderView.Nodes.Add(Class_FileManager.root); //display folders
+
 	    //Show name and type upon opening 
 	    fileNameTextBox.Text = Class_File.SaveAsFileName;  
 	    fileTypeComboBox.Text = Class_File.SaveAsFileType;
@@ -65,6 +67,11 @@ namespace XtremeHackerman
 	private void CancelButton_Click(object sender, EventArgs e)
 	{
 	    Close();
+	}
+
+	private void Form_SaveAs_FormClosing(object sender, FormClosingEventArgs e)
+	{
+	    folderView.Nodes.Clear();
 	}
     }
 }

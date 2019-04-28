@@ -9,13 +9,11 @@ namespace XtremeHackerman.Classes
 {
     class Class_FileManager
     {
-
 	//Initalize basic folders
-	public static TreeNode root = new TreeNode("This PC", 2, 2);
 	public static TreeNode docs = new TreeNode("Documents");
 	public static TreeNode down = new TreeNode("Downloads");
-
-	public static TreeView Folders = InitFolders();
+	static TreeNode[] PC_Children = { docs, down };
+	public static TreeNode root = new TreeNode("This PC", 2, 2, PC_Children);
 
 	//dictionary<folder, filesInTheFolder>
 	public static Dictionary<TreeNode, ListView> FolderFiles { get; set; } = new Dictionary<TreeNode, ListView>()
@@ -58,6 +56,7 @@ namespace XtremeHackerman.Classes
 		ListViewItem newFolderItem;
 		newFolderItem = fileView.Items.Add(subfolder.Text); //add folder's name, and show up in fileView
 		newFolderItem.SubItems.Add("File Folder"); //add folder type
+		newFolderItem.ImageKey = "folder.PNG";
 	    }
 
 	    //populate files from dictionary
@@ -89,15 +88,6 @@ namespace XtremeHackerman.Classes
 	{
 	    foreach (ListViewItem file in FolderFiles[currFolder].Items)
 		file.Tag = getFilePath(currFolder);
-	}
-
-	private static TreeView InitFolders()
-	{
-	    TreeView folders = new TreeView();
-	    root.Nodes.Add(docs);
-	    root.Nodes.Add(down);
-	    folders.Nodes.Add(root);
-	    return folders;
 	}
     }
 }

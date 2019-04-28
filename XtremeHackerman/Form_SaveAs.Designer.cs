@@ -31,13 +31,12 @@
 	    this.components = new System.ComponentModel.Container();
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SaveAs));
 	    this.folderView = new System.Windows.Forms.TreeView();
-	    this.folderView = XtremeHackerman.Classes.Class_FileManager.Folders; //set to our folders
+	    this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 	    this.fileNameTextBox = new System.Windows.Forms.TextBox();
 	    this.SaveButton = new System.Windows.Forms.Button();
 	    this.CancelButton = new System.Windows.Forms.Button();
 	    this.FileNameLabel = new System.Windows.Forms.Label();
 	    this.fileTypeComboBox = new System.Windows.Forms.ComboBox();
-	    this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 	    this.FileTypeLabel = new System.Windows.Forms.Label();
 	    this.SuspendLayout();
 	    // 
@@ -53,10 +52,18 @@
 	    this.folderView.Size = new System.Drawing.Size(782, 591);
 	    this.folderView.TabIndex = 0;
 	    // 
-	    // textBox1
+	    // imageList1
+	    // 
+	    this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+	    this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+	    this.imageList1.Images.SetKeyName(0, "folder.PNG");
+	    this.imageList1.Images.SetKeyName(1, "openfolder.PNG");
+	    this.imageList1.Images.SetKeyName(2, "thispc.png");
+	    // 
+	    // fileNameTextBox
 	    // 
 	    this.fileNameTextBox.Location = new System.Drawing.Point(170, 618);
-	    this.fileNameTextBox.Name = "textBox1";
+	    this.fileNameTextBox.Name = "fileNameTextBox";
 	    this.fileNameTextBox.Size = new System.Drawing.Size(613, 38);
 	    this.fileNameTextBox.TabIndex = 1;
 	    // 
@@ -89,21 +96,13 @@
 	    this.FileNameLabel.TabIndex = 4;
 	    this.FileNameLabel.Text = "File Name:";
 	    // 
-	    // comboBox1
+	    // fileTypeComboBox
 	    // 
 	    this.fileTypeComboBox.FormattingEnabled = true;
 	    this.fileTypeComboBox.Location = new System.Drawing.Point(170, 672);
-	    this.fileTypeComboBox.Name = "comboBox1";
+	    this.fileTypeComboBox.Name = "fileTypeComboBox";
 	    this.fileTypeComboBox.Size = new System.Drawing.Size(612, 39);
 	    this.fileTypeComboBox.TabIndex = 6;
-	    // 
-	    // imageList1
-	    // 
-	    this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-	    this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-	    this.imageList1.Images.SetKeyName(0, "folder.PNG");
-	    this.imageList1.Images.SetKeyName(1, "openfolder.PNG");
-	    this.imageList1.Images.SetKeyName(2, "thispc.png");
 	    // 
 	    // FileTypeLabel
 	    // 
@@ -128,6 +127,7 @@
 	    this.Controls.Add(this.folderView);
 	    this.Name = "Form_SaveAs";
 	    this.Text = "Form_SaveAs";
+	    this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_SaveAs_FormClosing);
 	    this.Load += new System.EventHandler(this.Form_SaveAs_Load);
 	    this.ResumeLayout(false);
 	    this.PerformLayout();

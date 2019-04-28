@@ -16,6 +16,7 @@ namespace XtremeHackerman
 
 	private void Form_FileManager_Load(object sender, EventArgs e)
 	{
+	    folderView.Nodes.Add(Class_FileManager.root); //display folders
 	    folderView.Nodes[0].Expand(); // Automatically expands to show all subfolders of "ThisPC" when opening filemanager
 	}
 
@@ -30,7 +31,7 @@ namespace XtremeHackerman
 	    //Click on folder in treeview, show folders and files in listView
 	    TreeNode currFolder = folderView.SelectedNode;
 
-	    // if folder is "ThicPC", don't allow creation of new text document
+	    // if folder is "ThisPC", don't allow creation of new text document
 	    if (currFolder.Parent == null) //PC has null parent
 	    {
 		fileToolStripMenuItem.Visible = false; //do not allow new files to be created
@@ -144,14 +145,17 @@ namespace XtremeHackerman
 	private void fileToolStripMenuItem_Click(object sender, EventArgs e)
 	{
 	    //Create New Text Document
-	    ListViewItem newDoc = new ListViewItem();
+	    ListViewItem newDoc = new ListViewItem();	    
 	    newDoc.Text = "New Text Document";
 	    newDoc.SubItems.Add("Text Document");
+	    newDoc.ImageKey = "doc.PNG";
 	    newDoc.Tag = new Class_File(folderView.SelectedNode, "Text Document", false, null); //
 	    FolderFiles[folderView.SelectedNode].Items.Add(newDoc); //add it to the dictionary
 
+	    //Show in fileView / we duplicate to avoid errors
 	    newDoc = fileView.Items.Add("New Text Document");
 	    newDoc.SubItems.Add("Text Document");
+	    newDoc.ImageKey = "doc.PNG";
 	    newDoc.BeginEdit(); //prompt for new file name
 	}
 
@@ -238,6 +242,11 @@ namespace XtremeHackerman
 		    MessageBox.Show("A file name can't be blank"); //cannot be blank name
 		}
 	    }
+	}
+
+	private void Form_FileManager_FormClosing(object sender, FormClosingEventArgs e)
+	{
+	    folderView.Nodes.Clear();
 	}
     }
 }

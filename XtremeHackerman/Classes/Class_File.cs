@@ -19,7 +19,7 @@ namespace XtremeHackerman.Classes
 	public static object SaveAsContent { get; set; }
 
 	public TreeNode Folder { get; set; }
-	public string FilePath { get; set; }
+	//public string FilePath { get; set; }
 	public string FileType { get; set; }
 	public bool IsMalicious { get; set; }
 	public object Content { get; set; }
@@ -27,7 +27,7 @@ namespace XtremeHackerman.Classes
 	public Class_File(TreeNode folder, string filetype, bool ismalicious, object content)
 	{
 	    Folder = folder;
-	    FilePath = folder.FullPath;
+	    //FilePath = folder.FullPath;
 	    FileType = filetype;
 	    IsMalicious = ismalicious;
 	    Content = content;
@@ -51,6 +51,19 @@ namespace XtremeHackerman.Classes
 	    ListViewItem newFile = new ListViewItem();
 	    newFile.Text = filename;
 	    newFile.SubItems.Add(filetype);
+
+	    if (filetype == "Text Document")
+	    {
+		newFile.ImageKey = "doc.PNG";
+	    }
+	    else if (filetype == "PNG File")
+	    {
+		newFile.ImageKey = "img.PNG";
+	    }
+	    else
+	    {
+		newFile.ImageKey = "file.PNG";
+	    }
 
 	    var fileTag = new Class_File(folder, filetype, ismalicious, content); //Create new File
 	    newFile.Tag = fileTag;
