@@ -21,20 +21,10 @@ namespace XtremeHackerman
             InitializeComponent();
 	}
 
-        private void Form_Desktop_Load(object sender, EventArgs e)
-        {
-	    // LOADING THE DESKTOP
-	}
-
-        private void searchEntry(object sender, EventArgs e)
-        {
-            // Search bar implementation
-        }
-
         private void internetExplorerClick(object sender, EventArgs e)
         {
             var formInternetBrowser = new Form_InternetBrowser();
-            formInternetBrowser.ShowDialog();
+            formInternetBrowser.Show();
         }
 
         private void startButtonClick(object sender, EventArgs e)
@@ -74,7 +64,7 @@ namespace XtremeHackerman
         {
 	    // Command Line implementation
 	    var formCLI = new Form_CLI();
-            formCLI.ShowDialog();
+            formCLI.Show();
         }
 
         private void emailButtonClick(object sender, EventArgs e)
@@ -84,7 +74,7 @@ namespace XtremeHackerman
             //Form_Email Test = new Form_Email();
             //Test.Show();
             var formEmail = new Form_Email();
-            formEmail.ShowDialog();
+            formEmail.Show();
         }
 
         private void Restart_Click(object sender, EventArgs e)
@@ -100,7 +90,7 @@ namespace XtremeHackerman
         private void InternetBrowser_Click(object sender, EventArgs e)
         {
             var formInternetBrowser = new Form_InternetBrowser();
-            formInternetBrowser.ShowDialog();
+            formInternetBrowser.Show();
         }
 
         private void TaskManager_Click(object sender, EventArgs e)
@@ -114,11 +104,6 @@ namespace XtremeHackerman
 	    var formFileManager = new Form_FileManager();
 	    formFileManager.Show();
 	}
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void toolbarNetworkBTN_Click(object sender, EventArgs e)
         {
@@ -145,7 +130,26 @@ namespace XtremeHackerman
             /// This is JUST a debug button for doing testing on the Ransomware Form.
             /// It should be Deleted or Hidden When the Ransomware event is added.
             var formRansomware = new Form_Ransomware();
-            formRansomware.ShowDialog();
+            formRansomware.Show();
         }
+
+	private void Form_Desktop_FormClosing(object sender, FormClosingEventArgs e)
+	{
+	    //Close any forms that open if Desktop is closed
+	    //Code Attribution: https://stackoverflow.com/questions/9029351/close-all-open-forms-except-the-main-menu-in-c-sharp
+	    List<Form> openForms = new List<Form>();
+
+	    foreach (Form f in Application.OpenForms)
+		openForms.Add(f);
+
+	    foreach (Form f in openForms)
+	    {
+		if (f.Name != "Form_Desktop" && f.Name != "Form_TitleScreen")
+		{
+		    f.Close();
+		}
+	    }
+
+	}
     }
 }
