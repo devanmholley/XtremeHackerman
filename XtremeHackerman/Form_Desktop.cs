@@ -19,6 +19,7 @@ namespace XtremeHackerman
         public Form_Desktop()
         {
             InitializeComponent();
+	    EventLogic.PhishingEmailAttack();
 	}
 
         private void internetExplorerClick(object sender, EventArgs e)
@@ -127,9 +128,9 @@ namespace XtremeHackerman
 
         private void Btn_Ransom_Debug_Click(object sender, EventArgs e)
         {
-            /// This is JUST a debug button for doing testing on the Ransomware Form.
-            /// It should be Deleted or Hidden When the Ransomware event is added.
-            var formRansomware = new Form_Ransomware();
+	    /// This is JUST a debug button for doing testing on the Ransomware Form.
+	    /// It should be Deleted or Hidden When the Ransomware event is added.
+	    var formRansomware = new Form_Anitvirus();
             formRansomware.Show();
         }
 
