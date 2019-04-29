@@ -27,7 +27,7 @@ namespace XtremeHackerman
         private void toolStripDropDownTerminal_Click(object sender, EventArgs e)
         {
             var formTerminal = new Form_HackerTerminal();
-            formTerminal.ShowDialog();
+            formTerminal.Show();
         }
 
         private void toolStripDropDownShutdown_Click(object sender, EventArgs e)

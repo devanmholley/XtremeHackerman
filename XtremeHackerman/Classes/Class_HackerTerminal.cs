@@ -21,7 +21,7 @@ namespace XtremeHackerman.Classes
         // The UserIP object keeps track of the IP of the user on that instance
         // of the terminal. It's not static since multiple terminals can have 
         // unique IPs.
-        public string UserIP;
+        public static string UserIP;
         public string wirelessModule = "";
 
         public void Set_Password()
@@ -29,7 +29,7 @@ namespace XtremeHackerman.Classes
         }
 
         // Check that the given password is equal to the root password
-        public bool Check_Pass(string password)
+        public static bool Check_Pass(string password)
         {
             if(password == Root_password)
             {
