@@ -200,6 +200,8 @@ namespace XtremeHackerman
         public static void RansomewareAttack()
         {
             //Event Trigger
+            var formRansomware = new Form_Ransomware();
+            formRansomware.Show();
         }
 
         private static void RansomewareRecovery()

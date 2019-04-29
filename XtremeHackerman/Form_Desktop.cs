@@ -129,8 +129,7 @@ namespace XtremeHackerman
         {
             /// This is JUST a debug button for doing testing on the Ransomware Form.
             /// It should be Deleted or Hidden When the Ransomware event is added.
-            var formRansomware = new Form_Ransomware();
-            formRansomware.Show();
+            
         }
 
 	private void Form_Desktop_FormClosing(object sender, FormClosingEventArgs e)
