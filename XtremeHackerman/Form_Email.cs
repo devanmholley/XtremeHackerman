@@ -92,7 +92,7 @@ namespace XtremeHackerman
         private void LL_Phish_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             /// this is where we download the attachment.
-            EventLogic.RansomewareAttack();
+            
         }
 
         private void email_inbox_SelectedIndexChanged(object sender, System.EventArgs e)
