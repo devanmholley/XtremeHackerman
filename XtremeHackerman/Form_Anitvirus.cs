@@ -25,18 +25,22 @@ namespace XtremeHackerman
 	    AntiVirus_scanPNL.BringToFront();
 
 	    Class_Antivirus.ScanResults();
-	    Header_LBL.Text += Class_Antivirus.malwares.Count(); //display number of threats
+	    Header_LBL.Text += Class_Antivirus.MalwareList.Count(); //display number of threats
 
-	    foreach (ListViewItem file in Class_Antivirus.malwares)
+	    foreach (ListViewItem file in Class_Antivirus.MalwareList)
 	    {
 		malwareListBox.Items.Add(file.Text); //show up in UI
+	    }
+
+	    if (Class_Antivirus.MalwareList.Count() == 0)
+	    {
+		removeButton.Enabled = false;
 	    }
 	}
 
 	private void removeButton_Click(object sender, EventArgs e)
 	{
-	    foreach (ListViewItem malware in Class_Antivirus.malwares) //delete files from dictionary
-		malware.Remove();
+	    Class_Antivirus.RemoveAllThreats();
 	    malwareListBox.Items.Clear(); //delete in UI
 	}
     }

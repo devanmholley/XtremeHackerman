@@ -45,6 +45,7 @@
 	    this.FileManager = new System.Windows.Forms.Button();
 	    this.EmailClient = new System.Windows.Forms.Button();
 	    this.Btn_Ransom_Debug = new System.Windows.Forms.Button();
+	    this.Antivirus = new System.Windows.Forms.Button();
 	    this.panel1.SuspendLayout();
 	    this.SuspendLayout();
 	    // 
@@ -59,10 +60,10 @@
 	    this.panel1.Controls.Add(this.startButton);
 	    this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-	    this.panel1.Location = new System.Drawing.Point(0, 778);
+	    this.panel1.Location = new System.Drawing.Point(0, 1101);
 	    this.panel1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.panel1.Name = "panel1";
-	    this.panel1.Size = new System.Drawing.Size(1605, 102);
+	    this.panel1.Size = new System.Drawing.Size(2124, 102);
 	    this.panel1.TabIndex = 0;
 	    // 
 	    // toolbarNetworkBTN
@@ -73,7 +74,7 @@
 	    this.toolbarNetworkBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 	    this.toolbarNetworkBTN.FlatAppearance.BorderSize = 0;
 	    this.toolbarNetworkBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.toolbarNetworkBTN.Location = new System.Drawing.Point(1289, 7);
+	    this.toolbarNetworkBTN.Location = new System.Drawing.Point(1808, 7);
 	    this.toolbarNetworkBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.toolbarNetworkBTN.Name = "toolbarNetworkBTN";
 	    this.toolbarNetworkBTN.Size = new System.Drawing.Size(83, 62);
@@ -85,7 +86,7 @@
 	    // 
 	    this.toolbarTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 	    this.toolbarTime.AutoSize = true;
-	    this.toolbarTime.Location = new System.Drawing.Point(1454, 0);
+	    this.toolbarTime.Location = new System.Drawing.Point(1973, 0);
 	    this.toolbarTime.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.toolbarTime.Name = "toolbarTime";
 	    this.toolbarTime.Size = new System.Drawing.Size(87, 32);
@@ -96,7 +97,7 @@
 	    // 
 	    this.toolbarDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 	    this.toolbarDate.AutoSize = true;
-	    this.toolbarDate.Location = new System.Drawing.Point(1419, 38);
+	    this.toolbarDate.Location = new System.Drawing.Point(1938, 38);
 	    this.toolbarDate.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.toolbarDate.Name = "toolbarDate";
 	    this.toolbarDate.Size = new System.Drawing.Size(143, 32);
@@ -268,7 +269,22 @@
 	    this.Btn_Ransom_Debug.TabIndex = 16;
 	    this.Btn_Ransom_Debug.Text = "button1";
 	    this.Btn_Ransom_Debug.UseVisualStyleBackColor = true;
+	    this.Btn_Ransom_Debug.Visible = false;
 	    this.Btn_Ransom_Debug.Click += new System.EventHandler(this.Btn_Ransom_Debug_Click);
+	    // 
+	    // Antivirus
+	    // 
+	    this.Antivirus.BackColor = System.Drawing.Color.Transparent;
+	    this.Antivirus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Antivirus.BackgroundImage")));
+	    this.Antivirus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.Antivirus.Cursor = System.Windows.Forms.Cursors.Default;
+	    this.Antivirus.Location = new System.Drawing.Point(582, 81);
+	    this.Antivirus.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.Antivirus.Name = "Antivirus";
+	    this.Antivirus.Size = new System.Drawing.Size(253, 188);
+	    this.Antivirus.TabIndex = 17;
+	    this.Antivirus.UseVisualStyleBackColor = false;
+	    this.Antivirus.Click += new System.EventHandler(this.Antivirus_Click);
 	    // 
 	    // Form_Desktop
 	    // 
@@ -276,7 +292,7 @@
 	    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 	    this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_Desktop;
 	    this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.ClientSize = new System.Drawing.Size(1605, 880);
+	    this.ClientSize = new System.Drawing.Size(2124, 1203);
 	    this.Controls.Add(this.Btn_Ransom_Debug);
 	    this.Controls.Add(this.EmailClient);
 	    this.Controls.Add(this.Restart);
@@ -288,6 +304,7 @@
 	    this.Controls.Add(this.FileManagerIcon);
 	    this.Controls.Add(this.cliButton);
 	    this.Controls.Add(this.internetExplorerIcon);
+	    this.Controls.Add(this.Antivirus);
 	    this.Controls.Add(this.panel1);
 	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Name = "Form_Desktop";
@@ -321,5 +338,6 @@
         private System.Windows.Forms.Label toolbarTime;
         private System.Windows.Forms.Button toolbarNetworkBTN;
         private System.Windows.Forms.Button Btn_Ransom_Debug;
+	private System.Windows.Forms.Button Antivirus;
     }
 }
