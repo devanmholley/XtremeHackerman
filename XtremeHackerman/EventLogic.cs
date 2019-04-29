@@ -90,9 +90,11 @@ namespace XtremeHackerman
             Procmon.OnChange += ProcmonAttack;
             Procmon.OnChange += ProcmonRecovery;
 
-            //Desktop Notifications
-            Broadcaster Notifications = new Broadcaster();
-            Notifications.OnChange += DesktopNotifications;
+            //Ransomeware Event
+            Broadcaster Ransomeware = new Broadcaster();
+            Ransomeware.OnChange += RansomewareAttack;
+            Ransomeware.OnChange += RansomewareRecovery;
+
 
             //File Manager
             Broadcaster File = new Broadcaster();
@@ -193,6 +195,16 @@ namespace XtremeHackerman
         private static void ProcmonRecovery()
         {
             //Steps for recovering in the system for this event.
+        }
+
+        public static void RansomewareAttack()
+        {
+            //Event Trigger
+        }
+
+        private static void RansomewareRecovery()
+        {
+            // Steps for recovering in the system for this event
         }
 
         private static void DesktopNotifications()
