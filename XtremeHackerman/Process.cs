@@ -15,9 +15,7 @@ namespace XtremeHackerman
         public Process()
         {
             
-            Spawntime = DateTime.Now;
-            StopTime = DateTime.Now;
-        
+            Spawntime = DateTime.Now;        
 
         }
 
