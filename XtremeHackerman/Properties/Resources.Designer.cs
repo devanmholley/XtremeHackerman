@@ -171,6 +171,16 @@ namespace XtremeHackerman.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartModeLockIcon {
+            get {
+                object obj = ResourceManager.GetObject("StartModeLockIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] VCR_OSD_MONO_1_001 {

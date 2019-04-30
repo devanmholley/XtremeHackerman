@@ -12,6 +12,7 @@ using System.Reflection;
 using XtremeHackerman.Classes;
 using XtremeHackerman.Properties;
 
+
 namespace XtremeHackerman
 {
     public partial class Form_Desktop : Class_BaseForm
@@ -19,6 +20,7 @@ namespace XtremeHackerman
         public Form_Desktop()
         {
             InitializeComponent();
+            desktopBootOptions();
 	}
 
         private void internetExplorerClick(object sender, EventArgs e)
@@ -63,8 +65,16 @@ namespace XtremeHackerman
         private void cliButtonClick(object sender, EventArgs e)
         {
 	    // Command Line implementation
-	    var formCLI = new Form_CLI();
-            formCLI.Show();
+
+            if (Desktop_BKEND.CMD_ON == false)
+            {
+                const string message = "Command Prompt Access Restricted in Current Boot Options.";
+                var result = MessageBox.Show(message);
+                return;
+                
+            }
+	        var formCLI = new Form_CLI();
+            formCLI.ShowDialog();
         }
 
         private void emailButtonClick(object sender, EventArgs e)
@@ -79,7 +89,8 @@ namespace XtremeHackerman
 
         private void Restart_Click(object sender, EventArgs e)
         {
-            Close();
+            RestartBootOptions.ContextMenu = new ContextMenu();
+            RestartBootOptions.Show(Cursor.Position);
         }
 
         private void Shutdown_Click(object sender, EventArgs e)
@@ -157,5 +168,65 @@ namespace XtremeHackerman
 	    var formAntivirus = new Form_Anitvirus();
 	    formAntivirus.Show();
 	}
+
+        private void desktopBootOptions()
+        {   // This function will handle enabling/disabling certain settings based on Boot Options
+            
+            //Disables the Background when in SAFE MODE
+            if(BootOptions.enableSafeMode == true)
+            {
+                BackgroundImage = null;
+                BackColor = Color.Black;
+            }
+            //// Enables or disables Network access as defined by the system boot options 
+            //if(BootOptions.enableNetworking == false)
+            //{
+            //    Desktop_BKEND.net_ON = false;
+            //    toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
+            //}
+
+            // Enables or disables CMD access as defined by the system boot options
+            if(BootOptions.enableCommandPrompt == false)
+            {
+                Desktop_BKEND.CMD_ON = false;
+            }
+            else
+            {
+                Desktop_BKEND.CMD_ON = true;
+            }
+        }
+
+        private void DesktopPermissions_Tick(object sender, EventArgs e)
+        { // This simple Tick will refresh the permissions of the Desktop form over time 
+            desktopBootOptions();
+        }
+
+        private async void restartNoChangesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Handles simulation of a restart in the Desktop form by hiding the form for a few frames, updating, and then making it visible again
+            BootOptions.enableSafeMode = false;
+            BootOptions.enableNetworking = true;
+            BootOptions.enableCommandPrompt = false;
+            this.Opacity = 0;
+            await Task.Delay(300);
+            desktopBootOptions();
+            BackgroundImage = Resources.Background_Desktop;
+            this.Opacity = 100;
+            RestartBootOptions.Close();
+            
+        }
+
+        private async void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Handles simulation of a restart (Safe Mode) in the Desktop form by hiding the form for a few frames, updating, and then making it visible again
+            BootOptions.enableSafeMode = true;
+            BootOptions.enableNetworking = false;
+            BootOptions.enableCommandPrompt = true;
+            this.Opacity = 0;
+            await Task.Delay(300);
+            desktopBootOptions();
+            this.Opacity = 100;
+            RestartBootOptions.Close();
+        }
     }
 }
