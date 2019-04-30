@@ -247,6 +247,8 @@
     <None Include="Resources\WifiIcon-OFF.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Form_Desktop\Icon_Hint.png" />
+    <Content Include="Resources\Form_Desktop\Icon_AntiVirus.png" />
     <Content Include="Resources\Form_Desktop\Icon_FileManager.png" />
     <Content Include="Resources\Form_FileManager\addfile.png" />
     <Content Include="Resources\Form_FileManager\addfolder.png" />
