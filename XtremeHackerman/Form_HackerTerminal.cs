@@ -150,12 +150,19 @@ namespace XtremeHackerman
                         TerminalCurrentLine += 1;
                     }
                     break;
+                // Sniff network traffic
                 case "sudo dsniff -c":
                     prompt_Pass();
-                    while (TerminalCommand != "C")
-                    {
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "");
-                    }
+                    // Header
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + "tcp 172.217.9.14.33322" +
+                        " -> 138.93.0.10.21 (ftp)");
+                    TerminalCurrentLine += 1;
+                    // Packet body
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + "USER root");
+                    TerminalCurrentLine += 1;
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + "PASS password123");
+                    TerminalCurrentLine += 1;
+                    
                     break;
                     
             }
