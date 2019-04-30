@@ -16,6 +16,9 @@ namespace XtremeHackerman
         public Form_Hacker()
         {
             InitializeComponent();
+            // Show the instructions at startup
+            Form startup = new Form_HackerStartup();
+            startup.Show();
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)

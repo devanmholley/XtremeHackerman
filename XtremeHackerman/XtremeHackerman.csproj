@@ -64,6 +64,12 @@
     </Compile>
     <Compile Include="Classes\Class_CustomFonts.cs" />
     <Compile Include="Classes\Class_Email.cs" />
+    <Compile Include="Form_HackerStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HackerStartup.Designer.cs">
+      <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_CLI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_HackerStartup.resx">
+      <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
     </EmbeddedResource>
