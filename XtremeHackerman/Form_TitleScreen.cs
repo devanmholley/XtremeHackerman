@@ -8,8 +8,9 @@ namespace XtremeHackerman
     {
         // Define byte[] VCRFont as an embedded resource, to be used for custom font formatting
         private readonly byte[] _vcrFont = Properties.Resources.VCR_OSD_MONO_1_001;
+	public Form_Desktop formDesktop = new Form_Desktop();
 
-        public Form_TitleScreen()
+	public Form_TitleScreen()
         {
             InitializeComponent();
         }
@@ -46,7 +47,6 @@ namespace XtremeHackerman
         private void button_Admin_Click(object sender, EventArgs e)
         {
             Hide();
-            var formDesktop = new Form_Desktop();
             formDesktop.ShowDialog();
         }
 

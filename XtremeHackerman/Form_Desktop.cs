@@ -133,7 +133,7 @@ namespace XtremeHackerman
 
 	private void Form_Desktop_FormClosing(object sender, FormClosingEventArgs e)
 	{
-	    //Close any forms that open if Desktop is closed
+	    //Close any forms that are open if Desktop is closed, to go back to title screen
 	    //Code Attribution: https://stackoverflow.com/questions/9029351/close-all-open-forms-except-the-main-menu-in-c-sharp
 	    List<Form> openForms = new List<Form>();
 
@@ -147,7 +147,6 @@ namespace XtremeHackerman
 		    f.Close();
 		}
 	    }
-
 	}
 
 	private void Antivirus_Click(object sender, EventArgs e)

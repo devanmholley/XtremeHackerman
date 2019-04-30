@@ -453,6 +453,7 @@
 	    this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 	    this.Text = "Desktop - Xtreme Hackerman";
 	    this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+	    this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Desktop_FormClosing);
 	    this.TaskbarPanel.ResumeLayout(false);
 	    this.TaskbarPanel.PerformLayout();
 	    this.RestartBootOptions.ResumeLayout(false);
