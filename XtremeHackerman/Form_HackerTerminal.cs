@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace XtremeHackerman
 {
@@ -114,6 +115,20 @@ namespace XtremeHackerman
                 TerminalCurrentLine += 1;
                 HackerTerminal_TXT.AppendText(Environment.NewLine + "\t RX packets" +
                     " 164  bytes 34810  (34.8 KB");
+                TerminalCurrentLine += 1;
+                HackerTerminal_TXT.AppendText(Environment.NewLine + "RX errors " +
+                    "0  dropped 1  overruns 0  frame 0");
+                TerminalCurrentLine += 1;
+                HackerTerminal_TXT.AppendText(Environment.NewLine + "TX Packets 49 " +
+                    " bytes 7840 (7.8 KB)");
+                TerminalCurrentLine += 1;
+                HackerTerminal_TXT.AppendText(Environment.NewLine + "TX errors 0 " +
+                    " dropped 0 overruns 0 carrier 0  collisions 0");
+                TerminalCurrentLine += 1;
+            }
+            if (command == "")
+            {
+
             }
 
         }
