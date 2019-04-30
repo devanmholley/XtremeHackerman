@@ -31,28 +31,15 @@ namespace XtremeHackerman
 
         private void startButtonClick(object sender, EventArgs e)
         {
-            
-            bool i = ! Restart.Visible;
-            if (i == true)
+	    //Display Start Menu
+	    if (StartMenuPanel.Visible == false)
             {
-                Restart.Visible = true;
-                Shutdown.Visible = true;
-                InternetBrowser.Visible = true;
-                FileManager.Visible = true;
-                TaskManager.Visible = true;
-                Email.Visible = true;
+		StartMenuPanel.Visible = true;
             }
             else 
             {
-                Restart.Visible = false;
-                Shutdown.Visible = false;
-                InternetBrowser.Visible = false;
-                FileManager.Visible = false;
-                TaskManager.Visible = false;
-                Email.Visible = false;
+		StartMenuPanel.Visible = false;
             }
-                
-
         }
 
         private void FileManagerButtonClick(object sender, EventArgs e)
