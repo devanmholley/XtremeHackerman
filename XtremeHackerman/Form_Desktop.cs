@@ -40,7 +40,7 @@ namespace XtremeHackerman
                 InternetBrowser.Visible = true;
                 FileManager.Visible = true;
                 TaskManager.Visible = true;
-                EmailClient.Visible = true;
+                Email.Visible = true;
             }
             else 
             {
@@ -49,7 +49,7 @@ namespace XtremeHackerman
                 InternetBrowser.Visible = false;
                 FileManager.Visible = false;
                 TaskManager.Visible = false;
-                EmailClient.Visible = false;
+                Email.Visible = false;
             }
                 
 
@@ -62,7 +62,7 @@ namespace XtremeHackerman
 	    formFileManager.Show();
     }
 
-        private void cliButtonClick(object sender, EventArgs e)
+        private void commandIconClick(object sender, EventArgs e)
         {
 	    // Command Line implementation
 
