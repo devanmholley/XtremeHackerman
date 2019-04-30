@@ -54,10 +54,16 @@
 	    this.AntivirusIcon = new System.Windows.Forms.Button();
 	    this.StartMenuPanel = new System.Windows.Forms.FlowLayoutPanel();
 	    this.IconsPanel = new System.Windows.Forms.FlowLayoutPanel();
+	    this.eventProgress = new System.Windows.Forms.ProgressBar();
+	    this.ProgressPanel = new System.Windows.Forms.Panel();
+	    this.eventLBL = new System.Windows.Forms.Label();
+	    this.CurrEventLBL = new System.Windows.Forms.Label();
+	    this.HintIcon = new System.Windows.Forms.Button();
 	    this.TaskbarPanel.SuspendLayout();
 	    this.RestartBootOptions.SuspendLayout();
 	    this.StartMenuPanel.SuspendLayout();
 	    this.IconsPanel.SuspendLayout();
+	    this.ProgressPanel.SuspendLayout();
 	    this.SuspendLayout();
 	    // 
 	    // TaskbarPanel
@@ -85,7 +91,7 @@
 	    this.toolbarNetworkBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 	    this.toolbarNetworkBTN.FlatAppearance.BorderSize = 0;
 	    this.toolbarNetworkBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.toolbarNetworkBTN.Location = new System.Drawing.Point(2553, 7);
+	    this.toolbarNetworkBTN.Location = new System.Drawing.Point(5418, 7);
 	    this.toolbarNetworkBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.toolbarNetworkBTN.Name = "toolbarNetworkBTN";
 	    this.toolbarNetworkBTN.Size = new System.Drawing.Size(83, 62);
@@ -97,7 +103,7 @@
 	    // 
 	    this.toolbarTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 	    this.toolbarTime.AutoSize = true;
-	    this.toolbarTime.Location = new System.Drawing.Point(2718, 0);
+	    this.toolbarTime.Location = new System.Drawing.Point(5583, 0);
 	    this.toolbarTime.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.toolbarTime.Name = "toolbarTime";
 	    this.toolbarTime.Size = new System.Drawing.Size(87, 32);
@@ -108,7 +114,7 @@
 	    // 
 	    this.toolbarDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 	    this.toolbarDate.AutoSize = true;
-	    this.toolbarDate.Location = new System.Drawing.Point(2683, 38);
+	    this.toolbarDate.Location = new System.Drawing.Point(5548, 38);
 	    this.toolbarDate.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.toolbarDate.Name = "toolbarDate";
 	    this.toolbarDate.Size = new System.Drawing.Size(143, 32);
@@ -361,14 +367,74 @@
 	    this.IconsPanel.Controls.Add(this.AntivirusIcon);
 	    this.IconsPanel.Controls.Add(this.commandIcon);
 	    this.IconsPanel.Controls.Add(this.Btn_Ransom_Debug);
-	    this.IconsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.IconsPanel.Dock = System.Windows.Forms.DockStyle.Left;
 	    this.IconsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 	    this.IconsPanel.Location = new System.Drawing.Point(0, 0);
 	    this.IconsPanel.Margin = new System.Windows.Forms.Padding(5);
 	    this.IconsPanel.Name = "IconsPanel";
 	    this.IconsPanel.Padding = new System.Windows.Forms.Padding(70, 70, 0, 0);
-	    this.IconsPanel.Size = new System.Drawing.Size(2869, 1543);
+	    this.IconsPanel.Size = new System.Drawing.Size(1354, 1543);
 	    this.IconsPanel.TabIndex = 16;
+	    // 
+	    // eventProgress
+	    // 
+	    this.eventProgress.BackColor = System.Drawing.Color.Gray;
+	    this.eventProgress.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.eventProgress.Location = new System.Drawing.Point(0, 0);
+	    this.eventProgress.Name = "eventProgress";
+	    this.eventProgress.Size = new System.Drawing.Size(369, 60);
+	    this.eventProgress.TabIndex = 16;
+	    this.eventProgress.Value = 10;
+	    // 
+	    // ProgressPanel
+	    // 
+	    this.ProgressPanel.BackColor = System.Drawing.Color.Transparent;
+	    this.ProgressPanel.Controls.Add(this.eventLBL);
+	    this.ProgressPanel.Controls.Add(this.CurrEventLBL);
+	    this.ProgressPanel.Controls.Add(this.eventProgress);
+	    this.ProgressPanel.Controls.Add(this.HintIcon);
+	    this.ProgressPanel.Dock = System.Windows.Forms.DockStyle.Right;
+	    this.ProgressPanel.Location = new System.Drawing.Point(2500, 0);
+	    this.ProgressPanel.Name = "ProgressPanel";
+	    this.ProgressPanel.Size = new System.Drawing.Size(369, 1543);
+	    this.ProgressPanel.TabIndex = 19;
+	    // 
+	    // eventLBL
+	    // 
+	    this.eventLBL.AutoSize = true;
+	    this.eventLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.eventLBL.ForeColor = System.Drawing.Color.DeepPink;
+	    this.eventLBL.Location = new System.Drawing.Point(122, 121);
+	    this.eventLBL.Name = "eventLBL";
+	    this.eventLBL.Size = new System.Drawing.Size(156, 61);
+	    this.eventLBL.TabIndex = 20;
+	    this.eventLBL.Text = "event";
+	    this.eventLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+	    // 
+	    // CurrEventLBL
+	    // 
+	    this.CurrEventLBL.AutoSize = true;
+	    this.CurrEventLBL.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.CurrEventLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.CurrEventLBL.ForeColor = System.Drawing.Color.White;
+	    this.CurrEventLBL.Location = new System.Drawing.Point(0, 60);
+	    this.CurrEventLBL.Name = "CurrEventLBL";
+	    this.CurrEventLBL.Size = new System.Drawing.Size(367, 61);
+	    this.CurrEventLBL.TabIndex = 17;
+	    this.CurrEventLBL.Text = "Current Event:";
+	    // 
+	    // HintIcon
+	    // 
+	    this.HintIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HintIcon.BackgroundImage")));
+	    this.HintIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.HintIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.HintIcon.Location = new System.Drawing.Point(119, 187);
+	    this.HintIcon.Name = "HintIcon";
+	    this.HintIcon.Size = new System.Drawing.Size(182, 150);
+	    this.HintIcon.TabIndex = 16;
+	    this.HintIcon.Text = "Hint";
+	    this.HintIcon.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+	    this.HintIcon.UseVisualStyleBackColor = true;
 	    // 
 	    // Form_Desktop
 	    // 
@@ -377,6 +443,7 @@
 	    this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_Desktop;
 	    this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 	    this.ClientSize = new System.Drawing.Size(2869, 1645);
+	    this.Controls.Add(this.ProgressPanel);
 	    this.Controls.Add(this.StartMenuPanel);
 	    this.Controls.Add(this.IconsPanel);
 	    this.Controls.Add(this.TaskbarPanel);
@@ -391,6 +458,8 @@
 	    this.RestartBootOptions.ResumeLayout(false);
 	    this.StartMenuPanel.ResumeLayout(false);
 	    this.IconsPanel.ResumeLayout(false);
+	    this.ProgressPanel.ResumeLayout(false);
+	    this.ProgressPanel.PerformLayout();
 	    this.ResumeLayout(false);
 	    this.PerformLayout();
 
@@ -422,5 +491,10 @@
 	private System.Windows.Forms.Button AntivirusIcon;
 	private System.Windows.Forms.FlowLayoutPanel StartMenuPanel;
 	private System.Windows.Forms.FlowLayoutPanel IconsPanel;
+	private System.Windows.Forms.ProgressBar eventProgress;
+	private System.Windows.Forms.Panel ProgressPanel;
+	private System.Windows.Forms.Label CurrEventLBL;
+	private System.Windows.Forms.Label eventLBL;
+	private System.Windows.Forms.Button HintIcon;
     }
 }
