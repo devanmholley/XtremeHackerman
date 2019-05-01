@@ -53,10 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="Classes\Class_File.cs" />
     <Compile Include="Classes\Class_BootOptions.cs" />
     <Compile Include="Classes\Class_Firewall.cs" />
     <Compile Include="Classes\Class_Progress.cs" />
+    <Compile Include="Classes\Class_HackerDesktop.cs" />
+    <Compile Include="Classes\Class_HackerTerminal.cs" />
     <Compile Include="EventLogic.cs" />
     <Compile Include="Classes\Class_FileManager.cs" />
     <Compile Include="Classes\Class_Antivirus.cs" />
@@ -66,11 +69,19 @@
     </Compile>
     <Compile Include="Classes\Class_CustomFonts.cs" />
     <Compile Include="Classes\Class_Email.cs" />
+
     <Compile Include="Form_Anitvirus.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Anitvirus.Designer.cs">
       <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+
+    <Compile Include="Form_HackerStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HackerStartup.Designer.cs">
+      <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Form_CLI.cs">
       <SubType>Form</SubType>
@@ -114,6 +125,12 @@
     <Compile Include="Form_Hacker.Designer.cs">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_HackerTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HackerTerminal.Designer.cs">
+      <DependentUpon>Form_HackerTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_InternetBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,8 +169,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
     <EmbeddedResource Include="Form_Anitvirus.resx">
       <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+
+    <EmbeddedResource Include="Form_HackerStartup.resx">
+      <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
@@ -175,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Hacker.resx">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HackerTerminal.resx">
+      <DependentUpon>Form_HackerTerminal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_InternetBrowser.resx">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
