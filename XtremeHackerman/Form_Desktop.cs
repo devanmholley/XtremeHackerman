@@ -248,6 +248,24 @@ namespace XtremeHackerman
 	    RansomwarePanel.Visible = false;
 	    Close();
 	}
-	
+
+
+        private void ransomwareIcon_Click(object sender, EventArgs e)
+        {
+            Desktop_BKEND.CloseOpenForms(); //close all open forms
+
+            //Set Ransomwareform to desktop background
+            RansomwarePanel.Visible = true;
+            var formRansomware = new Form_Ransomware();
+            formRansomware.TopLevel = false;
+            RansomwarePanel.Controls.Add(formRansomware);
+            formRansomware.Dock = DockStyle.Fill;
+            formRansomware.Show();
+            RansomwarePanel.BringToFront();
+
+            ProgressPanel.BackColor = Color.Red; //progress panel match the ransomware bg
+            StartMenuPanel.BackColor = Color.Red; //startmenu panel match the ransomware bg
+            StartMenuPanel.BringToFront(); //allow user to still access start menu to boot into safe mode
+        }
     }
 }
