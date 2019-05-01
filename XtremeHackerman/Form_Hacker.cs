@@ -13,12 +13,11 @@ namespace XtremeHackerman
 {
     public partial class Form_Hacker : Class_BaseForm
     {
-        public Form_Hacker()
+	Form startup = new Form_HackerStartup();
+
+	public Form_Hacker()
         {
             InitializeComponent();
-            // Show the instructions at startup
-            Form startup = new Form_HackerStartup();
-            startup.Show();
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
@@ -43,5 +42,16 @@ namespace XtremeHackerman
         {
 
         }
+
+	private void Form_Hacker_Load(object sender, EventArgs e)
+	{
+	    // Show the instructions at startup
+	    startup.Show();
+	}
+
+	private void Form_Hacker_Shown(object sender, EventArgs e)
+	{
+	    startup.BringToFront();
+	}
     }
 }
