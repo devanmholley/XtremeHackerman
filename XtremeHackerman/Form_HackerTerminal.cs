@@ -14,8 +14,6 @@ namespace XtremeHackerman
     {
         //Stores the user command into a string
         string TerminalInput;
-        //Stores the current directory into a string
-        string TerminalDirectory;
         //Stores the user and machine name
         string UserComp;
         //Stores the current command
@@ -27,7 +25,7 @@ namespace XtremeHackerman
         public Form_HackerTerminal()
         {
             InitializeComponent();
-            UserComp = "Hackerman@Comp";
+            UserComp = "Hackerman@Comp $";
             HackerTerminal_TXT.AppendText(UserComp);
         }
 
@@ -59,6 +57,23 @@ namespace XtremeHackerman
                 TerminalCurrentLine += 1;
             }
         }
+
+        private void TerminalTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (TerminalCurrentLine == 0) //If we are initializing the Command Line interface
+                { // Initialize CLI with default command
+                    HackerTerminal_TXT.Select(HackerTerminal_TXT.Text.Length, 0);
+                    TerminalCurrentLine = 1;
+                    return;
+                }
+                string terminalInput = TerminalCommand;
+                Eval_Commands(terminalInput);
+                TerminalCurrentLine += 1;
+            }
+        }
+
 
         //If a known command is passed in run the associated command
         private void Eval_Commands(string command)
@@ -164,7 +179,10 @@ namespace XtremeHackerman
                     TerminalCurrentLine += 1;
                     
                     break;
-                    
+
+                default:
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + "Invalid command");
+                    break;
             }
         }
 

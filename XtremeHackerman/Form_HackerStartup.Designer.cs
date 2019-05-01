@@ -54,6 +54,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Hacker_WelcomeTXT);
             this.Name = "Form_HackerStartup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome!";
             this.ResumeLayout(false);
             this.PerformLayout();

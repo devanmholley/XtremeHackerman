@@ -36,6 +36,7 @@
             this.HackerTerminal_TXT.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.HackerTerminal_TXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.HackerTerminal_TXT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HackerTerminal_TXT.ForeColor = System.Drawing.Color.White;
             this.HackerTerminal_TXT.Location = new System.Drawing.Point(0, 0);
             this.HackerTerminal_TXT.Multiline = true;
             this.HackerTerminal_TXT.Name = "HackerTerminal_TXT";
@@ -43,6 +44,7 @@
             this.HackerTerminal_TXT.Size = new System.Drawing.Size(933, 507);
             this.HackerTerminal_TXT.TabIndex = 0;
             this.HackerTerminal_TXT.TextChanged += new System.EventHandler(this.HackerTerminal_TXT_TextChanged);
+            this.HackerTerminal_TXT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TerminalTxt_KeyDown);
             // 
             // Form_HackerTerminal
             // 
