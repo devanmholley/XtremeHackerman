@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using XtremeHackerman.Classes;
 
 
 namespace XtremeHackerman
 {
     class EventLogic
     {
-
         public enum StateType
         {
             ACTION,
@@ -90,9 +90,11 @@ namespace XtremeHackerman
             Procmon.OnChange += ProcmonAttack;
             Procmon.OnChange += ProcmonRecovery;
 
-            //Desktop Notifications
-            Broadcaster Notifications = new Broadcaster();
-            Notifications.OnChange += DesktopNotifications;
+            //Ransomeware Event
+            Broadcaster Ransomware = new Broadcaster();
+            Ransomware.OnChange += RansomwareAttack;
+            Ransomware.OnChange += RansomwareRecovery;
+
 
             //File Manager
             Broadcaster File = new Broadcaster();
@@ -123,11 +125,19 @@ namespace XtremeHackerman
 
         }
 
-        private static void PhishingEmailAttack()
+        public static void PhishingEmailAttack()
         {
-            //Event Trigger
+	    string sender = "ChaseBank@fake.com";
+            string destination = "SysAdmin@meganopoly.com";
+            string sentdate = "April 10, 2019";
+            string subject = "Problem with your bank account- For Real";
+            string body = "We have noticed suspicious activity on your account. Please reply with your " +
+            "credit card number as well as the expiration date and the 3 magic numbers on the " +
+            "back to validate your identity. This is not a phishing email. I am cereal.";
+            Class_Email.AddMail(sender, destination, sentdate, subject, body);
         }
-        private static void PhishingEmailRecovery()
+
+	private static void PhishingEmailRecovery()
         {
             //Steps for recovering in the system for this event.
         }
@@ -186,6 +196,17 @@ namespace XtremeHackerman
         private static void ProcmonRecovery()
         {
             //Steps for recovering in the system for this event.
+        }
+
+        public static void RansomwareAttack()
+        {
+	    //Event Trigger
+	    Form_TitleScreen.formDesktop.RansomwareAttack();
+        }
+
+        private static void RansomwareRecovery()
+        {
+            // Steps for recovering in the system for this event
         }
 
         private static void DesktopNotifications()

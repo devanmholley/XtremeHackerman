@@ -13,6 +13,7 @@ namespace XtremeHackerman
 {
     public partial class Form_InternetBrowser : Class_BaseForm
     {
+        List<string> safeUrls = new List<string>(15) { "viruses.com", "thebest.com" };
         public Form_InternetBrowser()
         {
             InitializeComponent();
@@ -46,8 +47,11 @@ namespace XtremeHackerman
 
         private void companyFirewallToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formLandingPage = new Form_LandingPage();
-            formLandingPage.Show();
+            var formFirewall = new Form_Firewall();
+	    formFirewall.TopLevel = false;
+	    WebsitePanel.Controls.Add(formFirewall);
+	    formFirewall.Dock = DockStyle.Fill;
+	    formFirewall.Show();
         }
 
         private void Form_InternetBrowser_Load(object sender, EventArgs e)
@@ -57,12 +61,11 @@ namespace XtremeHackerman
 
         private void virusTotalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            virusTotal.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            urlScan.Show();
-        }
+	    var formVirusTotal = new Form_VirusTotal();
+	    formVirusTotal.TopLevel = false;
+	    WebsitePanel.Controls.Add(formVirusTotal);
+	    formVirusTotal.Dock = DockStyle.Fill;
+	    formVirusTotal.Show();
+	}
     }
 }

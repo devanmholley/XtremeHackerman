@@ -60,6 +60,16 @@
     <Compile Include="Classes\Class_WiresharkBluetoothData.cs" />
     <Compile Include="Classes\Class_WiresharkWifiData.cs" />
     <Compile Include="Classes\Class_WiresharkEthernetData.cs" />
+
+    <Compile Include="Classes\Class_File.cs" />
+    <Compile Include="Classes\Class_BootOptions.cs" />
+    <Compile Include="Classes\Class_Firewall.cs" />
+    <Compile Include="Classes\Class_Progress.cs" />
+    <Compile Include="Classes\Class_HackerDesktop.cs" />
+    <Compile Include="Classes\Class_HackerTerminal.cs" />
+    <Compile Include="EventLogic.cs" />
+    <Compile Include="Classes\Class_FileManager.cs" />
+    <Compile Include="Classes\Class_Antivirus.cs" />
     <Compile Include="Classes\Desktop_BKEND.cs" />
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
@@ -71,6 +81,20 @@
     </Compile>
     <Compile Include="Form_Wireshark.Designer.cs">
       <DependentUpon>Form_Wireshark.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="Form_Anitvirus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Anitvirus.Designer.cs">
+      <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HackerStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HackerStartup.Designer.cs">
+      <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Form_CLI.cs">
       <SubType>Form</SubType>
@@ -114,11 +138,35 @@
     <Compile Include="Form_Hacker.Designer.cs">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_HackerTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HackerTerminal.Designer.cs">
+      <DependentUpon>Form_HackerTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_InternetBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_InternetBrowser.Designer.cs">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Ransomware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ransomware.Designer.cs">
+      <DependentUpon>Form_Ransomware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SaveAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SaveAs.Designer.cs">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SelectFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SelectFile.Designer.cs">
+      <DependentUpon>Form_SelectFile.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_TitleScreen.cs">
       <SubType>Form</SubType>
@@ -126,14 +174,22 @@
     <Compile Include="Form_TitleScreen.Designer.cs">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_LandingPage.cs">
+    <Compile Include="Form_VirusTotal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_LandingPage.Designer.cs">
-      <DependentUpon>Form_LandingPage.cs</DependentUpon>
+    <Compile Include="Form_VirusTotal.Designer.cs">
+      <DependentUpon>Form_VirusTotal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <EmbeddedResource Include="Form_Anitvirus.resx">
+      <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HackerStartup.resx">
+      <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,14 +211,26 @@
     <EmbeddedResource Include="Form_Hacker.resx">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_HackerTerminal.resx">
+      <DependentUpon>Form_HackerTerminal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_InternetBrowser.resx">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ransomware.resx">
+      <DependentUpon>Form_Ransomware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SaveAs.resx">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SelectFile.resx">
+      <DependentUpon>Form_SelectFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_LandingPage.resx">
-      <DependentUpon>Form_LandingPage.cs</DependentUpon>
+    <EmbeddedResource Include="Form_VirusTotal.resx">
+      <DependentUpon>Form_VirusTotal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Wireshark.en-US.resx">
       <DependentUpon>Form_Wireshark.cs</DependentUpon>
@@ -176,6 +244,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\XtremeHackerman.Classes.Class_FileManager.datasource" />
     <None Include="Properties\DataSources\XtremeHackerman.Classes.EmailLogic.datasource" />
     <None Include="Properties\DataSources\XtremeHackerman.Classes.WiresharkEthernetData.datasource" />
     <None Include="Properties\Settings.settings">
@@ -243,6 +312,8 @@
     <None Include="Resources\EthernetConnectionTrack.png" />
     <None Include="Resources\EthernetConnectionTrack2.png" />
     <Content Include="Resources\foldericon.bmp" />
+    <Content Include="Resources\Form_Desktop\Icon_Hint.png" />
+    <Content Include="Resources\Form_Desktop\Icon_AntiVirus.png" />
     <Content Include="Resources\Form_Desktop\Icon_FileManager.png" />
     <Content Include="Resources\Form_FileManager\addfile.png" />
     <Content Include="Resources\Form_FileManager\addfolder.png" />
@@ -254,6 +325,8 @@
     <Content Include="Resources\Form_FileManager\thispc.png" />
     <None Include="Resources\wiresharktoolicon.ico" />
     <None Include="Resources\wiresharklogo.png" />
+    <None Include="Resources\StartModeLockIcon.png" />
+    <None Include="Resources\From_Ransomware\ransomware-512.png" />
     <None Include="Resources\ieicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
