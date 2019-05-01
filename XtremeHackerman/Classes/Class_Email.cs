@@ -27,9 +27,6 @@ namespace XtremeHackerman.Classes
 
                 //Then we add the new email to the inbox.
                 EmailList.Add(newMail);
-
-                //Serialize the new object into the JSON file.
-                // JsonConvert.SerializeObject(EmailList, Formatting.Indented);
             }
         }
 
