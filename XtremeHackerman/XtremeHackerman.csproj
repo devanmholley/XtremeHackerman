@@ -56,6 +56,7 @@
     <Compile Include="Classes\Class_File.cs" />
     <Compile Include="Classes\Class_BootOptions.cs" />
     <Compile Include="Classes\Class_Firewall.cs" />
+    <Compile Include="Classes\Class_Progress.cs" />
     <Compile Include="EventLogic.cs" />
     <Compile Include="Classes\Class_FileManager.cs" />
     <Compile Include="Classes\Class_Antivirus.cs" />

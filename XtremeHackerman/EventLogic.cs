@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using XtremeHackerman.Classes;
 
+
 namespace XtremeHackerman
 {
     class EventLogic
     {
-
         public enum StateType
         {
             ACTION,
@@ -91,9 +91,9 @@ namespace XtremeHackerman
             Procmon.OnChange += ProcmonRecovery;
 
             //Ransomeware Event
-            Broadcaster Ransomeware = new Broadcaster();
-            Ransomeware.OnChange += RansomewareAttack;
-            Ransomeware.OnChange += RansomewareRecovery;
+            Broadcaster Ransomware = new Broadcaster();
+            Ransomware.OnChange += RansomwareAttack;
+            Ransomware.OnChange += RansomwareRecovery;
 
 
             //File Manager
@@ -127,7 +127,7 @@ namespace XtremeHackerman
 
         public static void PhishingEmailAttack()
         {
-            string sender = "ChaseBank@fake.com";
+	    string sender = "ChaseBank@fake.com";
             string destination = "SysAdmin@meganopoly.com";
             string sentdate = "April 10, 2019";
             string subject = "Problem with your bank account- For Real";
@@ -136,7 +136,8 @@ namespace XtremeHackerman
             "back to validate your identity. This is not a phishing email. I am cereal.";
             Class_Email.AddMail(sender, destination, sentdate, subject, body);
         }
-        private static void PhishingEmailRecovery()
+
+	private static void PhishingEmailRecovery()
         {
             //Steps for recovering in the system for this event.
         }
@@ -197,14 +198,13 @@ namespace XtremeHackerman
             //Steps for recovering in the system for this event.
         }
 
-        public static void RansomewareAttack()
+        public static void RansomwareAttack()
         {
-            //Event Trigger
-            var formRansomware = new Form_Ransomware();
-            formRansomware.Show();
+	    //Event Trigger
+	    Form_TitleScreen.formDesktop.RansomwareAttack();
         }
 
-        private static void RansomewareRecovery()
+        private static void RansomwareRecovery()
         {
             // Steps for recovering in the system for this event
         }

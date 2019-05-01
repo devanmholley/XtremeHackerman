@@ -44,7 +44,6 @@
 	    this.TaskManager = new System.Windows.Forms.Button();
 	    this.FileManager = new System.Windows.Forms.Button();
 	    this.Email = new System.Windows.Forms.Button();
-	    this.Btn_Ransom_Debug = new System.Windows.Forms.Button();
 	    this.DesktopPermissions = new System.Windows.Forms.Timer(this.components);
 	    this.RestartBootOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
 	    this.restartNoChangesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +51,7 @@
 	    this.Antivirus = new System.Windows.Forms.Button();
 	    this.AntivirusIcon = new System.Windows.Forms.Button();
 	    this.StartMenuPanel = new System.Windows.Forms.FlowLayoutPanel();
+	    this.LogOut = new System.Windows.Forms.Button();
 	    this.IconsPanel = new System.Windows.Forms.FlowLayoutPanel();
 	    this.eventProgress = new System.Windows.Forms.ProgressBar();
 	    this.ProgressPanel = new System.Windows.Forms.Panel();
@@ -61,6 +61,7 @@
 	    this.RealTime = new System.Windows.Forms.Timer(this.components);
 	    this.TaskbarPanel = new System.Windows.Forms.SplitContainer();
 	    this.panel1 = new System.Windows.Forms.Panel();
+	    this.RansomwarePanel = new System.Windows.Forms.Panel();
 	    this.RestartBootOptions.SuspendLayout();
 	    this.StartMenuPanel.SuspendLayout();
 	    this.IconsPanel.SuspendLayout();
@@ -186,7 +187,7 @@
 	    // 
 	    this.Restart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
 	    this.Restart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.Restart.Location = new System.Drawing.Point(8, 290);
+	    this.Restart.Location = new System.Drawing.Point(8, 100);
 	    this.Restart.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Restart.Name = "Restart";
 	    this.Restart.Size = new System.Drawing.Size(280, 70);
@@ -199,7 +200,7 @@
 	    // 
 	    this.Shutdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
 	    this.Shutdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.Shutdown.Location = new System.Drawing.Point(8, 374);
+	    this.Shutdown.Location = new System.Drawing.Point(8, 184);
 	    this.Shutdown.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Shutdown.Name = "Shutdown";
 	    this.Shutdown.Size = new System.Drawing.Size(280, 70);
@@ -212,66 +213,56 @@
 	    // 
 	    this.InternetBrowser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
 	    this.InternetBrowser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.InternetBrowser.Location = new System.Drawing.Point(304, 374);
+	    this.InternetBrowser.Location = new System.Drawing.Point(600, 184);
 	    this.InternetBrowser.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.InternetBrowser.Name = "InternetBrowser";
 	    this.InternetBrowser.Size = new System.Drawing.Size(280, 70);
 	    this.InternetBrowser.TabIndex = 12;
 	    this.InternetBrowser.Text = "Internet Browser";
 	    this.InternetBrowser.UseVisualStyleBackColor = false;
+	    this.InternetBrowser.Visible = false;
 	    this.InternetBrowser.Click += new System.EventHandler(this.InternetBrowser_Click);
 	    // 
 	    // TaskManager
 	    // 
 	    this.TaskManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
 	    this.TaskManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.TaskManager.Location = new System.Drawing.Point(8, 206);
+	    this.TaskManager.Location = new System.Drawing.Point(304, 184);
 	    this.TaskManager.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.TaskManager.Name = "TaskManager";
 	    this.TaskManager.Size = new System.Drawing.Size(280, 70);
 	    this.TaskManager.TabIndex = 13;
 	    this.TaskManager.Text = "Task Manager ";
 	    this.TaskManager.UseVisualStyleBackColor = false;
+	    this.TaskManager.Visible = false;
 	    this.TaskManager.Click += new System.EventHandler(this.TaskManager_Click);
 	    // 
 	    // FileManager
 	    // 
 	    this.FileManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
 	    this.FileManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.FileManager.Location = new System.Drawing.Point(8, 38);
+	    this.FileManager.Location = new System.Drawing.Point(304, 16);
 	    this.FileManager.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.FileManager.Name = "FileManager";
 	    this.FileManager.Size = new System.Drawing.Size(280, 70);
 	    this.FileManager.TabIndex = 14;
 	    this.FileManager.Text = "File Manager";
 	    this.FileManager.UseVisualStyleBackColor = false;
+	    this.FileManager.Visible = false;
 	    this.FileManager.Click += new System.EventHandler(this.FileManager_Click);
 	    // 
 	    // Email
 	    // 
 	    this.Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
 	    this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.Email.Location = new System.Drawing.Point(8, 122);
+	    this.Email.Location = new System.Drawing.Point(304, 100);
 	    this.Email.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Email.Name = "Email";
 	    this.Email.Size = new System.Drawing.Size(280, 70);
 	    this.Email.TabIndex = 15;
 	    this.Email.Text = "Email";
 	    this.Email.UseVisualStyleBackColor = false;
-	    // 
-	    // Btn_Ransom_Debug
-	    // 
-	    this.Btn_Ransom_Debug.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Ransom_Debug.BackgroundImage")));
-	    this.Btn_Ransom_Debug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.Btn_Ransom_Debug.Location = new System.Drawing.Point(78, 1087);
-	    this.Btn_Ransom_Debug.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.Btn_Ransom_Debug.Name = "Btn_Ransom_Debug";
-	    this.Btn_Ransom_Debug.Size = new System.Drawing.Size(147, 138);
-	    this.Btn_Ransom_Debug.TabIndex = 16;
-	    this.Btn_Ransom_Debug.Text = "button1";
-	    this.Btn_Ransom_Debug.UseVisualStyleBackColor = true;
-	    this.Btn_Ransom_Debug.Visible = false;
-	    this.Btn_Ransom_Debug.Click += new System.EventHandler(this.Btn_Ransom_Debug_Click);
+	    this.Email.Visible = false;
 	    // 
 	    // DesktopPermissions
 	    // 
@@ -337,16 +328,30 @@
 	    this.StartMenuPanel.BackColor = System.Drawing.Color.Transparent;
 	    this.StartMenuPanel.Controls.Add(this.Shutdown);
 	    this.StartMenuPanel.Controls.Add(this.Restart);
+	    this.StartMenuPanel.Controls.Add(this.LogOut);
 	    this.StartMenuPanel.Controls.Add(this.TaskManager);
 	    this.StartMenuPanel.Controls.Add(this.Email);
 	    this.StartMenuPanel.Controls.Add(this.FileManager);
 	    this.StartMenuPanel.Controls.Add(this.InternetBrowser);
 	    this.StartMenuPanel.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-	    this.StartMenuPanel.Location = new System.Drawing.Point(0, 1092);
+	    this.StartMenuPanel.Location = new System.Drawing.Point(0, 1282);
 	    this.StartMenuPanel.Name = "StartMenuPanel";
-	    this.StartMenuPanel.Size = new System.Drawing.Size(307, 451);
+	    this.StartMenuPanel.Size = new System.Drawing.Size(307, 261);
 	    this.StartMenuPanel.TabIndex = 18;
 	    this.StartMenuPanel.Visible = false;
+	    // 
+	    // LogOut
+	    // 
+	    this.LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+	    this.LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.LogOut.Location = new System.Drawing.Point(8, 16);
+	    this.LogOut.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.LogOut.Name = "LogOut";
+	    this.LogOut.Size = new System.Drawing.Size(280, 70);
+	    this.LogOut.TabIndex = 16;
+	    this.LogOut.Text = "Log Out";
+	    this.LogOut.UseVisualStyleBackColor = false;
+	    this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
 	    // 
 	    // IconsPanel
 	    // 
@@ -356,14 +361,13 @@
 	    this.IconsPanel.Controls.Add(this.FileManagerIcon);
 	    this.IconsPanel.Controls.Add(this.AntivirusIcon);
 	    this.IconsPanel.Controls.Add(this.commandIcon);
-	    this.IconsPanel.Controls.Add(this.Btn_Ransom_Debug);
-	    this.IconsPanel.Dock = System.Windows.Forms.DockStyle.Left;
+	    this.IconsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.IconsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 	    this.IconsPanel.Location = new System.Drawing.Point(0, 0);
 	    this.IconsPanel.Margin = new System.Windows.Forms.Padding(5);
 	    this.IconsPanel.Name = "IconsPanel";
 	    this.IconsPanel.Padding = new System.Windows.Forms.Padding(70, 70, 0, 0);
-	    this.IconsPanel.Size = new System.Drawing.Size(1354, 1545);
+	    this.IconsPanel.Size = new System.Drawing.Size(2869, 1545);
 	    this.IconsPanel.TabIndex = 16;
 	    // 
 	    // eventProgress
@@ -372,29 +376,29 @@
 	    this.eventProgress.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.eventProgress.Location = new System.Drawing.Point(0, 0);
 	    this.eventProgress.Name = "eventProgress";
-	    this.eventProgress.Size = new System.Drawing.Size(369, 60);
+	    this.eventProgress.Size = new System.Drawing.Size(415, 60);
 	    this.eventProgress.TabIndex = 16;
-	    this.eventProgress.Value = 10;
 	    // 
 	    // ProgressPanel
 	    // 
 	    this.ProgressPanel.BackColor = System.Drawing.Color.Transparent;
+	    this.ProgressPanel.Controls.Add(this.HintIcon);
 	    this.ProgressPanel.Controls.Add(this.eventLBL);
 	    this.ProgressPanel.Controls.Add(this.CurrEventLBL);
 	    this.ProgressPanel.Controls.Add(this.eventProgress);
-	    this.ProgressPanel.Controls.Add(this.HintIcon);
 	    this.ProgressPanel.Dock = System.Windows.Forms.DockStyle.Right;
-	    this.ProgressPanel.Location = new System.Drawing.Point(2500, 0);
+	    this.ProgressPanel.Location = new System.Drawing.Point(2454, 0);
 	    this.ProgressPanel.Name = "ProgressPanel";
-	    this.ProgressPanel.Size = new System.Drawing.Size(369, 1545);
+	    this.ProgressPanel.Size = new System.Drawing.Size(415, 1545);
 	    this.ProgressPanel.TabIndex = 19;
 	    // 
 	    // eventLBL
 	    // 
 	    this.eventLBL.AutoSize = true;
+	    this.eventLBL.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.eventLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.eventLBL.ForeColor = System.Drawing.Color.DeepPink;
-	    this.eventLBL.Location = new System.Drawing.Point(122, 121);
+	    this.eventLBL.Location = new System.Drawing.Point(0, 121);
 	    this.eventLBL.Name = "eventLBL";
 	    this.eventLBL.Size = new System.Drawing.Size(156, 61);
 	    this.eventLBL.TabIndex = 20;
@@ -403,15 +407,15 @@
 	    // 
 	    // CurrEventLBL
 	    // 
-	    this.CurrEventLBL.AutoSize = true;
 	    this.CurrEventLBL.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.CurrEventLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.CurrEventLBL.ForeColor = System.Drawing.Color.White;
 	    this.CurrEventLBL.Location = new System.Drawing.Point(0, 60);
 	    this.CurrEventLBL.Name = "CurrEventLBL";
-	    this.CurrEventLBL.Size = new System.Drawing.Size(367, 61);
+	    this.CurrEventLBL.Size = new System.Drawing.Size(415, 61);
 	    this.CurrEventLBL.TabIndex = 17;
 	    this.CurrEventLBL.Text = "Current Event:";
+	    this.CurrEventLBL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 	    // 
 	    // HintIcon
 	    // 
@@ -460,6 +464,16 @@
 	    this.panel1.Size = new System.Drawing.Size(282, 100);
 	    this.panel1.TabIndex = 12;
 	    // 
+	    // RansomwarePanel
+	    // 
+	    this.RansomwarePanel.BackColor = System.Drawing.Color.Transparent;
+	    this.RansomwarePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.RansomwarePanel.Location = new System.Drawing.Point(0, 0);
+	    this.RansomwarePanel.Name = "RansomwarePanel";
+	    this.RansomwarePanel.Size = new System.Drawing.Size(2454, 1545);
+	    this.RansomwarePanel.TabIndex = 21;
+	    this.RansomwarePanel.Visible = false;
+	    // 
 	    // Form_Desktop
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -467,6 +481,7 @@
 	    this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_Desktop;
 	    this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 	    this.ClientSize = new System.Drawing.Size(2869, 1645);
+	    this.Controls.Add(this.RansomwarePanel);
 	    this.Controls.Add(this.ProgressPanel);
 	    this.Controls.Add(this.StartMenuPanel);
 	    this.Controls.Add(this.IconsPanel);
@@ -509,7 +524,6 @@
         private System.Windows.Forms.Label toolbarDate;
         private System.Windows.Forms.Label toolbarTime;
         private System.Windows.Forms.Button toolbarNetworkBTN;
-        private System.Windows.Forms.Button Btn_Ransom_Debug;
 	private System.Windows.Forms.Button Antivirus;
         private System.Windows.Forms.Timer DesktopPermissions;
         private System.Windows.Forms.ContextMenuStrip RestartBootOptions;
@@ -526,5 +540,7 @@
 	private System.Windows.Forms.Timer RealTime;
 	private System.Windows.Forms.SplitContainer TaskbarPanel;
 	private System.Windows.Forms.Panel panel1;
+	private System.Windows.Forms.Panel RansomwarePanel;
+	private System.Windows.Forms.Button LogOut;
     }
 }
