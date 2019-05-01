@@ -515,8 +515,8 @@
 	    this.ClientSize = new System.Drawing.Size(2869, 1645);
 	    this.Controls.Add(this.RansomwarePanel);
 	    this.Controls.Add(this.ProgressPanel);
-	    this.Controls.Add(this.IconsPanel);
 	    this.Controls.Add(this.StartMenuPanel);
+	    this.Controls.Add(this.IconsPanel);
 	    this.Controls.Add(this.TaskbarPanel);
 	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Name = "Form_Desktop";
