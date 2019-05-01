@@ -40,6 +40,7 @@
             // 
             // label_Warning
             // 
+            this.label_Warning.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label_Warning.AutoSize = true;
             this.label_Warning.Font = new System.Drawing.Font("Comic Sans MS", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Warning.ForeColor = System.Drawing.Color.White;
@@ -52,6 +53,7 @@
             // 
             // Label_Destroy_Warning
             // 
+            this.Label_Destroy_Warning.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Label_Destroy_Warning.AutoSize = true;
             this.Label_Destroy_Warning.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Destroy_Warning.ForeColor = System.Drawing.Color.White;
@@ -65,7 +67,9 @@
             // TB_Ransomeware_Description
             // 
             this.TB_Ransomeware_Description.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.TB_Ransomeware_Description.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.TB_Ransomeware_Description.BackColor = System.Drawing.Color.White;
+            this.TB_Ransomeware_Description.Enabled = false;
             this.TB_Ransomeware_Description.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Ransomeware_Description.HideSelection = false;
             this.TB_Ransomeware_Description.Location = new System.Drawing.Point(491, 72);
@@ -91,6 +95,7 @@
             // 
             // Label_date
             // 
+            this.Label_date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Label_date.AutoSize = true;
             this.Label_date.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_date.ForeColor = System.Drawing.Color.White;
@@ -103,6 +108,7 @@
             // 
             // Btn_Next_Ransom
             // 
+            this.Btn_Next_Ransom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Next_Ransom.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Next_Ransom.Location = new System.Drawing.Point(1020, 642);
             this.Btn_Next_Ransom.Name = "Btn_Next_Ransom";
@@ -126,9 +132,13 @@
             this.Controls.Add(this.Label_Destroy_Warning);
             this.Controls.Add(this.PB_Ransom_Icon);
             this.Controls.Add(this.label_Warning);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Ransomware";
-            this.Text = "Form_Ransomware";
+            this.ShowIcon = false;
+            this.Text = "Haha! Gotcha!";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.PB_Ransom_Icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
