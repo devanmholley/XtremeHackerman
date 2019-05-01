@@ -24,7 +24,6 @@ namespace XtremeHackerman
 
         private void Btn_Next_Ransom_Click(object sender, EventArgs e)
         {
-            this.Close();
         }
     }
 }

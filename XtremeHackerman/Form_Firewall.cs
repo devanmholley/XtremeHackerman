@@ -25,19 +25,13 @@ namespace XtremeHackerman
 
         private void Firewall_Load(object sender, EventArgs e)
         {
-           permissionsPage.Hide();
-            blockIP.Hide();
-            homeButton1perm.Hide();
-            blockIPwindow.Hide();
-            ipEntry.Hide();
-            pageMedian.Hide();
-            rightArrowforip.Hide();
-            
-    }
+
+	}
         // The button for logout will close the window but not exit out of the total program. 
         private void Logout_Button(object sender, EventArgs e)
         {
-            this.Close();
+	    FirewallSplitContainer.Visible = false;
+	    LandingPanel.Visible = true;
         }
 
 
@@ -72,16 +66,6 @@ namespace XtremeHackerman
 
         }
 
-        private void permissionsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            permissionsPage.Show();
-            blockIP.Show();
-            blockIPwindow.Show();
-            homeButton1perm.Show();
-            ipEntry.Show();
-            pageMedian.Show();
-            rightArrowforip.Show();
-        }
         // This is the code behind storing the ip addresses that can be called later 
         private void rightArrowforip_Click(object sender, EventArgs e)
         {
@@ -119,31 +103,15 @@ namespace XtremeHackerman
         }
 
         // Home button set to hide all the individual components
-        private void homeButton1perm_Click(object sender, EventArgs e)
+        private void homeButton_Click(object sender, EventArgs e)
         {
-            permissionsPage.Hide();
-            blockIP.Hide();
-            blockIPwindow.Hide();
-            homeButton1perm.Hide();
-            ipEntry.Hide();
-            pageMedian.Hide();
-            rightArrowforip.Hide();
+	    HomePanel.BringToFront();
         }
 
-        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            managePage.Show();
-        }
-
-        private void homeButton2_Click(object sender, EventArgs e)
-        {
-            managePage.Hide();
-        }
         // Will work with the Domain button to display the window for user email domain permissions 
         private void domainSwitch_Click(object sender, EventArgs e)
         {
-            emailDomainWindow.Show();
-            webaccessPanel.Hide();
+	    DomainPanel.BringToFront();
         }
 
         private void domainADD_Click(object sender, EventArgs e)
@@ -155,9 +123,7 @@ namespace XtremeHackerman
 
         private void webpageUsage_Click(object sender, EventArgs e)
         {
-            webaccessPanel.Show();
-            
-            
+	    webaccessPanel.BringToFront();
         }
 
         private void waccessInBtn_Click(object sender, EventArgs e)
@@ -171,5 +137,17 @@ namespace XtremeHackerman
         {
 
         }
+
+	private void loginButton_Click(object sender, EventArgs e)
+	{
+	    LandingPanel.Visible = false;
+	    FirewallSplitContainer.Visible = true;
+	}
+
+	private void blockedIps_Click(object sender, EventArgs e)
+	{
+	    blockIPPanel.BringToFront();
+
+	}
     }
 }
