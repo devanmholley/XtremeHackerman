@@ -160,6 +160,11 @@ namespace XtremeHackerman
 	    {
 		BackgroundImage = null;
 		BackColor = Color.Black;
+
+		
+		RansomwarePanel.Visible = false; //disable ransomware
+		ProgressPanel.BackColor = Color.Black; //progress panel match the ransomware bg
+		StartMenuPanel.BackColor = Color.Black; //startmenu panel match the ransomware bg
 	    }
 	    //// Enables or disables Network access as defined by the system boot options 
 	    //if(BootOptions.enableNetworking == false)
@@ -217,7 +222,7 @@ namespace XtremeHackerman
 	    toolbarTime.Text = DateTime.Now.ToString("h:mm tt"); //update real time every 10 seconds
 	}
 
-	private void Wireshark_Click(object sender, EventArgs e)
+	private void WiresharkIcon_Click(object sender, EventArgs e)
 	{
 		var formWireshark = new Form_Wireshark();
 		formWireshark.ShowDialog();
@@ -236,6 +241,8 @@ namespace XtremeHackerman
 	    formRansomware.Show();
 	    RansomwarePanel.BringToFront();
 
+	    eventLBL.Text = Class_Progress.ActiveEvent;
+	    eventProgress.Value = Class_Progress.Percent;
 	    ProgressPanel.BackColor = Color.Red; //progress panel match the ransomware bg
 	    StartMenuPanel.BackColor = Color.Red; //startmenu panel match the ransomware bg
 	    StartMenuPanel.BringToFront(); //allow user to still access start menu to boot into safe mode
@@ -249,23 +256,9 @@ namespace XtremeHackerman
 	    Close();
 	}
 
-
-        private void ransomwareIcon_Click(object sender, EventArgs e)
-        {
-            Desktop_BKEND.CloseOpenForms(); //close all open forms
-
-            //Set Ransomwareform to desktop background
-            RansomwarePanel.Visible = true;
-            var formRansomware = new Form_Ransomware();
-            formRansomware.TopLevel = false;
-            RansomwarePanel.Controls.Add(formRansomware);
-            formRansomware.Dock = DockStyle.Fill;
-            formRansomware.Show();
-            RansomwarePanel.BringToFront();
-
-            ProgressPanel.BackColor = Color.Red; //progress panel match the ransomware bg
-            StartMenuPanel.BackColor = Color.Red; //startmenu panel match the ransomware bg
-            StartMenuPanel.BringToFront(); //allow user to still access start menu to boot into safe mode
-        }
+	private void RansomwareIcon_Click(object sender, EventArgs e)
+	{
+	    EventLogic.RansomwareAttack();
+	}
     }
 }

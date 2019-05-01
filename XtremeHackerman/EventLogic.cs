@@ -201,6 +201,9 @@ namespace XtremeHackerman
         public static void RansomwareAttack()
         {
 	    //Event Trigger
+	    Class_Progress.ActiveEvent = "Ransomware";
+	    Class_Progress.Percent = 10;
+	    Class_File.Save(Class_FileManager.root, "not ransomware", "Totally Not Ransomware", true, null);
 	    Form_TitleScreen.formDesktop.RansomwareAttack();
         }
 
