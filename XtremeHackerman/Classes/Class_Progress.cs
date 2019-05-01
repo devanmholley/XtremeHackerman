@@ -27,7 +27,7 @@ namespace XtremeHackerman.Classes
 	public void Play()
 	{
 	    /*** FIRST EVENT: PHISHING EMAIL ***/
-	    ActiveEvent = "Phising Email;
+	    ActiveEvent = "Phising Email";
 	    Percent = 10;
 	    Steps = PhishSteps;
 
