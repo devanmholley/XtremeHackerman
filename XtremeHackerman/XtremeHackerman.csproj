@@ -53,22 +53,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="Classes\Class_File.cs" />
     <Compile Include="Classes\Class_Firewall.cs" />
     <Compile Include="Classes\Class_HackerDesktop.cs" />
     <Compile Include="Classes\Class_HackerTerminal.cs" />
     <Compile Include="EventLogic.cs" />
     <Compile Include="Classes\Class_FileManager.cs" />
+    <Compile Include="Classes\Class_Antivirus.cs" />
     <Compile Include="Classes\Desktop_BKEND.cs" />
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\Class_CustomFonts.cs" />
     <Compile Include="Classes\Class_Email.cs" />
+
+    <Compile Include="Form_Anitvirus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Anitvirus.Designer.cs">
+      <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+
     <Compile Include="Form_HackerStartup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_HackerStartup.Designer.cs">
       <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Form_CLI.cs">
       <SubType>Form</SubType>
@@ -130,6 +141,12 @@
     <Compile Include="Form_Ransomware.Designer.cs">
       <DependentUpon>Form_Ransomware.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_SaveAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SaveAs.Designer.cs">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,8 +161,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <EmbeddedResource Include="Form_Anitvirus.resx">
+      <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+
     <EmbeddedResource Include="Form_HackerStartup.resx">
       <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
@@ -177,6 +199,9 @@
     <EmbeddedResource Include="Form_Ransomware.resx">
       <DependentUpon>Form_Ransomware.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_SaveAs.resx">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +214,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\XtremeHackerman.Classes.Class_FileManager.datasource" />
     <None Include="Properties\DataSources\XtremeHackerman.Classes.EmailLogic.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

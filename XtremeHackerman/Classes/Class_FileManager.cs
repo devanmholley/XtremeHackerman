@@ -9,7 +9,19 @@ namespace XtremeHackerman.Classes
 {
     class Class_FileManager
     {
-	public static Dictionary<TreeNode, ListView> FolderFiles { get; set; } = new Dictionary<TreeNode, ListView>();//dictionary<folder, filesInTheFolder>
+	//Initalize basic folders
+	public static TreeNode docs = new TreeNode("Documents");
+	public static TreeNode down = new TreeNode("Downloads");
+	static TreeNode[] PC_Children = { docs, down };
+	public static TreeNode root = new TreeNode("This PC", 2, 2, PC_Children);
+
+	//dictionary<folder, filesInTheFolder>
+	public static Dictionary<TreeNode, ListView> FolderFiles { get; set; } = new Dictionary<TreeNode, ListView>()
+	{
+	    {root, new ListView() },
+	    {docs, new ListView() },
+	    {down, new ListView() }
+	};
 
 	/// <summary>
 	/// Creates a new folder through the UI: new folder button OR right click new folder
@@ -44,6 +56,7 @@ namespace XtremeHackerman.Classes
 		ListViewItem newFolderItem;
 		newFolderItem = fileView.Items.Add(subfolder.Text); //add folder's name, and show up in fileView
 		newFolderItem.SubItems.Add("File Folder"); //add folder type
+		newFolderItem.ImageKey = "folder.PNG";
 	    }
 
 	    //populate files from dictionary

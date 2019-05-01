@@ -130,7 +130,7 @@ namespace XtremeHackerman
             string sentdate = "April 10, 2019";
             string subject = "Problem with your bank account- For Real";
             string body = "We have noticed suspicious activity on your account. Please reply with your " +
-            "credit card number as well as the expiration date and 3 numbers on the " +
+            "credit card number as well as the expiration date and the 3 magic numbers on the " +
             "back to validate your identity. This is not a phishing email. I am cereal.";
             Class_Email.AddMail(sender, destination, sentdate, subject, body);
         }
