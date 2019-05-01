@@ -107,8 +107,8 @@ namespace XtremeHackerman
 
         private void TaskManager_Click(object sender, EventArgs e)
         {
-            const string message = "You have opened the Task Manager";
-            var result = MessageBox.Show(message);
+            var formTaskManager = new Form_TaskManager();
+            formTaskManager.ShowDialog();
         }
 
         private void FileManager_Click(object sender, EventArgs e)
@@ -147,6 +147,12 @@ namespace XtremeHackerman
             /// It should be Deleted or Hidden When the Ransomware event is added.
             var formRansomware = new Form_Ransomware();
             formRansomware.ShowDialog();
+        }
+
+        private void TaskManager1_Click(object sender, EventArgs e)
+        {
+            var formTaskManager = new Form_TaskManager();
+            formTaskManager.ShowDialog();
         }
     }
 }

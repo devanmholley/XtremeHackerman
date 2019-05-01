@@ -45,7 +45,9 @@
             this.FileManager = new System.Windows.Forms.Button();
             this.EmailClient = new System.Windows.Forms.Button();
             this.Btn_Ransom_Debug = new System.Windows.Forms.Button();
+            this.TaskManager1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -255,6 +257,18 @@
             this.Btn_Ransom_Debug.UseVisualStyleBackColor = true;
             this.Btn_Ransom_Debug.Click += new System.EventHandler(this.Btn_Ransom_Debug_Click);
             // 
+            // TaskManager1
+            // 
+            this.TaskManager1.Image = ((System.Drawing.Image)(resources.GetObject("TaskManager1.Image")));
+            this.TaskManager1.InitialImage = ((System.Drawing.Image)(resources.GetObject("TaskManager1.InitialImage")));
+            this.TaskManager1.Location = new System.Drawing.Point(201, 31);
+            this.TaskManager1.Name = "TaskManager1";
+            this.TaskManager1.Size = new System.Drawing.Size(101, 82);
+            this.TaskManager1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.TaskManager1.TabIndex = 17;
+            this.TaskManager1.TabStop = false;
+            this.TaskManager1.Click += new System.EventHandler(this.TaskManager1_Click);
+            // 
             // Form_Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +276,7 @@
             this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_Desktop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(602, 369);
+            this.Controls.Add(this.TaskManager1);
             this.Controls.Add(this.Btn_Ransom_Debug);
             this.Controls.Add(this.EmailClient);
             this.Controls.Add(this.Restart);
@@ -282,6 +297,7 @@
             this.Load += new System.EventHandler(this.Form_Desktop_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +321,6 @@
         private System.Windows.Forms.Label toolbarTime;
         private System.Windows.Forms.Button toolbarNetworkBTN;
         private System.Windows.Forms.Button Btn_Ransom_Debug;
+        private System.Windows.Forms.PictureBox TaskManager1;
     }
 }

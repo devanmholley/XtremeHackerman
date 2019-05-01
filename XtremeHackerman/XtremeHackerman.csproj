@@ -116,6 +116,12 @@
     <Compile Include="Form_Ransomware.Designer.cs">
       <DependentUpon>Form_Ransomware.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TaskManager.Designer.cs">
+      <DependentUpon>Form_TaskManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_TitleScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,7 @@
     <Compile Include="Form_LandingPage.Designer.cs">
       <DependentUpon>Form_LandingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Process.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Email.resx">
@@ -156,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Ransomware.resx">
       <DependentUpon>Form_Ransomware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TaskManager.resx">
+      <DependentUpon>Form_TaskManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
