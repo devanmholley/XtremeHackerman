@@ -20,10 +20,17 @@ namespace XtremeHackerman
         public Form_Desktop()
         {
             InitializeComponent();
-            desktopBootOptions();
+	    desktopBootOptions();
 	}
 
-        private void internetExplorerClick(object sender, EventArgs e)
+	private void Form_Desktop_Load(object sender, EventArgs e)
+	{
+	    toolbarTime.Text = DateTime.Now.ToString("h:mm tt");
+	    toolbarDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
+	    RealTime.Start();
+	}
+
+	private void internetExplorerClick(object sender, EventArgs e)
         {
             var formInternetBrowser = new Form_InternetBrowser();
             formInternetBrowser.Show();
@@ -214,5 +221,10 @@ namespace XtremeHackerman
             this.Opacity = 100;
             RestartBootOptions.Close();
         }
+
+	private void RealTime_Tick(object sender, EventArgs e)
+	{
+	    toolbarTime.Text = DateTime.Now.ToString("h:mm tt"); //update real time every 10 seconds
+	}
     }
 }

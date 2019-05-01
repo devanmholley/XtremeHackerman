@@ -30,7 +30,6 @@
         {
 	    this.components = new System.ComponentModel.Container();
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Desktop));
-	    this.TaskbarPanel = new System.Windows.Forms.Panel();
 	    this.toolbarNetworkBTN = new System.Windows.Forms.Button();
 	    this.toolbarTime = new System.Windows.Forms.Label();
 	    this.toolbarDate = new System.Windows.Forms.Label();
@@ -59,62 +58,52 @@
 	    this.eventLBL = new System.Windows.Forms.Label();
 	    this.CurrEventLBL = new System.Windows.Forms.Label();
 	    this.HintIcon = new System.Windows.Forms.Button();
-	    this.TaskbarPanel.SuspendLayout();
+	    this.RealTime = new System.Windows.Forms.Timer(this.components);
+	    this.TaskbarPanel = new System.Windows.Forms.SplitContainer();
+	    this.panel1 = new System.Windows.Forms.Panel();
 	    this.RestartBootOptions.SuspendLayout();
 	    this.StartMenuPanel.SuspendLayout();
 	    this.IconsPanel.SuspendLayout();
 	    this.ProgressPanel.SuspendLayout();
+	    ((System.ComponentModel.ISupportInitialize)(this.TaskbarPanel)).BeginInit();
+	    this.TaskbarPanel.Panel1.SuspendLayout();
+	    this.TaskbarPanel.Panel2.SuspendLayout();
+	    this.TaskbarPanel.SuspendLayout();
+	    this.panel1.SuspendLayout();
 	    this.SuspendLayout();
-	    // 
-	    // TaskbarPanel
-	    // 
-	    this.TaskbarPanel.AutoSize = true;
-	    this.TaskbarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-	    this.TaskbarPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-	    this.TaskbarPanel.Controls.Add(this.toolbarNetworkBTN);
-	    this.TaskbarPanel.Controls.Add(this.toolbarTime);
-	    this.TaskbarPanel.Controls.Add(this.toolbarDate);
-	    this.TaskbarPanel.Controls.Add(this.startButton);
-	    this.TaskbarPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-	    this.TaskbarPanel.ForeColor = System.Drawing.SystemColors.ControlText;
-	    this.TaskbarPanel.Location = new System.Drawing.Point(0, 1543);
-	    this.TaskbarPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.TaskbarPanel.Name = "TaskbarPanel";
-	    this.TaskbarPanel.Size = new System.Drawing.Size(2869, 102);
-	    this.TaskbarPanel.TabIndex = 0;
 	    // 
 	    // toolbarNetworkBTN
 	    // 
-	    this.toolbarNetworkBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 	    this.toolbarNetworkBTN.AutoSize = true;
 	    this.toolbarNetworkBTN.BackgroundImage = global::XtremeHackerman.Properties.Resources.WifiIcon;
 	    this.toolbarNetworkBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+	    this.toolbarNetworkBTN.Dock = System.Windows.Forms.DockStyle.Left;
 	    this.toolbarNetworkBTN.FlatAppearance.BorderSize = 0;
 	    this.toolbarNetworkBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.toolbarNetworkBTN.Location = new System.Drawing.Point(5418, 7);
+	    this.toolbarNetworkBTN.Location = new System.Drawing.Point(0, 0);
 	    this.toolbarNetworkBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.toolbarNetworkBTN.Name = "toolbarNetworkBTN";
-	    this.toolbarNetworkBTN.Size = new System.Drawing.Size(83, 62);
+	    this.toolbarNetworkBTN.Size = new System.Drawing.Size(83, 100);
 	    this.toolbarNetworkBTN.TabIndex = 11;
 	    this.toolbarNetworkBTN.UseVisualStyleBackColor = true;
 	    this.toolbarNetworkBTN.Click += new System.EventHandler(this.toolbarNetworkBTN_Click);
 	    // 
 	    // toolbarTime
 	    // 
-	    this.toolbarTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+	    this.toolbarTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
 	    this.toolbarTime.AutoSize = true;
-	    this.toolbarTime.Location = new System.Drawing.Point(5583, 0);
+	    this.toolbarTime.Location = new System.Drawing.Point(116, 12);
 	    this.toolbarTime.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.toolbarTime.Name = "toolbarTime";
-	    this.toolbarTime.Size = new System.Drawing.Size(87, 32);
+	    this.toolbarTime.Size = new System.Drawing.Size(136, 32);
 	    this.toolbarTime.TabIndex = 10;
-	    this.toolbarTime.Text = "22:00";
+	    this.toolbarTime.Text = "22:00 PM";
 	    // 
 	    // toolbarDate
 	    // 
-	    this.toolbarDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+	    this.toolbarDate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 	    this.toolbarDate.AutoSize = true;
-	    this.toolbarDate.Location = new System.Drawing.Point(5548, 38);
+	    this.toolbarDate.Location = new System.Drawing.Point(110, 57);
 	    this.toolbarDate.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.toolbarDate.Name = "toolbarDate";
 	    this.toolbarDate.Size = new System.Drawing.Size(143, 32);
@@ -125,13 +114,14 @@
 	    // 
 	    this.startButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
 	    this.startButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+	    this.startButton.Dock = System.Windows.Forms.DockStyle.Left;
 	    this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 	    this.startButton.ForeColor = System.Drawing.SystemColors.ControlText;
 	    this.startButton.Image = global::XtremeHackerman.Properties.Resources.StartButton;
-	    this.startButton.Location = new System.Drawing.Point(-5, -12);
+	    this.startButton.Location = new System.Drawing.Point(0, 0);
 	    this.startButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.startButton.Name = "startButton";
-	    this.startButton.Size = new System.Drawing.Size(235, 103);
+	    this.startButton.Size = new System.Drawing.Size(235, 100);
 	    this.startButton.TabIndex = 8;
 	    this.startButton.UseVisualStyleBackColor = false;
 	    this.startButton.Click += new System.EventHandler(this.startButtonClick);
@@ -373,7 +363,7 @@
 	    this.IconsPanel.Margin = new System.Windows.Forms.Padding(5);
 	    this.IconsPanel.Name = "IconsPanel";
 	    this.IconsPanel.Padding = new System.Windows.Forms.Padding(70, 70, 0, 0);
-	    this.IconsPanel.Size = new System.Drawing.Size(1354, 1543);
+	    this.IconsPanel.Size = new System.Drawing.Size(1354, 1545);
 	    this.IconsPanel.TabIndex = 16;
 	    // 
 	    // eventProgress
@@ -396,7 +386,7 @@
 	    this.ProgressPanel.Dock = System.Windows.Forms.DockStyle.Right;
 	    this.ProgressPanel.Location = new System.Drawing.Point(2500, 0);
 	    this.ProgressPanel.Name = "ProgressPanel";
-	    this.ProgressPanel.Size = new System.Drawing.Size(369, 1543);
+	    this.ProgressPanel.Size = new System.Drawing.Size(369, 1545);
 	    this.ProgressPanel.TabIndex = 19;
 	    // 
 	    // eventLBL
@@ -436,6 +426,40 @@
 	    this.HintIcon.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 	    this.HintIcon.UseVisualStyleBackColor = true;
 	    // 
+	    // RealTime
+	    // 
+	    this.RealTime.Interval = 10000;
+	    this.RealTime.Tick += new System.EventHandler(this.RealTime_Tick);
+	    // 
+	    // TaskbarPanel
+	    // 
+	    this.TaskbarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+	    this.TaskbarPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+	    this.TaskbarPanel.Location = new System.Drawing.Point(0, 1545);
+	    this.TaskbarPanel.Name = "TaskbarPanel";
+	    // 
+	    // TaskbarPanel.Panel1
+	    // 
+	    this.TaskbarPanel.Panel1.Controls.Add(this.startButton);
+	    // 
+	    // TaskbarPanel.Panel2
+	    // 
+	    this.TaskbarPanel.Panel2.Controls.Add(this.panel1);
+	    this.TaskbarPanel.Size = new System.Drawing.Size(2869, 100);
+	    this.TaskbarPanel.SplitterDistance = 2583;
+	    this.TaskbarPanel.TabIndex = 12;
+	    // 
+	    // panel1
+	    // 
+	    this.panel1.Controls.Add(this.toolbarTime);
+	    this.panel1.Controls.Add(this.toolbarNetworkBTN);
+	    this.panel1.Controls.Add(this.toolbarDate);
+	    this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.panel1.Location = new System.Drawing.Point(0, 0);
+	    this.panel1.Name = "panel1";
+	    this.panel1.Size = new System.Drawing.Size(282, 100);
+	    this.panel1.TabIndex = 12;
+	    // 
 	    // Form_Desktop
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -454,21 +478,23 @@
 	    this.Text = "Desktop - Xtreme Hackerman";
 	    this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 	    this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Desktop_FormClosing);
-	    this.TaskbarPanel.ResumeLayout(false);
-	    this.TaskbarPanel.PerformLayout();
+	    this.Load += new System.EventHandler(this.Form_Desktop_Load);
 	    this.RestartBootOptions.ResumeLayout(false);
 	    this.StartMenuPanel.ResumeLayout(false);
 	    this.IconsPanel.ResumeLayout(false);
 	    this.ProgressPanel.ResumeLayout(false);
 	    this.ProgressPanel.PerformLayout();
+	    this.TaskbarPanel.Panel1.ResumeLayout(false);
+	    this.TaskbarPanel.Panel2.ResumeLayout(false);
+	    ((System.ComponentModel.ISupportInitialize)(this.TaskbarPanel)).EndInit();
+	    this.TaskbarPanel.ResumeLayout(false);
+	    this.panel1.ResumeLayout(false);
+	    this.panel1.PerformLayout();
 	    this.ResumeLayout(false);
-	    this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel TaskbarPanel;
         private System.Windows.Forms.Button internetExplorerIcon;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button commandIcon;
@@ -497,5 +523,8 @@
 	private System.Windows.Forms.Label CurrEventLBL;
 	private System.Windows.Forms.Label eventLBL;
 	private System.Windows.Forms.Button HintIcon;
+	private System.Windows.Forms.Timer RealTime;
+	private System.Windows.Forms.SplitContainer TaskbarPanel;
+	private System.Windows.Forms.Panel panel1;
     }
 }
