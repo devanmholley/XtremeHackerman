@@ -31,10 +31,13 @@
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Firewall));
 	    this.LogoutButton = new System.Windows.Forms.Button();
 	    this.FirewallSplitContainer = new System.Windows.Forms.SplitContainer();
-	    this.webpageUsage = new System.Windows.Forms.Button();
-	    this.blockedIps = new System.Windows.Forms.Button();
-	    this.domainSwitch = new System.Windows.Forms.Button();
+	    this.webTab = new System.Windows.Forms.Button();
+	    this.ipTab = new System.Windows.Forms.Button();
+	    this.domainTab = new System.Windows.Forms.Button();
 	    this.homeButton = new System.Windows.Forms.Button();
+	    this.HomePanel = new System.Windows.Forms.Panel();
+	    this.homeInstructions = new System.Windows.Forms.TextBox();
+	    this.welcomeMessagelabel = new System.Windows.Forms.Label();
 	    this.webaccessPanel = new System.Windows.Forms.Panel();
 	    this.webmessageLabel = new System.Windows.Forms.Label();
 	    this.webPanelAccess2 = new System.Windows.Forms.Panel();
@@ -42,7 +45,6 @@
 	    this.waccessBLEntry = new System.Windows.Forms.TextBox();
 	    this.waccessTextEntry = new System.Windows.Forms.TextBox();
 	    this.blacklistWebLabel = new System.Windows.Forms.Label();
-	    this.webaccessBtnMedian = new System.Windows.Forms.Button();
 	    this.textBox1 = new System.Windows.Forms.TextBox();
 	    this.clearedWebLabel = new System.Windows.Forms.Label();
 	    this.DomainPanel = new System.Windows.Forms.Panel();
@@ -57,33 +59,32 @@
 	    this.ipYeahweblocked = new System.Windows.Forms.Label();
 	    this.ipEntry = new System.Windows.Forms.TextBox();
 	    this.blockIP = new System.Windows.Forms.Label();
-	    this.HomePanel = new System.Windows.Forms.Panel();
-	    this.welcomeMessagelabel = new System.Windows.Forms.Label();
 	    this.LandingPanel = new System.Windows.Forms.Panel();
-	    this.PasswordLBL = new System.Windows.Forms.Label();
-	    this.UsernameLBL = new System.Windows.Forms.Label();
 	    this.loginButton = new System.Windows.Forms.Button();
 	    this.password_field = new System.Windows.Forms.TextBox();
 	    this.username_field = new System.Windows.Forms.TextBox();
+	    this.PasswordLBL = new System.Windows.Forms.Label();
+	    this.UsernameLBL = new System.Windows.Forms.Label();
 	    ((System.ComponentModel.ISupportInitialize)(this.FirewallSplitContainer)).BeginInit();
 	    this.FirewallSplitContainer.Panel1.SuspendLayout();
 	    this.FirewallSplitContainer.Panel2.SuspendLayout();
 	    this.FirewallSplitContainer.SuspendLayout();
+	    this.HomePanel.SuspendLayout();
 	    this.webaccessPanel.SuspendLayout();
 	    this.webPanelAccess2.SuspendLayout();
 	    this.DomainPanel.SuspendLayout();
 	    this.blockIPPanel.SuspendLayout();
-	    this.HomePanel.SuspendLayout();
 	    this.LandingPanel.SuspendLayout();
 	    this.SuspendLayout();
 	    // 
 	    // LogoutButton
 	    // 
 	    this.LogoutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+	    this.LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.LogoutButton.Location = new System.Drawing.Point(0, 1114);
 	    this.LogoutButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.LogoutButton.Name = "LogoutButton";
-	    this.LogoutButton.Size = new System.Drawing.Size(241, 93);
+	    this.LogoutButton.Size = new System.Drawing.Size(400, 93);
 	    this.LogoutButton.TabIndex = 2;
 	    this.LogoutButton.Text = "Logout";
 	    this.LogoutButton.UseVisualStyleBackColor = true;
@@ -99,9 +100,9 @@
 	    // FirewallSplitContainer.Panel1
 	    // 
 	    this.FirewallSplitContainer.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-	    this.FirewallSplitContainer.Panel1.Controls.Add(this.webpageUsage);
-	    this.FirewallSplitContainer.Panel1.Controls.Add(this.blockedIps);
-	    this.FirewallSplitContainer.Panel1.Controls.Add(this.domainSwitch);
+	    this.FirewallSplitContainer.Panel1.Controls.Add(this.webTab);
+	    this.FirewallSplitContainer.Panel1.Controls.Add(this.ipTab);
+	    this.FirewallSplitContainer.Panel1.Controls.Add(this.domainTab);
 	    this.FirewallSplitContainer.Panel1.Controls.Add(this.homeButton);
 	    this.FirewallSplitContainer.Panel1.Controls.Add(this.LogoutButton);
 	    // 
@@ -109,65 +110,108 @@
 	    // 
 	    this.FirewallSplitContainer.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirewallSplitContainer.Panel2.BackgroundImage")));
 	    this.FirewallSplitContainer.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.FirewallSplitContainer.Panel2.Controls.Add(this.HomePanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.webaccessPanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.DomainPanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.blockIPPanel);
-	    this.FirewallSplitContainer.Panel2.Controls.Add(this.HomePanel);
 	    this.FirewallSplitContainer.Panel2.Tag = "homePagefire";
 	    this.FirewallSplitContainer.Size = new System.Drawing.Size(2752, 1207);
-	    this.FirewallSplitContainer.SplitterDistance = 241;
+	    this.FirewallSplitContainer.SplitterDistance = 400;
 	    this.FirewallSplitContainer.SplitterWidth = 11;
 	    this.FirewallSplitContainer.TabIndex = 3;
 	    this.FirewallSplitContainer.Visible = false;
 	    // 
-	    // webpageUsage
+	    // webTab
 	    // 
-	    this.webpageUsage.Dock = System.Windows.Forms.DockStyle.Top;
-	    this.webpageUsage.Location = new System.Drawing.Point(0, 203);
-	    this.webpageUsage.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.webpageUsage.Name = "webpageUsage";
-	    this.webpageUsage.Size = new System.Drawing.Size(241, 55);
-	    this.webpageUsage.TabIndex = 1;
-	    this.webpageUsage.Text = "Web Access";
-	    this.webpageUsage.UseVisualStyleBackColor = true;
-	    this.webpageUsage.Click += new System.EventHandler(this.webpageUsage_Click);
+	    this.webTab.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.webTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.webTab.Location = new System.Drawing.Point(0, 267);
+	    this.webTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.webTab.Name = "webTab";
+	    this.webTab.Size = new System.Drawing.Size(400, 87);
+	    this.webTab.TabIndex = 1;
+	    this.webTab.Text = "Web Access";
+	    this.webTab.UseVisualStyleBackColor = true;
+	    this.webTab.Click += new System.EventHandler(this.webpageUsage_Click);
 	    // 
-	    // blockedIps
+	    // ipTab
 	    // 
-	    this.blockedIps.Dock = System.Windows.Forms.DockStyle.Top;
-	    this.blockedIps.Location = new System.Drawing.Point(0, 148);
-	    this.blockedIps.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.blockedIps.Name = "blockedIps";
-	    this.blockedIps.Size = new System.Drawing.Size(241, 55);
-	    this.blockedIps.TabIndex = 3;
-	    this.blockedIps.Text = "Block IPs";
-	    this.blockedIps.UseVisualStyleBackColor = true;
-	    this.blockedIps.Click += new System.EventHandler(this.blockedIps_Click);
+	    this.ipTab.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.ipTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.ipTab.Location = new System.Drawing.Point(0, 180);
+	    this.ipTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.ipTab.Name = "ipTab";
+	    this.ipTab.Size = new System.Drawing.Size(400, 87);
+	    this.ipTab.TabIndex = 3;
+	    this.ipTab.Text = "Block IPs";
+	    this.ipTab.UseVisualStyleBackColor = true;
+	    this.ipTab.Click += new System.EventHandler(this.blockedIps_Click);
 	    // 
-	    // domainSwitch
+	    // domainTab
 	    // 
-	    this.domainSwitch.Dock = System.Windows.Forms.DockStyle.Top;
-	    this.domainSwitch.Location = new System.Drawing.Point(0, 93);
-	    this.domainSwitch.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.domainSwitch.Name = "domainSwitch";
-	    this.domainSwitch.Size = new System.Drawing.Size(241, 55);
-	    this.domainSwitch.TabIndex = 0;
-	    this.domainSwitch.Text = "Domain";
-	    this.domainSwitch.UseVisualStyleBackColor = true;
-	    this.domainSwitch.Click += new System.EventHandler(this.domainSwitch_Click);
+	    this.domainTab.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.domainTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.domainTab.Location = new System.Drawing.Point(0, 93);
+	    this.domainTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.domainTab.Name = "domainTab";
+	    this.domainTab.Size = new System.Drawing.Size(400, 87);
+	    this.domainTab.TabIndex = 0;
+	    this.domainTab.Text = "Block Domains";
+	    this.domainTab.UseVisualStyleBackColor = true;
+	    this.domainTab.Click += new System.EventHandler(this.domainSwitch_Click);
 	    // 
 	    // homeButton
 	    // 
 	    this.homeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homeButton.BackgroundImage")));
 	    this.homeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 	    this.homeButton.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.homeButton.Location = new System.Drawing.Point(0, 0);
 	    this.homeButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.homeButton.Name = "homeButton";
-	    this.homeButton.Size = new System.Drawing.Size(241, 93);
+	    this.homeButton.Size = new System.Drawing.Size(400, 93);
 	    this.homeButton.TabIndex = 5;
 	    this.homeButton.UseVisualStyleBackColor = true;
 	    this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+	    // 
+	    // HomePanel
+	    // 
+	    this.HomePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomePanel.BackgroundImage")));
+	    this.HomePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.HomePanel.Controls.Add(this.homeInstructions);
+	    this.HomePanel.Controls.Add(this.welcomeMessagelabel);
+	    this.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.HomePanel.Location = new System.Drawing.Point(0, 0);
+	    this.HomePanel.Name = "HomePanel";
+	    this.HomePanel.Size = new System.Drawing.Size(2341, 1207);
+	    this.HomePanel.TabIndex = 4;
+	    // 
+	    // homeInstructions
+	    // 
+	    this.homeInstructions.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.homeInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.homeInstructions.Location = new System.Drawing.Point(685, 244);
+	    this.homeInstructions.Multiline = true;
+	    this.homeInstructions.Name = "homeInstructions";
+	    this.homeInstructions.ReadOnly = true;
+	    this.homeInstructions.Size = new System.Drawing.Size(1000, 706);
+	    this.homeInstructions.TabIndex = 2;
+	    this.homeInstructions.Text = resources.GetString("homeInstructions.Text");
+	    this.homeInstructions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+	    // 
+	    // welcomeMessagelabel
+	    // 
+	    this.welcomeMessagelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.welcomeMessagelabel.AutoSize = true;
+	    this.welcomeMessagelabel.BackColor = System.Drawing.Color.Transparent;
+	    this.welcomeMessagelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.welcomeMessagelabel.ForeColor = System.Drawing.Color.Transparent;
+	    this.welcomeMessagelabel.Location = new System.Drawing.Point(887, 153);
+	    this.welcomeMessagelabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+	    this.welcomeMessagelabel.Name = "welcomeMessagelabel";
+	    this.welcomeMessagelabel.Size = new System.Drawing.Size(590, 63);
+	    this.welcomeMessagelabel.TabIndex = 1;
+	    this.welcomeMessagelabel.Text = "Welcome Mr. Anderson";
 	    // 
 	    // webaccessPanel
 	    // 
@@ -177,7 +221,7 @@
 	    this.webaccessPanel.Location = new System.Drawing.Point(0, 0);
 	    this.webaccessPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.webaccessPanel.Name = "webaccessPanel";
-	    this.webaccessPanel.Size = new System.Drawing.Size(2500, 1207);
+	    this.webaccessPanel.Size = new System.Drawing.Size(2341, 1207);
 	    this.webaccessPanel.TabIndex = 6;
 	    // 
 	    // webmessageLabel
@@ -197,7 +241,6 @@
 	    this.webPanelAccess2.Controls.Add(this.waccessBLEntry);
 	    this.webPanelAccess2.Controls.Add(this.waccessTextEntry);
 	    this.webPanelAccess2.Controls.Add(this.blacklistWebLabel);
-	    this.webPanelAccess2.Controls.Add(this.webaccessBtnMedian);
 	    this.webPanelAccess2.Controls.Add(this.textBox1);
 	    this.webPanelAccess2.Controls.Add(this.clearedWebLabel);
 	    this.webPanelAccess2.Location = new System.Drawing.Point(192, 215);
@@ -246,16 +289,6 @@
 	    this.blacklistWebLabel.TabIndex = 3;
 	    this.blacklistWebLabel.Text = "Blacklisted:";
 	    // 
-	    // webaccessBtnMedian
-	    // 
-	    this.webaccessBtnMedian.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-	    this.webaccessBtnMedian.Location = new System.Drawing.Point(627, 0);
-	    this.webaccessBtnMedian.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.webaccessBtnMedian.Name = "webaccessBtnMedian";
-	    this.webaccessBtnMedian.Size = new System.Drawing.Size(40, 622);
-	    this.webaccessBtnMedian.TabIndex = 2;
-	    this.webaccessBtnMedian.UseVisualStyleBackColor = true;
-	    // 
 	    // textBox1
 	    // 
 	    this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -266,7 +299,7 @@
 	    this.textBox1.Name = "textBox1";
 	    this.textBox1.Size = new System.Drawing.Size(349, 424);
 	    this.textBox1.TabIndex = 1;
-	    this.textBox1.Text = "VirusTotals.com\r\n<filler>\r\n<filler>";
+	    this.textBox1.Text = "VirusTotals.com\r\n";
 	    // 
 	    // clearedWebLabel
 	    // 
@@ -275,9 +308,9 @@
 	    this.clearedWebLabel.Location = new System.Drawing.Point(8, 26);
 	    this.clearedWebLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.clearedWebLabel.Name = "clearedWebLabel";
-	    this.clearedWebLabel.Size = new System.Drawing.Size(123, 32);
+	    this.clearedWebLabel.Size = new System.Drawing.Size(194, 32);
 	    this.clearedWebLabel.TabIndex = 0;
-	    this.clearedWebLabel.Text = "Cleared:";
+	    this.clearedWebLabel.Text = "Cleared Sites:";
 	    // 
 	    // DomainPanel
 	    // 
@@ -291,7 +324,7 @@
 	    this.DomainPanel.Location = new System.Drawing.Point(0, 0);
 	    this.DomainPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.DomainPanel.Name = "DomainPanel";
-	    this.DomainPanel.Size = new System.Drawing.Size(2500, 1207);
+	    this.DomainPanel.Size = new System.Drawing.Size(2341, 1207);
 	    this.DomainPanel.TabIndex = 2;
 	    // 
 	    // domainADD
@@ -357,7 +390,7 @@
 	    this.blockIPPanel.Location = new System.Drawing.Point(0, 0);
 	    this.blockIPPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.blockIPPanel.Name = "blockIPPanel";
-	    this.blockIPPanel.Size = new System.Drawing.Size(2500, 1207);
+	    this.blockIPPanel.Size = new System.Drawing.Size(2341, 1207);
 	    this.blockIPPanel.TabIndex = 7;
 	    // 
 	    // rightArrowforip
@@ -415,74 +448,32 @@
 	    this.blockIP.Text = "Add IPs to block below:";
 	    this.blockIP.Click += new System.EventHandler(this.blockIP_Click);
 	    // 
-	    // HomePanel
-	    // 
-	    this.HomePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomePanel.BackgroundImage")));
-	    this.HomePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.HomePanel.Controls.Add(this.welcomeMessagelabel);
-	    this.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-	    this.HomePanel.Location = new System.Drawing.Point(0, 0);
-	    this.HomePanel.Name = "HomePanel";
-	    this.HomePanel.Size = new System.Drawing.Size(2500, 1207);
-	    this.HomePanel.TabIndex = 4;
-	    // 
-	    // welcomeMessagelabel
-	    // 
-	    this.welcomeMessagelabel.AutoSize = true;
-	    this.welcomeMessagelabel.Location = new System.Drawing.Point(1240, 410);
-	    this.welcomeMessagelabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-	    this.welcomeMessagelabel.Name = "welcomeMessagelabel";
-	    this.welcomeMessagelabel.Size = new System.Drawing.Size(309, 32);
-	    this.welcomeMessagelabel.TabIndex = 1;
-	    this.welcomeMessagelabel.Text = "Welcome Mr. Anderson";
-	    // 
 	    // LandingPanel
 	    // 
+	    this.LandingPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 	    this.LandingPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LandingPanel.BackgroundImage")));
 	    this.LandingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.LandingPanel.Controls.Add(this.PasswordLBL);
-	    this.LandingPanel.Controls.Add(this.UsernameLBL);
 	    this.LandingPanel.Controls.Add(this.loginButton);
 	    this.LandingPanel.Controls.Add(this.password_field);
 	    this.LandingPanel.Controls.Add(this.username_field);
+	    this.LandingPanel.Controls.Add(this.PasswordLBL);
+	    this.LandingPanel.Controls.Add(this.UsernameLBL);
 	    this.LandingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.LandingPanel.Location = new System.Drawing.Point(0, 0);
 	    this.LandingPanel.Name = "LandingPanel";
 	    this.LandingPanel.Size = new System.Drawing.Size(2752, 1207);
 	    this.LandingPanel.TabIndex = 8;
 	    // 
-	    // PasswordLBL
-	    // 
-	    this.PasswordLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
-	    this.PasswordLBL.AutoSize = true;
-	    this.PasswordLBL.BackColor = System.Drawing.SystemColors.AppWorkspace;
-	    this.PasswordLBL.Location = new System.Drawing.Point(1095, 590);
-	    this.PasswordLBL.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-	    this.PasswordLBL.Name = "PasswordLBL";
-	    this.PasswordLBL.Size = new System.Drawing.Size(147, 32);
-	    this.PasswordLBL.TabIndex = 6;
-	    this.PasswordLBL.Text = "Password:";
-	    // 
-	    // UsernameLBL
-	    // 
-	    this.UsernameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
-	    this.UsernameLBL.BackColor = System.Drawing.SystemColors.AppWorkspace;
-	    this.UsernameLBL.Location = new System.Drawing.Point(1095, 511);
-	    this.UsernameLBL.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-	    this.UsernameLBL.Name = "UsernameLBL";
-	    this.UsernameLBL.Size = new System.Drawing.Size(153, 32);
-	    this.UsernameLBL.TabIndex = 5;
-	    this.UsernameLBL.Text = "Username:";
-	    // 
 	    // loginButton
 	    // 
 	    this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
 	    this.loginButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 	    this.loginButton.Cursor = System.Windows.Forms.Cursors.AppStarting;
-	    this.loginButton.Location = new System.Drawing.Point(1283, 764);
+	    this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.loginButton.Location = new System.Drawing.Point(1277, 748);
 	    this.loginButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.loginButton.Name = "loginButton";
-	    this.loginButton.Size = new System.Drawing.Size(200, 55);
+	    this.loginButton.Size = new System.Drawing.Size(198, 89);
 	    this.loginButton.TabIndex = 4;
 	    this.loginButton.Text = "Login";
 	    this.loginButton.UseVisualStyleBackColor = false;
@@ -491,7 +482,7 @@
 	    // password_field
 	    // 
 	    this.password_field.Anchor = System.Windows.Forms.AnchorStyles.None;
-	    this.password_field.Location = new System.Drawing.Point(1335, 587);
+	    this.password_field.Location = new System.Drawing.Point(1368, 607);
 	    this.password_field.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.password_field.Name = "password_field";
 	    this.password_field.Size = new System.Drawing.Size(369, 38);
@@ -500,19 +491,46 @@
 	    // username_field
 	    // 
 	    this.username_field.Anchor = System.Windows.Forms.AnchorStyles.None;
-	    this.username_field.Location = new System.Drawing.Point(1335, 508);
+	    this.username_field.Location = new System.Drawing.Point(1368, 516);
 	    this.username_field.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.username_field.Name = "username_field";
 	    this.username_field.Size = new System.Drawing.Size(369, 38);
 	    this.username_field.TabIndex = 2;
+	    // 
+	    // PasswordLBL
+	    // 
+	    this.PasswordLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.PasswordLBL.AutoSize = true;
+	    this.PasswordLBL.BackColor = System.Drawing.Color.Transparent;
+	    this.PasswordLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.PasswordLBL.ForeColor = System.Drawing.Color.White;
+	    this.PasswordLBL.Location = new System.Drawing.Point(1049, 587);
+	    this.PasswordLBL.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+	    this.PasswordLBL.Name = "PasswordLBL";
+	    this.PasswordLBL.Size = new System.Drawing.Size(279, 63);
+	    this.PasswordLBL.TabIndex = 6;
+	    this.PasswordLBL.Text = "Password:";
+	    // 
+	    // UsernameLBL
+	    // 
+	    this.UsernameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.UsernameLBL.BackColor = System.Drawing.Color.Transparent;
+	    this.UsernameLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.UsernameLBL.ForeColor = System.Drawing.Color.White;
+	    this.UsernameLBL.Location = new System.Drawing.Point(1047, 497);
+	    this.UsernameLBL.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+	    this.UsernameLBL.Name = "UsernameLBL";
+	    this.UsernameLBL.Size = new System.Drawing.Size(331, 63);
+	    this.UsernameLBL.TabIndex = 5;
+	    this.UsernameLBL.Text = "Username:";
 	    // 
 	    // Form_Firewall
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
 	    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 	    this.ClientSize = new System.Drawing.Size(2752, 1207);
-	    this.Controls.Add(this.LandingPanel);
 	    this.Controls.Add(this.FirewallSplitContainer);
+	    this.Controls.Add(this.LandingPanel);
 	    this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Name = "Form_Firewall";
@@ -523,6 +541,8 @@
 	    this.FirewallSplitContainer.Panel2.ResumeLayout(false);
 	    ((System.ComponentModel.ISupportInitialize)(this.FirewallSplitContainer)).EndInit();
 	    this.FirewallSplitContainer.ResumeLayout(false);
+	    this.HomePanel.ResumeLayout(false);
+	    this.HomePanel.PerformLayout();
 	    this.webaccessPanel.ResumeLayout(false);
 	    this.webaccessPanel.PerformLayout();
 	    this.webPanelAccess2.ResumeLayout(false);
@@ -531,8 +551,6 @@
 	    this.DomainPanel.PerformLayout();
 	    this.blockIPPanel.ResumeLayout(false);
 	    this.blockIPPanel.PerformLayout();
-	    this.HomePanel.ResumeLayout(false);
-	    this.HomePanel.PerformLayout();
 	    this.LandingPanel.ResumeLayout(false);
 	    this.LandingPanel.PerformLayout();
 	    this.ResumeLayout(false);
@@ -551,8 +569,8 @@
         private System.Windows.Forms.Label ipYeahweblocked;
         private System.Windows.Forms.TextBox testipWindow;
         private System.Windows.Forms.Panel DomainPanel;
-        private System.Windows.Forms.Button webpageUsage;
-        private System.Windows.Forms.Button domainSwitch;
+        private System.Windows.Forms.Button webTab;
+        private System.Windows.Forms.Button domainTab;
         private System.Windows.Forms.Label discMessage;
         private System.Windows.Forms.Label labelManageAdd;
         private System.Windows.Forms.Button domainADD;
@@ -561,7 +579,6 @@
         private System.Windows.Forms.Panel webaccessPanel;
         private System.Windows.Forms.Label webmessageLabel;
         private System.Windows.Forms.Panel webPanelAccess2;
-        private System.Windows.Forms.Button webaccessBtnMedian;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label clearedWebLabel;
         private System.Windows.Forms.Label blacklistWebLabel;
@@ -574,7 +591,8 @@
 	private System.Windows.Forms.Button loginButton;
 	private System.Windows.Forms.TextBox password_field;
 	private System.Windows.Forms.TextBox username_field;
-	private System.Windows.Forms.Button blockedIps;
+	private System.Windows.Forms.Button ipTab;
 	private System.Windows.Forms.Panel HomePanel;
+	private System.Windows.Forms.TextBox homeInstructions;
     }
 }

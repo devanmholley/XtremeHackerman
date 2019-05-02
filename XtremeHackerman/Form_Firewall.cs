@@ -23,18 +23,18 @@ namespace XtremeHackerman
         List<string> blacklistDomains = new List<string>();
         List<string> blacklistWebpages = new List<string>();
 
+	private void Firewall_Load(object sender, EventArgs e)
+	{
+	    LandingPanel.BringToFront();
+	}
+
 	private void loginButton_Click(object sender, EventArgs e)
 	{
 	    LandingPanel.Visible = false;
 	    FirewallSplitContainer.Visible = true;
-	}
-
-	private void Firewall_Load(object sender, EventArgs e)
-        {
 	    HomePanel.BringToFront();
 	}
 
-	
 	private void homeButton_Click(object sender, EventArgs e)
 	{
 	    // Home button go to welcome page

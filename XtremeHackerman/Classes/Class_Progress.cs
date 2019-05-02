@@ -43,10 +43,10 @@ namespace XtremeHackerman.Classes
 
 	    EventLogic.PhishingEmailAttack(); // the first email
 
-	    //Populate phishing email every 5 seconds
+	    //Populate phishing email every 15 seconds
 	    timer = new Timer();
 	    timer.Tick += new EventHandler(timer_Tick);
-	    timer.Interval = 5000; 
+	    timer.Interval = 15000; 
 	    timer.Start();
 	    /**********************************/
 	}
