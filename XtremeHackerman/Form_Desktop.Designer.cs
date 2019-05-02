@@ -417,6 +417,7 @@
 	    this.HintButton.Text = "Hint";
 	    this.HintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 	    this.HintButton.UseVisualStyleBackColor = true;
+	    this.HintButton.Click += new System.EventHandler(this.HintButton_Click);
 	    // 
 	    // eventLBL
 	    // 

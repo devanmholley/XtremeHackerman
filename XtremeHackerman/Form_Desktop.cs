@@ -268,5 +268,21 @@ namespace XtremeHackerman
 	{
 	    BackgroundRefresh();
 	}
+
+	private void HintButton_Click(object sender, EventArgs e)
+	{
+	    int step = 0;
+	    if (Class_Progress.Percent == 10)
+		step = 0;
+	    else if (Class_Progress.Percent == 28)
+		step = 1;
+	    else if (Class_Progress.Percent == 46)
+		step = 2;
+	    else if (Class_Progress.Percent == 64)
+		step = 3;
+	    else if (Class_Progress.Percent == 82)
+		step = 4;
+	    MessageBox.Show(Class_Progress.Steps[step]);
+	}
     }
 }
