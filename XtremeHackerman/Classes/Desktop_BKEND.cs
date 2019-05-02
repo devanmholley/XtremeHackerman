@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tulpep.NotificationWindow;
 
 namespace XtremeHackerman.Classes
 {
@@ -22,6 +24,9 @@ namespace XtremeHackerman.Classes
         /// </summary>
         public static bool CMD_ON = true;
 
+	/// <summary>
+	/// Close all open forms upon exiting the Desktop and return back to title screen
+	/// </summary>
 	public static void CloseOpenForms()
 	{
 	    //Close any forms that are open if Desktop is closed, to go back to title screen
@@ -38,6 +43,20 @@ namespace XtremeHackerman.Classes
 		    f.Close();
 		}
 	    }
+	}
+
+	public static void Notification(string message)
+	{
+	    // Initialization of Notification Popup 
+	    string messagetime = System.DateTime.Now.ToString("ddd  HH:mm:ss");
+	    string messageBody = message;
+	    var popupNotifier = new PopupNotifier();
+	    popupNotifier.TitleText = messagetime;
+	    popupNotifier.ContentText = messageBody;
+	    popupNotifier.IsRightToLeft = false;
+	    popupNotifier.BodyColor = Color.Purple;
+	    popupNotifier.Delay = 10000;
+	    popupNotifier.Popup();
 	}
     }
 }

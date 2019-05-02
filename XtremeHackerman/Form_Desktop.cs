@@ -63,6 +63,8 @@ namespace XtremeHackerman
 	    // FileManager icon button implementation
 	    var formFileManager = new Form_FileManager();
 	    formFileManager.Show();
+
+	    Desktop_BKEND.Notification("hell yeah");
 	}
 
 	private void commandIconClick(object sender, EventArgs e)

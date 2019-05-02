@@ -13,7 +13,7 @@ namespace XtremeHackerman
 	public Form_TitleScreen()
         {
             InitializeComponent();
-	    Class_Progress GameOn = new Class_Progress();
+	    Class_Progress GameOn = new Class_Progress(); //start the event attacks
 	    GameOn.Play();
         }
 
