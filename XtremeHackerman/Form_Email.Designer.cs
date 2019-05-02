@@ -30,17 +30,19 @@
         {
 	    this.components = new System.ComponentModel.Container();
 	    this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+	    this.email_inbox = new System.Windows.Forms.ListBox();
+	    this.emailInboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+	    this.FoldersPanel = new System.Windows.Forms.Panel();
 	    this.email_trashBTN = new System.Windows.Forms.Button();
 	    this.email_composeBTN = new System.Windows.Forms.Button();
 	    this.email_spamBTN = new System.Windows.Forms.Button();
 	    this.email_flaggedBTN = new System.Windows.Forms.Button();
 	    this.email_inboxBTN = new System.Windows.Forms.Button();
-	    this.email_inbox = new System.Windows.Forms.ListBox();
-	    this.emailInboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
 	    this.LL_Phish = new System.Windows.Forms.LinkLabel();
 	    this.rightClickLinkMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 	    this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 	    this.saveLinkAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+	    this.email_bodyTXT = new System.Windows.Forms.TextBox();
 	    this.panel1 = new System.Windows.Forms.Panel();
 	    this.btn_Send = new System.Windows.Forms.Button();
 	    this.email_mvtrashBTN = new System.Windows.Forms.Button();
@@ -49,7 +51,6 @@
 	    this.email_forwardBTN = new System.Windows.Forms.Button();
 	    this.email_replyBTN = new System.Windows.Forms.Button();
 	    this.email_subjectTXT = new System.Windows.Forms.TextBox();
-	    this.email_bodyTXT = new System.Windows.Forms.TextBox();
 	    this.email_header = new System.Windows.Forms.Panel();
 	    this.targetTXT = new System.Windows.Forms.TextBox();
 	    this.Date_TXT = new System.Windows.Forms.Label();
@@ -59,16 +60,15 @@
 	    this.email_dateTXT = new System.Windows.Forms.TextBox();
 	    this.email_destTXT = new System.Windows.Forms.TextBox();
 	    this.email_sourceTXT = new System.Windows.Forms.TextBox();
-	    this.FoldersPanel = new System.Windows.Forms.Panel();
 	    ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 	    this.splitContainer1.Panel1.SuspendLayout();
 	    this.splitContainer1.Panel2.SuspendLayout();
 	    this.splitContainer1.SuspendLayout();
 	    ((System.ComponentModel.ISupportInitialize)(this.emailInboxBindingSource)).BeginInit();
+	    this.FoldersPanel.SuspendLayout();
 	    this.rightClickLinkMenu.SuspendLayout();
 	    this.panel1.SuspendLayout();
 	    this.email_header.SuspendLayout();
-	    this.FoldersPanel.SuspendLayout();
 	    this.SuspendLayout();
 	    // 
 	    // splitContainer1
@@ -96,6 +96,36 @@
 	    this.splitContainer1.SplitterDistance = 706;
 	    this.splitContainer1.SplitterWidth = 11;
 	    this.splitContainer1.TabIndex = 0;
+	    // 
+	    // email_inbox
+	    // 
+	    this.email_inbox.DataSource = this.emailInboxBindingSource;
+	    this.email_inbox.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.email_inbox.FormattingEnabled = true;
+	    this.email_inbox.ItemHeight = 31;
+	    this.email_inbox.Location = new System.Drawing.Point(0, 274);
+	    this.email_inbox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.email_inbox.Name = "email_inbox";
+	    this.email_inbox.Size = new System.Drawing.Size(706, 799);
+	    this.email_inbox.TabIndex = 0;
+	    this.email_inbox.SelectedIndexChanged += new System.EventHandler(this.email_inbox_SelectedIndexChanged);
+	    // 
+	    // emailInboxBindingSource
+	    // 
+	    this.emailInboxBindingSource.DataSource = typeof(XtremeHackerman.Classes.Class_Email);
+	    // 
+	    // FoldersPanel
+	    // 
+	    this.FoldersPanel.Controls.Add(this.email_trashBTN);
+	    this.FoldersPanel.Controls.Add(this.email_composeBTN);
+	    this.FoldersPanel.Controls.Add(this.email_spamBTN);
+	    this.FoldersPanel.Controls.Add(this.email_flaggedBTN);
+	    this.FoldersPanel.Controls.Add(this.email_inboxBTN);
+	    this.FoldersPanel.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.FoldersPanel.Location = new System.Drawing.Point(0, 0);
+	    this.FoldersPanel.Name = "FoldersPanel";
+	    this.FoldersPanel.Size = new System.Drawing.Size(706, 274);
+	    this.FoldersPanel.TabIndex = 6;
 	    // 
 	    // email_trashBTN
 	    // 
@@ -175,23 +205,6 @@
 	    this.email_inboxBTN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 	    this.email_inboxBTN.UseVisualStyleBackColor = false;
 	    // 
-	    // email_inbox
-	    // 
-	    this.email_inbox.DataSource = this.emailInboxBindingSource;
-	    this.email_inbox.Dock = System.Windows.Forms.DockStyle.Fill;
-	    this.email_inbox.FormattingEnabled = true;
-	    this.email_inbox.ItemHeight = 31;
-	    this.email_inbox.Location = new System.Drawing.Point(0, 274);
-	    this.email_inbox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.email_inbox.Name = "email_inbox";
-	    this.email_inbox.Size = new System.Drawing.Size(706, 799);
-	    this.email_inbox.TabIndex = 0;
-	    this.email_inbox.SelectedIndexChanged += new System.EventHandler(this.email_inbox_SelectedIndexChanged);
-	    // 
-	    // emailInboxBindingSource
-	    // 
-	    this.emailInboxBindingSource.DataSource = typeof(XtremeHackerman.Classes.Class_Email);
-	    // 
 	    // LL_Phish
 	    // 
 	    this.LL_Phish.AutoSize = true;
@@ -213,21 +226,36 @@
             this.saveToolStripMenuItem,
             this.saveLinkAsToolStripMenuItem});
 	    this.rightClickLinkMenu.Name = "rightClickLinkMenu";
-	    this.rightClickLinkMenu.Size = new System.Drawing.Size(259, 96);
+	    this.rightClickLinkMenu.Size = new System.Drawing.Size(361, 151);
 	    // 
 	    // saveToolStripMenuItem
 	    // 
 	    this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-	    this.saveToolStripMenuItem.Size = new System.Drawing.Size(258, 46);
+	    this.saveToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
 	    this.saveToolStripMenuItem.Text = "Save Link";
 	    this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveLinkToolStripMenuItem_Click);
 	    // 
 	    // saveLinkAsToolStripMenuItem
 	    // 
 	    this.saveLinkAsToolStripMenuItem.Name = "saveLinkAsToolStripMenuItem";
-	    this.saveLinkAsToolStripMenuItem.Size = new System.Drawing.Size(258, 46);
+	    this.saveLinkAsToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
 	    this.saveLinkAsToolStripMenuItem.Text = "Save Link As";
+	    this.saveLinkAsToolStripMenuItem.Visible = false;
 	    this.saveLinkAsToolStripMenuItem.Click += new System.EventHandler(this.saveLinkAsToolStripMenuItem_Click);
+	    // 
+	    // email_bodyTXT
+	    // 
+	    this.email_bodyTXT.BackColor = System.Drawing.Color.White;
+	    this.email_bodyTXT.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.email_bodyTXT.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_bodyTXT.Location = new System.Drawing.Point(0, 412);
+	    this.email_bodyTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.email_bodyTXT.Multiline = true;
+	    this.email_bodyTXT.Name = "email_bodyTXT";
+	    this.email_bodyTXT.ReadOnly = true;
+	    this.email_bodyTXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+	    this.email_bodyTXT.Size = new System.Drawing.Size(1416, 661);
+	    this.email_bodyTXT.TabIndex = 1;
 	    // 
 	    // panel1
 	    // 
@@ -322,20 +350,6 @@
 	    this.email_subjectTXT.ReadOnly = true;
 	    this.email_subjectTXT.Size = new System.Drawing.Size(1337, 61);
 	    this.email_subjectTXT.TabIndex = 0;
-	    // 
-	    // email_bodyTXT
-	    // 
-	    this.email_bodyTXT.BackColor = System.Drawing.Color.White;
-	    this.email_bodyTXT.Dock = System.Windows.Forms.DockStyle.Fill;
-	    this.email_bodyTXT.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.email_bodyTXT.Location = new System.Drawing.Point(0, 412);
-	    this.email_bodyTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.email_bodyTXT.Multiline = true;
-	    this.email_bodyTXT.Name = "email_bodyTXT";
-	    this.email_bodyTXT.ReadOnly = true;
-	    this.email_bodyTXT.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-	    this.email_bodyTXT.Size = new System.Drawing.Size(1416, 661);
-	    this.email_bodyTXT.TabIndex = 1;
 	    // 
 	    // email_header
 	    // 
@@ -448,19 +462,6 @@
 	    this.email_sourceTXT.Size = new System.Drawing.Size(1165, 43);
 	    this.email_sourceTXT.TabIndex = 0;
 	    // 
-	    // FoldersPanel
-	    // 
-	    this.FoldersPanel.Controls.Add(this.email_trashBTN);
-	    this.FoldersPanel.Controls.Add(this.email_composeBTN);
-	    this.FoldersPanel.Controls.Add(this.email_spamBTN);
-	    this.FoldersPanel.Controls.Add(this.email_flaggedBTN);
-	    this.FoldersPanel.Controls.Add(this.email_inboxBTN);
-	    this.FoldersPanel.Dock = System.Windows.Forms.DockStyle.Top;
-	    this.FoldersPanel.Location = new System.Drawing.Point(0, 0);
-	    this.FoldersPanel.Name = "FoldersPanel";
-	    this.FoldersPanel.Size = new System.Drawing.Size(706, 274);
-	    this.FoldersPanel.TabIndex = 6;
-	    // 
 	    // Form_Email
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -478,12 +479,12 @@
 	    ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 	    this.splitContainer1.ResumeLayout(false);
 	    ((System.ComponentModel.ISupportInitialize)(this.emailInboxBindingSource)).EndInit();
+	    this.FoldersPanel.ResumeLayout(false);
 	    this.rightClickLinkMenu.ResumeLayout(false);
 	    this.panel1.ResumeLayout(false);
 	    this.panel1.PerformLayout();
 	    this.email_header.ResumeLayout(false);
 	    this.email_header.PerformLayout();
-	    this.FoldersPanel.ResumeLayout(false);
 	    this.ResumeLayout(false);
 
         }

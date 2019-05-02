@@ -248,5 +248,20 @@ namespace XtremeHackerman
 	{
 	    folderView.Nodes.Clear();
 	}
+
+	private void fileView_DoubleClick(object sender, EventArgs e)
+	{
+	    //Allow user to change folders from clicking on a folder in FileView
+
+	    ListViewItem currFile = fileView.SelectedItems[0];
+	    TreeNode currFolder = folderView.SelectedNode; //current folder	
+	    int index = fileView.SelectedItems[0].Index;
+
+	    if (currFile.SubItems[1].Text == "File Folder")
+	    {
+		folderView.SelectedNode = currFolder.Nodes[index];
+		Class_FileManager.refreshFileView(fileView, folderView.SelectedNode);
+	    }
+	}
     }
 }

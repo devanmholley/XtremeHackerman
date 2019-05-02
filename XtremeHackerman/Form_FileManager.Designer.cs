@@ -180,6 +180,7 @@
 	    this.fileView.UseCompatibleStateImageBehavior = false;
 	    this.fileView.View = System.Windows.Forms.View.Details;
 	    this.fileView.AfterLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.fileView_AfterLabelEdit);
+	    this.fileView.DoubleClick += new System.EventHandler(this.fileView_DoubleClick);
 	    // 
 	    // columnHeader1
 	    // 
