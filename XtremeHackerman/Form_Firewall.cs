@@ -122,7 +122,7 @@ namespace XtremeHackerman
             blacklistDomains.ForEach(i => domainEntered.Text += i + Environment.NewLine);
 
 	    if (domainEntered.Text.Contains("fake"))
-		Class_Progress.StepCompleted("Phishing Email", 5); //step 5 completed -> Phishing Event completed
+		Class_Progress.StepCompleted("Phishing Email", 5); //step five completed -> Phishing Event completed
 	}
 
         private void webpageUsage_Click(object sender, EventArgs e)

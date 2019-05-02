@@ -46,6 +46,8 @@ namespace XtremeHackerman
 	    {
 		StartMenuPanel.Visible = false;
 	    }
+
+	    Class_Progress.StepCompleted("Ransomware", 1); //step one completed
 	}
 
 	private void FileManagerButtonClick(object sender, EventArgs e)
@@ -84,6 +86,7 @@ namespace XtremeHackerman
 	{
 	    RestartBootOptions.ContextMenu = new ContextMenu();
 	    RestartBootOptions.Show(Cursor.Position);
+	    Class_Progress.StepCompleted("Ransomware", 2); //step two completed
 	}
 
 	private void Shutdown_Click(object sender, EventArgs e)
@@ -139,6 +142,7 @@ namespace XtremeHackerman
 	{
 	    var formAntivirus = new Form_Anitvirus();
 	    formAntivirus.Show();
+	    Class_Progress.StepCompleted("Ransomware", 4); //step four completed
 	}
 
 	private void desktopBootOptions()
@@ -211,6 +215,7 @@ namespace XtremeHackerman
 	    this.Opacity = 100;
 	    RestartBootOptions.Close();
 	    BackgroundRefresh();
+	    Class_Progress.StepCompleted("Ransomware", 3); //step three completed
 	}
 
 	public void BackgroundRefresh()

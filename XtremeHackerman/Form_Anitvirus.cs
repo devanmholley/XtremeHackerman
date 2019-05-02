@@ -40,6 +40,9 @@ namespace XtremeHackerman
 
 	private void removeButton_Click(object sender, EventArgs e)
 	{
+	    foreach (ListViewItem malware in Class_Antivirus.MalwareList)
+		if (malware.Text == "not ransomware")
+		    Class_Progress.StepCompleted("Ransomware", 5); //step five completed -> Ransomware Event completed
 	    Class_Antivirus.RemoveAllThreats();
 	    malwareListBox.Items.Clear(); //delete in UI
 	}

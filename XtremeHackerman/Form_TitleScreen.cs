@@ -96,7 +96,8 @@ namespace XtremeHackerman
         {
             // Enable Safe Mode Usage 
             BootOptions.enableSafeMode = true;
-        }
+	    Class_Progress.StepCompleted("Ransomware", 3); //step three completed
+	}
 
         private void disableToolStripMenuItem_Click(object sender, EventArgs e)
         {   // Disallow Safe Mode Usage 
