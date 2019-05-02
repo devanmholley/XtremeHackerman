@@ -105,7 +105,7 @@
 	    // toolStripTextBox1
 	    // 
 	    this.toolStripTextBox1.Name = "toolStripTextBox1";
-	    this.toolStripTextBox1.Size = new System.Drawing.Size(260, 48);
+	    this.toolStripTextBox1.Size = new System.Drawing.Size(700, 48);
 	    // 
 	    // toolStripButton4
 	    // 
@@ -132,15 +132,15 @@
 	    // companyFirewallToolStripMenuItem
 	    // 
 	    this.companyFirewallToolStripMenuItem.Name = "companyFirewallToolStripMenuItem";
-	    this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(367, 46);
-	    this.companyFirewallToolStripMenuItem.Text = "Company Firewall";
+	    this.companyFirewallToolStripMenuItem.Size = new System.Drawing.Size(347, 46);
+	    this.companyFirewallToolStripMenuItem.Text = "Manage Firewall";
 	    this.companyFirewallToolStripMenuItem.Click += new System.EventHandler(this.companyFirewallToolStripMenuItem_Click);
 	    // 
 	    // virusTotalToolStripMenuItem
 	    // 
 	    this.virusTotalToolStripMenuItem.Name = "virusTotalToolStripMenuItem";
-	    this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(367, 46);
-	    this.virusTotalToolStripMenuItem.Text = "Virus Total";
+	    this.virusTotalToolStripMenuItem.Size = new System.Drawing.Size(347, 46);
+	    this.virusTotalToolStripMenuItem.Text = "VirusTotals.com";
 	    this.virusTotalToolStripMenuItem.Click += new System.EventHandler(this.virusTotalToolStripMenuItem_Click);
 	    // 
 	    // errorLabel

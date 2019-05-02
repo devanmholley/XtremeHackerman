@@ -60,8 +60,8 @@
 	    this.HomePanel = new System.Windows.Forms.Panel();
 	    this.welcomeMessagelabel = new System.Windows.Forms.Label();
 	    this.LandingPanel = new System.Windows.Forms.Panel();
-	    this.label2 = new System.Windows.Forms.Label();
-	    this.label1 = new System.Windows.Forms.Label();
+	    this.PasswordLBL = new System.Windows.Forms.Label();
+	    this.UsernameLBL = new System.Windows.Forms.Label();
 	    this.loginButton = new System.Windows.Forms.Button();
 	    this.password_field = new System.Windows.Forms.TextBox();
 	    this.username_field = new System.Windows.Forms.TextBox();
@@ -114,7 +114,6 @@
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.blockIPPanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.HomePanel);
 	    this.FirewallSplitContainer.Panel2.Tag = "homePagefire";
-	    this.FirewallSplitContainer.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
 	    this.FirewallSplitContainer.Size = new System.Drawing.Size(2752, 1207);
 	    this.FirewallSplitContainer.SplitterDistance = 241;
 	    this.FirewallSplitContainer.SplitterWidth = 11;
@@ -217,7 +216,6 @@
 	    this.waccessInBtn.TabIndex = 6;
 	    this.waccessInBtn.Text = "Add:";
 	    this.waccessInBtn.UseVisualStyleBackColor = false;
-	    this.waccessInBtn.Click += new System.EventHandler(this.waccessInBtn_Click);
 	    // 
 	    // waccessBLEntry
 	    // 
@@ -385,7 +383,6 @@
 	    this.testipWindow.Size = new System.Drawing.Size(755, 654);
 	    this.testipWindow.TabIndex = 4;
 	    this.testipWindow.Text = "\r\n";
-	    this.testipWindow.TextChanged += new System.EventHandler(this.testipWindow_TextChanged);
 	    // 
 	    // ipYeahweblocked
 	    // 
@@ -397,7 +394,6 @@
 	    this.ipYeahweblocked.Size = new System.Drawing.Size(214, 32);
 	    this.ipYeahweblocked.TabIndex = 3;
 	    this.ipYeahweblocked.Text = "BlackListed IPS";
-	    this.ipYeahweblocked.Click += new System.EventHandler(this.ipYeahweblocked_Click);
 	    // 
 	    // ipEntry
 	    // 
@@ -406,7 +402,6 @@
 	    this.ipEntry.Name = "ipEntry";
 	    this.ipEntry.Size = new System.Drawing.Size(308, 38);
 	    this.ipEntry.TabIndex = 0;
-	    this.ipEntry.TextChanged += new System.EventHandler(this.ipEntry_TextChanged);
 	    // 
 	    // blockIP
 	    // 
@@ -445,8 +440,8 @@
 	    // 
 	    this.LandingPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LandingPanel.BackgroundImage")));
 	    this.LandingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.LandingPanel.Controls.Add(this.label2);
-	    this.LandingPanel.Controls.Add(this.label1);
+	    this.LandingPanel.Controls.Add(this.PasswordLBL);
+	    this.LandingPanel.Controls.Add(this.UsernameLBL);
 	    this.LandingPanel.Controls.Add(this.loginButton);
 	    this.LandingPanel.Controls.Add(this.password_field);
 	    this.LandingPanel.Controls.Add(this.username_field);
@@ -456,33 +451,35 @@
 	    this.LandingPanel.Size = new System.Drawing.Size(2752, 1207);
 	    this.LandingPanel.TabIndex = 8;
 	    // 
-	    // label2
+	    // PasswordLBL
 	    // 
-	    this.label2.AutoSize = true;
-	    this.label2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-	    this.label2.Location = new System.Drawing.Point(1528, 701);
-	    this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-	    this.label2.Name = "label2";
-	    this.label2.Size = new System.Drawing.Size(147, 32);
-	    this.label2.TabIndex = 6;
-	    this.label2.Text = "Password:";
+	    this.PasswordLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.PasswordLBL.AutoSize = true;
+	    this.PasswordLBL.BackColor = System.Drawing.SystemColors.AppWorkspace;
+	    this.PasswordLBL.Location = new System.Drawing.Point(1095, 590);
+	    this.PasswordLBL.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+	    this.PasswordLBL.Name = "PasswordLBL";
+	    this.PasswordLBL.Size = new System.Drawing.Size(147, 32);
+	    this.PasswordLBL.TabIndex = 6;
+	    this.PasswordLBL.Text = "Password:";
 	    // 
-	    // label1
+	    // UsernameLBL
 	    // 
-	    this.label1.AutoSize = true;
-	    this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-	    this.label1.Location = new System.Drawing.Point(1520, 599);
-	    this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-	    this.label1.Name = "label1";
-	    this.label1.Size = new System.Drawing.Size(153, 32);
-	    this.label1.TabIndex = 5;
-	    this.label1.Text = "Username:";
+	    this.UsernameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.UsernameLBL.BackColor = System.Drawing.SystemColors.AppWorkspace;
+	    this.UsernameLBL.Location = new System.Drawing.Point(1095, 511);
+	    this.UsernameLBL.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+	    this.UsernameLBL.Name = "UsernameLBL";
+	    this.UsernameLBL.Size = new System.Drawing.Size(153, 32);
+	    this.UsernameLBL.TabIndex = 5;
+	    this.UsernameLBL.Text = "Username:";
 	    // 
 	    // loginButton
 	    // 
+	    this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
 	    this.loginButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 	    this.loginButton.Cursor = System.Windows.Forms.Cursors.AppStarting;
-	    this.loginButton.Location = new System.Drawing.Point(1424, 827);
+	    this.loginButton.Location = new System.Drawing.Point(1283, 764);
 	    this.loginButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.loginButton.Name = "loginButton";
 	    this.loginButton.Size = new System.Drawing.Size(200, 55);
@@ -493,7 +490,8 @@
 	    // 
 	    // password_field
 	    // 
-	    this.password_field.Location = new System.Drawing.Point(1424, 737);
+	    this.password_field.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.password_field.Location = new System.Drawing.Point(1335, 587);
 	    this.password_field.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.password_field.Name = "password_field";
 	    this.password_field.Size = new System.Drawing.Size(369, 38);
@@ -501,7 +499,8 @@
 	    // 
 	    // username_field
 	    // 
-	    this.username_field.Location = new System.Drawing.Point(1424, 637);
+	    this.username_field.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.username_field.Location = new System.Drawing.Point(1335, 508);
 	    this.username_field.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.username_field.Name = "username_field";
 	    this.username_field.Size = new System.Drawing.Size(369, 38);
@@ -512,8 +511,8 @@
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
 	    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 	    this.ClientSize = new System.Drawing.Size(2752, 1207);
-	    this.Controls.Add(this.FirewallSplitContainer);
 	    this.Controls.Add(this.LandingPanel);
+	    this.Controls.Add(this.FirewallSplitContainer);
 	    this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Name = "Form_Firewall";
@@ -570,8 +569,8 @@
         private System.Windows.Forms.TextBox waccessBLEntry;
         private System.Windows.Forms.TextBox waccessTextEntry;
 	private System.Windows.Forms.Panel LandingPanel;
-	private System.Windows.Forms.Label label2;
-	private System.Windows.Forms.Label label1;
+	private System.Windows.Forms.Label PasswordLBL;
+	private System.Windows.Forms.Label UsernameLBL;
 	private System.Windows.Forms.Button loginButton;
 	private System.Windows.Forms.TextBox password_field;
 	private System.Windows.Forms.TextBox username_field;

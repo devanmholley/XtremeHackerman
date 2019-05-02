@@ -52,6 +52,7 @@ namespace XtremeHackerman
 	    WebsitePanel.Controls.Add(formFirewall);
 	    formFirewall.Dock = DockStyle.Fill;
 	    formFirewall.Show();
+	    toolStripTextBox1.Text = "firewall.com";
 	    Class_Progress.StepCompleted("Phishing Email", 3); //step three completed
 	}
 
@@ -66,6 +67,7 @@ namespace XtremeHackerman
 	    formVirusTotal.TopLevel = false;
 	    WebsitePanel.Controls.Add(formVirusTotal);
 	    formVirusTotal.Dock = DockStyle.Fill;
+	    toolStripTextBox1.Text = "virustotals.com";
 	    formVirusTotal.Show();
 	}
     }
