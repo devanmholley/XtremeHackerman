@@ -15,7 +15,7 @@ namespace XtremeHackerman.Classes
 	public static int Percent; //how far user has completed steps
 	public static string[] Steps; //list of recovery steps
 
-	string[] PhishSteps = new string[]
+	public static string[] PhishSteps = new string[]
 	{
 	    "Inspect Email",
 	    "Open Internet",
@@ -24,7 +24,7 @@ namespace XtremeHackerman.Classes
 	    "Block Email Domain"
 	};
 
-	string[] RansomwareSteps = new string[]
+	public static string[] RansomwareSteps = new string[]
 	{
 	    "Open Start Menu",
 	    "Click Restart",
@@ -63,33 +63,23 @@ namespace XtremeHackerman.Classes
 	    {
 		// five steps, 18 points each
 		// Make sure to only increment on the first time the step was compeleted
-		if (step == 1 && Percent == 10)
+		if (step == 1 && Percent == 10 || step == 2 && Percent == 28 || step == 3 && Percent == 46 || step == 4 && Percent == 64)
 		{
 		    Percent += 18;
-		}
-		else if (step == 2 && Percent == 28)
-		{
-		    Percent += 18;
-		}
-		else if (step == 3 && Percent == 46)
-		{
-		    Percent += 18;
-		}
-		else if (step == 4 && Percent == 64)
-		{
-		    Percent += 18;
+		    Desktop_BKEND.Notification("You've completed Step " + step + "\n" + Steps[step-1], true);
 		}
 		else if (step == 5 && Percent == 82)
 		{
-		    Percent += 18;
 		}
 	    }
 
 	    /*** SECOND EVENT: RANSOMWARE ***/
 	    if (activeEvent == "Phishing Email" && Percent == 100)
 	    {
-		Class_Progress.ActiveEvent = "Ransomware";
-		Class_Progress.Percent = 10; //begin at 10	
+		timer.Stop(); //stop populating phishing emails
+		ActiveEvent = "Ransomware";
+		Percent = 10; //begin at 10
+		Steps = RansomwareSteps;
 		EventLogic.RansomwareAttack();	   
 	    }
 	    /**********************************/

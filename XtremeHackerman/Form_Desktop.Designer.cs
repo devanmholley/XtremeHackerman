@@ -437,7 +437,7 @@
 	    this.eventLBL.AutoSize = true;
 	    this.eventLBL.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.eventLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.eventLBL.ForeColor = System.Drawing.Color.Aqua;
+	    this.eventLBL.ForeColor = System.Drawing.Color.Teal;
 	    this.eventLBL.Location = new System.Drawing.Point(0, 121);
 	    this.eventLBL.Name = "eventLBL";
 	    this.eventLBL.Size = new System.Drawing.Size(156, 61);
@@ -466,6 +466,7 @@
 	    // 
 	    // TaskbarPanel.Panel1
 	    // 
+	    this.TaskbarPanel.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
 	    this.TaskbarPanel.Panel1.Controls.Add(this.startButton);
 	    // 
 	    // TaskbarPanel.Panel2
