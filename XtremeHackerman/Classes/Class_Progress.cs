@@ -88,9 +88,9 @@ namespace XtremeHackerman.Classes
 	    /*** SECOND EVENT: RANSOMWARE ***/
 	    if (activeEvent == "Phishing Email" && Percent == 100)
 	    {
-		/*** SECOND EVENT: RANSOMWARE ***/
 		Class_Progress.ActiveEvent = "Ransomware";
-		Class_Progress.Percent = 10; //begin at 10			   
+		Class_Progress.Percent = 10; //begin at 10	
+		EventLogic.RansomwareAttack();	   
 	    }
 	    /**********************************/
 	}

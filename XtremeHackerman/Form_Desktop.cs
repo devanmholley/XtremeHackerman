@@ -25,7 +25,7 @@ namespace XtremeHackerman
 
 	private void Form_Desktop_Load(object sender, EventArgs e)
 	{
-
+	    BackgroundRefresh();
 	}
 
 	private void internetExplorerClick(object sender, EventArgs e)
@@ -53,8 +53,6 @@ namespace XtremeHackerman
 	    // FileManager icon button implementation
 	    var formFileManager = new Form_FileManager();
 	    formFileManager.Show();
-
-	    Desktop_BKEND.Notification("hell yeah");
 	}
 
 	private void commandIconClick(object sender, EventArgs e)
@@ -135,7 +133,6 @@ namespace XtremeHackerman
 	{
 	    Desktop_BKEND.CloseOpenForms();
 	    StartMenuPanel.Visible = false;
-	    RansomwarePanel.Visible = false;
 	}
 
 	private void Antivirus_Click(object sender, EventArgs e)
@@ -147,27 +144,19 @@ namespace XtremeHackerman
 	private void desktopBootOptions()
 	{   // This function will handle enabling/disabling certain settings based on Boot Options
 
-	    //Disables the Background when in SAFE MODE
-	    if (BootOptions.enableSafeMode == true)
-	    {
-		BackgroundImage = null;
-		BackColor = Color.Black;
 
-		//RANSOMWARE
-		RansomwarePanel.Visible = false; //disable ransomware
-		ProgressPanel.BackColor = Color.Black; //progress panel match the ransomware bg
-		StartMenuPanel.BackColor = Color.Black; //startmenu panel match the ransomware bg
-	    }
-	    else if (eventLBL.Text == "Ransomware" && BootOptions.enableSafeMode == false)
-	    {
-		RansomwareAttack(); //Ransomware Background
-	    }
+
 	    //// Enables or disables Network access as defined by the system boot options 
-	    //if(BootOptions.enableNetworking == false)
-	    //{
-	    //    Desktop_BKEND.net_ON = false;
-	    //    toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
-	    //}
+	    if (BootOptions.enableNetworking == false)
+	    {
+		Desktop_BKEND.net_ON = false;
+		toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
+	    }
+	    else
+	    {
+		Desktop_BKEND.net_ON = true;
+		toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon;		
+	    }
 
 	    // Enables or disables CMD access as defined by the system boot options
 	    if (BootOptions.enableCommandPrompt == false)
@@ -205,10 +194,9 @@ namespace XtremeHackerman
 	    this.Opacity = 0;
 	    await Task.Delay(300);
 	    desktopBootOptions();
-	    BackgroundImage = Resources.Background_Desktop;
 	    this.Opacity = 100;
 	    RestartBootOptions.Close();
-
+	    BackgroundRefresh();
 	}
 
 	private async void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -222,10 +210,43 @@ namespace XtremeHackerman
 	    desktopBootOptions();
 	    this.Opacity = 100;
 	    RestartBootOptions.Close();
+	    BackgroundRefresh();
 	}
 
-	private void RealTime_Tick(object sender, EventArgs e)
+	public void BackgroundRefresh()
 	{
+	    //Disables the Background when in SAFE MODE
+	    if (BootOptions.enableSafeMode == true)
+	    {
+		BackgroundImage = null;
+		BackColor = Color.Black;
+
+		IconsPanel.Visible = true;
+		RansomwarePanel.Visible = false; //disable ransomware
+		ProgressPanel.BackColor = Color.Black; //progress panel match the ransomware bg
+		StartMenuPanel.BackColor = Color.Black; //startmenu panel match the ransomware bg
+	    }
+	    ////Load Ransomware Background if active event and safemode is disabled
+	    else if (Class_Progress.ActiveEvent == "Ransomware" && BootOptions.enableSafeMode == false)
+	    {
+		IconsPanel.Visible = false;
+
+		//Set Ransomwareform to desktop background
+		RansomwarePanel.Visible = true;
+		//RansomwarePanel.BackColor = Color.Red;
+
+		ProgressPanel.BackColor = Color.Red; //progress panel match the ransomware bg
+		StartMenuPanel.BackColor = Color.Red; //startmenu panel match the ransomware bg
+		StartMenuPanel.BringToFront(); //allow user to still access start menu to boot into safe mode
+	    }
+	    else
+	    {
+		BackgroundImage = Resources.Background_Desktop; //Regular Background
+		IconsPanel.Visible = true;
+		RansomwarePanel.Visible = false;
+		ProgressPanel.BackColor = Color.Transparent; //progress panel match the ransomware bg
+		StartMenuPanel.BackColor = Color.Transparent; //startmenu panel match the ransomware bg
+	    }
 	}
 
 	private void WiresharkIcon_Click(object sender, EventArgs e)
@@ -234,37 +255,17 @@ namespace XtremeHackerman
 		formWireshark.ShowDialog();
 	}
 	
-	public void RansomwareAttack()
-	{
-	    Desktop_BKEND.CloseOpenForms(); //close all open forms
-
-	    //Set Ransomwareform to desktop background
-	    RansomwarePanel.Visible = true;
-	    var formRansomware = new Form_Ransomware();
-	    formRansomware.TopLevel = false;
-	    RansomwarePanel.Controls.Add(formRansomware);
-	    formRansomware.Dock = DockStyle.Fill;
-	    formRansomware.Show();
-	    RansomwarePanel.BringToFront();
-
-	    eventLBL.Text = Class_Progress.ActiveEvent;
-	    eventProgress.Value = Class_Progress.Percent;
-	    ProgressPanel.BackColor = Color.Red; //progress panel match the ransomware bg
-	    StartMenuPanel.BackColor = Color.Red; //startmenu panel match the ransomware bg
-	    StartMenuPanel.BringToFront(); //allow user to still access start menu to boot into safe mode
-	}
 
 	private void LogOut_Click(object sender, EventArgs e)
 	{
 	    Desktop_BKEND.CloseOpenForms();
 	    StartMenuPanel.Visible = false;
-	    RansomwarePanel.Visible = false;
 	    Close();
 	}
 
 	private void RansomwareIcon_Click(object sender, EventArgs e)
 	{
-	    EventLogic.RansomwareAttack();
+	    BackgroundRefresh();
 	}
     }
 }

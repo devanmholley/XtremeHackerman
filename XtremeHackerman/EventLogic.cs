@@ -145,8 +145,9 @@ namespace XtremeHackerman
 	public static void RansomwareAttack()
 	{
 	    //Event Trigger
+	    Desktop_BKEND.CloseOpenForms(); //close all open forms
 	    Class_File.Save(Class_FileManager.root, "not ransomware", "Totally Not Ransomware", true, null); //create a file in filemanager
-	    Form_TitleScreen.formDesktop.RansomwareAttack(); //start the attack by changing desktop bg and disable icons
+	    Form_TitleScreen.formDesktop.BackgroundRefresh(); //start the attack by changing desktop bg and disable icons
 	}
 
 	private static void RansomwareRecovery()
