@@ -54,7 +54,6 @@
 	    this.LogOut = new System.Windows.Forms.Button();
 	    this.IconsPanel = new System.Windows.Forms.FlowLayoutPanel();
 	    this.WireSharkIcon = new System.Windows.Forms.Button();
-	    this.RansomwareIcon = new System.Windows.Forms.Button();
 	    this.eventProgress = new System.Windows.Forms.ProgressBar();
 	    this.ProgressPanel = new System.Windows.Forms.Panel();
 	    this.HintIcon = new System.Windows.Forms.Button();
@@ -375,14 +374,13 @@
 	    this.IconsPanel.Controls.Add(this.AntivirusIcon);
 	    this.IconsPanel.Controls.Add(this.commandIcon);
 	    this.IconsPanel.Controls.Add(this.WireSharkIcon);
-	    this.IconsPanel.Controls.Add(this.RansomwareIcon);
 	    this.IconsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.IconsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 	    this.IconsPanel.Location = new System.Drawing.Point(0, 0);
 	    this.IconsPanel.Margin = new System.Windows.Forms.Padding(5);
 	    this.IconsPanel.Name = "IconsPanel";
 	    this.IconsPanel.Padding = new System.Windows.Forms.Padding(70, 70, 0, 0);
-	    this.IconsPanel.Size = new System.Drawing.Size(2869, 1545);
+	    this.IconsPanel.Size = new System.Drawing.Size(2454, 1545);
 	    this.IconsPanel.TabIndex = 16;
 	    // 
 	    // WireSharkIcon
@@ -398,20 +396,6 @@
 	    this.WireSharkIcon.TabIndex = 18;
 	    this.WireSharkIcon.UseVisualStyleBackColor = false;
 	    this.WireSharkIcon.Click += new System.EventHandler(this.WiresharkIcon_Click);
-	    // 
-	    // RansomwareIcon
-	    // 
-	    this.RansomwareIcon.BackColor = System.Drawing.Color.White;
-	    this.RansomwareIcon.BackgroundImage = global::XtremeHackerman.Properties.Resources.Ransomware_Icon;
-	    this.RansomwareIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.RansomwareIcon.Cursor = System.Windows.Forms.Cursors.Default;
-	    this.RansomwareIcon.Location = new System.Drawing.Point(78, 1289);
-	    this.RansomwareIcon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.RansomwareIcon.Name = "RansomwareIcon";
-	    this.RansomwareIcon.Size = new System.Drawing.Size(253, 188);
-	    this.RansomwareIcon.TabIndex = 19;
-	    this.RansomwareIcon.UseVisualStyleBackColor = false;
-	    this.RansomwareIcon.Click += new System.EventHandler(this.RansomwareIcon_Click);
 	    // 
 	    // eventProgress
 	    // 
@@ -453,7 +437,7 @@
 	    this.eventLBL.AutoSize = true;
 	    this.eventLBL.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.eventLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.eventLBL.ForeColor = System.Drawing.Color.DeepPink;
+	    this.eventLBL.ForeColor = System.Drawing.Color.Aqua;
 	    this.eventLBL.Location = new System.Drawing.Point(0, 121);
 	    this.eventLBL.Name = "eventLBL";
 	    this.eventLBL.Size = new System.Drawing.Size(156, 61);
@@ -628,10 +612,10 @@
 	    this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_Desktop;
 	    this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 	    this.ClientSize = new System.Drawing.Size(2869, 1645);
-	    this.Controls.Add(this.RansomwarePanel);
-	    this.Controls.Add(this.ProgressPanel);
 	    this.Controls.Add(this.StartMenuPanel);
 	    this.Controls.Add(this.IconsPanel);
+	    this.Controls.Add(this.RansomwarePanel);
+	    this.Controls.Add(this.ProgressPanel);
 	    this.Controls.Add(this.TaskbarPanel);
 	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Name = "Form_Desktop";
@@ -696,7 +680,6 @@
 		private System.Windows.Forms.Panel RansomwarePanel;
 		private System.Windows.Forms.Button LogOut;
 	private System.Windows.Forms.Button WireSharkIcon;
-	private System.Windows.Forms.Button RansomwareIcon;
 	private System.Windows.Forms.Panel RightPanel;
 	private System.Windows.Forms.Button Btn_Next_Ransom;
 	private System.Windows.Forms.TextBox TB_Ransomeware_Description;

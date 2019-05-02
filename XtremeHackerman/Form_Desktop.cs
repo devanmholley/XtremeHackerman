@@ -218,29 +218,25 @@ namespace XtremeHackerman
 	    //Disables the Background when in SAFE MODE
 	    if (BootOptions.enableSafeMode == true)
 	    {
+		//SafeMode Background
 		BackgroundImage = null;
 		BackColor = Color.Black;
-
 		IconsPanel.Visible = true;
-		RansomwarePanel.Visible = false; //disable ransomware
+		RansomwarePanel.Visible = false; 
 		ProgressPanel.BackColor = Color.Black; //progress panel match the ransomware bg
 		StartMenuPanel.BackColor = Color.Black; //startmenu panel match the ransomware bg
 	    }
-	    ////Load Ransomware Background if active event and safemode is disabled
 	    else if (Class_Progress.ActiveEvent == "Ransomware" && BootOptions.enableSafeMode == false)
 	    {
+		//Ransomware Background
 		IconsPanel.Visible = false;
-
-		//Set Ransomwareform to desktop background
 		RansomwarePanel.Visible = true;
-		//RansomwarePanel.BackColor = Color.Red;
-
 		ProgressPanel.BackColor = Color.Red; //progress panel match the ransomware bg
 		StartMenuPanel.BackColor = Color.Red; //startmenu panel match the ransomware bg
-		StartMenuPanel.BringToFront(); //allow user to still access start menu to boot into safe mode
 	    }
 	    else
 	    {
+		//Regular Background
 		BackgroundImage = Resources.Background_Desktop; //Regular Background
 		IconsPanel.Visible = true;
 		RansomwarePanel.Visible = false;
