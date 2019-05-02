@@ -25,24 +25,14 @@ namespace XtremeHackerman
 
 	private void Form_Desktop_Load(object sender, EventArgs e)
 	{
-	    eventLBL.Text = Class_Progress.ActiveEvent;
-	    eventProgress.Value = Class_Progress.Percent;
 
-	    if (eventLBL.Text == "Ransomware")
-	    {
-		RansomwareAttack();
-	    }
-		
-
-	    toolbarTime.Text = DateTime.Now.ToString("h:mm tt");
-	    toolbarDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
-	    RealTime.Start();
 	}
 
 	private void internetExplorerClick(object sender, EventArgs e)
 	{
 	    var formInternetBrowser = new Form_InternetBrowser();
 	    formInternetBrowser.Show();
+	    Class_Progress.StepCompleted("Phishing Email", 2); //step two completed
 	}
 
 	private void startButtonClick(object sender, EventArgs e)
@@ -163,10 +153,14 @@ namespace XtremeHackerman
 		BackgroundImage = null;
 		BackColor = Color.Black;
 
-		
+		//RANSOMWARE
 		RansomwarePanel.Visible = false; //disable ransomware
 		ProgressPanel.BackColor = Color.Black; //progress panel match the ransomware bg
 		StartMenuPanel.BackColor = Color.Black; //startmenu panel match the ransomware bg
+	    }
+	    else if (eventLBL.Text == "Ransomware" && BootOptions.enableSafeMode == false)
+	    {
+		RansomwareAttack(); //Ransomware Background
 	    }
 	    //// Enables or disables Network access as defined by the system boot options 
 	    //if(BootOptions.enableNetworking == false)
@@ -186,9 +180,20 @@ namespace XtremeHackerman
 	    }
 	}
 
-	private void DesktopPermissions_Tick(object sender, EventArgs e)
-	{ // This simple Tick will refresh the permissions of the Desktop form over time 
+	private void RefreshTimer_Tick(object sender, EventArgs e)
+	{
+	    /*** Timer that refreshes things every second ***/
+	   
+	    //This simple Tick will refresh the permissions of the Desktop form over time 
 	    desktopBootOptions();
+
+	    //Update Event Progress
+	    eventLBL.Text = Class_Progress.ActiveEvent;
+	    eventProgress.Value = Class_Progress.Percent;
+
+	    //Update Date and Time
+	    toolbarTime.Text = DateTime.Now.ToString("h:mm tt");
+	    toolbarDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
 	}
 
 	private async void restartNoChangesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -221,7 +226,6 @@ namespace XtremeHackerman
 
 	private void RealTime_Tick(object sender, EventArgs e)
 	{
-	    toolbarTime.Text = DateTime.Now.ToString("h:mm tt"); //update real time every 10 seconds
 	}
 
 	private void WiresharkIcon_Click(object sender, EventArgs e)

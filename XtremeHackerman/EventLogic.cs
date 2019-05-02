@@ -142,7 +142,19 @@ namespace XtremeHackerman
             //Steps for recovering in the system for this event.
         }
 
-        private static void DDosAttack()
+	public static void RansomwareAttack()
+	{
+	    //Event Trigger
+	    Class_File.Save(Class_FileManager.root, "not ransomware", "Totally Not Ransomware", true, null); //create a file in filemanager
+	    Form_TitleScreen.formDesktop.RansomwareAttack(); //start the attack by changing desktop bg and disable icons
+	}
+
+	private static void RansomwareRecovery()
+	{
+	    // Steps for recovering in the system for this event
+	}
+
+	private static void DDosAttack()
         {
             //Event Trigger
         }
@@ -198,19 +210,6 @@ namespace XtremeHackerman
             //Steps for recovering in the system for this event.
         }
 
-        public static void RansomwareAttack()
-        {
-	    //Event Trigger
-	    Class_Progress.ActiveEvent = "Ransomware";
-	    Class_Progress.Percent = 10;
-	    Class_File.Save(Class_FileManager.root, "not ransomware", "Totally Not Ransomware", true, null);
-	    Form_TitleScreen.formDesktop.RansomwareAttack();
-        }
-
-        private static void RansomwareRecovery()
-        {
-            // Steps for recovering in the system for this event
-        }
 
         private static void DesktopNotifications()
         {

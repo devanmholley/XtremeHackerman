@@ -52,7 +52,8 @@ namespace XtremeHackerman
 	    WebsitePanel.Controls.Add(formFirewall);
 	    formFirewall.Dock = DockStyle.Fill;
 	    formFirewall.Show();
-        }
+	    Class_Progress.StepCompleted("Phishing Email", 3); //step three completed
+	}
 
         private void Form_InternetBrowser_Load(object sender, EventArgs e)
         {

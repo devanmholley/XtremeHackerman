@@ -45,10 +45,13 @@ namespace XtremeHackerman.Classes
 	    }
 	}
 
+	/// <summary>
+	/// Desktop Popup Notification Message
+	/// </summary>
+	/// <param name="message"></param>
 	public static void Notification(string message)
 	{
-	    // Initialization of Notification Popup 
-	    string messagetime = System.DateTime.Now.ToString("ddd  HH:mm:ss");
+	    string messagetime = System.DateTime.Now.ToString("ddd  HH:mm:ss"); //Display current time
 	    string messageBody = message;
 	    var popupNotifier = new PopupNotifier();
 	    popupNotifier.TitleText = messagetime;

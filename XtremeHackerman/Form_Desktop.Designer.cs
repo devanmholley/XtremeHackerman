@@ -44,7 +44,7 @@
 	    this.TaskManager = new System.Windows.Forms.Button();
 	    this.FileManager = new System.Windows.Forms.Button();
 	    this.Email = new System.Windows.Forms.Button();
-	    this.DesktopPermissions = new System.Windows.Forms.Timer(this.components);
+	    this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
 	    this.RestartBootOptions = new System.Windows.Forms.ContextMenuStrip(this.components);
 	    this.restartNoChangesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 	    this.safeModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +60,6 @@
 	    this.HintIcon = new System.Windows.Forms.Button();
 	    this.eventLBL = new System.Windows.Forms.Label();
 	    this.CurrEventLBL = new System.Windows.Forms.Label();
-	    this.RealTime = new System.Windows.Forms.Timer(this.components);
 	    this.TaskbarPanel = new System.Windows.Forms.SplitContainer();
 	    this.panel1 = new System.Windows.Forms.Panel();
 	    this.RansomwarePanel = new System.Windows.Forms.Panel();
@@ -266,11 +265,11 @@
 	    this.Email.UseVisualStyleBackColor = false;
 	    this.Email.Visible = false;
 	    // 
-	    // DesktopPermissions
+	    // RefreshTimer
 	    // 
-	    this.DesktopPermissions.Enabled = true;
-	    this.DesktopPermissions.Interval = 1000;
-	    this.DesktopPermissions.Tick += new System.EventHandler(this.DesktopPermissions_Tick);
+	    this.RefreshTimer.Enabled = true;
+	    this.RefreshTimer.Interval = 1000;
+	    this.RefreshTimer.Tick += new System.EventHandler(this.RefreshTimer_Tick);
 	    // 
 	    // RestartBootOptions
 	    // 
@@ -462,11 +461,6 @@
 	    this.CurrEventLBL.Text = "Current Event:";
 	    this.CurrEventLBL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 	    // 
-	    // RealTime
-	    // 
-	    this.RealTime.Interval = 10000;
-	    this.RealTime.Tick += new System.EventHandler(this.RealTime_Tick);
-	    // 
 	    // TaskbarPanel
 	    // 
 	    this.TaskbarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
@@ -558,7 +552,7 @@
         private System.Windows.Forms.Button toolbarNetworkBTN;
         private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button Antivirus;
-        private System.Windows.Forms.Timer DesktopPermissions;
+        private System.Windows.Forms.Timer RefreshTimer;
         private System.Windows.Forms.ContextMenuStrip RestartBootOptions;
         private System.Windows.Forms.ToolStripMenuItem restartNoChangesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
@@ -570,7 +564,6 @@
 		private System.Windows.Forms.Label CurrEventLBL;
 		private System.Windows.Forms.Label eventLBL;
 		private System.Windows.Forms.Button HintIcon;
-		private System.Windows.Forms.Timer RealTime;
 		private System.Windows.Forms.SplitContainer TaskbarPanel;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel RansomwarePanel;

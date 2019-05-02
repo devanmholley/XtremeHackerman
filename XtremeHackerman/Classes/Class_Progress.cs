@@ -17,17 +17,27 @@ namespace XtremeHackerman.Classes
 
 	string[] PhishSteps = new string[]
 	{
-	    "Step 1: Inspect Email",
-	    "Step 2: Open Internet",
-	    "Step 3: Visit Firewall.com",
-	    "Step 4: Block Email Domain"
+	    "Inspect Email",
+	    "Open Internet",
+	    "Visit Firewall.com",
+	    "Open Domain Tab",
+	    "Block Email Domain"
+	};
+
+	string[] RansomwareSteps = new string[]
+	{
+	    "Open Start Menu",
+	    "Click Restart",
+	    "Enable Safemode",
+	    "Open Antivirus",
+	    "Remove All Threats"
 	};
 
 	
 	public void Play()
 	{
 	    /*** FIRST EVENT: PHISHING EMAIL ***/
-	    ActiveEvent = "Phising Email";
+	    ActiveEvent = "Phishing Email";
 	    Percent = 10;
 	    Steps = PhishSteps;
 
@@ -44,6 +54,45 @@ namespace XtremeHackerman.Classes
 	private void timer_Tick(object sender, EventArgs e)
 	{
 	    EventLogic.PhishingEmailAttack();
+	}
+
+	public static void StepCompleted(string activeEvent, int step)
+	{
+	    //Only increment if the step completed was for the current event
+	    if (activeEvent == ActiveEvent)
+	    {
+		// five steps, 18 points each
+		// Make sure to only increment on the first time the step was compeleted
+		if (step == 1 && Percent == 10)
+		{
+		    Percent += 18;
+		}
+		else if (step == 2 && Percent == 28)
+		{
+		    Percent += 18;
+		}
+		else if (step == 3 && Percent == 46)
+		{
+		    Percent += 18;
+		}
+		else if (step == 4 && Percent == 64)
+		{
+		    Percent += 18;
+		}
+		else if (step == 5 && Percent == 82)
+		{
+		    Percent += 18;
+		}
+	    }
+
+	    /*** SECOND EVENT: RANSOMWARE ***/
+	    if (activeEvent == "Phishing Email" && Percent == 100)
+	    {
+		/*** SECOND EVENT: RANSOMWARE ***/
+		Class_Progress.ActiveEvent = "Ransomware";
+		Class_Progress.Percent = 10; //begin at 10			   
+	    }
+	    /**********************************/
 	}
     }
 }

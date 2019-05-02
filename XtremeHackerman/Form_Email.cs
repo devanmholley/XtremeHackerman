@@ -102,6 +102,7 @@ namespace XtremeHackerman
             {
                 this.LL_Phish.Visible = true;
                 this.LL_Phish.Enabled = true;
+		Class_Progress.StepCompleted("Phishing Email", 1); //step one completed
             }
             else
             {

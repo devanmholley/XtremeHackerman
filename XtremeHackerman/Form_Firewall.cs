@@ -112,14 +112,18 @@ namespace XtremeHackerman
         private void domainSwitch_Click(object sender, EventArgs e)
         {
 	    DomainPanel.BringToFront();
-        }
+	    Class_Progress.StepCompleted("Phishing Email", 4); //step four completed
+	}
 
         private void domainADD_Click(object sender, EventArgs e)
         {
             blacklistDomains.Add(domainEntry.Text);
             domainEntered.Text = "";
             blacklistDomains.ForEach(i => domainEntered.Text += i + Environment.NewLine);
-        }
+
+	    if (domainEntered.Text.Contains("fake"))
+		Class_Progress.StepCompleted("Phishing Email", 5); //step 5 completed -> Phishing Event completed
+	}
 
         private void webpageUsage_Click(object sender, EventArgs e)
         {
