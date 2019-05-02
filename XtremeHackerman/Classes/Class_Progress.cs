@@ -70,6 +70,8 @@ namespace XtremeHackerman.Classes
 		}
 		else if (step == 5 && Percent == 82)
 		{
+		    MessageBox.Show("You've completed Step " + step + "\n" + Steps[step - 1] + "\nYou have successfully recovered from: " + activeEvent);
+		    Percent += 18;
 		}
 	    }
 

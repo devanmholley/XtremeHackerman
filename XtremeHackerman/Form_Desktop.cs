@@ -20,7 +20,7 @@ namespace XtremeHackerman
 	public Form_Desktop()
 	{
 	    InitializeComponent();
-	    desktopBootOptions();
+	    //desktopBootOptions();
 	}
 
 	private void Form_Desktop_Load(object sender, EventArgs e)
@@ -178,7 +178,7 @@ namespace XtremeHackerman
 	    /*** Timer that refreshes things every second ***/
 	   
 	    //This simple Tick will refresh the permissions of the Desktop form over time 
-	    desktopBootOptions();
+	    //desktopBootOptions();
 
 	    //Update Event Progress
 	    eventLBL.Text = Class_Progress.ActiveEvent;
