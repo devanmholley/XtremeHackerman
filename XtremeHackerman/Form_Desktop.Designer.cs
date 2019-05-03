@@ -674,7 +674,6 @@
         private System.Windows.Forms.Button toolbarNetworkBTN;
         private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button Antivirus;
-        private System.Windows.Forms.Timer RefreshTimer;
         private System.Windows.Forms.ContextMenuStrip RestartBootOptions;
         private System.Windows.Forms.ToolStripMenuItem restartNoChangesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
@@ -700,5 +699,6 @@
 	private System.Windows.Forms.PictureBox PB_Ransom_Icon;
 	private System.Windows.Forms.Button HintButton;
 	private System.Windows.Forms.Button TaskManagerIcon;
+	public System.Windows.Forms.Timer RefreshTimer;
     }
 }

@@ -228,19 +228,23 @@ namespace XtremeHackerman
 
 	    }
 	    var formCLI = new Form_CLI();
-	    formCLI.ShowDialog();
+	    formCLI.Show();
+
+	    Process.newProcess("Command Prompt", DateTime.Now);
 	}
 	private void InternetIcon_Click(object sender, EventArgs e)
 	{
 	    var formInternetBrowser = new Form_InternetBrowser();
 	    formInternetBrowser.Show();
 	    Class_Progress.StepCompleted("Phishing Email", 2); //step two completed
+	    Process.newProcess("Internet Browser", DateTime.Now);
 	}
 
 	private void EmailIcon_Click(object sender, EventArgs e)
 	{
 	    var formEmail = new Form_Email();
 	    formEmail.Show();
+	    Process.newProcess("Email Client", DateTime.Now);
 	}
 
 	private void FileManagerIcon_Click(object sender, EventArgs e)
@@ -248,6 +252,7 @@ namespace XtremeHackerman
 	    // FileManager icon button implementation
 	    var formFileManager = new Form_FileManager();
 	    formFileManager.Show();
+	    Process.newProcess("File Explorer", DateTime.Now);
 	}
 
 	private void Antivirus_Click(object sender, EventArgs e)
@@ -255,18 +260,21 @@ namespace XtremeHackerman
 	    var formAntivirus = new Form_Anitvirus();
 	    formAntivirus.Show();
 	    Class_Progress.StepCompleted("Ransomware", 4); //step four completed
+	    Process.newProcess("Best Antivirus", DateTime.Now);
 	}
 
 	private void WiresharkIcon_Click(object sender, EventArgs e)
 	{
 	    var formWireshark = new Form_Wireshark();
 	    formWireshark.ShowDialog();
+	    Process.newProcess("Network Analyzer", DateTime.Now);
 	}
 
 	private void TaskManagerIcon_Click(object sender, EventArgs e)
 	{
 	    var formTaskManager = new Form_TaskManager();
 	    formTaskManager.ShowDialog();
+	    Process.newProcess("Task Manager", DateTime.Now);
 	}
     }
 }
