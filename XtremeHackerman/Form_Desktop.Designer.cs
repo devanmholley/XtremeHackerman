@@ -34,10 +34,10 @@
 	    this.toolbarTime = new System.Windows.Forms.Label();
 	    this.toolbarDate = new System.Windows.Forms.Label();
 	    this.startButton = new System.Windows.Forms.Button();
-	    this.internetExplorerIcon = new System.Windows.Forms.Button();
-	    this.commandIcon = new System.Windows.Forms.Button();
+	    this.InternetIcon = new System.Windows.Forms.Button();
+	    this.CommandIcon = new System.Windows.Forms.Button();
 	    this.FileManagerIcon = new System.Windows.Forms.Button();
-	    this.emailIcon = new System.Windows.Forms.Button();
+	    this.EmailIcon = new System.Windows.Forms.Button();
 	    this.Restart = new System.Windows.Forms.Button();
 	    this.Shutdown = new System.Windows.Forms.Button();
 	    this.RefreshTimer = new System.Windows.Forms.Timer(this.components);
@@ -50,6 +50,7 @@
 	    this.LogOut = new System.Windows.Forms.Button();
 	    this.IconsPanel = new System.Windows.Forms.FlowLayoutPanel();
 	    this.WireSharkIcon = new System.Windows.Forms.Button();
+	    this.TaskManagerIcon = new System.Windows.Forms.Button();
 	    this.eventProgress = new System.Windows.Forms.ProgressBar();
 	    this.ProgressPanel = new System.Windows.Forms.Panel();
 	    this.HintButton = new System.Windows.Forms.Button();
@@ -140,47 +141,47 @@
 	    this.startButton.UseVisualStyleBackColor = false;
 	    this.startButton.Click += new System.EventHandler(this.startButtonClick);
 	    // 
-	    // internetExplorerIcon
+	    // InternetIcon
 	    // 
-	    this.internetExplorerIcon.AutoSize = true;
-	    this.internetExplorerIcon.BackColor = System.Drawing.Color.Transparent;
-	    this.internetExplorerIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.internetExplorerIcon.Cursor = System.Windows.Forms.Cursors.Default;
-	    this.internetExplorerIcon.FlatAppearance.BorderSize = 0;
-	    this.internetExplorerIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.internetExplorerIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.internetExplorerIcon.ForeColor = System.Drawing.Color.White;
-	    this.internetExplorerIcon.Image = ((System.Drawing.Image)(resources.GetObject("internetExplorerIcon.Image")));
-	    this.internetExplorerIcon.Location = new System.Drawing.Point(78, 77);
-	    this.internetExplorerIcon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.internetExplorerIcon.Name = "internetExplorerIcon";
-	    this.internetExplorerIcon.Size = new System.Drawing.Size(171, 152);
-	    this.internetExplorerIcon.TabIndex = 7;
-	    this.internetExplorerIcon.Text = "Internet";
-	    this.internetExplorerIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-	    this.internetExplorerIcon.UseVisualStyleBackColor = false;
-	    this.internetExplorerIcon.Click += new System.EventHandler(this.internetExplorerClick);
+	    this.InternetIcon.AutoSize = true;
+	    this.InternetIcon.BackColor = System.Drawing.Color.Transparent;
+	    this.InternetIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.InternetIcon.Cursor = System.Windows.Forms.Cursors.Default;
+	    this.InternetIcon.FlatAppearance.BorderSize = 0;
+	    this.InternetIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+	    this.InternetIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.InternetIcon.ForeColor = System.Drawing.Color.White;
+	    this.InternetIcon.Image = ((System.Drawing.Image)(resources.GetObject("InternetIcon.Image")));
+	    this.InternetIcon.Location = new System.Drawing.Point(78, 77);
+	    this.InternetIcon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.InternetIcon.Name = "InternetIcon";
+	    this.InternetIcon.Size = new System.Drawing.Size(171, 152);
+	    this.InternetIcon.TabIndex = 7;
+	    this.InternetIcon.Text = "Internet";
+	    this.InternetIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+	    this.InternetIcon.UseVisualStyleBackColor = false;
+	    this.InternetIcon.Click += new System.EventHandler(this.InternetIcon_Click);
 	    // 
-	    // commandIcon
+	    // CommandIcon
 	    // 
-	    this.commandIcon.AutoSize = true;
-	    this.commandIcon.BackColor = System.Drawing.Color.Transparent;
-	    this.commandIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.commandIcon.Cursor = System.Windows.Forms.Cursors.Default;
-	    this.commandIcon.FlatAppearance.BorderSize = 0;
-	    this.commandIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.commandIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.commandIcon.ForeColor = System.Drawing.Color.White;
-	    this.commandIcon.Image = ((System.Drawing.Image)(resources.GetObject("commandIcon.Image")));
-	    this.commandIcon.Location = new System.Drawing.Point(929, 77);
-	    this.commandIcon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.commandIcon.Name = "commandIcon";
-	    this.commandIcon.Size = new System.Drawing.Size(368, 152);
-	    this.commandIcon.TabIndex = 8;
-	    this.commandIcon.Text = "Command Prompt";
-	    this.commandIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-	    this.commandIcon.UseVisualStyleBackColor = false;
-	    this.commandIcon.Click += new System.EventHandler(this.commandIconClick);
+	    this.CommandIcon.AutoSize = true;
+	    this.CommandIcon.BackColor = System.Drawing.Color.Transparent;
+	    this.CommandIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.CommandIcon.Cursor = System.Windows.Forms.Cursors.Default;
+	    this.CommandIcon.FlatAppearance.BorderSize = 0;
+	    this.CommandIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+	    this.CommandIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.CommandIcon.ForeColor = System.Drawing.Color.White;
+	    this.CommandIcon.Image = ((System.Drawing.Image)(resources.GetObject("CommandIcon.Image")));
+	    this.CommandIcon.Location = new System.Drawing.Point(929, 77);
+	    this.CommandIcon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.CommandIcon.Name = "CommandIcon";
+	    this.CommandIcon.Size = new System.Drawing.Size(368, 152);
+	    this.CommandIcon.TabIndex = 8;
+	    this.CommandIcon.Text = "Command Prompt";
+	    this.CommandIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+	    this.CommandIcon.UseVisualStyleBackColor = false;
+	    this.CommandIcon.Click += new System.EventHandler(this.CommandIcon_Click);
 	    // 
 	    // FileManagerIcon
 	    // 
@@ -201,28 +202,28 @@
 	    this.FileManagerIcon.Text = "File Explorer";
 	    this.FileManagerIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 	    this.FileManagerIcon.UseVisualStyleBackColor = false;
-	    this.FileManagerIcon.Click += new System.EventHandler(this.FileManagerButtonClick);
+	    this.FileManagerIcon.Click += new System.EventHandler(this.FileManagerIcon_Click);
 	    // 
-	    // emailIcon
+	    // EmailIcon
 	    // 
-	    this.emailIcon.AutoSize = true;
-	    this.emailIcon.BackColor = System.Drawing.Color.Transparent;
-	    this.emailIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.emailIcon.Cursor = System.Windows.Forms.Cursors.Default;
-	    this.emailIcon.FlatAppearance.BorderSize = 0;
-	    this.emailIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.emailIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.emailIcon.ForeColor = System.Drawing.Color.White;
-	    this.emailIcon.Image = ((System.Drawing.Image)(resources.GetObject("emailIcon.Image")));
-	    this.emailIcon.Location = new System.Drawing.Point(265, 77);
-	    this.emailIcon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.emailIcon.Name = "emailIcon";
-	    this.emailIcon.Size = new System.Drawing.Size(149, 152);
-	    this.emailIcon.TabIndex = 10;
-	    this.emailIcon.Text = "E-Mail";
-	    this.emailIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-	    this.emailIcon.UseVisualStyleBackColor = false;
-	    this.emailIcon.Click += new System.EventHandler(this.emailButtonClick);
+	    this.EmailIcon.AutoSize = true;
+	    this.EmailIcon.BackColor = System.Drawing.Color.Transparent;
+	    this.EmailIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.EmailIcon.Cursor = System.Windows.Forms.Cursors.Default;
+	    this.EmailIcon.FlatAppearance.BorderSize = 0;
+	    this.EmailIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+	    this.EmailIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.EmailIcon.ForeColor = System.Drawing.Color.White;
+	    this.EmailIcon.Image = ((System.Drawing.Image)(resources.GetObject("EmailIcon.Image")));
+	    this.EmailIcon.Location = new System.Drawing.Point(265, 77);
+	    this.EmailIcon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.EmailIcon.Name = "EmailIcon";
+	    this.EmailIcon.Size = new System.Drawing.Size(149, 152);
+	    this.EmailIcon.TabIndex = 10;
+	    this.EmailIcon.Text = "E-Mail";
+	    this.EmailIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+	    this.EmailIcon.UseVisualStyleBackColor = false;
+	    this.EmailIcon.Click += new System.EventHandler(this.EmailIcon_Click);
 	    // 
 	    // Restart
 	    // 
@@ -345,12 +346,13 @@
 	    // IconsPanel
 	    // 
 	    this.IconsPanel.BackColor = System.Drawing.Color.Transparent;
-	    this.IconsPanel.Controls.Add(this.internetExplorerIcon);
-	    this.IconsPanel.Controls.Add(this.emailIcon);
+	    this.IconsPanel.Controls.Add(this.InternetIcon);
+	    this.IconsPanel.Controls.Add(this.EmailIcon);
 	    this.IconsPanel.Controls.Add(this.FileManagerIcon);
 	    this.IconsPanel.Controls.Add(this.AntivirusIcon);
-	    this.IconsPanel.Controls.Add(this.commandIcon);
+	    this.IconsPanel.Controls.Add(this.CommandIcon);
 	    this.IconsPanel.Controls.Add(this.WireSharkIcon);
+	    this.IconsPanel.Controls.Add(this.TaskManagerIcon);
 	    this.IconsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.IconsPanel.Location = new System.Drawing.Point(0, 0);
 	    this.IconsPanel.Margin = new System.Windows.Forms.Padding(5);
@@ -379,6 +381,27 @@
 	    this.WireSharkIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 	    this.WireSharkIcon.UseVisualStyleBackColor = false;
 	    this.WireSharkIcon.Click += new System.EventHandler(this.WiresharkIcon_Click);
+	    // 
+	    // TaskManagerIcon
+	    // 
+	    this.TaskManagerIcon.AutoSize = true;
+	    this.TaskManagerIcon.BackColor = System.Drawing.Color.Transparent;
+	    this.TaskManagerIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.TaskManagerIcon.Cursor = System.Windows.Forms.Cursors.Default;
+	    this.TaskManagerIcon.FlatAppearance.BorderSize = 0;
+	    this.TaskManagerIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+	    this.TaskManagerIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.TaskManagerIcon.ForeColor = System.Drawing.Color.White;
+	    this.TaskManagerIcon.Image = ((System.Drawing.Image)(resources.GetObject("TaskManagerIcon.Image")));
+	    this.TaskManagerIcon.Location = new System.Drawing.Point(1688, 77);
+	    this.TaskManagerIcon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+	    this.TaskManagerIcon.Name = "TaskManagerIcon";
+	    this.TaskManagerIcon.Size = new System.Drawing.Size(359, 152);
+	    this.TaskManagerIcon.TabIndex = 19;
+	    this.TaskManagerIcon.Text = "Task Manager";
+	    this.TaskManagerIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+	    this.TaskManagerIcon.UseVisualStyleBackColor = false;
+	    this.TaskManagerIcon.Click += new System.EventHandler(this.TaskManagerIcon_Click);
 	    // 
 	    // eventProgress
 	    // 
@@ -639,11 +662,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button internetExplorerIcon;
+        private System.Windows.Forms.Button InternetIcon;
         private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button commandIcon;
+        private System.Windows.Forms.Button CommandIcon;
         private System.Windows.Forms.Button FileManagerIcon;
-        private System.Windows.Forms.Button emailIcon;
+        private System.Windows.Forms.Button EmailIcon;
         private System.Windows.Forms.Button Restart;
         private System.Windows.Forms.Button Shutdown;
         private System.Windows.Forms.Label toolbarDate;
@@ -676,5 +699,6 @@
 	private System.Windows.Forms.Label Label_Destroy_Warning;
 	private System.Windows.Forms.PictureBox PB_Ransom_Icon;
 	private System.Windows.Forms.Button HintButton;
+	private System.Windows.Forms.Button TaskManagerIcon;
     }
 }
