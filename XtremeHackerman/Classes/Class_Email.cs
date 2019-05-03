@@ -14,7 +14,7 @@ namespace XtremeHackerman.Classes
         public static void AddMail(string src, string dst, string dt, string sbjt, string bdy)
         {
             //If the email source hasn't been blocked on the firewall
-            if (Class_Firewall.blockedIPs.Contains(src)== false) { 
+            if (Class_Firewall.blockedDomains.Contains(src)== false) { 
                 EmailStruct newMail = new EmailStruct
                 {
                     // Creates a new email with the passed in values.
@@ -27,9 +27,6 @@ namespace XtremeHackerman.Classes
 
                 //Then we add the new email to the inbox.
                 EmailList.Add(newMail);
-
-                //Serialize the new object into the JSON file.
-                // JsonConvert.SerializeObject(EmailList, Formatting.Indented);
             }
         }
 

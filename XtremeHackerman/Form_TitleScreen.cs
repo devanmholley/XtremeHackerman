@@ -8,8 +8,10 @@ namespace XtremeHackerman
     {
         // Define byte[] VCRFont as an embedded resource, to be used for custom font formatting
         private readonly byte[] _vcrFont = Properties.Resources.VCR_OSD_MONO_1_001;
-
-        public Form_TitleScreen()
+	public static Form_Desktop formDesktop = new Form_Desktop();
+	Class_Progress GameOn = new Class_Progress(); //start the event attacks
+	
+	public Form_TitleScreen()
         {
             InitializeComponent();
         }
@@ -45,10 +47,13 @@ namespace XtremeHackerman
         /// <param name="e"></param>
         private void button_Admin_Click(object sender, EventArgs e)
         {
-            Hide();
-            var formDesktop = new Form_Desktop();
+	    //Start the attacks for the first time
+	    if (Class_Progress.ActiveEvent == null)
+		GameOn.Play(); //starting with phish
+
+	    Hide();
             formDesktop.ShowDialog();
-        }
+	}
 
         /// <summary>
         /// Hide current TitlePage instance (NOT closing it) and load Hacker form.
@@ -61,6 +66,113 @@ namespace XtremeHackerman
             var formHacker = new Form_Hacker();
             formHacker.ShowDialog();
         }
+        /// <summary>
+        /// Enables the selection of the Safe Mode Conext Menu upon click of the image button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void safeModeIconButton_MouseClick(object sender, MouseEventArgs e)
+        {   
+            if (e.Button is MouseButtons.Left)
+            {
+                safeModeContextStrip.ContextMenu = new ContextMenu();
+                safeModeContextStrip.Show(Cursor.Position);
+            }
+        }
 
+        private void safeModeContextStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void safeModeOptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+
+        }
+
+        private void enableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Enable Safe Mode Usage 
+            BootOptions.enableSafeMode = true;
+	    Class_Progress.StepCompleted("Ransomware", 3); //step three completed
+	}
+
+        private void disableToolStripMenuItem_Click(object sender, EventArgs e)
+        {   // Disallow Safe Mode Usage 
+            BootOptions.enableSafeMode = false;
+
+        }
+
+        private void BootOptionsDisplay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BootStatusSettings()
+        {
+            // This function is in charge of updating the statuses of the Boot Options and updating
+            // their status in real time on the initial window
+
+
+        }
+
+        private void BootStatusTimer_Tick(object sender, EventArgs e)
+        {
+            // Safe Mode Settings
+            if (BootOptions.enableSafeMode == true)
+            {
+                SafeModeStatus.Text = "Safe Mode: Enabled";
+            }
+            else
+            {
+                SafeModeStatus.Text = "Safe Mode: Disabled";
+            }
+            // Network Settings
+            if (BootOptions.enableNetworking == true)
+            {
+                NetworkingStatus.Text = "Network: Enabled";
+            }
+            else
+            {
+                NetworkingStatus.Text = "Network: Disabled";
+            }
+            // Command Prompt Settings
+            if (BootOptions.enableCommandPrompt == true)
+            {
+                CMDAccessStatus.Text = "Command Prompt Access: Enabled";
+            }
+            else
+            {
+                CMDAccessStatus.Text = "Command Prompt Access: Disabled";
+            }
+            
+        }
+
+        // Conext Menu Options for Network Persmissions
+        private void enableToolStripMenuItem1_Click(object sender, EventArgs e)
+        {   // Allow Network Usage
+            BootOptions.enableNetworking = true;
+        }
+            // Disallow Network Usage 
+        private void disableToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BootOptions.enableNetworking = false;
+        }
+
+        // Context Menu Options for Command Prompt Access
+        private void enableToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            BootOptions.enableCommandPrompt = true;
+        }
+
+        private void disableToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            BootOptions.enableCommandPrompt = false;
+        }
     }
 }

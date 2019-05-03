@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using XtremeHackerman.Classes;
 
 
@@ -88,5 +89,38 @@ namespace XtremeHackerman
                 var result = MessageBox.Show(message);
             }
         }
+
+        private void LL_Phish_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            /// this is where we download the attachment.
+            //EventLogic.RansomwareAttack();
+        }
+
+        private void email_inbox_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if (this.email_sourceTXT.Text == "ChaseBank@fake.com")
+            {
+                this.LL_Phish.Visible = true;
+                this.LL_Phish.Enabled = true;
+		Class_Progress.StepCompleted("Phishing Email", 1); //step one completed
+            }
+            else
+            {
+                this.LL_Phish.Visible = false;
+                this.LL_Phish.Enabled = false;
+            }
+        }
+
+	private void saveLinkToolStripMenuItem_Click(object sender, System.EventArgs e)
+	{
+	    string fileName = String.Join("", LL_Phish.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
+	    Class_File.Save(null, fileName, "HTML Document", true, null); // save into downloads
+	}
+
+	private void saveLinkAsToolStripMenuItem_Click(object sender, System.EventArgs e)
+	{
+	    string fileName = String.Join("", LL_Phish.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
+	    Class_File.SaveAs(fileName, "HTML Document", true, null); //save into chosen folder, and allow user to edit filename
+	}
     }
 }

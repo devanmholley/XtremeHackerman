@@ -154,11 +154,31 @@
   <data name="WifiIcon_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WifiIcon-OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
   <data name="Ransomware_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\From_Ransomware\ransomware-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_InternetExplorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ieicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Wireshark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wiresharklogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wiresharktoolicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wiresharktoolicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foldericon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foldericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EthernetConnectionTrack2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EthernetConnectionTrack2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WiFiConnectionTrack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WiFiConnectionTrack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EthernetNetworkActivity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EthernetNetworkActivity.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StartModeLockIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartModeLockIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

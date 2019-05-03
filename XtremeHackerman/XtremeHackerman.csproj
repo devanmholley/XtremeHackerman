@@ -36,11 +36,15 @@
     <StartupObject>XtremeHackerman.XtremeHackermanAppContext</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Json.Net, Version=1.0.16.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Json.Net.1.0.16\lib\netstandard2.0\Json.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,17 +55,47 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.25\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Class_WiresharkBluetoothData.cs" />
+    <Compile Include="Classes\Class_WiresharkWifiData.cs" />
+    <Compile Include="Classes\Class_WiresharkEthernetData.cs" />
+    <Compile Include="Classes\Class_File.cs" />
+    <Compile Include="Classes\Class_BootOptions.cs" />
     <Compile Include="Classes\Class_Firewall.cs" />
+    <Compile Include="Classes\Class_Progress.cs" />
+    <Compile Include="Classes\Class_HackerDesktop.cs" />
+    <Compile Include="Classes\Class_HackerTerminal.cs" />
     <Compile Include="EventLogic.cs" />
     <Compile Include="Classes\Class_FileManager.cs" />
+    <Compile Include="Classes\Class_Antivirus.cs" />
     <Compile Include="Classes\Desktop_BKEND.cs" />
     <Compile Include="Classes\Class_BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\Class_CustomFonts.cs" />
     <Compile Include="Classes\Class_Email.cs" />
+    <Compile Include="Form_Wireshark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Wireshark.Designer.cs">
+      <DependentUpon>Form_Wireshark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Anitvirus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Anitvirus.Designer.cs">
+      <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HackerStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HackerStartup.Designer.cs">
+      <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_CLI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,17 +138,29 @@
     <Compile Include="Form_Hacker.Designer.cs">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_HackerTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HackerTerminal.Designer.cs">
+      <DependentUpon>Form_HackerTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_InternetBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_InternetBrowser.Designer.cs">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Ransomware.cs">
+    <Compile Include="Form_SaveAs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Ransomware.Designer.cs">
-      <DependentUpon>Form_Ransomware.cs</DependentUpon>
+    <Compile Include="Form_SaveAs.Designer.cs">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SelectFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SelectFile.Designer.cs">
+      <DependentUpon>Form_SelectFile.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_TaskManager.cs">
       <SubType>Form</SubType>
@@ -128,15 +174,21 @@
     <Compile Include="Form_TitleScreen.Designer.cs">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_LandingPage.cs">
+    <Compile Include="Form_VirusTotal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_LandingPage.Designer.cs">
-      <DependentUpon>Form_LandingPage.cs</DependentUpon>
+    <Compile Include="Form_VirusTotal.Designer.cs">
+      <DependentUpon>Form_VirusTotal.cs</DependentUpon>
     </Compile>
     <Compile Include="Process.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Anitvirus.resx">
+      <DependentUpon>Form_Anitvirus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HackerStartup.resx">
+      <DependentUpon>Form_HackerStartup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Email.resx">
       <DependentUpon>Form_Email.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,11 +210,17 @@
     <EmbeddedResource Include="Form_Hacker.resx">
       <DependentUpon>Form_Hacker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_HackerTerminal.resx">
+      <DependentUpon>Form_HackerTerminal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_InternetBrowser.resx">
       <DependentUpon>Form_InternetBrowser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Ransomware.resx">
-      <DependentUpon>Form_Ransomware.cs</DependentUpon>
+    <EmbeddedResource Include="Form_SaveAs.resx">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SelectFile.resx">
+      <DependentUpon>Form_SelectFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TaskManager.resx">
       <DependentUpon>Form_TaskManager.cs</DependentUpon>
@@ -170,8 +228,14 @@
     <EmbeddedResource Include="Form_TitleScreen.resx">
       <DependentUpon>Form_TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_LandingPage.resx">
-      <DependentUpon>Form_LandingPage.cs</DependentUpon>
+    <EmbeddedResource Include="Form_VirusTotal.resx">
+      <DependentUpon>Form_VirusTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Wireshark.en-US.resx">
+      <DependentUpon>Form_Wireshark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Wireshark.resx">
+      <DependentUpon>Form_Wireshark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,7 +243,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\XtremeHackerman.Classes.Class_FileManager.datasource" />
     <None Include="Properties\DataSources\XtremeHackerman.Classes.EmailLogic.datasource" />
+    <None Include="Properties\DataSources\XtremeHackerman.Classes.WiresharkEthernetData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -205,6 +271,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\EthernetNetworkActivity.json" />
     <None Include="Resources\Form_TitleScreen\Background_TitleScreen.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -229,12 +296,78 @@
     <None Include="Resources\Form_TitleScreen\Picture_Title.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Form_Wireshark\EthernetConnectionData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\Form_Wireshark\WifiConnectionData.json" />
     <None Include="Resources\WifiIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\WifiIcon-OFF.png" />
+    <None Include="Resources\WifiIcon_OFF.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\GradientLineIcons\AddFolder.png" />
+    <Content Include="Resources\GradientLineIcons\Antivirus%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Antivirus.png" />
+    <Content Include="Resources\GradientLineIcons\Arrow_Down.png" />
+    <Content Include="Resources\GradientLineIcons\Arrow_Forward.png" />
+    <Content Include="Resources\GradientLineIcons\Arrow_Left.png" />
+    <Content Include="Resources\GradientLineIcons\Arrow_Right.png" />
+    <Content Include="Resources\GradientLineIcons\Arrow_Up.png" />
+    <Content Include="Resources\GradientLineIcons\Bluetooth.png" />
+    <Content Include="Resources\GradientLineIcons\Bookmark.png" />
+    <Content Include="Resources\GradientLineIcons\Checkmark.png" />
+    <Content Include="Resources\GradientLineIcons\Command%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Command.png" />
+    <Content Include="Resources\GradientLineIcons\Computer.png" />
+    <Content Include="Resources\GradientLineIcons\Email%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Email.png" />
+    <Content Include="Resources\GradientLineIcons\Email_2.png" />
+    <Content Include="Resources\GradientLineIcons\Ethernet.png" />
+    <Content Include="Resources\GradientLineIcons\File_Code.png" />
+    <Content Include="Resources\GradientLineIcons\File_Explorer.png" />
+    <Content Include="Resources\GradientLineIcons\File_HTML.png" />
+    <Content Include="Resources\GradientLineIcons\File_Text.png" />
+    <Content Include="Resources\GradientLineIcons\Firewall.png" />
+    <Content Include="Resources\GradientLineIcons\Folder.png" />
+    <Content Include="Resources\GradientLineIcons\Folder_Documents.png" />
+    <Content Include="Resources\GradientLineIcons\Folder_Downloads.png" />
+    <Content Include="Resources\GradientLineIcons\Folder_Explorer%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Folder_Open.png" />
+    <Content Include="Resources\GradientLineIcons\Help%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Help.png" />
+    <Content Include="Resources\GradientLineIcons\Home.png" />
+    <Content Include="Resources\GradientLineIcons\Internet%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Internet.png" />
+    <Content Include="Resources\GradientLineIcons\Lock.png" />
+    <Content Include="Resources\GradientLineIcons\Network%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Network.png" />
+    <Content Include="Resources\GradientLineIcons\Network_Analyzer%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Network_Manager%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Network_Nodes%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Power%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Power.png" />
+    <Content Include="Resources\GradientLineIcons\Refresh.png" />
+    <Content Include="Resources\GradientLineIcons\Refresh_2.png" />
+    <Content Include="Resources\GradientLineIcons\Router%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Router.png" />
+    <Content Include="Resources\GradientLineIcons\Router_Wifi.png" />
+    <Content Include="Resources\GradientLineIcons\toggleoff.png" />
+    <Content Include="Resources\GradientLineIcons\toggleon.png" />
+    <Content Include="Resources\GradientLineIcons\Trophy.png" />
+    <Content Include="Resources\GradientLineIcons\Virus.png" />
+    <Content Include="Resources\GradientLineIcons\Warning.png" />
+    <Content Include="Resources\GradientLineIcons\Wifi_Off%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Wifi_Off.png" />
+    <Content Include="Resources\GradientLineIcons\Wifi_On%2896%29.png" />
+    <Content Include="Resources\GradientLineIcons\Wifi_On.png" />
+    <None Include="Resources\WiFiConnectionTrack.png" />
+    <None Include="Resources\foldericon.png" />
+    <None Include="Resources\EthernetConnectionTrack.png" />
+    <None Include="Resources\EthernetConnectionTrack2.png" />
+    <Content Include="Resources\foldericon.bmp" />
+    <Content Include="Resources\Form_Desktop\Icon_Hint.png" />
+    <Content Include="Resources\Form_Desktop\Icon_AntiVirus.png" />
     <Content Include="Resources\Form_Desktop\Icon_FileManager.png" />
     <Content Include="Resources\Form_FileManager\addfile.png" />
     <Content Include="Resources\Form_FileManager\addfolder.png" />
@@ -244,6 +377,9 @@
     <Content Include="Resources\Form_FileManager\img.PNG" />
     <Content Include="Resources\Form_FileManager\openfolder.PNG" />
     <Content Include="Resources\Form_FileManager\thispc.png" />
+    <None Include="Resources\wiresharktoolicon.ico" />
+    <None Include="Resources\wiresharklogo.png" />
+    <None Include="Resources\StartModeLockIcon.png" />
     <None Include="Resources\From_Ransomware\ransomware-512.png" />
     <None Include="Resources\ieicon.png" />
   </ItemGroup>

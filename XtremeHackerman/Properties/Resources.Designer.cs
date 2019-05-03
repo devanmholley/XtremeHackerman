@@ -93,6 +93,36 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EthernetConnectionTrack2 {
+            get {
+                object obj = ResourceManager.GetObject("EthernetConnectionTrack2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] EthernetNetworkActivity {
+            get {
+                object obj = ResourceManager.GetObject("EthernetNetworkActivity", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foldericon {
+            get {
+                object obj = ResourceManager.GetObject("foldericon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_CommandLine {
             get {
                 object obj = ResourceManager.GetObject("Icon_CommandLine", resourceCulture);
@@ -143,6 +173,16 @@ namespace XtremeHackerman.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Wireshark {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Wireshark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Picture_Title {
             get {
                 object obj = ResourceManager.GetObject("Picture_Title", resourceCulture);
@@ -171,12 +211,32 @@ namespace XtremeHackerman.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StartModeLockIcon {
+            get {
+                object obj = ResourceManager.GetObject("StartModeLockIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] VCR_OSD_MONO_1_001 {
             get {
                 object obj = ResourceManager.GetObject("VCR_OSD_MONO_1_001", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WiFiConnectionTrack {
+            get {
+                object obj = ResourceManager.GetObject("WiFiConnectionTrack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -197,6 +257,16 @@ namespace XtremeHackerman.Properties {
             get {
                 object obj = ResourceManager.GetObject("WifiIcon_OFF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon wiresharktoolicon {
+            get {
+                object obj = ResourceManager.GetObject("wiresharktoolicon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }
