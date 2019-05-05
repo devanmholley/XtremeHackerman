@@ -80,6 +80,12 @@ namespace XtremeHackerman
         //If a known command is passed in run the associated command
         private void Eval_Commands(string command)
         {
+            // New lines can leave the return and newline characters at the beginning
+            // of the string. Remove these so that the command can be read.
+            if (command.Contains("\r\n"))
+            {
+                command = command.Replace("\r\n", "");
+            }
             switch (command)
             {
                 // If switching ip forwarding on
@@ -145,7 +151,7 @@ namespace XtremeHackerman
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "\t TX errors 0 " +
                         " dropped 0 overruns 0 carrier 0  collisions 0");
                     TerminalCurrentLine += 1;
-                    HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                    HackerTerminal_TXT.AppendText(Environment.NewLine +"Hackerman@Comp$ ");
                     break;
 
                 // When telling the client you are the server
