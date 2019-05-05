@@ -53,7 +53,7 @@ namespace XtremeHackerman
 	    eventLBL.Text = Class_Progress.ActiveEvent;
 	    eventProgress.Value = Class_Progress.Percent;
 	    //update completed stepsView
-	    if (Class_Progress.Percent <= 10) //no steps done
+	    if (Class_Progress.Percent <= 10 || Class_Progress.Percent == 100) //no steps done or completed game
 	    {
 		StepsView.Items[0].Text = "Step 1:";
 		StepsView.Items[0].ImageIndex = 0;
@@ -88,11 +88,11 @@ namespace XtremeHackerman
 		    StepsView.Items[3].Text = Class_Progress.Steps[3];
 		    StepsView.Items[3].ImageIndex = 2;
 		}
-		if (Class_Progress.Percent == 100) //step 5 done
-		{
-		    StepsView.Items[4].Text = Class_Progress.Steps[4];
-		    StepsView.Items[4].ImageIndex = 2;
-		}
+		//if (Class_Progress.Percent == 100) //step 5 done
+		//{
+		//    StepsView.Items[4].Text = Class_Progress.Steps[4];
+		//    StepsView.Items[4].ImageIndex = 2;
+		//}
 	    }
 	    //update completed events
 	    if (eventLBL.Text == "Ransomware")
@@ -143,18 +143,25 @@ namespace XtremeHackerman
 
 	private void HintButton_Click(object sender, EventArgs e)
 	{
-	    int step = 0;
-	    if (Class_Progress.Percent == 10)
-		step = 0;
-	    else if (Class_Progress.Percent == 28)
-		step = 1;
-	    else if (Class_Progress.Percent == 46)
-		step = 2;
-	    else if (Class_Progress.Percent == 64)
-		step = 3;
-	    else if (Class_Progress.Percent == 82)
-		step = 4;
-	    MessageBox.Show(Class_Progress.Hints[step]);
+	    if (Class_Progress.Percent == 100)
+	    {
+		MessageBox.Show("Nothing here to see.");
+	    }
+	    else
+	    {
+		int step = 0;
+		if (Class_Progress.Percent == 10)
+		    step = 0;
+		else if (Class_Progress.Percent == 28)
+		    step = 1;
+		else if (Class_Progress.Percent == 46)
+		    step = 2;
+		else if (Class_Progress.Percent == 64)
+		    step = 3;
+		else if (Class_Progress.Percent == 82)
+		    step = 4;
+		MessageBox.Show(Class_Progress.Hints[step]);
+	    }
 	}
 
 	private void toolbarNetworkBTN_Click(object sender, EventArgs e)

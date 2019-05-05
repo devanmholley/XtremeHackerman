@@ -38,7 +38,7 @@ namespace XtremeHackerman.Classes
 	{
 	    "Open Start Menu",
 	    "Logoff or Restart",
-	    "Enable Safemode",
+	    "Enable Safe Mode",
 	    "Open Antivirus",
 	    "Remove All Threats"
 	};
@@ -112,8 +112,8 @@ namespace XtremeHackerman.Classes
 	    if (activeEvent == "Ransomware" && Percent == 100)
 	    {
 		ActiveEvent = "You Win!";
-		Percent = 0;
 		Steps = null;
+		Hints = null;
 	    }
 	    /**********************************/
 

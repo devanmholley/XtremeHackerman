@@ -206,12 +206,12 @@
 	    this.welcomeMessagelabel.BackColor = System.Drawing.Color.Transparent;
 	    this.welcomeMessagelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.welcomeMessagelabel.ForeColor = System.Drawing.Color.Transparent;
-	    this.welcomeMessagelabel.Location = new System.Drawing.Point(887, 153);
+	    this.welcomeMessagelabel.Location = new System.Drawing.Point(959, 153);
 	    this.welcomeMessagelabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.welcomeMessagelabel.Name = "welcomeMessagelabel";
-	    this.welcomeMessagelabel.Size = new System.Drawing.Size(590, 63);
+	    this.welcomeMessagelabel.Size = new System.Drawing.Size(412, 61);
 	    this.welcomeMessagelabel.TabIndex = 1;
-	    this.welcomeMessagelabel.Text = "Welcome Mr. Anderson";
+	    this.welcomeMessagelabel.Text = "Welcome Admin";
 	    // 
 	    // webaccessPanel
 	    // 
@@ -507,7 +507,7 @@
 	    this.PasswordLBL.Location = new System.Drawing.Point(1049, 587);
 	    this.PasswordLBL.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.PasswordLBL.Name = "PasswordLBL";
-	    this.PasswordLBL.Size = new System.Drawing.Size(279, 63);
+	    this.PasswordLBL.Size = new System.Drawing.Size(274, 61);
 	    this.PasswordLBL.TabIndex = 6;
 	    this.PasswordLBL.Text = "Password:";
 	    // 
