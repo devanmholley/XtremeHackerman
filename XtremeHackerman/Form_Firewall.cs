@@ -30,9 +30,12 @@ namespace XtremeHackerman
 
 	private void loginButton_Click(object sender, EventArgs e)
 	{
-	    LandingPanel.Visible = false;
-	    FirewallSplitContainer.Visible = true;
-	    HomePanel.BringToFront();
+	    if (username_field.Text == "admin" && password_field.Text == "password")
+	    {
+		LandingPanel.Visible = false;
+		FirewallSplitContainer.Visible = true;
+		HomePanel.BringToFront();
+	    }
 	}
 
 	private void homeButton_Click(object sender, EventArgs e)
@@ -81,7 +84,7 @@ namespace XtremeHackerman
 		Class_Firewall.blockedDomains.Add(domainEntered.Text);
 	    }
 
-	    if (domainEntered.Text.Contains("fake"))
+	    if (domainEntered.Text.Contains("phi.sh"))
 		Class_Progress.StepCompleted("Phishing Email", 5); //step five completed -> Phishing Event completed
 	}
 
