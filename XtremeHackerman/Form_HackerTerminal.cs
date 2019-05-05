@@ -38,7 +38,7 @@ namespace XtremeHackerman
         }
 
         // Prompt for the password and check it
-        private void prompt_Pass()
+        private bool prompt_Pass()
         {
             //prompt for user password
             HackerTerminal_TXT.AppendText(Environment.NewLine +
@@ -51,12 +51,14 @@ namespace XtremeHackerman
             if (Classes.Class_HackerTerminal.Check_Pass(userinput) == true)
             {
                 HackerTerminal_TXT.AppendText(UserComp);
+                return true;
             }
             else
             {
                 HackerTerminal_TXT.AppendText(Environment.NewLine + 
                     "Incorrect password.");
                 TerminalCurrentLine += 1;
+                return false;
             }
         }
 
@@ -90,18 +92,34 @@ namespace XtremeHackerman
             {
                 // If switching ip forwarding on
                 case "Hackerman@Comp$ echo '1' | sudo tee /proc/sys/net/ipv4/ip_forward":
-                    TerminalCurrentLine += 1;
+                    //TerminalCurrentLine += 1;
                     // prompt for the password
-                    prompt_Pass();
-                    // enable ip forwarding
-                    Classes.Class_HackerTerminal.ipforwarding = true;
+                    if (prompt_Pass() == true)
+                    {
+                        Classes.Class_HackerTerminal.ipforwarding = true;
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@comp$ ");
+                        TerminalCurrentLine += 1;
+                    }
+                    else
+                    {
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@comp$ ");
+                        TerminalCurrentLine += 1;
+                    }
                     break;
 
                 // Turn off ip forwarding
                 case "Hackerman@Comp$ echo '0' | sudo tee /proc/sys/net/ipv4/ip_forward":
-                    TerminalCurrentLine += 1;
-                    prompt_Pass();
-                    Classes.Class_HackerTerminal.ipforwarding = false;
+                    if (prompt_Pass() == true)
+                    {
+                        Classes.Class_HackerTerminal.ipforwarding = false;
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@comp$ ");
+                        TerminalCurrentLine += 1;
+                    }
+                    else
+                    {
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@comp$ ");
+                        TerminalCurrentLine += 1;
+                    }
                     break;
 
                 // If checking the status of ip forwarding
@@ -156,25 +174,31 @@ namespace XtremeHackerman
 
                 // When telling the client you are the server
                 case "Hackerman@Comp$ sudo arpspoof -i wlp5s0 -t 138.93.0.10 172.217.9.14":
-                    prompt_Pass();
-                    while (TerminalCommand!="C")
+                    if (prompt_Pass() == true)
                     {
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "0:26:c7:77:88:48 " +
-                                                "8:0:27:5f:58:20 0806 42: arp reply 192.168.0.168 is-at " +
-                                                "0:26:c7:77:88:48");
+                        "8:0:27:5f:58:20 0806 42: arp reply 192.168.0.168 is-at " +
+                        "0:26:c7:77:88:48");
                         TerminalCurrentLine += 1;
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                    }
+                    else
+                    {
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
                     }
                     break;
                 // When telling the server you are the client
                 case "Hackerman@Comp$ sudo arpspoof -i wlp5s0 -t 172.217.9.14 138.93.0.10":
-                    prompt_Pass();
-                    while (TerminalCommand != "C")
+                    if(prompt_Pass() == true)
                     {
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "0:26:c7:77:88:48 " +
-                                                "8:0:27:5f:58:20 0806 42: arp reply 192.168.0.168 is-at " +
-                                                "0:26:c7:77:88:48");
+                                            "8:0:27:5f:58:20 0806 42: arp reply 192.168.0.168 is-at " +
+                                            "0:26:c7:77:88:48");
                         TerminalCurrentLine += 1;
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                    }
+                    else
+                    {
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
                     }
                     break;
@@ -190,7 +214,6 @@ namespace XtremeHackerman
                     TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "PASS password123");
                     TerminalCurrentLine += 1;
-                    
                     break;
 
                 default:
@@ -198,10 +221,8 @@ namespace XtremeHackerman
                     TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
                     TerminalCurrentLine += 1;
-
                     break;
             }
         }
-
     }
 }
