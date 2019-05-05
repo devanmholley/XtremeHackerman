@@ -93,7 +93,15 @@ namespace XtremeHackerman
 		    StepsView.Items[4].Text = Class_Progress.Steps[4];
 		    StepsView.Items[4].ImageIndex = 2;
 		}
-
+	    }
+	    //update completed events
+	    if (eventLBL.Text == "Ransomware")
+	    {
+		CompletedEventsList.Text = "Phishing Email";
+	    }
+	    else if (eventLBL.Text == "You Win!")
+	    {
+		CompletedEventsList.Text = "Phishing Email\nRansomware";
 	    }
 
 	    //Update Date and Time

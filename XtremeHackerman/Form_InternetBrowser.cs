@@ -23,28 +23,11 @@ namespace XtremeHackerman
         {
 	    if (AddressBar.Text == "virustotals.com")
 	    {
-		//Visit VirusTotals.com
-		WebsitePanel.Visible = true;
-		ErrorPanel.Visible = false;
-		var formVirusTotal = new Form_VirusTotal();
-		formVirusTotal.TopLevel = false;
-		WebsitePanel.Controls.Add(formVirusTotal);
-		formVirusTotal.Dock = DockStyle.Fill;
-		AddressBar.Text = "virustotals.com";
-		formVirusTotal.Show();
+		GoToWebsite("virustotals.com");
 	    }
 	    else if (AddressBar.Text == "firewall.com")
 	    {
-		//Visit Firewall
-		WebsitePanel.Visible = true;
-		ErrorPanel.Visible = false;
-		var formFirewall = new Form_Firewall();
-		formFirewall.TopLevel = false;
-		WebsitePanel.Controls.Add(formFirewall);
-		formFirewall.Dock = DockStyle.Fill;
-		formFirewall.Show();
-		AddressBar.Text = "firewall.com";
-		Class_Progress.StepCompleted("Phishing Email", 3); //step three completed
+		GoToWebsite("firewall.com");
 	    }
 	    else
 	    {
@@ -74,30 +57,51 @@ namespace XtremeHackerman
 	    // Visit Home
 	    WebsitePanel.Visible = false;
 	    ErrorPanel.Visible = false;
+	    AddressBar.Text = "";
         }
 
         private void companyFirewallToolStripMenuItem_Click(object sender, EventArgs e)
         {
 	    //Visit Firewall
-            var formFirewall = new Form_Firewall();
-	    formFirewall.TopLevel = false;
-	    WebsitePanel.Controls.Add(formFirewall);
-	    formFirewall.Dock = DockStyle.Fill;
-	    formFirewall.Show();
-	    AddressBar.Text = "firewall.com";
-	    Class_Progress.StepCompleted("Phishing Email", 3); //step three completed
+	    GoToWebsite("firewall.com");
 	}
 
 
         private void virusTotalToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
 	    //Visit VirusTotals.com
-	    var formVirusTotal = new Form_VirusTotal();
-	    formVirusTotal.TopLevel = false;
-	    WebsitePanel.Controls.Add(formVirusTotal);
-	    formVirusTotal.Dock = DockStyle.Fill;
-	    AddressBar.Text = "virustotals.com";
-	    formVirusTotal.Show();
+	    GoToWebsite("virustotals.com");
+	}
+
+	//simulate opening a website in internet browser
+	private void GoToWebsite(string website)
+	{
+	    WebsitePanel.Visible = true;
+	    ErrorPanel.Visible = false;
+
+	    if (website == "firewall.com")
+	    {
+		//Visit Firewall
+		var formFirewall = new Form_Firewall();
+		formFirewall.TopLevel = false;
+		WebsitePanel.Controls.Add(formFirewall);
+		formFirewall.Dock = DockStyle.Fill;
+		formFirewall.Show();
+		AddressBar.Text = "firewall.com";
+		Class_Progress.StepCompleted("Phishing Email", 3); //step three completed
+	    }
+	    else if (website == "virustotals.com")
+	    {
+		//Visit virustotals.com
+		var formVirusTotal = new Form_VirusTotal();
+		formVirusTotal.TopLevel = false;
+		WebsitePanel.Controls.Add(formVirusTotal);
+		formVirusTotal.Dock = DockStyle.Fill;
+		AddressBar.Text = "virustotals.com";
+		formVirusTotal.Show();
+	    }
+	    
 	}
     }
 }

@@ -76,6 +76,8 @@
 	    this.Label_date = new System.Windows.Forms.Label();
 	    this.Label_Destroy_Warning = new System.Windows.Forms.Label();
 	    this.PB_Ransom_Icon = new System.Windows.Forms.PictureBox();
+	    this.CompletedEventsLBL = new System.Windows.Forms.Label();
+	    this.CompletedEventsList = new System.Windows.Forms.Label();
 	    this.RestartBootOptions.SuspendLayout();
 	    this.StartMenuPanel.SuspendLayout();
 	    this.IconsPanel.SuspendLayout();
@@ -424,6 +426,8 @@
 	    // ProgressPanel
 	    // 
 	    this.ProgressPanel.BackColor = System.Drawing.Color.Transparent;
+	    this.ProgressPanel.Controls.Add(this.CompletedEventsLBL);
+	    this.ProgressPanel.Controls.Add(this.CompletedEventsList);
 	    this.ProgressPanel.Controls.Add(this.StepsView);
 	    this.ProgressPanel.Controls.Add(this.ProgressLBL);
 	    this.ProgressPanel.Controls.Add(this.HintButton);
@@ -496,6 +500,7 @@
 	    this.HintButton.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.HintButton.FlatAppearance.BorderSize = 0;
 	    this.HintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+	    this.HintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.HintButton.ForeColor = System.Drawing.Color.White;
 	    this.HintButton.Image = ((System.Drawing.Image)(resources.GetObject("HintButton.Image")));
 	    this.HintButton.Location = new System.Drawing.Point(0, 182);
@@ -516,7 +521,7 @@
 	    this.eventLBL.Name = "eventLBL";
 	    this.eventLBL.Size = new System.Drawing.Size(539, 61);
 	    this.eventLBL.TabIndex = 24;
-	    this.eventLBL.Text = "event";
+	    this.eventLBL.Text = "Phising Email";
 	    this.eventLBL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 	    this.eventLBL.DoubleClick += new System.EventHandler(this.eventLBL_DoubleClick);
 	    // 
@@ -683,6 +688,31 @@
 	    this.PB_Ransom_Icon.TabIndex = 1;
 	    this.PB_Ransom_Icon.TabStop = false;
 	    // 
+	    // CompletedEventsLBL
+	    // 
+	    this.CompletedEventsLBL.Dock = System.Windows.Forms.DockStyle.Bottom;
+	    this.CompletedEventsLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.CompletedEventsLBL.ForeColor = System.Drawing.Color.White;
+	    this.CompletedEventsLBL.Image = ((System.Drawing.Image)(resources.GetObject("CompletedEventsLBL.Image")));
+	    this.CompletedEventsLBL.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+	    this.CompletedEventsLBL.Location = new System.Drawing.Point(0, 1136);
+	    this.CompletedEventsLBL.Name = "CompletedEventsLBL";
+	    this.CompletedEventsLBL.Size = new System.Drawing.Size(539, 216);
+	    this.CompletedEventsLBL.TabIndex = 25;
+	    this.CompletedEventsLBL.Text = "Completed Events:";
+	    this.CompletedEventsLBL.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+	    // 
+	    // CompletedEventsList
+	    // 
+	    this.CompletedEventsList.Dock = System.Windows.Forms.DockStyle.Bottom;
+	    this.CompletedEventsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.CompletedEventsList.ForeColor = System.Drawing.Color.Teal;
+	    this.CompletedEventsList.Location = new System.Drawing.Point(0, 1352);
+	    this.CompletedEventsList.Name = "CompletedEventsList";
+	    this.CompletedEventsList.Size = new System.Drawing.Size(539, 164);
+	    this.CompletedEventsList.TabIndex = 26;
+	    this.CompletedEventsList.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+	    // 
 	    // Form_Desktop
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -769,5 +799,7 @@
 	private System.Windows.Forms.ImageList imageList1;
 	private System.Windows.Forms.Label eventLBL;
 	private System.Windows.Forms.ColumnHeader columnHeader1;
+	private System.Windows.Forms.Label CompletedEventsLBL;
+	private System.Windows.Forms.Label CompletedEventsList;
     }
 }

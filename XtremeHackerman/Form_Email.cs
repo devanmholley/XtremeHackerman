@@ -99,6 +99,12 @@ namespace XtremeHackerman
 	    formInternet.AddressBar.Text = Link.Text;
 	    formInternet.Show();
 	    formInternet.Search.PerformClick();
+	    Class_Progress.StepCompleted("Phishing Email", 2); //step two completed, open internet
+
+	    if (Link.Text == "firewall.com")
+	    {
+		Class_Progress.StepCompleted("Phishing Email", 3); //step three completed, visit firewall
+	    }
 	}
 
         private void email_inbox_SelectedIndexChanged(object sender, System.EventArgs e)
