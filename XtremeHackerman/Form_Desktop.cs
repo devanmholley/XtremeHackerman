@@ -320,5 +320,14 @@ namespace XtremeHackerman
 	    formTaskManager.ShowDialog();
 	    Process.newProcess("Task Manager", DateTime.Now);
 	}
+
+	private void eventLBL_DoubleClick(object sender, EventArgs e)
+	{
+	    if (eventLBL.Text == "Phishing Email")
+		MessageBox.Show("\"Phishing is a type of online scam where criminals send an email that appears to be from a legitimate company and ask you to provide sensitive information. This is usually done by including a link that will appear to take you to the company’s website to fill in your information – but the website is a clever fake and the information you provide goes straight to the crooks behind the scam.\n\nThe term ’phishing’ is a spin on the word fishing, because criminals are dangling a fake ’lure’ (the email that looks legitimate, as well as the website that looks legitimate) hoping users will ’bite’ by providing the information the criminals have requested – such as credit card numbers, account numbers, passwords, usernames, and more.\"\n\n - WebRoot.com");
+
+	    if (eventLBL.Text == "Ransomware")
+		MessageBox.Show("\"Ransomware is a type of malicious software (or “malware”) that infects computers, then encrypts various files and demands a ransom to get them back. Even if you pay the money within the timeframe the criminals set, there’s no guarantee you’ll get your files back. Typical ransoms are at least $500, but some of them ask for much more (particularly if they hit a larger business that can’t function without immediate and reliable access to its data, such as a hospital.\"\n\n - Webroot.com");
+	}
     }
 }
