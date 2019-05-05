@@ -25,6 +25,7 @@ namespace XtremeHackerman
             email_subjectTXT.DataBindings.Add("Text", emailInboxBindingSource, "Subject");
             email_bodyTXT.DataBindings.Add("Text", emailInboxBindingSource, "Body");
 	    timer1.Start();
+	    LinkAppear();
         }
 
         private void email_composeBTN_Click(object sender, System.EventArgs e)
@@ -91,42 +92,57 @@ namespace XtremeHackerman
             }
         }
 
-        private void LL_Phish_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            /// this is where we download the attachment.
-            //EventLogic.RansomwareAttack();
-        }
+	    //Open link in internet browser
+	    var formInternet = new Form_InternetBrowser();
+	    formInternet.AddressBar.Text = Link.Text;
+	    formInternet.Show();
+	    formInternet.Search.PerformClick();
+	}
 
         private void email_inbox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (this.email_sourceTXT.Text == "ChaseBank@fake.com")
-            {
-                this.LL_Phish.Visible = true;
-                this.LL_Phish.Enabled = true;
-		Class_Progress.StepCompleted("Phishing Email", 1); //step one completed
-            }
-            else
-            {
-                this.LL_Phish.Visible = false;
-                this.LL_Phish.Enabled = false;
-            }
+	    LinkAppear();
         }
 
 	private void saveLinkToolStripMenuItem_Click(object sender, System.EventArgs e)
 	{
-	    string fileName = String.Join("", LL_Phish.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
+	    string fileName = String.Join("", Link.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
 	    Class_File.Save(null, fileName, "HTML Document", true, null); // save into downloads
 	}
 
 	private void saveLinkAsToolStripMenuItem_Click(object sender, System.EventArgs e)
 	{
-	    string fileName = String.Join("", LL_Phish.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
+	    string fileName = String.Join("", Link.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
 	    Class_File.SaveAs(fileName, "HTML Document", true, null); //save into chosen folder, and allow user to edit filename
 	}
 
 	private void timer1_Tick(object sender, EventArgs e)
 	{
 	    emailInboxBindingSource.ResetBindings(false); //refresh email
+	}
+
+	private void LinkAppear()
+	{
+	    if (email_sourceTXT.Text == "ChaseBank@phi.sh")
+	    {
+		Link.Text = "notphishing.com/ebneoKI23jdfn03";
+		Link.Visible = true;
+		Link.Enabled = true;
+		Class_Progress.StepCompleted("Phishing Email", 1); //step one completed
+	    }
+	    else if (email_sourceTXT.Text == "loginhelp@firewall.com")
+	    {
+		Link.Text = "firewall.com";
+		Link.Visible = true;
+		Link.Enabled = true;
+	    }
+	    else
+	    {
+		Link.Visible = false;
+		Link.Enabled = false;
+	    }
 	}
     }
 }

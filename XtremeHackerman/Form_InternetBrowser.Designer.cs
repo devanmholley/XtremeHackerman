@@ -30,31 +30,35 @@
         {
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_InternetBrowser));
 	    this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-	    this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-	    this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-	    this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-	    this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-	    this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-	    this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-	    this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+	    this.Back = new System.Windows.Forms.ToolStripButton();
+	    this.Forward = new System.Windows.Forms.ToolStripButton();
+	    this.Refresh = new System.Windows.Forms.ToolStripButton();
+	    this.Home = new System.Windows.Forms.ToolStripButton();
+	    this.AddressBar = new System.Windows.Forms.ToolStripTextBox();
+	    this.Search = new System.Windows.Forms.ToolStripButton();
+	    this.Bookmarks = new System.Windows.Forms.ToolStripDropDownButton();
 	    this.companyFirewallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 	    this.virusTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 	    this.errorLabel = new System.Windows.Forms.Label();
 	    this.WebsitePanel = new System.Windows.Forms.Panel();
+	    this.errorIcon = new System.Windows.Forms.PictureBox();
+	    this.ErrorPanel = new System.Windows.Forms.Panel();
 	    this.toolStrip1.SuspendLayout();
+	    ((System.ComponentModel.ISupportInitialize)(this.errorIcon)).BeginInit();
+	    this.ErrorPanel.SuspendLayout();
 	    this.SuspendLayout();
 	    // 
 	    // toolStrip1
 	    // 
 	    this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
 	    this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton5,
-            this.toolStripTextBox1,
-            this.toolStripButton4,
-            this.toolStripDropDownButton1});
+            this.Back,
+            this.Forward,
+            this.Refresh,
+            this.Home,
+            this.AddressBar,
+            this.Search,
+            this.Bookmarks});
 	    this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 	    this.toolStrip1.Name = "toolStrip1";
 	    this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
@@ -62,72 +66,72 @@
 	    this.toolStrip1.TabIndex = 0;
 	    this.toolStrip1.Text = "toolStrip1";
 	    // 
-	    // toolStripButton1
+	    // Back
 	    // 
-	    this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-	    this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-	    this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-	    this.toolStripButton1.Name = "toolStripButton1";
-	    this.toolStripButton1.Size = new System.Drawing.Size(44, 45);
-	    this.toolStripButton1.Text = "toolStripButton1";
-	    this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+	    this.Back.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+	    this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
+	    this.Back.ImageTransparentColor = System.Drawing.Color.Magenta;
+	    this.Back.Name = "Back";
+	    this.Back.Size = new System.Drawing.Size(44, 45);
+	    this.Back.Text = "Click to go backwards";
+	    this.Back.Click += new System.EventHandler(this.Back_Click);
 	    // 
-	    // toolStripButton2
+	    // Forward
 	    // 
-	    this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-	    this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-	    this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-	    this.toolStripButton2.Name = "toolStripButton2";
-	    this.toolStripButton2.Size = new System.Drawing.Size(44, 45);
-	    this.toolStripButton2.Text = "toolStripButton2";
-	    this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+	    this.Forward.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+	    this.Forward.Image = ((System.Drawing.Image)(resources.GetObject("Forward.Image")));
+	    this.Forward.ImageTransparentColor = System.Drawing.Color.Magenta;
+	    this.Forward.Name = "Forward";
+	    this.Forward.Size = new System.Drawing.Size(44, 45);
+	    this.Forward.Text = "Click to go forward";
+	    this.Forward.Click += new System.EventHandler(this.Forward_Click);
 	    // 
-	    // toolStripButton3
+	    // Refresh
 	    // 
-	    this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-	    this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-	    this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-	    this.toolStripButton3.Name = "toolStripButton3";
-	    this.toolStripButton3.Size = new System.Drawing.Size(44, 45);
-	    this.toolStripButton3.Text = "toolStripButton3";
-	    this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+	    this.Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+	    this.Refresh.Image = ((System.Drawing.Image)(resources.GetObject("Refresh.Image")));
+	    this.Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+	    this.Refresh.Name = "Refresh";
+	    this.Refresh.Size = new System.Drawing.Size(44, 45);
+	    this.Refresh.Text = "Refresh";
+	    this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
 	    // 
-	    // toolStripButton5
+	    // Home
 	    // 
-	    this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-	    this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-	    this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-	    this.toolStripButton5.Name = "toolStripButton5";
-	    this.toolStripButton5.Size = new System.Drawing.Size(44, 45);
-	    this.toolStripButton5.Text = "toolStripButton5";
-	    this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+	    this.Home.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+	    this.Home.Image = ((System.Drawing.Image)(resources.GetObject("Home.Image")));
+	    this.Home.ImageTransparentColor = System.Drawing.Color.Magenta;
+	    this.Home.Name = "Home";
+	    this.Home.Size = new System.Drawing.Size(44, 45);
+	    this.Home.Text = "Home";
+	    this.Home.Click += new System.EventHandler(this.Home_Click);
 	    // 
-	    // toolStripTextBox1
+	    // AddressBar
 	    // 
-	    this.toolStripTextBox1.Name = "toolStripTextBox1";
-	    this.toolStripTextBox1.Size = new System.Drawing.Size(700, 48);
+	    this.AddressBar.Name = "AddressBar";
+	    this.AddressBar.Size = new System.Drawing.Size(700, 48);
 	    // 
-	    // toolStripButton4
+	    // Search
 	    // 
-	    this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-	    this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-	    this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-	    this.toolStripButton4.Name = "toolStripButton4";
-	    this.toolStripButton4.Size = new System.Drawing.Size(44, 45);
-	    this.toolStripButton4.Text = "toolStripButton4";
-	    this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+	    this.Search.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+	    this.Search.Image = ((System.Drawing.Image)(resources.GetObject("Search.Image")));
+	    this.Search.ImageTransparentColor = System.Drawing.Color.Magenta;
+	    this.Search.Name = "Search";
+	    this.Search.Size = new System.Drawing.Size(44, 45);
+	    this.Search.Text = "Go";
+	    this.Search.Click += new System.EventHandler(this.Search_Click);
 	    // 
-	    // toolStripDropDownButton1
+	    // Bookmarks
 	    // 
-	    this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-	    this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+	    this.Bookmarks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+	    this.Bookmarks.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.companyFirewallToolStripMenuItem,
             this.virusTotalToolStripMenuItem});
-	    this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-	    this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-	    this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-	    this.toolStripDropDownButton1.Size = new System.Drawing.Size(66, 45);
-	    this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+	    this.Bookmarks.Image = ((System.Drawing.Image)(resources.GetObject("Bookmarks.Image")));
+	    this.Bookmarks.ImageTransparentColor = System.Drawing.Color.Magenta;
+	    this.Bookmarks.Name = "Bookmarks";
+	    this.Bookmarks.Size = new System.Drawing.Size(66, 45);
+	    this.Bookmarks.Text = "Bookmarks";
 	    // 
 	    // companyFirewallToolStripMenuItem
 	    // 
@@ -145,38 +149,68 @@
 	    // 
 	    // errorLabel
 	    // 
+	    this.errorLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
 	    this.errorLabel.AutoSize = true;
-	    this.errorLabel.Location = new System.Drawing.Point(483, 331);
+	    this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.errorLabel.Location = new System.Drawing.Point(865, 290);
 	    this.errorLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.errorLabel.Name = "errorLabel";
-	    this.errorLabel.Size = new System.Drawing.Size(129, 32);
+	    this.errorLabel.Size = new System.Drawing.Size(421, 122);
 	    this.errorLabel.TabIndex = 1;
-	    this.errorLabel.Text = "404 error";
-	    this.errorLabel.Visible = false;
+	    this.errorLabel.Text = "404 Error\r\nPage Not Found\r\n";
+	    this.errorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 	    // 
 	    // WebsitePanel
 	    // 
+	    this.WebsitePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 	    this.WebsitePanel.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.WebsitePanel.Location = new System.Drawing.Point(0, 48);
 	    this.WebsitePanel.Name = "WebsitePanel";
 	    this.WebsitePanel.Size = new System.Drawing.Size(2155, 1070);
 	    this.WebsitePanel.TabIndex = 8;
+	    this.WebsitePanel.Visible = false;
+	    // 
+	    // errorIcon
+	    // 
+	    this.errorIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("errorIcon.BackgroundImage")));
+	    this.errorIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+	    this.errorIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.errorIcon.Location = new System.Drawing.Point(0, 0);
+	    this.errorIcon.Name = "errorIcon";
+	    this.errorIcon.Size = new System.Drawing.Size(2155, 1070);
+	    this.errorIcon.TabIndex = 9;
+	    this.errorIcon.TabStop = false;
+	    // 
+	    // ErrorPanel
+	    // 
+	    this.ErrorPanel.Controls.Add(this.errorLabel);
+	    this.ErrorPanel.Controls.Add(this.errorIcon);
+	    this.ErrorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.ErrorPanel.Location = new System.Drawing.Point(0, 48);
+	    this.ErrorPanel.Name = "ErrorPanel";
+	    this.ErrorPanel.Size = new System.Drawing.Size(2155, 1070);
+	    this.ErrorPanel.TabIndex = 10;
+	    this.ErrorPanel.Visible = false;
 	    // 
 	    // Form_InternetBrowser
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
 	    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+	    this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+	    this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 	    this.ClientSize = new System.Drawing.Size(2155, 1118);
 	    this.Controls.Add(this.WebsitePanel);
+	    this.Controls.Add(this.ErrorPanel);
 	    this.Controls.Add(this.toolStrip1);
-	    this.Controls.Add(this.errorLabel);
 	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Name = "Form_InternetBrowser";
 	    this.Text = "InternetBrowser";
 	    this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-	    this.Load += new System.EventHandler(this.Form_InternetBrowser_Load);
 	    this.toolStrip1.ResumeLayout(false);
 	    this.toolStrip1.PerformLayout();
+	    ((System.ComponentModel.ISupportInitialize)(this.errorIcon)).EndInit();
+	    this.ErrorPanel.ResumeLayout(false);
+	    this.ErrorPanel.PerformLayout();
 	    this.ResumeLayout(false);
 	    this.PerformLayout();
 
@@ -185,16 +219,18 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripButton Back;
+        private System.Windows.Forms.ToolStripButton Forward;
+        private System.Windows.Forms.ToolStripButton Refresh;
+        private System.Windows.Forms.ToolStripButton Home;
+        private System.Windows.Forms.ToolStripDropDownButton Bookmarks;
         private System.Windows.Forms.ToolStripMenuItem companyFirewallToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem virusTotalToolStripMenuItem;
         private System.Windows.Forms.Label errorLabel;
 	private System.Windows.Forms.Panel WebsitePanel;
+	private System.Windows.Forms.PictureBox errorIcon;
+	private System.Windows.Forms.Panel ErrorPanel;
+	public System.Windows.Forms.ToolStripTextBox AddressBar;
+	public System.Windows.Forms.ToolStripButton Search;
     }
 }

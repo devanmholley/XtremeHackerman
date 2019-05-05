@@ -1,7 +1,8 @@
 [
 {
 "Destination": "SysAdmin@meganopoly.com",
-"Body": "To log in to the firewall manager please use your credentials below: \r\n\r\nUsername: admin \r\n\r\nPassword: password",
+"Body": "To log in to the firewall manager please use your credentials below: \r\n\r\nUsername: admin \r\n\rPassword: password \r\n\r\nLogin Using the Link Below:",
+"Source": "loginhelp@firewall.com",
 "Subject": "Firewall Management Login Credentials",
 "Date": "May 10, 2019 2:00 PM"
 },

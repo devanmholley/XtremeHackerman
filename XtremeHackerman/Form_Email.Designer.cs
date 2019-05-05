@@ -38,7 +38,7 @@
 	    this.email_spamBTN = new System.Windows.Forms.Button();
 	    this.email_flaggedBTN = new System.Windows.Forms.Button();
 	    this.email_inboxBTN = new System.Windows.Forms.Button();
-	    this.LL_Phish = new System.Windows.Forms.LinkLabel();
+	    this.Link = new System.Windows.Forms.LinkLabel();
 	    this.rightClickLinkMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 	    this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 	    this.saveLinkAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,7 +89,7 @@
 	    // 
 	    // splitContainer1.Panel2
 	    // 
-	    this.splitContainer1.Panel2.Controls.Add(this.LL_Phish);
+	    this.splitContainer1.Panel2.Controls.Add(this.Link);
 	    this.splitContainer1.Panel2.Controls.Add(this.email_bodyTXT);
 	    this.splitContainer1.Panel2.Controls.Add(this.panel1);
 	    this.splitContainer1.Panel2.Controls.Add(this.email_header);
@@ -206,19 +206,21 @@
 	    this.email_inboxBTN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 	    this.email_inboxBTN.UseVisualStyleBackColor = false;
 	    // 
-	    // LL_Phish
+	    // Link
 	    // 
-	    this.LL_Phish.AutoSize = true;
-	    this.LL_Phish.ContextMenuStrip = this.rightClickLinkMenu;
-	    this.LL_Phish.Enabled = false;
-	    this.LL_Phish.Location = new System.Drawing.Point(456, 916);
-	    this.LL_Phish.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-	    this.LL_Phish.Name = "LL_Phish";
-	    this.LL_Phish.Size = new System.Drawing.Size(449, 32);
-	    this.LL_Phish.TabIndex = 3;
-	    this.LL_Phish.TabStop = true;
-	    this.LL_Phish.Text = "notphishing.com/ebneoKI23jdfn03";
-	    this.LL_Phish.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LL_Phish_LinkClicked);
+	    this.Link.AutoSize = true;
+	    this.Link.BackColor = System.Drawing.Color.Transparent;
+	    this.Link.ContextMenuStrip = this.rightClickLinkMenu;
+	    this.Link.Enabled = false;
+	    this.Link.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.Link.Location = new System.Drawing.Point(25, 800);
+	    this.Link.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+	    this.Link.Name = "Link";
+	    this.Link.Size = new System.Drawing.Size(168, 46);
+	    this.Link.TabIndex = 3;
+	    this.Link.TabStop = true;
+	    this.Link.Text = "link.com";
+	    this.Link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_LinkClicked);
 	    // 
 	    // rightClickLinkMenu
 	    // 
@@ -523,7 +525,7 @@
         private System.Windows.Forms.Button btn_Send;
         private System.Windows.Forms.Label Date_TXT;
         private System.Windows.Forms.TextBox targetTXT;
-        private System.Windows.Forms.LinkLabel LL_Phish;
+        private System.Windows.Forms.LinkLabel Link;
 	private System.Windows.Forms.ContextMenuStrip rightClickLinkMenu;
 	private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
 	private System.Windows.Forms.ToolStripMenuItem saveLinkAsToolStripMenuItem;

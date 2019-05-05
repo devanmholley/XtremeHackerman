@@ -19,55 +19,84 @@ namespace XtremeHackerman
             InitializeComponent();
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void Search_Click(object sender, EventArgs e)
         {
-            // code for "begin search here" button
-            errorLabel.Visible = true;
+	    if (AddressBar.Text == "virustotals.com")
+	    {
+		//Visit VirusTotals.com
+		WebsitePanel.Visible = true;
+		ErrorPanel.Visible = false;
+		var formVirusTotal = new Form_VirusTotal();
+		formVirusTotal.TopLevel = false;
+		WebsitePanel.Controls.Add(formVirusTotal);
+		formVirusTotal.Dock = DockStyle.Fill;
+		AddressBar.Text = "virustotals.com";
+		formVirusTotal.Show();
+	    }
+	    else if (AddressBar.Text == "firewall.com")
+	    {
+		//Visit Firewall
+		WebsitePanel.Visible = true;
+		ErrorPanel.Visible = false;
+		var formFirewall = new Form_Firewall();
+		formFirewall.TopLevel = false;
+		WebsitePanel.Controls.Add(formFirewall);
+		formFirewall.Dock = DockStyle.Fill;
+		formFirewall.Show();
+		AddressBar.Text = "firewall.com";
+		Class_Progress.StepCompleted("Phishing Email", 3); //step three completed
+	    }
+	    else
+	    {
+		//Error Page
+		WebsitePanel.Visible = false;
+		ErrorPanel.Visible = true;
+	    }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void Back_Click(object sender, EventArgs e)
         {
             // Code for go-back button
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void Forward_Click(object sender, EventArgs e)
         {
             // code for go-forward button
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void Refresh_Click(object sender, EventArgs e)
         {
             // code for refresh button
         }
 
-        private void toolStripButton5_Click(object sender, EventArgs e)
+        private void Home_Click(object sender, EventArgs e)
         {
-            // code for home button here
+	    // Visit Home
+	    WebsitePanel.Visible = false;
+	    ErrorPanel.Visible = false;
         }
 
         private void companyFirewallToolStripMenuItem_Click(object sender, EventArgs e)
         {
+	    //Visit Firewall
             var formFirewall = new Form_Firewall();
 	    formFirewall.TopLevel = false;
 	    WebsitePanel.Controls.Add(formFirewall);
 	    formFirewall.Dock = DockStyle.Fill;
 	    formFirewall.Show();
-	    toolStripTextBox1.Text = "firewall.com";
+	    AddressBar.Text = "firewall.com";
 	    Class_Progress.StepCompleted("Phishing Email", 3); //step three completed
 	}
 
-        private void Form_InternetBrowser_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void virusTotalToolStripMenuItem_Click(object sender, EventArgs e)
         {
+	    //Visit VirusTotals.com
 	    var formVirusTotal = new Form_VirusTotal();
 	    formVirusTotal.TopLevel = false;
 	    WebsitePanel.Controls.Add(formVirusTotal);
 	    formVirusTotal.Dock = DockStyle.Fill;
-	    toolStripTextBox1.Text = "virustotals.com";
+	    AddressBar.Text = "virustotals.com";
 	    formVirusTotal.Show();
 	}
     }
