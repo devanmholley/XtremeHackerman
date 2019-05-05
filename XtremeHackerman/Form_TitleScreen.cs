@@ -136,11 +136,11 @@ namespace XtremeHackerman
             if (BootOptions.enableNetworking == true)
             {
                 NetworkingStatus.Text = "Network: Enabled";
-            }
+	    }
             else
             {
-                NetworkingStatus.Text = "Network: Disabled";
-            }
+		NetworkingStatus.Text = "Network: Disabled";
+	    }
             // Command Prompt Settings
             if (BootOptions.enableCommandPrompt == true)
             {

@@ -19,40 +19,26 @@ namespace XtremeHackerman
     {
 	public Form_Desktop()
 	{
-	    InitializeComponent();
-	    //desktopBootOptions();
+	    InitializeComponent();    
 	}
 
 	private void Form_Desktop_Load(object sender, EventArgs e)
 	{
 	    BackgroundRefresh();
+	    desktopBootOptions();
 	}
 
 	private void desktopBootOptions()
 	{   // This function will handle enabling/disabling certain settings based on Boot Options
 
-
-
-	    //// Enables or disables Network access as defined by the system boot options 
+	    //// Relect the wifi icon on or off as defined by the system boot options
 	    if (BootOptions.enableNetworking == false)
 	    {
-		Desktop_BKEND.net_ON = false;
-		toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
+		toolbarNetworkBTN.Image = Resources.Wifi_Off;
 	    }
 	    else
 	    {
-		Desktop_BKEND.net_ON = true;
-		toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon;		
-	    }
-
-	    // Enables or disables CMD access as defined by the system boot options
-	    if (BootOptions.enableCommandPrompt == false)
-	    {
-		Desktop_BKEND.CMD_ON = false;
-	    }
-	    else
-	    {
-		Desktop_BKEND.CMD_ON = true;
+		toolbarNetworkBTN.Image = Resources.Wifi_On;
 	    }
 	}
 
@@ -166,20 +152,20 @@ namespace XtremeHackerman
 	private void toolbarNetworkBTN_Click(object sender, EventArgs e)
 	{
 	    // If the network Icon shows that the network is currently on
-	    if (Desktop_BKEND.net_ON)
+	    if (BootOptions.enableNetworking == true)
 	    {
-		// Change the network icon to the 'Wifi Off' icon
-		toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon_OFF;
 		// Change the public status of the network to off
-		Desktop_BKEND.net_ON = false;
+		BootOptions.enableNetworking = false;
+		// Change the network icon to the 'Wifi Off'
+		toolbarNetworkBTN.Image = Resources.Wifi_Off;
 	    }
 	    // If the network icon shows that the network is currently off
 	    else
 	    {
-		// Change the network icon to the 'Wifi on; icon
-		toolbarNetworkBTN.BackgroundImage = Resources.WifiIcon;
 		// Change the public status of the network on on
-		Desktop_BKEND.net_ON = true;
+		BootOptions.enableNetworking = true;
+		// Change the network icon to the 'Wifi On' icon
+		toolbarNetworkBTN.Image = Resources.Wifi_On;
 	    }
 	}
 
@@ -264,7 +250,7 @@ namespace XtremeHackerman
 	{
 	    // Command Line implementation
 
-	    if (Desktop_BKEND.CMD_ON == false)
+	    if (BootOptions.enableCommandPrompt == false)
 	    {
 		const string message = "Command Prompt Access Restricted in Current Boot Options.";
 		var result = MessageBox.Show(message);
