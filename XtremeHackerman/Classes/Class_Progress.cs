@@ -87,10 +87,11 @@ namespace XtremeHackerman.Classes
 		{
 		    Percent += 18;
 		    //Desktop_BKEND.Notification("You've completed Step " + step + "\n" + Steps[step-1], true);
+		    MessageBox.Show("You've completed Step " + step + "\n" + Steps[step - 1]);
 		}
 		else if (step == 5 && Percent == 82)
 		{
-		    MessageBox.Show("You've completed Step " + step + "\n" + Steps[step - 1] + "\nYou have successfully recovered from: " + activeEvent);
+		    MessageBox.Show("You've completed Step " + step + "\n" + Steps[step - 1] + "\n\nYou have successfully recovered from: " + activeEvent);
 		    Percent += 18;
 		}
 	    }
