@@ -66,6 +66,49 @@ namespace XtremeHackerman
 	    //Update Event Progress
 	    eventLBL.Text = Class_Progress.ActiveEvent;
 	    eventProgress.Value = Class_Progress.Percent;
+	    //update completed stepsView
+	    if (Class_Progress.Percent <= 10) //no steps done
+	    {
+		StepsView.Items[0].Text = "Step 1:";
+		StepsView.Items[0].ImageIndex = 0;
+		StepsView.Items[1].Text = "Step 2:";
+		StepsView.Items[1].ImageIndex = 0;
+		StepsView.Items[2].Text = "Step 3:";
+		StepsView.Items[2].ImageIndex = 0;
+		StepsView.Items[3].Text = "Step 4:";
+		StepsView.Items[3].ImageIndex = 0;
+		StepsView.Items[4].Text = "Step 5:";
+		StepsView.Items[4].ImageIndex = 0;
+	    }
+	    else
+	    {
+		if (Class_Progress.Percent >= 28) //step 1 done
+		{
+		    StepsView.Items[0].Text = Class_Progress.Steps[0];
+		    StepsView.Items[0].ImageIndex = 2;
+		}
+		if (Class_Progress.Percent >= 46) // step 2 done
+		{
+		    StepsView.Items[1].Text = Class_Progress.Steps[1];
+		    StepsView.Items[1].ImageIndex = 2;
+		}
+		if (Class_Progress.Percent >= 64) //step 3 done
+		{
+		    StepsView.Items[2].Text = Class_Progress.Steps[2];
+		    StepsView.Items[2].ImageIndex = 2;
+		}
+		if (Class_Progress.Percent >= 82) //step 4 done
+		{
+		    StepsView.Items[3].Text = Class_Progress.Steps[3];
+		    StepsView.Items[3].ImageIndex = 2;
+		}
+		if (Class_Progress.Percent == 100) //step 5 done
+		{
+		    StepsView.Items[4].Text = Class_Progress.Steps[4];
+		    StepsView.Items[4].ImageIndex = 2;
+		}
+
+	    }
 
 	    //Update Date and Time
 	    toolbarTime.Text = DateTime.Now.ToString("h:mm tt");

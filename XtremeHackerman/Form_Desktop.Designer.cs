@@ -30,6 +30,11 @@
         {
 	    this.components = new System.ComponentModel.Container();
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Desktop));
+	    System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Step 1:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Step 2:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Step 3:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Step 4:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Step 5: asdfghjkl;wertyuio", 0);
 	    this.toolbarNetworkBTN = new System.Windows.Forms.Button();
 	    this.toolbarTime = new System.Windows.Forms.Label();
 	    this.toolbarDate = new System.Windows.Forms.Label();
@@ -54,7 +59,6 @@
 	    this.eventProgress = new System.Windows.Forms.ProgressBar();
 	    this.ProgressPanel = new System.Windows.Forms.Panel();
 	    this.HintButton = new System.Windows.Forms.Button();
-	    this.eventLBL = new System.Windows.Forms.Label();
 	    this.CurrEventLBL = new System.Windows.Forms.Label();
 	    this.TaskbarPanel = new System.Windows.Forms.SplitContainer();
 	    this.panel1 = new System.Windows.Forms.Panel();
@@ -67,6 +71,11 @@
 	    this.Label_date = new System.Windows.Forms.Label();
 	    this.Label_Destroy_Warning = new System.Windows.Forms.Label();
 	    this.PB_Ransom_Icon = new System.Windows.Forms.PictureBox();
+	    this.ProgressLBL = new System.Windows.Forms.Label();
+	    this.StepsView = new System.Windows.Forms.ListView();
+	    this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+	    this.eventLBL = new System.Windows.Forms.Label();
+	    this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 	    this.RestartBootOptions.SuspendLayout();
 	    this.StartMenuPanel.SuspendLayout();
 	    this.IconsPanel.SuspendLayout();
@@ -326,7 +335,7 @@
 	    this.StartMenuPanel.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
 	    this.StartMenuPanel.Location = new System.Drawing.Point(0, 1255);
 	    this.StartMenuPanel.Name = "StartMenuPanel";
-	    this.StartMenuPanel.Size = new System.Drawing.Size(2454, 261);
+	    this.StartMenuPanel.Size = new System.Drawing.Size(2330, 261);
 	    this.StartMenuPanel.TabIndex = 18;
 	    this.StartMenuPanel.Visible = false;
 	    // 
@@ -358,7 +367,7 @@
 	    this.IconsPanel.Margin = new System.Windows.Forms.Padding(5);
 	    this.IconsPanel.Name = "IconsPanel";
 	    this.IconsPanel.Padding = new System.Windows.Forms.Padding(70, 70, 0, 0);
-	    this.IconsPanel.Size = new System.Drawing.Size(2454, 1516);
+	    this.IconsPanel.Size = new System.Drawing.Size(2330, 1516);
 	    this.IconsPanel.TabIndex = 16;
 	    // 
 	    // WireSharkIcon
@@ -409,51 +418,41 @@
 	    this.eventProgress.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.eventProgress.Location = new System.Drawing.Point(0, 0);
 	    this.eventProgress.Name = "eventProgress";
-	    this.eventProgress.Size = new System.Drawing.Size(415, 60);
+	    this.eventProgress.Size = new System.Drawing.Size(539, 60);
 	    this.eventProgress.TabIndex = 16;
 	    // 
 	    // ProgressPanel
 	    // 
 	    this.ProgressPanel.BackColor = System.Drawing.Color.Transparent;
+	    this.ProgressPanel.Controls.Add(this.StepsView);
+	    this.ProgressPanel.Controls.Add(this.ProgressLBL);
 	    this.ProgressPanel.Controls.Add(this.HintButton);
 	    this.ProgressPanel.Controls.Add(this.eventLBL);
 	    this.ProgressPanel.Controls.Add(this.CurrEventLBL);
 	    this.ProgressPanel.Controls.Add(this.eventProgress);
 	    this.ProgressPanel.Dock = System.Windows.Forms.DockStyle.Right;
-	    this.ProgressPanel.Location = new System.Drawing.Point(2454, 0);
+	    this.ProgressPanel.Location = new System.Drawing.Point(2330, 0);
 	    this.ProgressPanel.Name = "ProgressPanel";
-	    this.ProgressPanel.Size = new System.Drawing.Size(415, 1516);
+	    this.ProgressPanel.Size = new System.Drawing.Size(539, 1516);
 	    this.ProgressPanel.TabIndex = 19;
 	    // 
 	    // HintButton
 	    // 
 	    this.HintButton.AutoSize = true;
 	    this.HintButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.HintButton.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.HintButton.FlatAppearance.BorderSize = 0;
 	    this.HintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 	    this.HintButton.ForeColor = System.Drawing.Color.White;
 	    this.HintButton.Image = ((System.Drawing.Image)(resources.GetObject("HintButton.Image")));
-	    this.HintButton.Location = new System.Drawing.Point(124, 236);
+	    this.HintButton.Location = new System.Drawing.Point(0, 182);
 	    this.HintButton.Name = "HintButton";
-	    this.HintButton.Size = new System.Drawing.Size(140, 140);
+	    this.HintButton.Size = new System.Drawing.Size(539, 140);
 	    this.HintButton.TabIndex = 21;
 	    this.HintButton.Text = "Hint";
 	    this.HintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 	    this.HintButton.UseVisualStyleBackColor = true;
 	    this.HintButton.Click += new System.EventHandler(this.HintButton_Click);
-	    // 
-	    // eventLBL
-	    // 
-	    this.eventLBL.AutoSize = true;
-	    this.eventLBL.Dock = System.Windows.Forms.DockStyle.Top;
-	    this.eventLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.eventLBL.ForeColor = System.Drawing.Color.Teal;
-	    this.eventLBL.Location = new System.Drawing.Point(0, 121);
-	    this.eventLBL.Name = "eventLBL";
-	    this.eventLBL.Size = new System.Drawing.Size(156, 61);
-	    this.eventLBL.TabIndex = 20;
-	    this.eventLBL.Text = "event";
-	    this.eventLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 	    // 
 	    // CurrEventLBL
 	    // 
@@ -462,7 +461,7 @@
 	    this.CurrEventLBL.ForeColor = System.Drawing.Color.White;
 	    this.CurrEventLBL.Location = new System.Drawing.Point(0, 60);
 	    this.CurrEventLBL.Name = "CurrEventLBL";
-	    this.CurrEventLBL.Size = new System.Drawing.Size(415, 61);
+	    this.CurrEventLBL.Size = new System.Drawing.Size(539, 61);
 	    this.CurrEventLBL.TabIndex = 17;
 	    this.CurrEventLBL.Text = "Current Event:";
 	    this.CurrEventLBL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -507,7 +506,7 @@
 	    this.RansomwarePanel.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.RansomwarePanel.Location = new System.Drawing.Point(0, 0);
 	    this.RansomwarePanel.Name = "RansomwarePanel";
-	    this.RansomwarePanel.Size = new System.Drawing.Size(2454, 1516);
+	    this.RansomwarePanel.Size = new System.Drawing.Size(2330, 1516);
 	    this.RansomwarePanel.TabIndex = 21;
 	    // 
 	    // RightPanel
@@ -519,14 +518,14 @@
 	    this.RightPanel.ForeColor = System.Drawing.SystemColors.WindowText;
 	    this.RightPanel.Location = new System.Drawing.Point(1328, 0);
 	    this.RightPanel.Name = "RightPanel";
-	    this.RightPanel.Size = new System.Drawing.Size(1126, 1516);
+	    this.RightPanel.Size = new System.Drawing.Size(1002, 1516);
 	    this.RightPanel.TabIndex = 9;
 	    // 
 	    // Btn_Next_Ransom
 	    // 
 	    this.Btn_Next_Ransom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 	    this.Btn_Next_Ransom.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.Btn_Next_Ransom.Location = new System.Drawing.Point(759, 1355);
+	    this.Btn_Next_Ransom.Location = new System.Drawing.Point(635, 1355);
 	    this.Btn_Next_Ransom.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Btn_Next_Ransom.Name = "Btn_Next_Ransom";
 	    this.Btn_Next_Ransom.Size = new System.Drawing.Size(328, 117);
@@ -542,7 +541,7 @@
 	    this.label_Warning.Location = new System.Drawing.Point(0, 0);
 	    this.label_Warning.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.label_Warning.Name = "label_Warning";
-	    this.label_Warning.Size = new System.Drawing.Size(1126, 150);
+	    this.label_Warning.Size = new System.Drawing.Size(1002, 150);
 	    this.label_Warning.TabIndex = 0;
 	    this.label_Warning.Text = "Your personal files are encrypted!";
 	    this.label_Warning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -562,7 +561,7 @@
 	    this.TB_Ransomeware_Description.Name = "TB_Ransomeware_Description";
 	    this.TB_Ransomeware_Description.ReadOnly = true;
 	    this.TB_Ransomeware_Description.ShortcutsEnabled = false;
-	    this.TB_Ransomeware_Description.Size = new System.Drawing.Size(1055, 1339);
+	    this.TB_Ransomeware_Description.Size = new System.Drawing.Size(931, 1339);
 	    this.TB_Ransomeware_Description.TabIndex = 3;
 	    this.TB_Ransomeware_Description.TabStop = false;
 	    this.TB_Ransomeware_Description.Text = resources.GetString("TB_Ransomeware_Description.Text");
@@ -617,6 +616,71 @@
 	    this.PB_Ransom_Icon.Size = new System.Drawing.Size(1232, 1116);
 	    this.PB_Ransom_Icon.TabIndex = 1;
 	    this.PB_Ransom_Icon.TabStop = false;
+	    // 
+	    // ProgressLBL
+	    // 
+	    this.ProgressLBL.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.ProgressLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.ProgressLBL.ForeColor = System.Drawing.Color.White;
+	    this.ProgressLBL.Location = new System.Drawing.Point(0, 322);
+	    this.ProgressLBL.Name = "ProgressLBL";
+	    this.ProgressLBL.Size = new System.Drawing.Size(539, 140);
+	    this.ProgressLBL.TabIndex = 22;
+	    this.ProgressLBL.Text = "Progress:";
+	    this.ProgressLBL.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+	    // 
+	    // StepsView
+	    // 
+	    this.StepsView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+	    this.StepsView.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.StepsView.Enabled = false;
+	    this.StepsView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.StepsView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+	    listViewItem1.StateImageIndex = 0;
+	    listViewItem2.StateImageIndex = 0;
+	    listViewItem3.StateImageIndex = 0;
+	    listViewItem4.StateImageIndex = 0;
+	    listViewItem5.StateImageIndex = 0;
+	    this.StepsView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5});
+	    this.StepsView.LargeImageList = this.imageList1;
+	    this.StepsView.Location = new System.Drawing.Point(0, 462);
+	    this.StepsView.Name = "StepsView";
+	    this.StepsView.Scrollable = false;
+	    this.StepsView.Size = new System.Drawing.Size(539, 421);
+	    this.StepsView.SmallImageList = this.imageList1;
+	    this.StepsView.TabIndex = 23;
+	    this.StepsView.UseCompatibleStateImageBehavior = false;
+	    this.StepsView.View = System.Windows.Forms.View.Details;
+	    // 
+	    // imageList1
+	    // 
+	    this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+	    this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+	    this.imageList1.Images.SetKeyName(0, "Checkbox.png");
+	    this.imageList1.Images.SetKeyName(1, "Checkbox_Checked.png");
+	    this.imageList1.Images.SetKeyName(2, "Checkbox_Checked2.png");
+	    // 
+	    // eventLBL
+	    // 
+	    this.eventLBL.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.eventLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.eventLBL.ForeColor = System.Drawing.Color.Teal;
+	    this.eventLBL.Location = new System.Drawing.Point(0, 121);
+	    this.eventLBL.Name = "eventLBL";
+	    this.eventLBL.Size = new System.Drawing.Size(539, 61);
+	    this.eventLBL.TabIndex = 24;
+	    this.eventLBL.Text = "event";
+	    this.eventLBL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+	    // 
+	    // columnHeader1
+	    // 
+	    this.columnHeader1.Width = 535;
 	    // 
 	    // Form_Desktop
 	    // 
@@ -683,7 +747,6 @@
 		private System.Windows.Forms.ProgressBar eventProgress;
 		private System.Windows.Forms.Panel ProgressPanel;
 		private System.Windows.Forms.Label CurrEventLBL;
-		private System.Windows.Forms.Label eventLBL;
 		private System.Windows.Forms.SplitContainer TaskbarPanel;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel RansomwarePanel;
@@ -700,5 +763,10 @@
 	private System.Windows.Forms.Button HintButton;
 	private System.Windows.Forms.Button TaskManagerIcon;
 	public System.Windows.Forms.Timer RefreshTimer;
+	private System.Windows.Forms.Label ProgressLBL;
+	private System.Windows.Forms.ListView StepsView;
+	private System.Windows.Forms.ImageList imageList1;
+	private System.Windows.Forms.Label eventLBL;
+	private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

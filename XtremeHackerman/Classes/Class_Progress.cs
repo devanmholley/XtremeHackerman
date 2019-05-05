@@ -63,10 +63,10 @@ namespace XtremeHackerman.Classes
 
 	    EventLogic.PhishingEmailAttack(); // the first email
 
-	    //Populate phishing email every 5 seconds
+	    //Populate phishing email every 10 seconds
 	    timer = new Timer();
 	    timer.Tick += new EventHandler(timer_Tick);
-	    timer.Interval = 5000; 
+	    timer.Interval = 10000; 
 	    timer.Start();
 	    /**********************************/
 	}
@@ -111,7 +111,7 @@ namespace XtremeHackerman.Classes
 	    /*** THIRD EVENT:  Finished***/
 	    if (activeEvent == "Ransomware" && Percent == 100)
 	    {
-		ActiveEvent = "Nothing";
+		ActiveEvent = "You Win!";
 		Percent = 0;
 		Steps = null;
 	    }
