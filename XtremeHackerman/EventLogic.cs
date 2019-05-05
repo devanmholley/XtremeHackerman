@@ -135,7 +135,7 @@ namespace XtremeHackerman
             "credit card number as well as the expiration date and the 3 magic numbers on the " +
             "back to validate your identity. This is not a phishing email. I am cereal.";
             Class_Email.AddMail(sender, destination, sentdate, subject, body);
-	    Desktop_BKEND.Notification("You've got mail!", false);
+	   //Desktop_BKEND.Notification("You've got mail!", false);
         }
 
 	private static void PhishingEmailRecovery()

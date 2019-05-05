@@ -117,7 +117,7 @@ namespace XtremeHackerman
 		step = 3;
 	    else if (Class_Progress.Percent == 82)
 		step = 4;
-	    MessageBox.Show(Class_Progress.Steps[step]);
+	    MessageBox.Show(Class_Progress.Hints[step]);
 	}
 
 	private void toolbarNetworkBTN_Click(object sender, EventArgs e)
@@ -170,6 +170,7 @@ namespace XtremeHackerman
 	    Desktop_BKEND.CloseOpenForms();
 	    StartMenuPanel.Visible = false;
 	    Close();
+	    Class_Progress.StepCompleted("Ransomware", 2); //step two completed
 	}
 
 	private void Restart_Click(object sender, EventArgs e)

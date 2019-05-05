@@ -55,7 +55,7 @@ namespace XtremeHackerman.Classes
 	    if (Application.OpenForms.Count == 1 && Application.OpenForms[0].Name == "Form_TitleScreen")
 		return;
 
-	    string messagetime = System.DateTime.Now.ToString("ddd  HH:mm:ss"); //Display current time
+	    string messagetime = System.DateTime.Now.ToString("ddd  h:mm:ss"); //Display current time
 	    string messageBody = message;
 	    var popupNotifier = new PopupNotifier();
 	    popupNotifier.TitleText = messagetime;

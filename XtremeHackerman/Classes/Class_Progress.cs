@@ -14,6 +14,7 @@ namespace XtremeHackerman.Classes
 	public static string ActiveEvent; //what the current event is
 	public static int Percent; //how far user has completed steps
 	public static string[] Steps; //list of recovery steps
+	public static string[] Hints; //list of hints
 
 	public static string[] PhishSteps = new string[]
 	{
@@ -24,29 +25,48 @@ namespace XtremeHackerman.Classes
 	    "Block Email Domain"
 	};
 
+	public static string[] PhishHints = new string[]
+	{
+	    "Why do I keep getting so many emails?",
+	    "Maybe I should check online.",
+	    "How do I put a wall between me and these emails?",
+	    "What's that thing called after the @ sign in an email?",
+	    "There has to be a way to block this person!"
+	};
+
 	public static string[] RansomwareSteps = new string[]
 	{
 	    "Open Start Menu",
-	    "Click Restart",
+	    "Logoff or Restart",
 	    "Enable Safemode",
 	    "Open Antivirus",
 	    "Remove All Threats"
 	};
 
-	
+	public static string[] RansomwareHints = new string[]
+	{
+	    "Where did all the icons go! What else can I click?",
+	    "What happens if I ",
+	    "This thing looks dangerous. What's the opposite of dangerous?",
+	    "Maybe I should scan my computer for bad things.",
+	    "OMG! There's a virus on my computer! Kill it!!!"
+	};
+
+
 	public void Play()
 	{
 	    /*** FIRST EVENT: PHISHING EMAIL ***/
 	    ActiveEvent = "Phishing Email";
 	    Percent = 10;
 	    Steps = PhishSteps;
+	    Hints = PhishHints;
 
 	    EventLogic.PhishingEmailAttack(); // the first email
 
-	    //Populate phishing email every 15 seconds
+	    //Populate phishing email every 5 seconds
 	    timer = new Timer();
 	    timer.Tick += new EventHandler(timer_Tick);
-	    timer.Interval = 15000; 
+	    timer.Interval = 5000; 
 	    timer.Start();
 	    /**********************************/
 	}
@@ -66,7 +86,7 @@ namespace XtremeHackerman.Classes
 		if (step == 1 && Percent == 10 || step == 2 && Percent == 28 || step == 3 && Percent == 46 || step == 4 && Percent == 64)
 		{
 		    Percent += 18;
-		    Desktop_BKEND.Notification("You've completed Step " + step + "\n" + Steps[step-1], true);
+		    //Desktop_BKEND.Notification("You've completed Step " + step + "\n" + Steps[step-1], true);
 		}
 		else if (step == 5 && Percent == 82)
 		{
@@ -82,9 +102,20 @@ namespace XtremeHackerman.Classes
 		ActiveEvent = "Ransomware";
 		Percent = 10; //begin at 10
 		Steps = RansomwareSteps;
+		Hints = RansomwareHints;
 		EventLogic.RansomwareAttack();	   
 	    }
 	    /**********************************/
+
+	    /*** THIRD EVENT:  Finished***/
+	    if (activeEvent == "Ransomware" && Percent == 100)
+	    {
+		ActiveEvent = "Nothing";
+		Percent = 0;
+		Steps = null;
+	    }
+	    /**********************************/
+
 	}
     }
 }
