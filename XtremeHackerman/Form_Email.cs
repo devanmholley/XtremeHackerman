@@ -24,6 +24,7 @@ namespace XtremeHackerman
             email_dateTXT.DataBindings.Add("Text", emailInboxBindingSource, "Date");
             email_subjectTXT.DataBindings.Add("Text", emailInboxBindingSource, "Subject");
             email_bodyTXT.DataBindings.Add("Text", emailInboxBindingSource, "Body");
+	    timer1.Start();
         }
 
         private void email_composeBTN_Click(object sender, System.EventArgs e)
@@ -121,6 +122,11 @@ namespace XtremeHackerman
 	{
 	    string fileName = String.Join("", LL_Phish.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
 	    Class_File.SaveAs(fileName, "HTML Document", true, null); //save into chosen folder, and allow user to edit filename
+	}
+
+	private void timer1_Tick(object sender, EventArgs e)
+	{
+	    emailInboxBindingSource.ResetBindings(false); //refresh email
 	}
     }
 }

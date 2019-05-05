@@ -60,6 +60,7 @@
 	    this.email_dateTXT = new System.Windows.Forms.TextBox();
 	    this.email_destTXT = new System.Windows.Forms.TextBox();
 	    this.email_sourceTXT = new System.Windows.Forms.TextBox();
+	    this.timer1 = new System.Windows.Forms.Timer(this.components);
 	    ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 	    this.splitContainer1.Panel1.SuspendLayout();
 	    this.splitContainer1.Panel2.SuspendLayout();
@@ -226,19 +227,19 @@
             this.saveToolStripMenuItem,
             this.saveLinkAsToolStripMenuItem});
 	    this.rightClickLinkMenu.Name = "rightClickLinkMenu";
-	    this.rightClickLinkMenu.Size = new System.Drawing.Size(361, 151);
+	    this.rightClickLinkMenu.Size = new System.Drawing.Size(259, 96);
 	    // 
 	    // saveToolStripMenuItem
 	    // 
 	    this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-	    this.saveToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
+	    this.saveToolStripMenuItem.Size = new System.Drawing.Size(258, 46);
 	    this.saveToolStripMenuItem.Text = "Save Link";
 	    this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveLinkToolStripMenuItem_Click);
 	    // 
 	    // saveLinkAsToolStripMenuItem
 	    // 
 	    this.saveLinkAsToolStripMenuItem.Name = "saveLinkAsToolStripMenuItem";
-	    this.saveLinkAsToolStripMenuItem.Size = new System.Drawing.Size(360, 46);
+	    this.saveLinkAsToolStripMenuItem.Size = new System.Drawing.Size(258, 46);
 	    this.saveLinkAsToolStripMenuItem.Text = "Save Link As";
 	    this.saveLinkAsToolStripMenuItem.Visible = false;
 	    this.saveLinkAsToolStripMenuItem.Click += new System.EventHandler(this.saveLinkAsToolStripMenuItem_Click);
@@ -462,6 +463,11 @@
 	    this.email_sourceTXT.Size = new System.Drawing.Size(1165, 43);
 	    this.email_sourceTXT.TabIndex = 0;
 	    // 
+	    // timer1
+	    // 
+	    this.timer1.Interval = 1000;
+	    this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+	    // 
 	    // Form_Email
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -522,5 +528,6 @@
 	private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
 	private System.Windows.Forms.ToolStripMenuItem saveLinkAsToolStripMenuItem;
 	private System.Windows.Forms.Panel FoldersPanel;
+	private System.Windows.Forms.Timer timer1;
     }
 }
