@@ -117,6 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="safeModeIconButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAABNRJREFUeF7tmktoXGUYhrMxbmpFRMTWRWlslEilWmskbVJzn+Yyncl1JpOJbWpt
+        2qQpmIoKQhZiAqELwYVQcCEuBMGAKCiotaUJKYhGigUhXQnJypW02+/1/ybf+UnOycnMuf2cxXngJbzv
+        +W4lmWQYWpWQkJCQkGCOullU75+khf2XaP3ZSSAKbc6med4la+PDgYs0f+ASYERql6yNDzUTtFEzAdRc
+        pAaJQufgBTrOO9TXdYniQ+0FgCU2Mkzt8UzdeYAlNjJM7fHM4bcAltjIMLXHM0fOASyxkWFqj2eOngVY
+        YiMj9D11g6iuP0MLr71J6/VngKCSsZER+p6GMZpvGAPCkoyNjND3NBVpo6kINI4G+/vNM1hiHZwcxJ7G
+        It5X+35vLNKDrbWl/SpTWmkapWn+qZRHDsrt8UzzKMAS65vd5rQWqfaNAt23auy19rx5lFbbcrRPHm/D
+        qhHrn6Nv45G2EVpoGwHClIzX8He+NU9r/Ex9/bMlj4y91vLqH51XN92X2tXBHX4S7L2+6czTtc48ELZk
+        vKYjT+9x3pGju+lxeowze+1W35KjpztztFbqydNUqWAL9l7fnBqmf7uGga7hcN67b85yHtY1RL9x3p2j
+        tESOWrtXtw1vZrQikcZe65v0EMASGxi3eekhesh5JkNPSqRr7ZLHVakBeop97xD9J5HGXuub7ADAEqux
+        cvtzt9zCPaeHnKvX8x6JHLMsyeOqVIH2lrJ+eiCRxl7rm8F+dZSSWI2V25+75RaueR/d4XwgS1mJyjLU
+        R/2lnn7nS8Btj2dyfQBLbGDc5g330ZXSsyz9PdKNJyR2hWtU7Zr0TEqscdvjmUIGYIkNjNu8VIoeLWRo
+        dfM5/TOSxWAhRXvlsUa9RB4fPU39Ixlak9o/dvoz6LbHM2OngSgk47cxnqZ9xTStutXac64tZOkZebwN
+        q0asf8Z7gSgk4x1cVj8J4710ebyH7thrLX+2h1bO9dLUTt95C3uvb873ACyxgfEyz14bpNc3E90AS2xg
+        vMyz1wbp9c3UKYAlNjBe5tlrg/T65koKYIkNzHSKNnjedAonJHLFvrvSW3j2Zm0IH4vPdAAssYGZaad5
+        a2b0oo9lrX/ebQdYYgMzq35zX22juavttG7NDls8m3fwLlnrnw9aAZbY2GDsrg9bAJbY2GDsrtlmgCU2
+        Nhi766OTAEusxsorlbRpdqrZTdKmcctDZ64JYInVWHmlkjbNTjW7Sdo0bnnoLJwAWGJjg7G7rh0HWGJj
+        g7G7PmkAWGI1Vl6ppE0zs0TLM8vqzUoFemeJlqRN4zY3dD59HWCJ1Vh5pZI2zdxN9Rr2IGnTuM0Nnc/q
+        AZbY0Lj+M+BF0qaJ6i4H14+pA5TEhsbiD4AXSZsmqrscfP4qwBKrsfJyknIHt74DvEjaNOXmh8YXrwAs
+        sRorLycpd3DvG7p9bxGoSKpW2jTl5ofGly8DLLGxwdhdXx0BWGJjg7G7vn4JYImNDcbuWjysfgsriY0N
+        xu769kWAJTY2GLvr+zqAJTY2GLvrxxcAltjYYOyun54HWGJjg7G7fjlEGzdqgV9ry3+Obwq+hW+6ccjA
+        f4e/WUPzt55Tb0djqRA+9y/HX3WoXj5Ic0rryzVALMS3qJv4NjkzISEhISHBM1VV/wPKP/HpxnlM2QAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="safeModeContextStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

@@ -11,7 +11,7 @@ namespace XtremeHackerman.Classes
     {
 	public static Timer timer;
 
-	public static string ActiveEvent; //what the current event is
+	public static string ActiveEvent = "Phishing Email"; //what the current event is
 	public static int Percent; //how far user has completed steps
 	public static string[] Steps; //list of recovery steps
 	public static string[] Hints; //list of hints
@@ -53,7 +53,7 @@ namespace XtremeHackerman.Classes
 	};
 
 
-	public void Play()
+	public static void Play()
 	{
 	    /*** FIRST EVENT: PHISHING EMAIL ***/
 	    ActiveEvent = "Phishing Email";
@@ -71,7 +71,7 @@ namespace XtremeHackerman.Classes
 	    /**********************************/
 	}
 
-	private void timer_Tick(object sender, EventArgs e)
+	private static void timer_Tick(object sender, EventArgs e)
 	{
 	    EventLogic.PhishingEmailAttack();
 	}

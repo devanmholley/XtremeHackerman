@@ -58,6 +58,8 @@
 	    this.TaskManagerIcon = new System.Windows.Forms.Button();
 	    this.eventProgress = new System.Windows.Forms.ProgressBar();
 	    this.ProgressPanel = new System.Windows.Forms.Panel();
+	    this.CompletedEventsLBL = new System.Windows.Forms.Label();
+	    this.CompletedEventsList = new System.Windows.Forms.Label();
 	    this.StepsView = new System.Windows.Forms.ListView();
 	    this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 	    this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -76,8 +78,15 @@
 	    this.Label_date = new System.Windows.Forms.Label();
 	    this.Label_Destroy_Warning = new System.Windows.Forms.Label();
 	    this.PB_Ransom_Icon = new System.Windows.Forms.PictureBox();
-	    this.CompletedEventsLBL = new System.Windows.Forms.Label();
-	    this.CompletedEventsList = new System.Windows.Forms.Label();
+	    this.InstructionsPanel = new System.Windows.Forms.Panel();
+	    this.NextBTN = new System.Windows.Forms.Button();
+	    this.InstructionsTB = new System.Windows.Forms.TextBox();
+	    this.Arrow1 = new System.Windows.Forms.PictureBox();
+	    this.ArrowPanel = new System.Windows.Forms.Panel();
+	    this.Arrow5 = new System.Windows.Forms.PictureBox();
+	    this.Arrow4 = new System.Windows.Forms.PictureBox();
+	    this.Arrow3 = new System.Windows.Forms.PictureBox();
+	    this.Arrow2 = new System.Windows.Forms.PictureBox();
 	    this.RestartBootOptions.SuspendLayout();
 	    this.StartMenuPanel.SuspendLayout();
 	    this.IconsPanel.SuspendLayout();
@@ -91,6 +100,13 @@
 	    this.RightPanel.SuspendLayout();
 	    this.LeftPanel.SuspendLayout();
 	    ((System.ComponentModel.ISupportInitialize)(this.PB_Ransom_Icon)).BeginInit();
+	    this.InstructionsPanel.SuspendLayout();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow1)).BeginInit();
+	    this.ArrowPanel.SuspendLayout();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow5)).BeginInit();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow4)).BeginInit();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow3)).BeginInit();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow2)).BeginInit();
 	    this.SuspendLayout();
 	    // 
 	    // toolbarNetworkBTN
@@ -329,15 +345,15 @@
 	    // 
 	    // StartMenuPanel
 	    // 
+	    this.StartMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 	    this.StartMenuPanel.BackColor = System.Drawing.Color.Transparent;
 	    this.StartMenuPanel.Controls.Add(this.Shutdown);
 	    this.StartMenuPanel.Controls.Add(this.Restart);
 	    this.StartMenuPanel.Controls.Add(this.LogOut);
-	    this.StartMenuPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.StartMenuPanel.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
 	    this.StartMenuPanel.Location = new System.Drawing.Point(0, 1255);
 	    this.StartMenuPanel.Name = "StartMenuPanel";
-	    this.StartMenuPanel.Size = new System.Drawing.Size(2330, 261);
+	    this.StartMenuPanel.Size = new System.Drawing.Size(340, 261);
 	    this.StartMenuPanel.TabIndex = 18;
 	    this.StartMenuPanel.Visible = false;
 	    // 
@@ -440,6 +456,31 @@
 	    this.ProgressPanel.Size = new System.Drawing.Size(539, 1516);
 	    this.ProgressPanel.TabIndex = 19;
 	    // 
+	    // CompletedEventsLBL
+	    // 
+	    this.CompletedEventsLBL.Dock = System.Windows.Forms.DockStyle.Bottom;
+	    this.CompletedEventsLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.CompletedEventsLBL.ForeColor = System.Drawing.Color.White;
+	    this.CompletedEventsLBL.Image = ((System.Drawing.Image)(resources.GetObject("CompletedEventsLBL.Image")));
+	    this.CompletedEventsLBL.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+	    this.CompletedEventsLBL.Location = new System.Drawing.Point(0, 1136);
+	    this.CompletedEventsLBL.Name = "CompletedEventsLBL";
+	    this.CompletedEventsLBL.Size = new System.Drawing.Size(539, 216);
+	    this.CompletedEventsLBL.TabIndex = 25;
+	    this.CompletedEventsLBL.Text = "Completed Events:";
+	    this.CompletedEventsLBL.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+	    // 
+	    // CompletedEventsList
+	    // 
+	    this.CompletedEventsList.Dock = System.Windows.Forms.DockStyle.Bottom;
+	    this.CompletedEventsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.CompletedEventsList.ForeColor = System.Drawing.Color.Teal;
+	    this.CompletedEventsList.Location = new System.Drawing.Point(0, 1352);
+	    this.CompletedEventsList.Name = "CompletedEventsList";
+	    this.CompletedEventsList.Size = new System.Drawing.Size(539, 164);
+	    this.CompletedEventsList.TabIndex = 26;
+	    this.CompletedEventsList.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+	    // 
 	    // StepsView
 	    // 
 	    this.StepsView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -521,7 +562,7 @@
 	    this.eventLBL.Name = "eventLBL";
 	    this.eventLBL.Size = new System.Drawing.Size(539, 61);
 	    this.eventLBL.TabIndex = 24;
-	    this.eventLBL.Text = "Phising Email";
+	    this.eventLBL.Text = "event";
 	    this.eventLBL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 	    this.eventLBL.DoubleClick += new System.EventHandler(this.eventLBL_DoubleClick);
 	    // 
@@ -688,30 +729,131 @@
 	    this.PB_Ransom_Icon.TabIndex = 1;
 	    this.PB_Ransom_Icon.TabStop = false;
 	    // 
-	    // CompletedEventsLBL
+	    // InstructionsPanel
 	    // 
-	    this.CompletedEventsLBL.Dock = System.Windows.Forms.DockStyle.Bottom;
-	    this.CompletedEventsLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.CompletedEventsLBL.ForeColor = System.Drawing.Color.White;
-	    this.CompletedEventsLBL.Image = ((System.Drawing.Image)(resources.GetObject("CompletedEventsLBL.Image")));
-	    this.CompletedEventsLBL.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-	    this.CompletedEventsLBL.Location = new System.Drawing.Point(0, 1136);
-	    this.CompletedEventsLBL.Name = "CompletedEventsLBL";
-	    this.CompletedEventsLBL.Size = new System.Drawing.Size(539, 216);
-	    this.CompletedEventsLBL.TabIndex = 25;
-	    this.CompletedEventsLBL.Text = "Completed Events:";
-	    this.CompletedEventsLBL.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+	    this.InstructionsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.InstructionsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+	    this.InstructionsPanel.Controls.Add(this.NextBTN);
+	    this.InstructionsPanel.Controls.Add(this.InstructionsTB);
+	    this.InstructionsPanel.Location = new System.Drawing.Point(1000, 600);
+	    this.InstructionsPanel.Name = "InstructionsPanel";
+	    this.InstructionsPanel.Size = new System.Drawing.Size(702, 386);
+	    this.InstructionsPanel.TabIndex = 22;
+	    this.InstructionsPanel.Visible = false;
 	    // 
-	    // CompletedEventsList
+	    // NextBTN
 	    // 
-	    this.CompletedEventsList.Dock = System.Windows.Forms.DockStyle.Bottom;
-	    this.CompletedEventsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.CompletedEventsList.ForeColor = System.Drawing.Color.Teal;
-	    this.CompletedEventsList.Location = new System.Drawing.Point(0, 1352);
-	    this.CompletedEventsList.Name = "CompletedEventsList";
-	    this.CompletedEventsList.Size = new System.Drawing.Size(539, 164);
-	    this.CompletedEventsList.TabIndex = 26;
-	    this.CompletedEventsList.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+	    this.NextBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+	    this.NextBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NextBTN.BackgroundImage")));
+	    this.NextBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.NextBTN.ForeColor = System.Drawing.Color.Gainsboro;
+	    this.NextBTN.Location = new System.Drawing.Point(579, 263);
+	    this.NextBTN.Name = "NextBTN";
+	    this.NextBTN.Size = new System.Drawing.Size(120, 120);
+	    this.NextBTN.TabIndex = 1;
+	    this.NextBTN.UseVisualStyleBackColor = true;
+	    this.NextBTN.Click += new System.EventHandler(this.NextBTN_Click);
+	    // 
+	    // InstructionsTB
+	    // 
+	    this.InstructionsTB.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.InstructionsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.InstructionsTB.Location = new System.Drawing.Point(0, 0);
+	    this.InstructionsTB.Multiline = true;
+	    this.InstructionsTB.Name = "InstructionsTB";
+	    this.InstructionsTB.Size = new System.Drawing.Size(702, 386);
+	    this.InstructionsTB.TabIndex = 3;
+	    this.InstructionsTB.Text = "Welcome Admin!\r\nYour goal is to secure the desktop by recovering from various cyb" +
+    "er security attacks.\r\n";
+	    this.InstructionsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+	    // 
+	    // Arrow1
+	    // 
+	    this.Arrow1.BackColor = System.Drawing.Color.Transparent;
+	    this.Arrow1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+	    this.Arrow1.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.Arrow1.Image = ((System.Drawing.Image)(resources.GetObject("Arrow1.Image")));
+	    this.Arrow1.Location = new System.Drawing.Point(0, 0);
+	    this.Arrow1.Name = "Arrow1";
+	    this.Arrow1.Size = new System.Drawing.Size(223, 30);
+	    this.Arrow1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+	    this.Arrow1.TabIndex = 2;
+	    this.Arrow1.TabStop = false;
+	    this.Arrow1.Visible = false;
+	    // 
+	    // ArrowPanel
+	    // 
+	    this.ArrowPanel.BackColor = System.Drawing.Color.Transparent;
+	    this.ArrowPanel.Controls.Add(this.Arrow5);
+	    this.ArrowPanel.Controls.Add(this.Arrow4);
+	    this.ArrowPanel.Controls.Add(this.Arrow3);
+	    this.ArrowPanel.Controls.Add(this.Arrow2);
+	    this.ArrowPanel.Controls.Add(this.Arrow1);
+	    this.ArrowPanel.Dock = System.Windows.Forms.DockStyle.Right;
+	    this.ArrowPanel.Location = new System.Drawing.Point(2107, 0);
+	    this.ArrowPanel.Name = "ArrowPanel";
+	    this.ArrowPanel.Size = new System.Drawing.Size(223, 1516);
+	    this.ArrowPanel.TabIndex = 23;
+	    // 
+	    // Arrow5
+	    // 
+	    this.Arrow5.BackColor = System.Drawing.Color.Transparent;
+	    this.Arrow5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+	    this.Arrow5.Dock = System.Windows.Forms.DockStyle.Bottom;
+	    this.Arrow5.Image = ((System.Drawing.Image)(resources.GetObject("Arrow5.Image")));
+	    this.Arrow5.Location = new System.Drawing.Point(0, 1316);
+	    this.Arrow5.Name = "Arrow5";
+	    this.Arrow5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 170);
+	    this.Arrow5.Size = new System.Drawing.Size(223, 200);
+	    this.Arrow5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+	    this.Arrow5.TabIndex = 6;
+	    this.Arrow5.TabStop = false;
+	    this.Arrow5.Visible = false;
+	    // 
+	    // Arrow4
+	    // 
+	    this.Arrow4.BackColor = System.Drawing.Color.Transparent;
+	    this.Arrow4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+	    this.Arrow4.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.Arrow4.Image = ((System.Drawing.Image)(resources.GetObject("Arrow4.Image")));
+	    this.Arrow4.Location = new System.Drawing.Point(0, 440);
+	    this.Arrow4.Name = "Arrow4";
+	    this.Arrow4.Padding = new System.Windows.Forms.Padding(0, 500, 0, 0);
+	    this.Arrow4.Size = new System.Drawing.Size(223, 530);
+	    this.Arrow4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+	    this.Arrow4.TabIndex = 5;
+	    this.Arrow4.TabStop = false;
+	    this.Arrow4.Visible = false;
+	    // 
+	    // Arrow3
+	    // 
+	    this.Arrow3.BackColor = System.Drawing.Color.Transparent;
+	    this.Arrow3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+	    this.Arrow3.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.Arrow3.Image = ((System.Drawing.Image)(resources.GetObject("Arrow3.Image")));
+	    this.Arrow3.Location = new System.Drawing.Point(0, 160);
+	    this.Arrow3.Name = "Arrow3";
+	    this.Arrow3.Padding = new System.Windows.Forms.Padding(0, 250, 0, 0);
+	    this.Arrow3.Size = new System.Drawing.Size(223, 280);
+	    this.Arrow3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+	    this.Arrow3.TabIndex = 4;
+	    this.Arrow3.TabStop = false;
+	    this.Arrow3.Visible = false;
+	    // 
+	    // Arrow2
+	    // 
+	    this.Arrow2.BackColor = System.Drawing.Color.Transparent;
+	    this.Arrow2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+	    this.Arrow2.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.Arrow2.Image = ((System.Drawing.Image)(resources.GetObject("Arrow2.Image")));
+	    this.Arrow2.Location = new System.Drawing.Point(0, 30);
+	    this.Arrow2.Name = "Arrow2";
+	    this.Arrow2.Padding = new System.Windows.Forms.Padding(0, 100, 0, 0);
+	    this.Arrow2.Size = new System.Drawing.Size(223, 130);
+	    this.Arrow2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+	    this.Arrow2.TabIndex = 3;
+	    this.Arrow2.TabStop = false;
+	    this.Arrow2.Visible = false;
 	    // 
 	    // Form_Desktop
 	    // 
@@ -720,6 +862,8 @@
 	    this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_Desktop;
 	    this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 	    this.ClientSize = new System.Drawing.Size(2869, 1645);
+	    this.Controls.Add(this.ArrowPanel);
+	    this.Controls.Add(this.InstructionsPanel);
 	    this.Controls.Add(this.StartMenuPanel);
 	    this.Controls.Add(this.IconsPanel);
 	    this.Controls.Add(this.RansomwarePanel);
@@ -752,6 +896,15 @@
 	    this.LeftPanel.ResumeLayout(false);
 	    this.LeftPanel.PerformLayout();
 	    ((System.ComponentModel.ISupportInitialize)(this.PB_Ransom_Icon)).EndInit();
+	    this.InstructionsPanel.ResumeLayout(false);
+	    this.InstructionsPanel.PerformLayout();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow1)).EndInit();
+	    this.ArrowPanel.ResumeLayout(false);
+	    this.ArrowPanel.PerformLayout();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow5)).EndInit();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow4)).EndInit();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow3)).EndInit();
+	    ((System.ComponentModel.ISupportInitialize)(this.Arrow2)).EndInit();
 	    this.ResumeLayout(false);
 
         }
@@ -801,5 +954,14 @@
 	private System.Windows.Forms.ColumnHeader columnHeader1;
 	private System.Windows.Forms.Label CompletedEventsLBL;
 	private System.Windows.Forms.Label CompletedEventsList;
+	private System.Windows.Forms.Panel InstructionsPanel;
+	private System.Windows.Forms.PictureBox Arrow1;
+	private System.Windows.Forms.Button NextBTN;
+	private System.Windows.Forms.TextBox InstructionsTB;
+	private System.Windows.Forms.Panel ArrowPanel;
+	private System.Windows.Forms.PictureBox Arrow5;
+	private System.Windows.Forms.PictureBox Arrow4;
+	private System.Windows.Forms.PictureBox Arrow2;
+	private System.Windows.Forms.PictureBox Arrow3;
     }
 }

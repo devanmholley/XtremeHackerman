@@ -17,6 +17,8 @@ namespace XtremeHackerman
 {
     public partial class Form_Desktop : Class_BaseForm
     {
+	int Next; //for next button instructions
+
 	public Form_Desktop()
 	{
 	    InitializeComponent();    
@@ -24,6 +26,10 @@ namespace XtremeHackerman
 
 	private void Form_Desktop_Load(object sender, EventArgs e)
 	{
+	    //Start the attacks for the first time
+	    if (Class_Progress.Percent == 0)
+		InstructionsPanel.Visible = true;
+		
 	    BackgroundRefresh();
 	    desktopBootOptions();
 	}
@@ -329,6 +335,59 @@ namespace XtremeHackerman
 
 	    if (eventLBL.Text == "Ransomware")
 		MessageBox.Show("\"Ransomware is a type of malicious software (or “malware”) that infects computers, then encrypts various files and demands a ransom to get them back. Even if you pay the money within the timeframe the criminals set, there’s no guarantee you’ll get your files back. Typical ransoms are at least $500, but some of them ask for much more (particularly if they hit a larger business that can’t function without immediate and reliable access to its data, such as a hospital.\"\n\n - Webroot.com");
+	}
+
+	private void NextBTN_Click(object sender, EventArgs e)
+	{
+	    //Instruction Next Button
+	    //Start off with "Welcome Admin"
+	    //Move on to "Here is progress bar"
+	    if (Next == 0)
+	    {
+		InstructionsTB.Text = "This is progress bar. It shows how close you are toward recovering from the current attack.";
+		Arrow1.Visible = true;
+		Next += 1;
+	    }
+	   else if (Next == 1)
+	    {
+		Arrow1.Visible = false;
+		InstructionsTB.Text = "This is the current attack you need to recover from. You can double click on it to learn more about it.";
+		Arrow2.Visible = true;
+		Next += 1;
+	    }
+	    else if (Next == 2)
+	    {
+		Arrow2.Visible = false;
+		InstructionsTB.Text = "If you get stuck, you can ask for a hint.";
+		Arrow3.Visible = true;
+		Next += 1;
+	    }
+	    else if (Next == 3)
+	    {
+		Arrow3.Visible = false;
+		InstructionsTB.Text = "Here you can check your progress. When you complete a correct step towards recovery, it will show up here.";
+		Arrow4.Visible = true;
+		Next += 1;
+	    }
+	    else if (Next == 4)
+	    {
+		Arrow4.Visible = false;
+		InstructionsTB.Text = "You can see how many attacks you have succesfully recovered from here.";
+		Arrow5.Visible = true;
+		Next += 1;
+	    }
+	    else if (Next == 5)
+	    {
+		Arrow5.Visible = false;
+		ArrowPanel.Visible = false;
+		InstructionsTB.Text = "Good luck Admin!";
+		Next += 1;
+	    }
+	    else if (Next == 6)
+	    {
+		Class_Progress.Play(); //Begin attacks, starting with phish
+		InstructionsPanel.Visible = false; //close instructions
+	    }
 	}
     }
 }

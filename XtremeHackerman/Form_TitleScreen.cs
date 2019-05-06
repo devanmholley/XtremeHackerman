@@ -9,7 +9,6 @@ namespace XtremeHackerman
         // Define byte[] VCRFont as an embedded resource, to be used for custom font formatting
         private readonly byte[] _vcrFont = Properties.Resources.VCR_OSD_MONO_1_001;
 	public static Form_Desktop formDesktop = new Form_Desktop();
-	Class_Progress GameOn = new Class_Progress(); //start the event attacks
 	
 	public Form_TitleScreen()
         {
@@ -47,10 +46,6 @@ namespace XtremeHackerman
         /// <param name="e"></param>
         private void button_Admin_Click(object sender, EventArgs e)
         {
-	    //Start the attacks for the first time
-	    if (Class_Progress.ActiveEvent == null)
-		GameOn.Play(); //starting with phish
-
 	    Hide();
             formDesktop.ShowDialog();
 	}
