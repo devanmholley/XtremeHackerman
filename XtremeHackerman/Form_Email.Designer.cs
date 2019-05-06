@@ -220,7 +220,7 @@
 	    this.Link.TabIndex = 3;
 	    this.Link.TabStop = true;
 	    this.Link.Text = "link.com";
-	    this.Link.Click += new System.EventHandler(this.Link_Click);
+	    this.Link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_LinkClicked);
 	    // 
 	    // rightClickLinkMenu
 	    // 

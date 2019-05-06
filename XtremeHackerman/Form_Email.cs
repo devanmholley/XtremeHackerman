@@ -92,6 +92,21 @@ namespace XtremeHackerman
             }
         }
 
+        private void Link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+	    //Open link in internet browser
+	    var formInternet = new Form_InternetBrowser();
+	    formInternet.AddressBar.Text = Link.Text;
+	    formInternet.Show();
+	    formInternet.Search.PerformClick();
+	    Class_Progress.StepCompleted("Phishing Email", 2); //step two completed, open internet
+
+	    if (Link.Text == "firewall.com")
+	    {
+		Class_Progress.StepCompleted("Phishing Email", 3); //step three completed, visit firewall
+	    }
+	}
+
         private void email_inbox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
 	    LinkAppear();
@@ -133,21 +148,6 @@ namespace XtremeHackerman
 	    {
 		Link.Visible = false;
 		Link.Enabled = false;
-	    }
-	}
-
-	private void Link_Click(object sender, EventArgs e)
-	{
-	    //Open link in internet browser
-	    var formInternet = new Form_InternetBrowser();
-	    formInternet.AddressBar.Text = Link.Text;
-	    formInternet.Show();
-	    formInternet.Search.PerformClick();
-	    Class_Progress.StepCompleted("Phishing Email", 2); //step two completed, open internet
-
-	    if (Link.Text == "firewall.com")
-	    {
-		Class_Progress.StepCompleted("Phishing Email", 3); //step three completed, visit firewall
 	    }
 	}
     }
