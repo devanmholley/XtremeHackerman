@@ -40,10 +40,6 @@ namespace XtremeHackerman
                 }
                 string cliInput = cliCommand;
                 checkCommand(cliInput);
-                if (cliInput == "phish")
-                {
-                    EventLogic.PhishingEmailAttack();
-                };
                 //string msg = String.Format("You have entered: {0}", cliInput);
                 //MessageBox.Show(msg, "COMMAND LINE ARGUMENT");
                 //cliText.AppendText(cliDirectory);
@@ -125,7 +121,7 @@ namespace XtremeHackerman
             {
                 cliText.AppendText(Environment.NewLine + "---------------- COMMAND LINE INSTRUCTIONS ----------------");
                 cliText.AppendText(Environment.NewLine + "HERE YOU CAN ENTER A COMMAND FOR THE HACKERMAN SOFTWARE TO TRIGGER CERTAIN ACTIONS");
-                cliText.AppendText(Environment.NewLine + "TO TRIGGER A CERTAIN ACTION, ENTER THE KEYWORK FOLLOWED BY %");
+                cliText.AppendText(Environment.NewLine + "TO TRIGGER A CERTAIN ACTION, ENTER THE KEYWORD FOLLOWED BY %");
                 cliText.AppendText(Environment.NewLine + "COMMANDS ARE LISTED BELOW");
                 cliText.AppendText(Environment.NewLine + "RUN_X - RUNS A SPECIFIC DESKTOP APPLICATION ");
                 cliText.AppendText(Environment.NewLine + "ECHO_X - ECHOS THE ENTERED TEXT ");
