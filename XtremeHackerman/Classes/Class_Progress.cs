@@ -56,18 +56,7 @@ namespace XtremeHackerman.Classes
 	public static void Play()
 	{
 	    /*** FIRST EVENT: PHISHING EMAIL ***/
-	    ActiveEvent = "Phishing Email";
-	    Percent = 10;
-	    Steps = PhishSteps;
-	    Hints = PhishHints;
-
-	    EventLogic.PhishingEmailAttack(); // the first email
-
-	    //Populate phishing email every 10 seconds
-	    timer = new Timer();
-	    timer.Tick += new EventHandler(timer_Tick);
-	    timer.Interval = 10000; 
-	    timer.Start();
+	    PhishSimulation();
 	    /**********************************/
 	}
 
@@ -100,11 +89,7 @@ namespace XtremeHackerman.Classes
 	    if (activeEvent == "Phishing Email" && Percent == 100)
 	    {
 		timer.Stop(); //stop populating phishing emails
-		ActiveEvent = "Ransomware";
-		Percent = 10; //begin at 10
-		Steps = RansomwareSteps;
-		Hints = RansomwareHints;
-		EventLogic.RansomwareAttack();	   
+		RansomwareSimulation();
 	    }
 	    /**********************************/
 
@@ -116,7 +101,31 @@ namespace XtremeHackerman.Classes
 		Hints = null;
 	    }
 	    /**********************************/
+	}
 
+	public static void PhishSimulation()
+	{
+	    ActiveEvent = "Phishing Email";
+	    Percent = 10;
+	    Steps = PhishSteps;
+	    Hints = PhishHints;
+
+	    EventLogic.PhishingEmailAttack(); // the first email
+
+	    //Populate phishing email every 10 seconds
+	    timer = new Timer();
+	    timer.Tick += new EventHandler(timer_Tick);
+	    timer.Interval = 10000;
+	    timer.Start();
+	}
+
+	public static void RansomwareSimulation()
+	{
+	    ActiveEvent = "Ransomware";
+	    Percent = 10; //begin at 10
+	    Steps = RansomwareSteps;
+	    Hints = RansomwareHints;
+	    EventLogic.RansomwareAttack();
 	}
     }
 }

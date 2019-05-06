@@ -105,7 +105,7 @@ namespace XtremeHackerman
 	    {
 		CompletedEventsList.Text = "Phishing Email";
 	    }
-	    else if (eventLBL.Text == "You Win!")
+	    else if (eventLBL.Text == "Events Completed!")
 	    {
 		CompletedEventsList.Text = "Phishing Email\nRansomware";
 	    }
