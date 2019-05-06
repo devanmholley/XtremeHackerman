@@ -37,32 +37,21 @@ namespace XtremeHackerman.Classes
 	/// Desktop Popup Notification Message
 	/// </summary>
 	/// <param name="message"></param>
-	public static void Notification(string message, bool important)
+	public static void Notification(string message)
 	{
 	    //Do Not show notifcations on titlescreen
 	    if (Application.OpenForms.Count == 1 && Application.OpenForms[0].Name == "Form_TitleScreen")
 		return;
 
-	    string messagetime = System.DateTime.Now.ToString("ddd  h:mm:ss"); //Display current time
+	    string messagetime = System.DateTime.Now.ToString("ddd  h:mm tt"); //Display current time
 	    string messageBody = message;
 	    var popupNotifier = new PopupNotifier();
 	    popupNotifier.TitleText = messagetime;
 	    popupNotifier.ContentText = messageBody;
 	    popupNotifier.IsRightToLeft = false;
 	    popupNotifier.TitleColor = Color.White;
-
-	    if (important == true) //for step completed notifications
-	    {
-		popupNotifier.BodyColor = Color.Teal;
-		popupNotifier.HeaderColor = Color.Teal;
-		popupNotifier.Delay= 7000;
-	    }    
-	    else
-	    {
-		popupNotifier.BodyColor = Color.MediumPurple;
-		popupNotifier.HeaderColor = Color.MediumPurple;
-		popupNotifier.Delay = 1000;
-	    }
+	    popupNotifier.BodyColor = Color.MediumPurple;
+	    popupNotifier.HeaderColor = Color.MediumPurple;
 
 	    popupNotifier.Popup();
 	}

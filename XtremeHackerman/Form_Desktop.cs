@@ -232,6 +232,7 @@ namespace XtremeHackerman
 
 	private void Shutdown_Click(object sender, EventArgs e)
 	{
+	    Close();
 	    Application.Exit();
 	}
 
