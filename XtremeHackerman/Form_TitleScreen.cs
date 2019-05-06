@@ -169,5 +169,11 @@ namespace XtremeHackerman
         {
             BootOptions.enableCommandPrompt = false;
         }
+
+	private void button_About_Click(object sender, EventArgs e)
+	{
+	    MessageBox.Show("Welcome to the Hacking and Recovery Simulator!\n\nOur objective is to assist training future system administrators and pentration testers."
+		+ "\n\nTo begin practicing resolving cyber security attacks, click on the \"ADMIN\" button.\n\nTo begin practicing penetration testing by simulating cyber security attacks click on the \"HACKER\" button.");
+	}
     }
 }

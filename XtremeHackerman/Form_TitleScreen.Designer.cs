@@ -54,10 +54,12 @@
 	    this.NetworkingStatus = new System.Windows.Forms.Label();
 	    this.CMDAccessStatus = new System.Windows.Forms.Label();
 	    this.BootStatusTimer = new System.Windows.Forms.Timer(this.components);
+	    this.panel1 = new System.Windows.Forms.Panel();
 	    this.tableLayoutPanel_Buttons.SuspendLayout();
 	    ((System.ComponentModel.ISupportInitialize)(this.safeModeIconButton)).BeginInit();
 	    ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Title)).BeginInit();
 	    this.safeModeContextStrip.SuspendLayout();
+	    this.panel1.SuspendLayout();
 	    this.SuspendLayout();
 	    // 
 	    // tableLayoutPanel_Buttons
@@ -139,6 +141,7 @@
 	    this.button_About.TabIndex = 2;
 	    this.button_About.Text = "ABOUT";
 	    this.button_About.UseVisualStyleBackColor = true;
+	    this.button_About.Click += new System.EventHandler(this.button_About_Click);
 	    // 
 	    // button_Quit
 	    // 
@@ -161,11 +164,12 @@
 	    // safeModeIconButton
 	    // 
 	    this.safeModeIconButton.BackColor = System.Drawing.Color.Transparent;
+	    this.safeModeIconButton.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.safeModeIconButton.Image = ((System.Drawing.Image)(resources.GetObject("safeModeIconButton.Image")));
-	    this.safeModeIconButton.Location = new System.Drawing.Point(0, 242);
+	    this.safeModeIconButton.Location = new System.Drawing.Point(0, 0);
 	    this.safeModeIconButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.safeModeIconButton.Name = "safeModeIconButton";
-	    this.safeModeIconButton.Size = new System.Drawing.Size(64, 64);
+	    this.safeModeIconButton.Size = new System.Drawing.Size(1925, 64);
 	    this.safeModeIconButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 	    this.safeModeIconButton.TabIndex = 3;
 	    this.safeModeIconButton.TabStop = false;
@@ -176,11 +180,10 @@
 	    this.pictureBox_Title.BackColor = System.Drawing.Color.Transparent;
 	    this.pictureBox_Title.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.pictureBox_Title.Image = global::XtremeHackerman.Properties.Resources.Picture_Title;
-	    this.pictureBox_Title.Location = new System.Drawing.Point(0, 0);
+	    this.pictureBox_Title.Location = new System.Drawing.Point(0, 406);
 	    this.pictureBox_Title.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.pictureBox_Title.Name = "pictureBox_Title";
-	    this.pictureBox_Title.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-	    this.pictureBox_Title.Size = new System.Drawing.Size(1925, 326);
+	    this.pictureBox_Title.Size = new System.Drawing.Size(1925, 129);
 	    this.pictureBox_Title.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 	    this.pictureBox_Title.TabIndex = 2;
 	    this.pictureBox_Title.TabStop = false;
@@ -290,12 +293,12 @@
 	    // 
 	    // SafeModeStatus
 	    // 
-	    this.SafeModeStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
 	    this.SafeModeStatus.AutoSize = true;
 	    this.SafeModeStatus.BackColor = System.Drawing.Color.Transparent;
+	    this.SafeModeStatus.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.SafeModeStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.SafeModeStatus.ForeColor = System.Drawing.Color.White;
-	    this.SafeModeStatus.Location = new System.Drawing.Point(-1, 59);
+	    this.SafeModeStatus.Location = new System.Drawing.Point(0, 64);
 	    this.SafeModeStatus.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.SafeModeStatus.Name = "SafeModeStatus";
 	    this.SafeModeStatus.Size = new System.Drawing.Size(327, 63);
@@ -305,12 +308,12 @@
 	    // 
 	    // NetworkingStatus
 	    // 
-	    this.NetworkingStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
 	    this.NetworkingStatus.AutoSize = true;
 	    this.NetworkingStatus.BackColor = System.Drawing.Color.Transparent;
+	    this.NetworkingStatus.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.NetworkingStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.NetworkingStatus.ForeColor = System.Drawing.Color.White;
-	    this.NetworkingStatus.Location = new System.Drawing.Point(0, 122);
+	    this.NetworkingStatus.Location = new System.Drawing.Point(0, 127);
 	    this.NetworkingStatus.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.NetworkingStatus.Name = "NetworkingStatus";
 	    this.NetworkingStatus.Size = new System.Drawing.Size(278, 63);
@@ -320,12 +323,12 @@
 	    // 
 	    // CMDAccessStatus
 	    // 
-	    this.CMDAccessStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
 	    this.CMDAccessStatus.AutoSize = true;
 	    this.CMDAccessStatus.BackColor = System.Drawing.Color.Transparent;
+	    this.CMDAccessStatus.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.CMDAccessStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.CMDAccessStatus.ForeColor = System.Drawing.Color.White;
-	    this.CMDAccessStatus.Location = new System.Drawing.Point(-5, 185);
+	    this.CMDAccessStatus.Location = new System.Drawing.Point(0, 190);
 	    this.CMDAccessStatus.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.CMDAccessStatus.Name = "CMDAccessStatus";
 	    this.CMDAccessStatus.Size = new System.Drawing.Size(704, 63);
@@ -338,6 +341,19 @@
 	    this.BootStatusTimer.Enabled = true;
 	    this.BootStatusTimer.Tick += new System.EventHandler(this.BootStatusTimer_Tick);
 	    // 
+	    // panel1
+	    // 
+	    this.panel1.BackColor = System.Drawing.Color.Transparent;
+	    this.panel1.Controls.Add(this.CMDAccessStatus);
+	    this.panel1.Controls.Add(this.NetworkingStatus);
+	    this.panel1.Controls.Add(this.SafeModeStatus);
+	    this.panel1.Controls.Add(this.safeModeIconButton);
+	    this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.panel1.Location = new System.Drawing.Point(0, 0);
+	    this.panel1.Name = "panel1";
+	    this.panel1.Size = new System.Drawing.Size(1925, 406);
+	    this.panel1.TabIndex = 6;
+	    // 
 	    // Form_TitleScreen
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -345,11 +361,8 @@
 	    this.BackgroundImage = global::XtremeHackerman.Properties.Resources.Background_TitleScreen;
 	    this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 	    this.ClientSize = new System.Drawing.Size(1925, 1061);
-	    this.Controls.Add(this.CMDAccessStatus);
-	    this.Controls.Add(this.NetworkingStatus);
-	    this.Controls.Add(this.SafeModeStatus);
-	    this.Controls.Add(this.safeModeIconButton);
 	    this.Controls.Add(this.pictureBox_Title);
+	    this.Controls.Add(this.panel1);
 	    this.Controls.Add(this.tableLayoutPanel_Buttons);
 	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Name = "Form_TitleScreen";
@@ -361,8 +374,9 @@
 	    ((System.ComponentModel.ISupportInitialize)(this.safeModeIconButton)).EndInit();
 	    ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Title)).EndInit();
 	    this.safeModeContextStrip.ResumeLayout(false);
+	    this.panel1.ResumeLayout(false);
+	    this.panel1.PerformLayout();
 	    this.ResumeLayout(false);
-	    this.PerformLayout();
 
         }
 
@@ -391,5 +405,6 @@
         private System.Windows.Forms.Label NetworkingStatus;
         private System.Windows.Forms.Label CMDAccessStatus;
         private System.Windows.Forms.Timer BootStatusTimer;
+	private System.Windows.Forms.Panel panel1;
     }
 }
