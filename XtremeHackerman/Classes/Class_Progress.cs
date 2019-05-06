@@ -65,28 +65,34 @@ namespace XtremeHackerman.Classes
 	    EventLogic.PhishingEmailAttack();
 	}
 
-	public static void StepCompleted(string activeEvent, int step)
+	public static void StepCompleted(string eventName, int step)
 	{
 	    //Only increment if the step completed was for the current event
-	    if (activeEvent == ActiveEvent)
+	    if (eventName == ActiveEvent)
 	    {
-		// five steps, 18 points each
+		// five steps, 20 points each
 		// Make sure to only increment on the first time the step was compeleted
-		if (step == 1 && Percent == 10 || step == 2 && Percent == 28 || step == 3 && Percent == 46 || step == 4 && Percent == 64)
+		if (step == 1 && Percent == 2) //offset, percent starts at 2
 		{
 		    Percent += 18;
 		    //Desktop_BKEND.Notification("You've completed Step " + step + "\n" + Steps[step-1], true);
 		    MessageBox.Show("You've completed Step " + step + "\n" + Steps[step - 1]);
 		}
-		else if (step == 5 && Percent == 82)
+		else if (step == 2 && Percent == 20 || step == 3 && Percent == 40 || step == 4 && Percent == 60)
 		{
-		    MessageBox.Show("You've completed Step " + step + "\n" + Steps[step - 1] + "\n\nYou have successfully recovered from: " + activeEvent);
-		    Percent += 18;
+		    Percent += 20;
+		    //Desktop_BKEND.Notification("You've completed Step " + step + "\n" + Steps[step-1], true);
+		    MessageBox.Show("You've completed Step " + step + "\n" + Steps[step - 1]);
+		}
+		else if (step == 5 && Percent == 80)
+		{
+		    MessageBox.Show("You've completed Step " + step + "\n" + Steps[step - 1] + "\n\nYou have successfully recovered from: " + eventName);
+		    Percent += 20;
 		}
 	    }
 
 	    /*** SECOND EVENT: RANSOMWARE ***/
-	    if (activeEvent == "Phishing Email" && Percent == 100)
+	    if (eventName == "Phishing Email" && Percent == 100)
 	    {
 		timer.Stop(); //stop populating phishing emails
 		RansomwareSimulation();
@@ -94,11 +100,12 @@ namespace XtremeHackerman.Classes
 	    /**********************************/
 
 	    /*** THIRD EVENT:  Finished***/
-	    if (activeEvent == "Ransomware" && Percent == 100)
+	    if (eventName == "Ransomware" && Percent == 100)
 	    {
 		ActiveEvent = "Events Completed!";
 		Steps = null;
 		Hints = null;
+		MessageBox.Show("Want to try again?\n\n Go to command prompt and type:\n\"PHISH%\" to try Phishing Email again or\n\"RANSOMWARE%\" to try Ransomware again.");
 	    }
 	    /**********************************/
 	}
@@ -107,11 +114,11 @@ namespace XtremeHackerman.Classes
 	{
 	    //if (Class_Firewall.blockedDomains.Contains)
 	    ActiveEvent = "Phishing Email";
-	    Percent = 10;
+	    Percent = 2; //show on progress bar a little
 	    Steps = PhishSteps;
 	    Hints = PhishHints;
 
-	    Class_Firewall.blockedDomains.Clear() //clear domains
+	    Class_Firewall.blockedDomains.Clear(); //clear domains
 
 	    EventLogic.PhishingEmailAttack(); // the first email
 
@@ -125,7 +132,7 @@ namespace XtremeHackerman.Classes
 	public static void RansomwareSimulation()
 	{
 	    ActiveEvent = "Ransomware";
-	    Percent = 10; //begin at 10
+	    Percent = 2; //show on progress bar
 	    Steps = RansomwareSteps;
 	    Hints = RansomwareHints;
 	    EventLogic.RansomwareAttack();

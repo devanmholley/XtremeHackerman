@@ -74,22 +74,22 @@ namespace XtremeHackerman
 	    }
 	    else
 	    {
-		if (Class_Progress.Percent >= 28) //step 1 done
+		if (Class_Progress.Percent >= 20) //step 1 done
 		{
 		    StepsView.Items[0].Text = Class_Progress.Steps[0];
 		    StepsView.Items[0].ImageIndex = 2;
 		}
-		if (Class_Progress.Percent >= 46) // step 2 done
+		if (Class_Progress.Percent >= 40) // step 2 done
 		{
 		    StepsView.Items[1].Text = Class_Progress.Steps[1];
 		    StepsView.Items[1].ImageIndex = 2;
 		}
-		if (Class_Progress.Percent >= 64) //step 3 done
+		if (Class_Progress.Percent >= 60) //step 3 done
 		{
 		    StepsView.Items[2].Text = Class_Progress.Steps[2];
 		    StepsView.Items[2].ImageIndex = 2;
 		}
-		if (Class_Progress.Percent >= 82) //step 4 done
+		if (Class_Progress.Percent >= 80) //step 4 done
 		{
 		    StepsView.Items[3].Text = Class_Progress.Steps[3];
 		    StepsView.Items[3].ImageIndex = 2;
@@ -346,7 +346,7 @@ namespace XtremeHackerman
 	    //Move on to "Here is progress bar"
 	    if (Next == 0)
 	    {
-		InstructionsTB.Text = "This is progress bar. It shows how close you are toward recovering from the current attack.";
+		InstructionsTB.Text = "This is the progress bar. It shows how close you are toward recovering from the current attack.";
 		Arrow1.Visible = true;
 		Next += 1;
 	    }

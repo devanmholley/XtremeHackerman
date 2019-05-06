@@ -345,15 +345,15 @@
 	    // 
 	    // StartMenuPanel
 	    // 
-	    this.StartMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 	    this.StartMenuPanel.BackColor = System.Drawing.Color.Transparent;
 	    this.StartMenuPanel.Controls.Add(this.Shutdown);
 	    this.StartMenuPanel.Controls.Add(this.Restart);
 	    this.StartMenuPanel.Controls.Add(this.LogOut);
+	    this.StartMenuPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.StartMenuPanel.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
 	    this.StartMenuPanel.Location = new System.Drawing.Point(0, 1255);
 	    this.StartMenuPanel.Name = "StartMenuPanel";
-	    this.StartMenuPanel.Size = new System.Drawing.Size(340, 261);
+	    this.StartMenuPanel.Size = new System.Drawing.Size(2330, 261);
 	    this.StartMenuPanel.TabIndex = 18;
 	    this.StartMenuPanel.Visible = false;
 	    // 
@@ -792,7 +792,7 @@
 	    this.ArrowPanel.Dock = System.Windows.Forms.DockStyle.Right;
 	    this.ArrowPanel.Location = new System.Drawing.Point(2107, 0);
 	    this.ArrowPanel.Name = "ArrowPanel";
-	    this.ArrowPanel.Size = new System.Drawing.Size(223, 1516);
+	    this.ArrowPanel.Size = new System.Drawing.Size(223, 1255);
 	    this.ArrowPanel.TabIndex = 23;
 	    // 
 	    // Arrow5
@@ -801,7 +801,7 @@
 	    this.Arrow5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 	    this.Arrow5.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.Arrow5.Image = ((System.Drawing.Image)(resources.GetObject("Arrow5.Image")));
-	    this.Arrow5.Location = new System.Drawing.Point(0, 1316);
+	    this.Arrow5.Location = new System.Drawing.Point(0, 1055);
 	    this.Arrow5.Name = "Arrow5";
 	    this.Arrow5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 170);
 	    this.Arrow5.Size = new System.Drawing.Size(223, 200);
