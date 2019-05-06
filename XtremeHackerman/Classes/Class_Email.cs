@@ -30,6 +30,7 @@ namespace XtremeHackerman.Classes
 
 		    //Then we add the new email to the inbox.
 		    EmailList.Add(newMail);
+            Desktop_BKEND.Notification("You've got mail!", false);
 		}
 	    }
         }
