@@ -46,7 +46,7 @@ namespace XtremeHackerman.Classes
 	public static string[] RansomwareHints = new string[]
 	{
 	    "Where did all the icons go! What else can I click?",
-	    "What happens if I ",
+	    "I mean I only got three options.",
 	    "This thing looks dangerous. What's the opposite of dangerous?",
 	    "Maybe I should scan my computer for bad things.",
 	    "OMG! There's a virus on my computer! Kill it!!!"
@@ -105,10 +105,13 @@ namespace XtremeHackerman.Classes
 
 	public static void PhishSimulation()
 	{
+	    //if (Class_Firewall.blockedDomains.Contains)
 	    ActiveEvent = "Phishing Email";
 	    Percent = 10;
 	    Steps = PhishSteps;
 	    Hints = PhishHints;
+
+	    Class_Firewall.blockedDomains.Clear() //clear domains
 
 	    EventLogic.PhishingEmailAttack(); // the first email
 

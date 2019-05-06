@@ -206,6 +206,7 @@ namespace XtremeHackerman
 	    if (StartMenuPanel.Visible == false)
 	    {
 		StartMenuPanel.Visible = true;
+		StartMenuPanel.BringToFront();
 	    }
 	    else
 	    {

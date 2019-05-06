@@ -12,5 +12,7 @@ namespace XtremeHackerman.Classes
         // blocked IPs.
         public static string IP;
         public static List<String> blockedDomains = new List<String>();
+	public static List<String> blockedIPs = new List<String>();
+	public static List<String> blockedWebpages = new List<String>();
     }
 }
