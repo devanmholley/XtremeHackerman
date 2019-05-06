@@ -111,7 +111,7 @@ namespace XtremeHackerman.Classes
 	    /*** THIRD EVENT:  Finished***/
 	    if (activeEvent == "Ransomware" && Percent == 100)
 	    {
-		ActiveEvent = "You Win!";
+		ActiveEvent = "Events Completed!";
 		Steps = null;
 		Hints = null;
 	    }
