@@ -13,10 +13,17 @@ namespace XtremeHackerman.Classes
         // Adds new mail into the JSON file so it appears in the inbox.
         public static void AddMail(string src, string dst, string dt, string sbjt, string bdy)
         {
+	    string domain = "";//init
 	    if (BootOptions.enableNetworking == true)
 	    {
+		//break up parts of the sender's email 
+		if (src.Contains("@"))
+		{
+		    string[] breakUpEmail = src.Split('@');
+		    domain = breakUpEmail[1]; //grab domain after the @ symbol
+		}
 		//If the email source hasn't been blocked on the firewall
-		if (Class_Firewall.blockedDomains.Contains(src) == false)
+		if (Class_Firewall.blockedDomains.Contains(domain) == false)
 		{
 		    EmailStruct newMail = new EmailStruct
 		    {
