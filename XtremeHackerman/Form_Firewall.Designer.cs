@@ -110,9 +110,9 @@
 	    // 
 	    this.FirewallSplitContainer.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirewallSplitContainer.Panel2.BackgroundImage")));
 	    this.FirewallSplitContainer.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.FirewallSplitContainer.Panel2.Controls.Add(this.DomainPanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.webaccessPanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.blockIPPanel);
-	    this.FirewallSplitContainer.Panel2.Controls.Add(this.DomainPanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.HomePanel);
 	    this.FirewallSplitContainer.Panel2.Tag = "homePagefire";
 	    this.FirewallSplitContainer.Size = new System.Drawing.Size(2752, 1207);
@@ -345,8 +345,8 @@
 	    // DomainPanel
 	    // 
 	    this.DomainPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-	    this.DomainPanel.Controls.Add(this.domainADD);
 	    this.DomainPanel.Controls.Add(this.blockedDomainsTB);
+	    this.DomainPanel.Controls.Add(this.domainADD);
 	    this.DomainPanel.Controls.Add(this.domainEntry);
 	    this.DomainPanel.Controls.Add(this.labelManageAdd);
 	    this.DomainPanel.Controls.Add(this.discMessage);
@@ -359,10 +359,11 @@
 	    // 
 	    // domainADD
 	    // 
-	    this.domainADD.Location = new System.Drawing.Point(835, 241);
+	    this.domainADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.domainADD.Location = new System.Drawing.Point(604, 226);
 	    this.domainADD.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.domainADD.Name = "domainADD";
-	    this.domainADD.Size = new System.Drawing.Size(200, 55);
+	    this.domainADD.Size = new System.Drawing.Size(211, 68);
 	    this.domainADD.TabIndex = 5;
 	    this.domainADD.Text = "Add";
 	    this.domainADD.UseVisualStyleBackColor = true;
@@ -370,41 +371,48 @@
 	    // 
 	    // blockedDomainsTB
 	    // 
-	    this.blockedDomainsTB.BackColor = System.Drawing.SystemColors.Control;
+	    this.blockedDomainsTB.BackColor = System.Drawing.Color.White;
 	    this.blockedDomainsTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-	    this.blockedDomainsTB.Location = new System.Drawing.Point(107, 305);
+	    this.blockedDomainsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.blockedDomainsTB.Location = new System.Drawing.Point(0, 355);
 	    this.blockedDomainsTB.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.blockedDomainsTB.Multiline = true;
 	    this.blockedDomainsTB.Name = "blockedDomainsTB";
-	    this.blockedDomainsTB.Size = new System.Drawing.Size(603, 475);
+	    this.blockedDomainsTB.Size = new System.Drawing.Size(564, 475);
 	    this.blockedDomainsTB.TabIndex = 4;
 	    // 
 	    // domainEntry
 	    // 
-	    this.domainEntry.Location = new System.Drawing.Point(107, 241);
+	    this.domainEntry.Dock = System.Windows.Forms.DockStyle.Left;
+	    this.domainEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.domainEntry.Location = new System.Drawing.Point(0, 226);
 	    this.domainEntry.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.domainEntry.Name = "domainEntry";
-	    this.domainEntry.Size = new System.Drawing.Size(527, 38);
+	    this.domainEntry.Size = new System.Drawing.Size(570, 67);
 	    this.domainEntry.TabIndex = 3;
 	    // 
 	    // labelManageAdd
 	    // 
 	    this.labelManageAdd.AutoSize = true;
-	    this.labelManageAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-	    this.labelManageAdd.Location = new System.Drawing.Point(107, 148);
+	    this.labelManageAdd.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.labelManageAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.labelManageAdd.Location = new System.Drawing.Point(0, 63);
 	    this.labelManageAdd.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.labelManageAdd.Name = "labelManageAdd";
-	    this.labelManageAdd.Size = new System.Drawing.Size(277, 34);
+	    this.labelManageAdd.Padding = new System.Windows.Forms.Padding(0, 100, 0, 0);
+	    this.labelManageAdd.Size = new System.Drawing.Size(522, 163);
 	    this.labelManageAdd.TabIndex = 2;
 	    this.labelManageAdd.Text = "Add Domains below:";
 	    // 
 	    // discMessage
 	    // 
 	    this.discMessage.AutoSize = true;
-	    this.discMessage.Location = new System.Drawing.Point(5, 9);
+	    this.discMessage.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.discMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.discMessage.Location = new System.Drawing.Point(0, 0);
 	    this.discMessage.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.discMessage.Name = "discMessage";
-	    this.discMessage.Size = new System.Drawing.Size(1009, 32);
+	    this.discMessage.Size = new System.Drawing.Size(1919, 63);
 	    this.discMessage.TabIndex = 1;
 	    this.discMessage.Text = "Disclaimer: Adding Domains to this page will blacklist the domain until removal.";
 	    // 
@@ -437,7 +445,7 @@
 	    // 
 	    this.welcomeMessagelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
 	    this.welcomeMessagelabel.AutoSize = true;
-	    this.welcomeMessagelabel.BackColor = System.Drawing.Color.Transparent;
+	    this.welcomeMessagelabel.BackColor = System.Drawing.Color.Black;
 	    this.welcomeMessagelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.welcomeMessagelabel.ForeColor = System.Drawing.Color.Transparent;
 	    this.welcomeMessagelabel.Location = new System.Drawing.Point(959, 153);
@@ -481,19 +489,21 @@
 	    // password_field
 	    // 
 	    this.password_field.Anchor = System.Windows.Forms.AnchorStyles.None;
-	    this.password_field.Location = new System.Drawing.Point(1368, 607);
+	    this.password_field.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.password_field.Location = new System.Drawing.Point(1368, 581);
 	    this.password_field.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.password_field.Name = "password_field";
-	    this.password_field.Size = new System.Drawing.Size(369, 38);
+	    this.password_field.Size = new System.Drawing.Size(369, 67);
 	    this.password_field.TabIndex = 3;
 	    // 
 	    // username_field
 	    // 
 	    this.username_field.Anchor = System.Windows.Forms.AnchorStyles.None;
-	    this.username_field.Location = new System.Drawing.Point(1368, 516);
+	    this.username_field.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.username_field.Location = new System.Drawing.Point(1368, 494);
 	    this.username_field.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.username_field.Name = "username_field";
-	    this.username_field.Size = new System.Drawing.Size(369, 38);
+	    this.username_field.Size = new System.Drawing.Size(369, 67);
 	    this.username_field.TabIndex = 2;
 	    // 
 	    // PasswordLBL
