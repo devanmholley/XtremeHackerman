@@ -136,30 +136,14 @@ namespace XtremeHackerman
                 
                 // Sniff network traffic
                 case "Hackerman@Comp$ sudo dsniff -c":
-                    // if everything has been set up then display the output for dsniff
-                    if (Classes.Class_HackerTerminal.ipforwarding == true && 
-                        Classes.Class_HackerTerminal.CSarp == true && 
-                        Classes.Class_HackerTerminal.SCarp == true )
-                    {
-                        // Header
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "tcp 172.217.9.14.33322" +
-                            " -> 138.93.0.10.21 (ftp)");
-                        // Packet body
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "USER root");
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "PASS password123");
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
-                        break;
-                    }
-                    else
-                    {
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Client-Server: "
-                            + Classes.Class_HackerTerminal.SCarp + "Server-Client: " +
-                            Classes.Class_HackerTerminal.CSarp + "ipforward: " + 
-                            Classes.Class_HackerTerminal.ipforwarding);
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "No packets to sniff");
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
-                        break;
-                    }
+                    // Header
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + "tcp 172.217.9.14.33322" +
+                        " -> 138.93.0.10.21 (ftp)");
+                    // Packet body
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + "USER root");
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + "PASS password123");
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
+                    break;
 
                 default:
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "Invalid command");
