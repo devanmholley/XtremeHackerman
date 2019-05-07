@@ -59,7 +59,7 @@ namespace XtremeHackerman
 	    eventLBL.Text = Class_Progress.ActiveEvent;
 	    eventProgress.Value = Class_Progress.Percent;
 	    //update completed stepsView
-	    if (Class_Progress.Percent <= 10 || Class_Progress.Percent == 100) //no steps done or completed game
+	    if (Class_Progress.Percent <= 10) //no steps done
 	    {
 		StepsView.Items[0].Text = "Step 1:";
 		StepsView.Items[0].ImageIndex = 0;
@@ -71,6 +71,19 @@ namespace XtremeHackerman
 		StepsView.Items[3].ImageIndex = 0;
 		StepsView.Items[4].Text = "Step 5:";
 		StepsView.Items[4].ImageIndex = 0;
+	    }
+	    else if (Class_Progress.Percent == 100 )//completed game
+	    {
+		StepsView.Items[0].Text = "Events Completed";
+		StepsView.Items[0].ImageIndex = 2;
+		StepsView.Items[1].Text = "Events Completed";
+		StepsView.Items[1].ImageIndex = 2;
+		StepsView.Items[2].Text = "Events Completed";
+		StepsView.Items[2].ImageIndex = 2;
+		StepsView.Items[3].Text = "Events Completed";
+		StepsView.Items[3].ImageIndex = 2;
+		StepsView.Items[4].Text = "Events Completed";
+		StepsView.Items[4].ImageIndex = 2;
 	    }
 	    else
 	    {
