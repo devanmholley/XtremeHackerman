@@ -81,8 +81,16 @@ namespace XtremeHackerman
 
                 // If checking the status of ip forwarding
                 case "Hackerman@Comp$ cat /proc/sys/net/ipv4/ip_forward":
-                    HackerTerminal_TXT.AppendText(Environment.NewLine + "1");
-                    HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
+                    if (Classes.Class_HackerTerminal.ipforwarding)
+                    {
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "1");
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
+                    }
+                    else
+                    {
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "0");
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
+                    }
                     break;
 
                 // Get the network configurations
@@ -144,6 +152,10 @@ namespace XtremeHackerman
                     }
                     else
                     {
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Client-Server: "
+                            + Classes.Class_HackerTerminal.SCarp + "Server-Client: " +
+                            Classes.Class_HackerTerminal.CSarp + "ipforward: " + 
+                            Classes.Class_HackerTerminal.ipforwarding);
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "No packets to sniff");
                         HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                         break;

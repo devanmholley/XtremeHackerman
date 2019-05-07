@@ -36,6 +36,7 @@
             this.HackerTerminal_TXT.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.HackerTerminal_TXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.HackerTerminal_TXT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HackerTerminal_TXT.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HackerTerminal_TXT.ForeColor = System.Drawing.Color.White;
             this.HackerTerminal_TXT.Location = new System.Drawing.Point(0, 0);
             this.HackerTerminal_TXT.Multiline = true;

@@ -16,5 +16,10 @@ namespace XtremeHackerman
         {
             InitializeComponent();
         }
+
+        private void Hacker_WelcomeTXT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

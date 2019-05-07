@@ -28,89 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Hacker));
-	    this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-	    this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-	    this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-	    this.powerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-	    this.shutDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-	    this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-	    this.toolStrip1.SuspendLayout();
-	    this.SuspendLayout();
-	    // 
-	    // toolStrip1
-	    // 
-	    this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
-	    this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Hacker));
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.powerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shutDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-	    this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-	    this.toolStrip1.Name = "toolStrip1";
-	    this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-	    this.toolStrip1.Size = new System.Drawing.Size(2688, 47);
-	    this.toolStrip1.TabIndex = 0;
-	    this.toolStrip1.Text = "toolStrip1";
-	    // 
-	    // toolStripDropDownButton1
-	    // 
-	    this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-	    this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(514, 47);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.terminalToolStripMenuItem,
             this.powerToolStripMenuItem});
-	    this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-	    this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-	    this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-	    this.toolStripDropDownButton1.Size = new System.Drawing.Size(66, 44);
-	    this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-	    this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
-	    // 
-	    // terminalToolStripMenuItem
-	    // 
-	    this.terminalToolStripMenuItem.Name = "terminalToolStripMenuItem";
-	    this.terminalToolStripMenuItem.Size = new System.Drawing.Size(243, 46);
-	    this.terminalToolStripMenuItem.Text = "Terminal";
-	    this.terminalToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownTerminal_Click);
-	    // 
-	    // powerToolStripMenuItem
-	    // 
-	    this.powerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(53, 44);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
+            // 
+            // terminalToolStripMenuItem
+            // 
+            this.terminalToolStripMenuItem.Name = "terminalToolStripMenuItem";
+            this.terminalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.terminalToolStripMenuItem.Text = "Terminal";
+            this.terminalToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownTerminal_Click);
+            // 
+            // powerToolStripMenuItem
+            // 
+            this.powerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.shutDownToolStripMenuItem,
             this.restartToolStripMenuItem});
-	    this.powerToolStripMenuItem.Name = "powerToolStripMenuItem";
-	    this.powerToolStripMenuItem.Size = new System.Drawing.Size(243, 46);
-	    this.powerToolStripMenuItem.Text = "Power";
-	    // 
-	    // shutDownToolStripMenuItem
-	    // 
-	    this.shutDownToolStripMenuItem.Name = "shutDownToolStripMenuItem";
-	    this.shutDownToolStripMenuItem.Size = new System.Drawing.Size(278, 46);
-	    this.shutDownToolStripMenuItem.Text = "Shut Down";
-	    this.shutDownToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownShutdown_Click);
-	    // 
-	    // restartToolStripMenuItem
-	    // 
-	    this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-	    this.restartToolStripMenuItem.Size = new System.Drawing.Size(278, 46);
-	    this.restartToolStripMenuItem.Text = "Restart";
-	    this.restartToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownRestart_Click);
-	    // 
-	    // Form_Hacker
-	    // 
-	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
-	    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-	    this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-	    this.ClientSize = new System.Drawing.Size(2688, 1738);
-	    this.Controls.Add(this.toolStrip1);
-	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.Name = "Form_Hacker";
-	    this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-	    this.Text = "Hacker - Xtreme Hackerman";
-	    this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-	    this.Load += new System.EventHandler(this.Form_Hacker_Load);
-	    this.Shown += new System.EventHandler(this.Form_Hacker_Shown);
-	    this.toolStrip1.ResumeLayout(false);
-	    this.toolStrip1.PerformLayout();
-	    this.ResumeLayout(false);
-	    this.PerformLayout();
+            this.powerToolStripMenuItem.Name = "powerToolStripMenuItem";
+            this.powerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.powerToolStripMenuItem.Text = "Power";
+            // 
+            // shutDownToolStripMenuItem
+            // 
+            this.shutDownToolStripMenuItem.Name = "shutDownToolStripMenuItem";
+            this.shutDownToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.shutDownToolStripMenuItem.Text = "Shut Down";
+            this.shutDownToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownShutdown_Click);
+            // 
+            // restartToolStripMenuItem
+            // 
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.toolStripDropDownRestart_Click);
+            // 
+            // Form_Hacker
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(514, 314);
+            this.Controls.Add(this.toolStrip1);
+            this.Name = "Form_Hacker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hacker - Xtreme Hackerman";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form_Hacker_Load);
+            this.Shown += new System.EventHandler(this.Form_Hacker_Shown);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
