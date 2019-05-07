@@ -10,8 +10,8 @@ namespace XtremeHackerman.Classes
     class Class_FileManager
     {
 	//Initalize basic folders
-	public static TreeNode docs = new TreeNode("Documents");
-	public static TreeNode down = new TreeNode("Downloads");
+	public static TreeNode docs = new TreeNode("Documents", 3, 1);
+	public static TreeNode down = new TreeNode("Downloads", 4, 1);
 	static TreeNode[] PC_Children = { docs, down };
 	public static TreeNode root = new TreeNode("This PC", 2, 2, PC_Children);
 
@@ -56,7 +56,13 @@ namespace XtremeHackerman.Classes
 		ListViewItem newFolderItem;
 		newFolderItem = fileView.Items.Add(subfolder.Text); //add folder's name, and show up in fileView
 		newFolderItem.SubItems.Add("File Folder"); //add folder type
-		newFolderItem.ImageKey = "folder.PNG";
+		//Chose folder image
+		if (subfolder.Text == "Documents")
+		    newFolderItem.ImageKey = "Folder_Documents.png";
+		else if (subfolder.Text == "Downloads")
+		    newFolderItem.ImageKey = "Folder_Downloads.png";
+		else
+		    newFolderItem.ImageKey = "Folder.png";
 	    }
 
 	    //populate files from dictionary

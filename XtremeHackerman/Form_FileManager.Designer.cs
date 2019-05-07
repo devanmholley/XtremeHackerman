@@ -115,6 +115,7 @@
 	    // 
 	    // filePathComboBox
 	    // 
+	    this.filePathComboBox.Enabled = false;
 	    this.filePathComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.filePathComboBox.Name = "filePathComboBox";
 	    this.filePathComboBox.Size = new System.Drawing.Size(1000, 47);
@@ -123,12 +124,14 @@
 	    // 
 	    this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
 	    this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-	    this.imageList1.Images.SetKeyName(0, "folder.PNG");
-	    this.imageList1.Images.SetKeyName(1, "openfolder.PNG");
-	    this.imageList1.Images.SetKeyName(2, "thispc.png");
-	    this.imageList1.Images.SetKeyName(3, "doc.PNG");
-	    this.imageList1.Images.SetKeyName(4, "file.PNG");
-	    this.imageList1.Images.SetKeyName(5, "img.PNG");
+	    this.imageList1.Images.SetKeyName(0, "Folder.png");
+	    this.imageList1.Images.SetKeyName(1, "Folder_Open.png");
+	    this.imageList1.Images.SetKeyName(2, "Computer.png");
+	    this.imageList1.Images.SetKeyName(3, "Folder_Documents.png");
+	    this.imageList1.Images.SetKeyName(4, "Folder_Downloads.png");
+	    this.imageList1.Images.SetKeyName(5, "File_Text.png");
+	    this.imageList1.Images.SetKeyName(6, "File_HTML.png");
+	    this.imageList1.Images.SetKeyName(7, "File.png");
 	    // 
 	    // folderViewMenuStrip
 	    // 
@@ -244,12 +247,12 @@
 	    this.folderView.ContextMenuStrip = this.folderViewMenuStrip;
 	    this.folderView.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.folderView.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.folderView.ImageIndex = 0;
+	    this.folderView.ImageKey = "Folder.png";
 	    this.folderView.ImageList = this.imageList1;
 	    this.folderView.LabelEdit = true;
 	    this.folderView.Location = new System.Drawing.Point(0, 0);
 	    this.folderView.Name = "folderView";
-	    this.folderView.SelectedImageIndex = 0;
+	    this.folderView.SelectedImageKey = "Folder_Open.png";
 	    this.folderView.Size = new System.Drawing.Size(468, 838);
 	    this.folderView.TabIndex = 0;
 	    this.folderView.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.folderView_AfterLabelEdit);

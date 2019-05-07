@@ -46,12 +46,12 @@
 	    // 
 	    this.folderView.Dock = System.Windows.Forms.DockStyle.Left;
 	    this.folderView.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.folderView.ImageIndex = 0;
+	    this.folderView.ImageKey = "Folder.png";
 	    this.folderView.ImageList = this.imageList1;
 	    this.folderView.Location = new System.Drawing.Point(0, 0);
 	    this.folderView.Name = "folderView";
-	    this.folderView.SelectedImageIndex = 0;
-	    this.folderView.Size = new System.Drawing.Size(504, 766);
+	    this.folderView.SelectedImageIndex = 1;
+	    this.folderView.Size = new System.Drawing.Size(675, 766);
 	    this.folderView.TabIndex = 0;
 	    this.folderView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.folderView_AfterSelect);
 	    // 
@@ -59,12 +59,14 @@
 	    // 
 	    this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
 	    this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-	    this.imageList1.Images.SetKeyName(0, "folder.PNG");
-	    this.imageList1.Images.SetKeyName(1, "openfolder.PNG");
-	    this.imageList1.Images.SetKeyName(2, "thispc.png");
-	    this.imageList1.Images.SetKeyName(3, "doc.PNG");
-	    this.imageList1.Images.SetKeyName(4, "file.PNG");
-	    this.imageList1.Images.SetKeyName(5, "img.PNG");
+	    this.imageList1.Images.SetKeyName(0, "Folder.png");
+	    this.imageList1.Images.SetKeyName(1, "Folder_Open.png");
+	    this.imageList1.Images.SetKeyName(2, "Computer.png");
+	    this.imageList1.Images.SetKeyName(3, "Folder_Documents.png");
+	    this.imageList1.Images.SetKeyName(4, "Folder_Downloads.png");
+	    this.imageList1.Images.SetKeyName(5, "File_Text.png");
+	    this.imageList1.Images.SetKeyName(6, "File_HTML.png");
+	    this.imageList1.Images.SetKeyName(7, "File.png");
 	    // 
 	    // fileView
 	    // 
@@ -73,9 +75,9 @@
             this.Type});
 	    this.fileView.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.fileView.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-	    this.fileView.Location = new System.Drawing.Point(504, 0);
+	    this.fileView.Location = new System.Drawing.Point(675, 0);
 	    this.fileView.Name = "fileView";
-	    this.fileView.Size = new System.Drawing.Size(997, 766);
+	    this.fileView.Size = new System.Drawing.Size(988, 766);
 	    this.fileView.SmallImageList = this.imageList1;
 	    this.fileView.TabIndex = 1;
 	    this.fileView.UseCompatibleStateImageBehavior = false;
@@ -84,17 +86,17 @@
 	    // FileName
 	    // 
 	    this.FileName.Text = "Name";
-	    this.FileName.Width = 150;
+	    this.FileName.Width = 200;
 	    // 
 	    // Type
 	    // 
 	    this.Type.Text = "Type";
-	    this.Type.Width = 275;
+	    this.Type.Width = 200;
 	    // 
 	    // SelectButton
 	    // 
 	    this.SelectButton.Dock = System.Windows.Forms.DockStyle.Right;
-	    this.SelectButton.Location = new System.Drawing.Point(725, 0);
+	    this.SelectButton.Location = new System.Drawing.Point(716, 0);
 	    this.SelectButton.Name = "SelectButton";
 	    this.SelectButton.Size = new System.Drawing.Size(136, 70);
 	    this.SelectButton.TabIndex = 2;
@@ -105,7 +107,7 @@
 	    // CancelButton
 	    // 
 	    this.CancelButton.Dock = System.Windows.Forms.DockStyle.Right;
-	    this.CancelButton.Location = new System.Drawing.Point(861, 0);
+	    this.CancelButton.Location = new System.Drawing.Point(852, 0);
 	    this.CancelButton.Name = "CancelButton";
 	    this.CancelButton.Size = new System.Drawing.Size(136, 70);
 	    this.CancelButton.TabIndex = 3;
@@ -119,14 +121,14 @@
 	    this.ButtonsPanel.Controls.Add(this.SelectButton);
 	    this.ButtonsPanel.Controls.Add(this.CancelButton);
 	    this.ButtonsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-	    this.ButtonsPanel.Location = new System.Drawing.Point(504, 696);
+	    this.ButtonsPanel.Location = new System.Drawing.Point(675, 696);
 	    this.ButtonsPanel.Name = "ButtonsPanel";
-	    this.ButtonsPanel.Size = new System.Drawing.Size(997, 70);
+	    this.ButtonsPanel.Size = new System.Drawing.Size(988, 70);
 	    this.ButtonsPanel.TabIndex = 4;
 	    // 
 	    // splitter1
 	    // 
-	    this.splitter1.Location = new System.Drawing.Point(504, 0);
+	    this.splitter1.Location = new System.Drawing.Point(675, 0);
 	    this.splitter1.Name = "splitter1";
 	    this.splitter1.Size = new System.Drawing.Size(10, 696);
 	    this.splitter1.TabIndex = 0;
@@ -136,7 +138,7 @@
 	    // 
 	    this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
 	    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-	    this.ClientSize = new System.Drawing.Size(1501, 766);
+	    this.ClientSize = new System.Drawing.Size(1663, 766);
 	    this.Controls.Add(this.splitter1);
 	    this.Controls.Add(this.ButtonsPanel);
 	    this.Controls.Add(this.fileView);

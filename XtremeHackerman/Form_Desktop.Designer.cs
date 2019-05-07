@@ -30,11 +30,11 @@
         {
 	    this.components = new System.ComponentModel.Container();
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Desktop));
-	    System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Step 1:", 0);
-	    System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Step 2:", 0);
-	    System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Step 3:", 0);
-	    System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Step 4:", 0);
-	    System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Step 5:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Step 1:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Step 2:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Step 3:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Step 4:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Step 5:", 0);
 	    this.toolbarNetworkBTN = new System.Windows.Forms.Button();
 	    this.toolbarTime = new System.Windows.Forms.Label();
 	    this.toolbarDate = new System.Windows.Forms.Label();
@@ -490,17 +490,17 @@
 	    this.StepsView.Enabled = false;
 	    this.StepsView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.StepsView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-	    listViewItem6.StateImageIndex = 0;
-	    listViewItem7.StateImageIndex = 0;
-	    listViewItem8.StateImageIndex = 0;
-	    listViewItem9.StateImageIndex = 0;
-	    listViewItem10.StateImageIndex = 0;
+	    listViewItem1.StateImageIndex = 0;
+	    listViewItem2.StateImageIndex = 0;
+	    listViewItem3.StateImageIndex = 0;
+	    listViewItem4.StateImageIndex = 0;
+	    listViewItem5.StateImageIndex = 0;
 	    this.StepsView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem6,
-            listViewItem7,
-            listViewItem8,
-            listViewItem9,
-            listViewItem10});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5});
 	    this.StepsView.LargeImageList = this.imageList1;
 	    this.StepsView.Location = new System.Drawing.Point(0, 462);
 	    this.StepsView.Name = "StepsView";

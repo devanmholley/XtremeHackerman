@@ -45,8 +45,8 @@ namespace XtremeHackerman
 
 	private void folderViewMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
 	{
-	    //do not show rename and delete right click menu items for ThisPC folder
-	    if (folderView.SelectedNode.Parent == null)
+	    //do not show rename and delete right click menu items for ThisPC, Documents, and Downloads folder
+	    if (folderView.SelectedNode == Class_FileManager.root || folderView.SelectedNode == Class_FileManager.docs || folderView.SelectedNode == Class_FileManager.down)
 	    {
 		renameToolStripMenuItem.Visible = false;
 		deleteToolStripMenuItem.Visible = false;
@@ -89,7 +89,6 @@ namespace XtremeHackerman
 	    //Delete folder from Right Click menu in folderView
 	    FolderFiles.Remove(folderView.SelectedNode);
 	    folderView.SelectedNode.Remove();
-
 	}
 
 	private void folderView_AfterLabelEdit(object sender, NodeLabelEditEventArgs e)
@@ -148,14 +147,14 @@ namespace XtremeHackerman
 	    ListViewItem newDoc = new ListViewItem();	    
 	    newDoc.Text = "New Text Document";
 	    newDoc.SubItems.Add("Text Document");
-	    newDoc.ImageKey = "doc.PNG";
+	    newDoc.ImageKey = "File_Text.png";
 	    newDoc.Tag = new Class_File(folderView.SelectedNode, "Text Document", false, null); //
 	    FolderFiles[folderView.SelectedNode].Items.Add(newDoc); //add it to the dictionary
 
 	    //Show in fileView / we duplicate to avoid errors
 	    newDoc = fileView.Items.Add("New Text Document");
 	    newDoc.SubItems.Add("Text Document");
-	    newDoc.ImageKey = "doc.PNG";
+	    newDoc.ImageKey = "File_Text.png";
 	    newDoc.BeginEdit(); //prompt for new file name
 	}
 
@@ -174,21 +173,25 @@ namespace XtremeHackerman
 	    //Delete file or folder from fileView
 	    ListViewItem currFile = fileView.SelectedItems[0];
 	    TreeNode currFolder = folderView.SelectedNode;
-	    int numFolders = currFolder.Nodes.Count;
 
-	    if (currFile.SubItems[1].Text == "Text Document")
+	    if (currFile.ImageKey != "Folder_Documents.png" && currFile.ImageKey != "Folder_Downloads.png") //can't delete downloads or documents folder
 	    {
-		int fileIndex = currFile.Index - numFolders;
-		FolderFiles[currFolder].Items[fileIndex].Remove(); //delete from dictionary
-		currFile.Remove(); //delete from fileview
+		int numFolders = currFolder.Nodes.Count;
 
-	    }
-	    else if (currFile.SubItems[1].Text == "File Folder")
-	    {
-		int fileIndex = currFile.Index; //get index of what is selected in fileview
-		FolderFiles.Remove(currFolder.Nodes[fileIndex]); //delete selected folder from dictionary
-		currFolder.Nodes[fileIndex].Remove(); //delete from folderview
-		Class_FileManager.refreshFileView(fileView, currFolder); //refresh to disappear from fileview
+		if (currFile.SubItems[1].Text == "Text Document")
+		{
+		    int fileIndex = currFile.Index - numFolders;
+		    FolderFiles[currFolder].Items[fileIndex].Remove(); //delete from dictionary
+		    currFile.Remove(); //delete from fileview
+
+		}
+		else if (currFile.SubItems[1].Text == "File Folder")
+		{
+		    int fileIndex = currFile.Index; //get index of what is selected in fileview
+		    FolderFiles.Remove(currFolder.Nodes[fileIndex]); //delete selected folder from dictionary
+		    currFolder.Nodes[fileIndex].Remove(); //delete from folderview
+		    Class_FileManager.refreshFileView(fileView, currFolder); //refresh to disappear from fileview
+		}
 	    }
 	}
 

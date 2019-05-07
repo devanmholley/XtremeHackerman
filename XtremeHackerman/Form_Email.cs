@@ -100,13 +100,27 @@ namespace XtremeHackerman
 	private void saveLinkToolStripMenuItem_Click(object sender, System.EventArgs e)
 	{
 	    string fileName = String.Join("", Link.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
-	    Class_File.Save(null, fileName, "HTML Document", true, null); // save into downloads
+	    if (fileName == "firewall.com")
+	    {
+		Class_File.Save(null, fileName, "HTML Document", false, null); // save into downloads / safe
+	    }
+	    else
+	    {
+		Class_File.Save(null, fileName, "HTML Document", true, null); // save into downloads /malicious
+	    }
 	}
 
 	private void saveLinkAsToolStripMenuItem_Click(object sender, System.EventArgs e)
 	{
 	    string fileName = String.Join("", Link.Text.Split('\\', '/', ':', '*', '?', '"', '<', '>', '|')); //remove invalid characters
-	    Class_File.SaveAs(fileName, "HTML Document", true, null); //save into chosen folder, and allow user to edit filename
+	    if (fileName == "firewall.com")
+	    {
+		Class_File.SaveAs(fileName, "HTML Document", false, null); //save into chosen folder, and allow user to edit filename /safe
+	    }
+	    else
+	    {
+		Class_File.SaveAs(fileName, "HTML Document", true, null); //save into chosen folder, and allow user to edit filename /malicious
+	    }
 	}
 
 	private void timer1_Tick(object sender, EventArgs e)

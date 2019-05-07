@@ -54,15 +54,15 @@ namespace XtremeHackerman.Classes
 
 	    if (filetype == "Text Document")
 	    {
-		newFile.ImageKey = "doc.PNG";
+		newFile.ImageKey = "File_Text.png";
 	    }
-	    else if (filetype == "PNG File")
+	    else if (filetype == "HTML Document")
 	    {
-		newFile.ImageKey = "img.PNG";
+		newFile.ImageKey = "File_HTML.png";
 	    }
 	    else
 	    {
-		newFile.ImageKey = "file.PNG";
+		newFile.ImageKey = "File.png";
 	    }
 
 	    var fileTag = new Class_File(folder, filetype, ismalicious, content); //Create new File
