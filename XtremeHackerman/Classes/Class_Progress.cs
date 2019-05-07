@@ -100,7 +100,7 @@ namespace XtremeHackerman.Classes
 	    /**********************************/
 
 	    /*** THIRD EVENT:  Finished***/
-	    if (eventName == "Ransomware" && Percent == 100)
+	    if (eventName == "Ransomware" && Percent == 100 && ActiveEvent != "Events Completed!")
 	    {
 		ActiveEvent = "Events Completed!";
 		Steps = null;
