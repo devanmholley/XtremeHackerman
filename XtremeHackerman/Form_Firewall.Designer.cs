@@ -110,9 +110,9 @@
 	    // 
 	    this.FirewallSplitContainer.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirewallSplitContainer.Panel2.BackgroundImage")));
 	    this.FirewallSplitContainer.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-	    this.FirewallSplitContainer.Panel2.Controls.Add(this.webaccessPanel);
-	    this.FirewallSplitContainer.Panel2.Controls.Add(this.blockIPPanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.DomainPanel);
+	    this.FirewallSplitContainer.Panel2.Controls.Add(this.blockIPPanel);
+	    this.FirewallSplitContainer.Panel2.Controls.Add(this.webaccessPanel);
 	    this.FirewallSplitContainer.Panel2.Controls.Add(this.HomePanel);
 	    this.FirewallSplitContainer.Panel2.Tag = "homePagefire";
 	    this.FirewallSplitContainer.Size = new System.Drawing.Size(2752, 1207);
@@ -176,8 +176,8 @@
 	    // 
 	    // webaccessPanel
 	    // 
-	    this.webaccessPanel.Controls.Add(this.webmessageLabel);
 	    this.webaccessPanel.Controls.Add(this.webPanelAccess2);
+	    this.webaccessPanel.Controls.Add(this.webmessageLabel);
 	    this.webaccessPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.webaccessPanel.Location = new System.Drawing.Point(0, 0);
 	    this.webaccessPanel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -188,10 +188,12 @@
 	    // webmessageLabel
 	    // 
 	    this.webmessageLabel.AutoSize = true;
-	    this.webmessageLabel.Location = new System.Drawing.Point(1160, 176);
+	    this.webmessageLabel.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.webmessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.webmessageLabel.Location = new System.Drawing.Point(0, 0);
 	    this.webmessageLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.webmessageLabel.Name = "webmessageLabel";
-	    this.webmessageLabel.Size = new System.Drawing.Size(461, 32);
+	    this.webmessageLabel.Size = new System.Drawing.Size(875, 63);
 	    this.webmessageLabel.TabIndex = 1;
 	    this.webmessageLabel.Text = "Add sites users cannot go to below.";
 	    // 
@@ -204,19 +206,21 @@
 	    this.webPanelAccess2.Controls.Add(this.blacklistWebLabel);
 	    this.webPanelAccess2.Controls.Add(this.textBox1);
 	    this.webPanelAccess2.Controls.Add(this.clearedWebLabel);
-	    this.webPanelAccess2.Location = new System.Drawing.Point(192, 215);
+	    this.webPanelAccess2.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.webPanelAccess2.Location = new System.Drawing.Point(0, 63);
 	    this.webPanelAccess2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.webPanelAccess2.Name = "webPanelAccess2";
-	    this.webPanelAccess2.Size = new System.Drawing.Size(1435, 622);
+	    this.webPanelAccess2.Size = new System.Drawing.Size(2341, 1144);
 	    this.webPanelAccess2.TabIndex = 0;
 	    // 
 	    // addWebButton
 	    // 
 	    this.addWebButton.BackColor = System.Drawing.SystemColors.Control;
-	    this.addWebButton.Location = new System.Drawing.Point(1173, 26);
+	    this.addWebButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.addWebButton.Location = new System.Drawing.Point(1862, 156);
 	    this.addWebButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.addWebButton.Name = "addWebButton";
-	    this.addWebButton.Size = new System.Drawing.Size(200, 55);
+	    this.addWebButton.Size = new System.Drawing.Size(231, 75);
 	    this.addWebButton.TabIndex = 6;
 	    this.addWebButton.Text = "Add:";
 	    this.addWebButton.UseVisualStyleBackColor = false;
@@ -225,28 +229,31 @@
 	    // 
 	    this.blockedWebsTB.BackColor = System.Drawing.SystemColors.ScrollBar;
 	    this.blockedWebsTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.blockedWebsTB.Location = new System.Drawing.Point(720, 88);
+	    this.blockedWebsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.blockedWebsTB.Location = new System.Drawing.Point(1323, 242);
 	    this.blockedWebsTB.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.blockedWebsTB.Multiline = true;
 	    this.blockedWebsTB.Name = "blockedWebsTB";
-	    this.blockedWebsTB.Size = new System.Drawing.Size(376, 427);
+	    this.blockedWebsTB.Size = new System.Drawing.Size(499, 532);
 	    this.blockedWebsTB.TabIndex = 5;
 	    // 
 	    // waccessTextEntry
 	    // 
-	    this.waccessTextEntry.Location = new System.Drawing.Point(891, 29);
+	    this.waccessTextEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.waccessTextEntry.Location = new System.Drawing.Point(1323, 158);
 	    this.waccessTextEntry.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.waccessTextEntry.Name = "waccessTextEntry";
-	    this.waccessTextEntry.Size = new System.Drawing.Size(260, 38);
+	    this.waccessTextEntry.Size = new System.Drawing.Size(499, 67);
 	    this.waccessTextEntry.TabIndex = 4;
 	    // 
 	    // blacklistWebLabel
 	    // 
 	    this.blacklistWebLabel.AutoSize = true;
-	    this.blacklistWebLabel.Location = new System.Drawing.Point(712, 36);
+	    this.blacklistWebLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.blacklistWebLabel.Location = new System.Drawing.Point(1401, 62);
 	    this.blacklistWebLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.blacklistWebLabel.Name = "blacklistWebLabel";
-	    this.blacklistWebLabel.Size = new System.Drawing.Size(161, 32);
+	    this.blacklistWebLabel.Size = new System.Drawing.Size(303, 63);
 	    this.blacklistWebLabel.TabIndex = 3;
 	    this.blacklistWebLabel.Text = "Blacklisted:";
 	    // 
@@ -254,11 +261,12 @@
 	    // 
 	    this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
 	    this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.textBox1.Location = new System.Drawing.Point(16, 91);
+	    this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.textBox1.Location = new System.Drawing.Point(323, 242);
 	    this.textBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.textBox1.Multiline = true;
 	    this.textBox1.Name = "textBox1";
-	    this.textBox1.Size = new System.Drawing.Size(349, 424);
+	    this.textBox1.Size = new System.Drawing.Size(457, 550);
 	    this.textBox1.TabIndex = 1;
 	    this.textBox1.Text = "VirusTotals.com\r\n";
 	    // 
@@ -266,16 +274,17 @@
 	    // 
 	    this.clearedWebLabel.AutoSize = true;
 	    this.clearedWebLabel.BackColor = System.Drawing.SystemColors.Control;
-	    this.clearedWebLabel.Location = new System.Drawing.Point(8, 26);
+	    this.clearedWebLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.clearedWebLabel.Location = new System.Drawing.Point(345, 163);
 	    this.clearedWebLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.clearedWebLabel.Name = "clearedWebLabel";
-	    this.clearedWebLabel.Size = new System.Drawing.Size(194, 32);
+	    this.clearedWebLabel.Size = new System.Drawing.Size(367, 63);
 	    this.clearedWebLabel.TabIndex = 0;
 	    this.clearedWebLabel.Text = "Cleared Sites:";
 	    // 
 	    // blockIPPanel
 	    // 
-	    this.blockIPPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+	    this.blockIPPanel.BackColor = System.Drawing.SystemColors.Control;
 	    this.blockIPPanel.Controls.Add(this.addIPButton);
 	    this.blockIPPanel.Controls.Add(this.blockedIPsTB);
 	    this.blockIPPanel.Controls.Add(this.ipYeahweblocked);
@@ -291,10 +300,11 @@
 	    // addIPButton
 	    // 
 	    this.addIPButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-	    this.addIPButton.Location = new System.Drawing.Point(1051, 211);
+	    this.addIPButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.addIPButton.Location = new System.Drawing.Point(591, 140);
 	    this.addIPButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.addIPButton.Name = "addIPButton";
-	    this.addIPButton.Size = new System.Drawing.Size(75, 55);
+	    this.addIPButton.Size = new System.Drawing.Size(169, 77);
 	    this.addIPButton.TabIndex = 1;
 	    this.addIPButton.Text = "Add";
 	    this.addIPButton.UseVisualStyleBackColor = true;
@@ -303,7 +313,9 @@
 	    // blockedIPsTB
 	    // 
 	    this.blockedIPsTB.AcceptsReturn = true;
-	    this.blockedIPsTB.Location = new System.Drawing.Point(685, 385);
+	    this.blockedIPsTB.BackColor = System.Drawing.Color.White;
+	    this.blockedIPsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.blockedIPsTB.Location = new System.Drawing.Point(5, 308);
 	    this.blockedIPsTB.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.blockedIPsTB.Multiline = true;
 	    this.blockedIPsTB.Name = "blockedIPsTB";
@@ -315,38 +327,42 @@
 	    // ipYeahweblocked
 	    // 
 	    this.ipYeahweblocked.AutoSize = true;
-	    this.ipYeahweblocked.BackColor = System.Drawing.SystemColors.ControlLight;
-	    this.ipYeahweblocked.Location = new System.Drawing.Point(763, 277);
+	    this.ipYeahweblocked.BackColor = System.Drawing.Color.Transparent;
+	    this.ipYeahweblocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.ipYeahweblocked.Location = new System.Drawing.Point(8, 244);
 	    this.ipYeahweblocked.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.ipYeahweblocked.Name = "ipYeahweblocked";
-	    this.ipYeahweblocked.Size = new System.Drawing.Size(214, 32);
+	    this.ipYeahweblocked.Size = new System.Drawing.Size(406, 63);
 	    this.ipYeahweblocked.TabIndex = 3;
 	    this.ipYeahweblocked.Text = "BlackListed IPS";
 	    // 
 	    // ipEntry
 	    // 
-	    this.ipEntry.Location = new System.Drawing.Point(719, 220);
+	    this.ipEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.ipEntry.Location = new System.Drawing.Point(11, 145);
 	    this.ipEntry.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.ipEntry.Name = "ipEntry";
-	    this.ipEntry.Size = new System.Drawing.Size(308, 38);
+	    this.ipEntry.Size = new System.Drawing.Size(559, 67);
 	    this.ipEntry.TabIndex = 0;
 	    // 
 	    // blockIP
 	    // 
 	    this.blockIP.AutoSize = true;
-	    this.blockIP.BackColor = System.Drawing.SystemColors.ActiveBorder;
-	    this.blockIP.Location = new System.Drawing.Point(792, 148);
+	    this.blockIP.BackColor = System.Drawing.Color.Transparent;
+	    this.blockIP.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.blockIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.blockIP.Location = new System.Drawing.Point(0, 0);
 	    this.blockIP.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.blockIP.Name = "blockIP";
-	    this.blockIP.Size = new System.Drawing.Size(308, 32);
+	    this.blockIP.Size = new System.Drawing.Size(586, 63);
 	    this.blockIP.TabIndex = 6;
 	    this.blockIP.Text = "Add IPs to block below:";
 	    // 
 	    // DomainPanel
 	    // 
-	    this.DomainPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-	    this.DomainPanel.Controls.Add(this.domainADD);
+	    this.DomainPanel.BackColor = System.Drawing.SystemColors.Control;
 	    this.DomainPanel.Controls.Add(this.blockedDomainsTB);
+	    this.DomainPanel.Controls.Add(this.domainADD);
 	    this.DomainPanel.Controls.Add(this.domainEntry);
 	    this.DomainPanel.Controls.Add(this.labelManageAdd);
 	    this.DomainPanel.Controls.Add(this.discMessage);
@@ -359,10 +375,11 @@
 	    // 
 	    // domainADD
 	    // 
-	    this.domainADD.Location = new System.Drawing.Point(835, 241);
+	    this.domainADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.domainADD.Location = new System.Drawing.Point(685, 219);
 	    this.domainADD.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.domainADD.Name = "domainADD";
-	    this.domainADD.Size = new System.Drawing.Size(200, 55);
+	    this.domainADD.Size = new System.Drawing.Size(211, 68);
 	    this.domainADD.TabIndex = 5;
 	    this.domainADD.Text = "Add";
 	    this.domainADD.UseVisualStyleBackColor = true;
@@ -370,41 +387,48 @@
 	    // 
 	    // blockedDomainsTB
 	    // 
-	    this.blockedDomainsTB.BackColor = System.Drawing.SystemColors.Control;
+	    this.blockedDomainsTB.BackColor = System.Drawing.Color.White;
 	    this.blockedDomainsTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-	    this.blockedDomainsTB.Location = new System.Drawing.Point(107, 305);
+	    this.blockedDomainsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.blockedDomainsTB.Location = new System.Drawing.Point(0, 355);
 	    this.blockedDomainsTB.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.blockedDomainsTB.Multiline = true;
 	    this.blockedDomainsTB.Name = "blockedDomainsTB";
-	    this.blockedDomainsTB.Size = new System.Drawing.Size(603, 475);
+	    this.blockedDomainsTB.Size = new System.Drawing.Size(674, 595);
 	    this.blockedDomainsTB.TabIndex = 4;
 	    // 
 	    // domainEntry
 	    // 
-	    this.domainEntry.Location = new System.Drawing.Point(107, 241);
+	    this.domainEntry.Dock = System.Windows.Forms.DockStyle.Left;
+	    this.domainEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.domainEntry.Location = new System.Drawing.Point(0, 226);
 	    this.domainEntry.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.domainEntry.Name = "domainEntry";
-	    this.domainEntry.Size = new System.Drawing.Size(527, 38);
+	    this.domainEntry.Size = new System.Drawing.Size(669, 67);
 	    this.domainEntry.TabIndex = 3;
 	    // 
 	    // labelManageAdd
 	    // 
 	    this.labelManageAdd.AutoSize = true;
-	    this.labelManageAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-	    this.labelManageAdd.Location = new System.Drawing.Point(107, 148);
+	    this.labelManageAdd.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.labelManageAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.labelManageAdd.Location = new System.Drawing.Point(0, 63);
 	    this.labelManageAdd.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.labelManageAdd.Name = "labelManageAdd";
-	    this.labelManageAdd.Size = new System.Drawing.Size(277, 34);
+	    this.labelManageAdd.Padding = new System.Windows.Forms.Padding(0, 100, 0, 0);
+	    this.labelManageAdd.Size = new System.Drawing.Size(522, 163);
 	    this.labelManageAdd.TabIndex = 2;
 	    this.labelManageAdd.Text = "Add Domains below:";
 	    // 
 	    // discMessage
 	    // 
 	    this.discMessage.AutoSize = true;
-	    this.discMessage.Location = new System.Drawing.Point(5, 9);
+	    this.discMessage.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.discMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.discMessage.Location = new System.Drawing.Point(0, 0);
 	    this.discMessage.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.discMessage.Name = "discMessage";
-	    this.discMessage.Size = new System.Drawing.Size(1009, 32);
+	    this.discMessage.Size = new System.Drawing.Size(1919, 63);
 	    this.discMessage.TabIndex = 1;
 	    this.discMessage.Text = "Disclaimer: Adding Domains to this page will blacklist the domain until removal.";
 	    // 
@@ -437,7 +461,7 @@
 	    // 
 	    this.welcomeMessagelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
 	    this.welcomeMessagelabel.AutoSize = true;
-	    this.welcomeMessagelabel.BackColor = System.Drawing.Color.Transparent;
+	    this.welcomeMessagelabel.BackColor = System.Drawing.Color.Black;
 	    this.welcomeMessagelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.welcomeMessagelabel.ForeColor = System.Drawing.Color.Transparent;
 	    this.welcomeMessagelabel.Location = new System.Drawing.Point(959, 153);
@@ -481,19 +505,21 @@
 	    // password_field
 	    // 
 	    this.password_field.Anchor = System.Windows.Forms.AnchorStyles.None;
-	    this.password_field.Location = new System.Drawing.Point(1368, 607);
+	    this.password_field.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.password_field.Location = new System.Drawing.Point(1368, 581);
 	    this.password_field.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.password_field.Name = "password_field";
-	    this.password_field.Size = new System.Drawing.Size(369, 38);
+	    this.password_field.Size = new System.Drawing.Size(369, 67);
 	    this.password_field.TabIndex = 3;
 	    // 
 	    // username_field
 	    // 
 	    this.username_field.Anchor = System.Windows.Forms.AnchorStyles.None;
-	    this.username_field.Location = new System.Drawing.Point(1368, 516);
+	    this.username_field.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.username_field.Location = new System.Drawing.Point(1368, 494);
 	    this.username_field.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.username_field.Name = "username_field";
-	    this.username_field.Size = new System.Drawing.Size(369, 38);
+	    this.username_field.Size = new System.Drawing.Size(369, 67);
 	    this.username_field.TabIndex = 2;
 	    // 
 	    // PasswordLBL

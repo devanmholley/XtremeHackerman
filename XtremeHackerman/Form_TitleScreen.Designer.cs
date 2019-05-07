@@ -78,15 +78,14 @@
 	    this.tableLayoutPanel_Buttons.Controls.Add(this.button_Quit, 2, 2);
 	    this.tableLayoutPanel_Buttons.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.tableLayoutPanel_Buttons.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-	    this.tableLayoutPanel_Buttons.Location = new System.Drawing.Point(0, 625);
+	    this.tableLayoutPanel_Buttons.Location = new System.Drawing.Point(0, 395);
 	    this.tableLayoutPanel_Buttons.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.tableLayoutPanel_Buttons.Name = "tableLayoutPanel_Buttons";
-	    this.tableLayoutPanel_Buttons.RowCount = 4;
-	    this.tableLayoutPanel_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+	    this.tableLayoutPanel_Buttons.RowCount = 3;
+	    this.tableLayoutPanel_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+	    this.tableLayoutPanel_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
 	    this.tableLayoutPanel_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-	    this.tableLayoutPanel_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-	    this.tableLayoutPanel_Buttons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-	    this.tableLayoutPanel_Buttons.Size = new System.Drawing.Size(1925, 436);
+	    this.tableLayoutPanel_Buttons.Size = new System.Drawing.Size(1925, 350);
 	    this.tableLayoutPanel_Buttons.TabIndex = 1;
 	    // 
 	    // button_Admin
@@ -101,7 +100,7 @@
 	    this.button_Admin.Location = new System.Drawing.Point(393, 7);
 	    this.button_Admin.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.button_Admin.Name = "button_Admin";
-	    this.button_Admin.Size = new System.Drawing.Size(561, 139);
+	    this.button_Admin.Size = new System.Drawing.Size(561, 188);
 	    this.button_Admin.TabIndex = 0;
 	    this.button_Admin.Text = "ADMIN";
 	    this.button_Admin.UseVisualStyleBackColor = true;
@@ -119,7 +118,7 @@
 	    this.button_Hacker.Location = new System.Drawing.Point(970, 7);
 	    this.button_Hacker.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.button_Hacker.Name = "button_Hacker";
-	    this.button_Hacker.Size = new System.Drawing.Size(561, 139);
+	    this.button_Hacker.Size = new System.Drawing.Size(561, 188);
 	    this.button_Hacker.TabIndex = 1;
 	    this.button_Hacker.Text = "HACKER";
 	    this.button_Hacker.UseVisualStyleBackColor = true;
@@ -134,10 +133,10 @@
 	    this.button_About.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 	    this.button_About.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.button_About.ForeColor = System.Drawing.Color.White;
-	    this.button_About.Location = new System.Drawing.Point(874, 160);
+	    this.button_About.Location = new System.Drawing.Point(874, 209);
 	    this.button_About.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.button_About.Name = "button_About";
-	    this.button_About.Size = new System.Drawing.Size(176, 62);
+	    this.button_About.Size = new System.Drawing.Size(176, 60);
 	    this.button_About.TabIndex = 2;
 	    this.button_About.Text = "ABOUT";
 	    this.button_About.UseVisualStyleBackColor = true;
@@ -152,7 +151,7 @@
 	    this.button_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 	    this.button_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.button_Quit.ForeColor = System.Drawing.Color.White;
-	    this.button_Quit.Location = new System.Drawing.Point(874, 236);
+	    this.button_Quit.Location = new System.Drawing.Point(874, 283);
 	    this.button_Quit.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.button_Quit.Name = "button_Quit";
 	    this.button_Quit.Size = new System.Drawing.Size(176, 62);
@@ -164,9 +163,9 @@
 	    // safeModeIconButton
 	    // 
 	    this.safeModeIconButton.BackColor = System.Drawing.Color.Transparent;
-	    this.safeModeIconButton.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.safeModeIconButton.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.safeModeIconButton.Image = ((System.Drawing.Image)(resources.GetObject("safeModeIconButton.Image")));
-	    this.safeModeIconButton.Location = new System.Drawing.Point(0, 0);
+	    this.safeModeIconButton.Location = new System.Drawing.Point(0, 63);
 	    this.safeModeIconButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.safeModeIconButton.Name = "safeModeIconButton";
 	    this.safeModeIconButton.Size = new System.Drawing.Size(1925, 64);
@@ -178,12 +177,13 @@
 	    // pictureBox_Title
 	    // 
 	    this.pictureBox_Title.BackColor = System.Drawing.Color.Transparent;
-	    this.pictureBox_Title.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.pictureBox_Title.Dock = System.Windows.Forms.DockStyle.Fill;
 	    this.pictureBox_Title.Image = global::XtremeHackerman.Properties.Resources.Picture_Title;
-	    this.pictureBox_Title.Location = new System.Drawing.Point(0, 406);
+	    this.pictureBox_Title.Location = new System.Drawing.Point(0, 0);
 	    this.pictureBox_Title.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.pictureBox_Title.Name = "pictureBox_Title";
-	    this.pictureBox_Title.Size = new System.Drawing.Size(1925, 129);
+	    this.pictureBox_Title.Padding = new System.Windows.Forms.Padding(0, 0, 0, 300);
+	    this.pictureBox_Title.Size = new System.Drawing.Size(1925, 395);
 	    this.pictureBox_Title.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 	    this.pictureBox_Title.TabIndex = 2;
 	    this.pictureBox_Title.TabStop = false;
@@ -284,21 +284,24 @@
 	    this.securityOptionsToolStripMenuItem.Name = "securityOptionsToolStripMenuItem";
 	    this.securityOptionsToolStripMenuItem.Size = new System.Drawing.Size(315, 46);
 	    this.securityOptionsToolStripMenuItem.Text = "Security Options";
+	    this.securityOptionsToolStripMenuItem.Visible = false;
+	    this.securityOptionsToolStripMenuItem.Click += new System.EventHandler(this.securityOptionsToolStripMenuItem_Click);
 	    // 
 	    // copyrightToolStripMenuItem
 	    // 
 	    this.copyrightToolStripMenuItem.Name = "copyrightToolStripMenuItem";
 	    this.copyrightToolStripMenuItem.Size = new System.Drawing.Size(315, 46);
 	    this.copyrightToolStripMenuItem.Text = "Copyright";
+	    this.copyrightToolStripMenuItem.Visible = false;
 	    // 
 	    // SafeModeStatus
 	    // 
 	    this.SafeModeStatus.AutoSize = true;
 	    this.SafeModeStatus.BackColor = System.Drawing.Color.Transparent;
-	    this.SafeModeStatus.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.SafeModeStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.SafeModeStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.SafeModeStatus.ForeColor = System.Drawing.Color.White;
-	    this.SafeModeStatus.Location = new System.Drawing.Point(0, 64);
+	    this.SafeModeStatus.Location = new System.Drawing.Point(0, 127);
 	    this.SafeModeStatus.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.SafeModeStatus.Name = "SafeModeStatus";
 	    this.SafeModeStatus.Size = new System.Drawing.Size(327, 63);
@@ -310,10 +313,10 @@
 	    // 
 	    this.NetworkingStatus.AutoSize = true;
 	    this.NetworkingStatus.BackColor = System.Drawing.Color.Transparent;
-	    this.NetworkingStatus.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.NetworkingStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.NetworkingStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.NetworkingStatus.ForeColor = System.Drawing.Color.White;
-	    this.NetworkingStatus.Location = new System.Drawing.Point(0, 127);
+	    this.NetworkingStatus.Location = new System.Drawing.Point(0, 190);
 	    this.NetworkingStatus.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.NetworkingStatus.Name = "NetworkingStatus";
 	    this.NetworkingStatus.Size = new System.Drawing.Size(278, 63);
@@ -325,10 +328,10 @@
 	    // 
 	    this.CMDAccessStatus.AutoSize = true;
 	    this.CMDAccessStatus.BackColor = System.Drawing.Color.Transparent;
-	    this.CMDAccessStatus.Dock = System.Windows.Forms.DockStyle.Top;
+	    this.CMDAccessStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.CMDAccessStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.CMDAccessStatus.ForeColor = System.Drawing.Color.White;
-	    this.CMDAccessStatus.Location = new System.Drawing.Point(0, 190);
+	    this.CMDAccessStatus.Location = new System.Drawing.Point(0, 253);
 	    this.CMDAccessStatus.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.CMDAccessStatus.Name = "CMDAccessStatus";
 	    this.CMDAccessStatus.Size = new System.Drawing.Size(704, 63);
@@ -344,14 +347,14 @@
 	    // panel1
 	    // 
 	    this.panel1.BackColor = System.Drawing.Color.Transparent;
-	    this.panel1.Controls.Add(this.CMDAccessStatus);
-	    this.panel1.Controls.Add(this.NetworkingStatus);
-	    this.panel1.Controls.Add(this.SafeModeStatus);
 	    this.panel1.Controls.Add(this.safeModeIconButton);
-	    this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-	    this.panel1.Location = new System.Drawing.Point(0, 0);
+	    this.panel1.Controls.Add(this.SafeModeStatus);
+	    this.panel1.Controls.Add(this.NetworkingStatus);
+	    this.panel1.Controls.Add(this.CMDAccessStatus);
+	    this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+	    this.panel1.Location = new System.Drawing.Point(0, 745);
 	    this.panel1.Name = "panel1";
-	    this.panel1.Size = new System.Drawing.Size(1925, 406);
+	    this.panel1.Size = new System.Drawing.Size(1925, 316);
 	    this.panel1.TabIndex = 6;
 	    // 
 	    // Form_TitleScreen
@@ -362,8 +365,8 @@
 	    this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 	    this.ClientSize = new System.Drawing.Size(1925, 1061);
 	    this.Controls.Add(this.pictureBox_Title);
-	    this.Controls.Add(this.panel1);
 	    this.Controls.Add(this.tableLayoutPanel_Buttons);
+	    this.Controls.Add(this.panel1);
 	    this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Name = "Form_TitleScreen";
 	    this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
