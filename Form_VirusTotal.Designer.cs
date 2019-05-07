@@ -243,10 +243,10 @@
             // 
             // urlScanButton
             // 
-            this.urlScanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlScanButton.Location = new System.Drawing.Point(131, 132);
+            this.urlScanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urlScanButton.Location = new System.Drawing.Point(112, 120);
             this.urlScanButton.Name = "urlScanButton";
-            this.urlScanButton.Size = new System.Drawing.Size(55, 30);
+            this.urlScanButton.Size = new System.Drawing.Size(65, 30);
             this.urlScanButton.TabIndex = 1;
             this.urlScanButton.Text = "URL";
             this.urlScanButton.UseVisualStyleBackColor = true;
@@ -255,7 +255,7 @@
             // virusTotalLogo
             // 
             this.virusTotalLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.virusTotalLogo.Location = new System.Drawing.Point(232, 48);
+            this.virusTotalLogo.Location = new System.Drawing.Point(219, 48);
             this.virusTotalLogo.Name = "virusTotalLogo";
             this.virusTotalLogo.Size = new System.Drawing.Size(192, 30);
             this.virusTotalLogo.TabIndex = 0;
@@ -265,10 +265,11 @@
             // 
             this.urlScanPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.urlScanPanel.Controls.Add(this.urlScanner);
+            this.urlScanPanel.Controls.Add(this.SelectFileButton);
             this.urlScanPanel.Controls.Add(this.urlScanHere);
             this.urlScanPanel.Controls.Add(this.urlEntry);
             this.urlScanPanel.Controls.Add(this.urlIcon);
-            this.urlScanPanel.Location = new System.Drawing.Point(131, 161);
+            this.urlScanPanel.Location = new System.Drawing.Point(0, 0);
             this.urlScanPanel.Name = "urlScanPanel";
             this.urlScanPanel.Size = new System.Drawing.Size(406, 215);
             this.urlScanPanel.TabIndex = 2;
@@ -287,10 +288,10 @@
             // urlScanHere
             // 
             this.urlScanHere.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.urlScanHere.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlScanHere.Location = new System.Drawing.Point(148, 46);
+            this.urlScanHere.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urlScanHere.Location = new System.Drawing.Point(125, 39);
             this.urlScanHere.Name = "urlScanHere";
-            this.urlScanHere.Size = new System.Drawing.Size(159, 17);
+            this.urlScanHere.Size = new System.Drawing.Size(159, 24);
             this.urlScanHere.TabIndex = 2;
             this.urlScanHere.Text = "Scan URLs Here:";
             // 
@@ -306,9 +307,9 @@
             this.urlIcon.BackColor = System.Drawing.Color.Transparent;
             this.urlIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("urlIcon.BackgroundImage")));
             this.urlIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.urlIcon.Location = new System.Drawing.Point(183, 23);
+            this.urlIcon.Location = new System.Drawing.Point(184, 10);
             this.urlIcon.Name = "urlIcon";
-            this.urlIcon.Size = new System.Drawing.Size(34, 20);
+            this.urlIcon.Size = new System.Drawing.Size(40, 30);
             this.urlIcon.TabIndex = 0;
             this.urlIcon.TabStop = false;
             // 
@@ -318,7 +319,6 @@
             this.HomePanel.Controls.Add(this.urlScanButton);
             this.HomePanel.Controls.Add(this.fileScanButton);
             this.HomePanel.Controls.Add(this.virusTotalLogo);
-            this.HomePanel.Controls.Add(this.urlScanPanel);
             this.HomePanel.Controls.Add(this.fileScanPanel);
             this.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomePanel.Location = new System.Drawing.Point(0, 0);
@@ -329,8 +329,8 @@
             // 
             // fileScanButton
             // 
-            this.fileScanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileScanButton.Location = new System.Drawing.Point(180, 132);
+            this.fileScanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileScanButton.Location = new System.Drawing.Point(176, 120);
             this.fileScanButton.Name = "fileScanButton";
             this.fileScanButton.Size = new System.Drawing.Size(55, 30);
             this.fileScanButton.TabIndex = 3;
@@ -342,11 +342,11 @@
             // 
             this.fileScanPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fileScanPanel.Controls.Add(this.fileScanTextBox);
-            this.fileScanPanel.Controls.Add(this.SelectFileButton);
             this.fileScanPanel.Controls.Add(this.fileScanner);
+            this.fileScanPanel.Controls.Add(this.urlScanPanel);
             this.fileScanPanel.Controls.Add(this.fileScanHere);
             this.fileScanPanel.Controls.Add(this.fileIcon);
-            this.fileScanPanel.Location = new System.Drawing.Point(131, 161);
+            this.fileScanPanel.Location = new System.Drawing.Point(109, 148);
             this.fileScanPanel.Name = "fileScanPanel";
             this.fileScanPanel.Size = new System.Drawing.Size(406, 215);
             this.fileScanPanel.TabIndex = 4;
@@ -363,7 +363,7 @@
             // 
             // SelectFileButton
             // 
-            this.SelectFileButton.Location = new System.Drawing.Point(2, 65);
+            this.SelectFileButton.Location = new System.Drawing.Point(5, 67);
             this.SelectFileButton.Margin = new System.Windows.Forms.Padding(1);
             this.SelectFileButton.Name = "SelectFileButton";
             this.SelectFileButton.Size = new System.Drawing.Size(63, 20);
