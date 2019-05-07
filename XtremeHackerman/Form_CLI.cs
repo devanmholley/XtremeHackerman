@@ -133,15 +133,15 @@ namespace XtremeHackerman
 
             if (command.Contains("PHISH%"))
             {
-                Class_Progress.PhishSimulation();
-                cliText.AppendText(Environment.NewLine + "---------------- TRIGGERING PHISHING SIMULATION ----------------");
+		cliText.AppendText(Environment.NewLine + "---------------- TRIGGERING PHISHING SIMULATION ----------------");
+		Class_Progress.PhishSimulation();
                 cliCurrentLine += 1;
             }
 
             if (command.Contains("RANSOMWARE%"))
             {
-                Class_Progress.RansomwareSimulation();
-                cliText.AppendText(Environment.NewLine + "---------------- TRIGGERING RANSOMWARE SIMULATION ----------------");
+		cliText.AppendText(Environment.NewLine + "---------------- TRIGGERING RANSOMWARE SIMULATION ----------------");
+		Class_Progress.RansomwareSimulation();
                 cliCurrentLine += 1;
             }
         }

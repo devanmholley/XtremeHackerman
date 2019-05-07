@@ -101,7 +101,11 @@ namespace XtremeHackerman
 		//}
 	    }
 	    //update completed events
-	    if (eventLBL.Text == "Ransomware")
+	    if (eventLBL.Text == "Phishing Email")
+	    {
+		CompletedEventsList.Text = "";
+	    }
+	    else if (eventLBL.Text == "Ransomware")
 	    {
 		CompletedEventsList.Text = "Phishing Email";
 	    }
@@ -156,15 +160,15 @@ namespace XtremeHackerman
 	    else
 	    {
 		int step = 0;
-		if (Class_Progress.Percent == 10)
+		if (Class_Progress.Percent == 2)
 		    step = 0;
-		else if (Class_Progress.Percent == 28)
+		else if (Class_Progress.Percent == 20)
 		    step = 1;
-		else if (Class_Progress.Percent == 46)
+		else if (Class_Progress.Percent == 40)
 		    step = 2;
-		else if (Class_Progress.Percent == 64)
+		else if (Class_Progress.Percent == 60)
 		    step = 3;
-		else if (Class_Progress.Percent == 82)
+		else if (Class_Progress.Percent == 80)
 		    step = 4;
 		MessageBox.Show(Class_Progress.Hints[step]);
 	    }
@@ -333,10 +337,10 @@ namespace XtremeHackerman
 	private void eventLBL_DoubleClick(object sender, EventArgs e)
 	{
 	    if (eventLBL.Text == "Phishing Email")
-		MessageBox.Show("\"Phishing is a type of online scam where criminals send an email that appears to be from a legitimate company and ask you to provide sensitive information. This is usually done by including a link that will appear to take you to the company’s website to fill in your information – but the website is a clever fake and the information you provide goes straight to the crooks behind the scam.\n\nThe term ’phishing’ is a spin on the word fishing, because criminals are dangling a fake ’lure’ (the email that looks legitimate, as well as the website that looks legitimate) hoping users will ’bite’ by providing the information the criminals have requested – such as credit card numbers, account numbers, passwords, usernames, and more.\"\n\n - WebRoot.com");
+		MessageBox.Show("From WebRoot.com\n\n\"Phishing is a type of online scam where criminals send an email that appears to be from a legitimate company and ask you to provide sensitive information. This is usually done by including a link that will appear to take you to the company’s website to fill in your information – but the website is a clever fake and the information you provide goes straight to the crooks behind the scam.\n\nThe term ’phishing’ is a spin on the word fishing, because criminals are dangling a fake ’lure’ (the email that looks legitimate, as well as the website that looks legitimate) hoping users will ’bite’ by providing the information the criminals have requested – such as credit card numbers, account numbers, passwords, usernames, and more.\"\n\nhttps://www.webroot.com/us/en/resources/tips-articles/what-is-phishing");
 
 	    if (eventLBL.Text == "Ransomware")
-		MessageBox.Show("\"Ransomware is a type of malicious software (or “malware”) that infects computers, then encrypts various files and demands a ransom to get them back. Even if you pay the money within the timeframe the criminals set, there’s no guarantee you’ll get your files back. Typical ransoms are at least $500, but some of them ask for much more (particularly if they hit a larger business that can’t function without immediate and reliable access to its data, such as a hospital.\"\n\n - Webroot.com");
+		MessageBox.Show("From WebRoot.com\n\n\"\"Ransomware is a type of malicious software (or “malware”) that infects computers, then encrypts various files and demands a ransom to get them back. Even if you pay the money within the timeframe the criminals set, there’s no guarantee you’ll get your files back. Typical ransoms are at least $500, but some of them ask for much more (particularly if they hit a larger business that can’t function without immediate and reliable access to its data, such as a hospital.\"\n\nhttps://www.webroot.com/us/en/resources/glossary/what-is-ransomware");
 	}
 
 	private void NextBTN_Click(object sender, EventArgs e)

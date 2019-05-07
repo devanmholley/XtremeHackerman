@@ -30,11 +30,11 @@
         {
 	    this.components = new System.ComponentModel.Container();
 	    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Desktop));
-	    System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Step 1:", 0);
-	    System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Step 2:", 0);
-	    System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Step 3:", 0);
-	    System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Step 4:", 0);
-	    System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Step 5:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Step 1:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Step 2:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Step 3:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Step 4:", 0);
+	    System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Step 5:", 0);
 	    this.toolbarNetworkBTN = new System.Windows.Forms.Button();
 	    this.toolbarTime = new System.Windows.Forms.Label();
 	    this.toolbarDate = new System.Windows.Forms.Label();
@@ -472,6 +472,7 @@
 	    // 
 	    // CompletedEventsList
 	    // 
+	    this.CompletedEventsList.BackColor = System.Drawing.Color.White;
 	    this.CompletedEventsList.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.CompletedEventsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.CompletedEventsList.ForeColor = System.Drawing.Color.Teal;
@@ -489,17 +490,17 @@
 	    this.StepsView.Enabled = false;
 	    this.StepsView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.StepsView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-	    listViewItem1.StateImageIndex = 0;
-	    listViewItem2.StateImageIndex = 0;
-	    listViewItem3.StateImageIndex = 0;
-	    listViewItem4.StateImageIndex = 0;
-	    listViewItem5.StateImageIndex = 0;
+	    listViewItem6.StateImageIndex = 0;
+	    listViewItem7.StateImageIndex = 0;
+	    listViewItem8.StateImageIndex = 0;
+	    listViewItem9.StateImageIndex = 0;
+	    listViewItem10.StateImageIndex = 0;
 	    this.StepsView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5});
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10});
 	    this.StepsView.LargeImageList = this.imageList1;
 	    this.StepsView.Location = new System.Drawing.Point(0, 462);
 	    this.StepsView.Name = "StepsView";
@@ -732,6 +733,7 @@
 	    // InstructionsPanel
 	    // 
 	    this.InstructionsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+	    this.InstructionsPanel.BackColor = System.Drawing.Color.Transparent;
 	    this.InstructionsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 	    this.InstructionsPanel.Controls.Add(this.NextBTN);
 	    this.InstructionsPanel.Controls.Add(this.InstructionsTB);
@@ -744,20 +746,24 @@
 	    // NextBTN
 	    // 
 	    this.NextBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+	    this.NextBTN.BackColor = System.Drawing.Color.White;
 	    this.NextBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NextBTN.BackgroundImage")));
 	    this.NextBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+	    this.NextBTN.FlatAppearance.BorderSize = 0;
+	    this.NextBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 	    this.NextBTN.ForeColor = System.Drawing.Color.Gainsboro;
-	    this.NextBTN.Location = new System.Drawing.Point(579, 263);
+	    this.NextBTN.Location = new System.Drawing.Point(564, 251);
 	    this.NextBTN.Name = "NextBTN";
 	    this.NextBTN.Size = new System.Drawing.Size(120, 120);
 	    this.NextBTN.TabIndex = 1;
-	    this.NextBTN.UseVisualStyleBackColor = true;
+	    this.NextBTN.UseVisualStyleBackColor = false;
 	    this.NextBTN.Click += new System.EventHandler(this.NextBTN_Click);
 	    // 
 	    // InstructionsTB
 	    // 
+	    this.InstructionsTB.BackColor = System.Drawing.Color.White;
 	    this.InstructionsTB.Dock = System.Windows.Forms.DockStyle.Fill;
-	    this.InstructionsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.InstructionsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.InstructionsTB.Location = new System.Drawing.Point(0, 0);
 	    this.InstructionsTB.Multiline = true;
 	    this.InstructionsTB.Name = "InstructionsTB";
@@ -775,7 +781,7 @@
 	    this.Arrow1.Image = ((System.Drawing.Image)(resources.GetObject("Arrow1.Image")));
 	    this.Arrow1.Location = new System.Drawing.Point(0, 0);
 	    this.Arrow1.Name = "Arrow1";
-	    this.Arrow1.Size = new System.Drawing.Size(223, 30);
+	    this.Arrow1.Size = new System.Drawing.Size(223, 44);
 	    this.Arrow1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 	    this.Arrow1.TabIndex = 2;
 	    this.Arrow1.TabStop = false;
@@ -801,10 +807,10 @@
 	    this.Arrow5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 	    this.Arrow5.Dock = System.Windows.Forms.DockStyle.Bottom;
 	    this.Arrow5.Image = ((System.Drawing.Image)(resources.GetObject("Arrow5.Image")));
-	    this.Arrow5.Location = new System.Drawing.Point(0, 1055);
+	    this.Arrow5.Location = new System.Drawing.Point(0, 1041);
 	    this.Arrow5.Name = "Arrow5";
 	    this.Arrow5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 170);
-	    this.Arrow5.Size = new System.Drawing.Size(223, 200);
+	    this.Arrow5.Size = new System.Drawing.Size(223, 214);
 	    this.Arrow5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 	    this.Arrow5.TabIndex = 6;
 	    this.Arrow5.TabStop = false;
@@ -816,10 +822,10 @@
 	    this.Arrow4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 	    this.Arrow4.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.Arrow4.Image = ((System.Drawing.Image)(resources.GetObject("Arrow4.Image")));
-	    this.Arrow4.Location = new System.Drawing.Point(0, 440);
+	    this.Arrow4.Location = new System.Drawing.Point(0, 482);
 	    this.Arrow4.Name = "Arrow4";
 	    this.Arrow4.Padding = new System.Windows.Forms.Padding(0, 500, 0, 0);
-	    this.Arrow4.Size = new System.Drawing.Size(223, 530);
+	    this.Arrow4.Size = new System.Drawing.Size(223, 544);
 	    this.Arrow4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 	    this.Arrow4.TabIndex = 5;
 	    this.Arrow4.TabStop = false;
@@ -831,10 +837,10 @@
 	    this.Arrow3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 	    this.Arrow3.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.Arrow3.Image = ((System.Drawing.Image)(resources.GetObject("Arrow3.Image")));
-	    this.Arrow3.Location = new System.Drawing.Point(0, 160);
+	    this.Arrow3.Location = new System.Drawing.Point(0, 188);
 	    this.Arrow3.Name = "Arrow3";
 	    this.Arrow3.Padding = new System.Windows.Forms.Padding(0, 250, 0, 0);
-	    this.Arrow3.Size = new System.Drawing.Size(223, 280);
+	    this.Arrow3.Size = new System.Drawing.Size(223, 294);
 	    this.Arrow3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 	    this.Arrow3.TabIndex = 4;
 	    this.Arrow3.TabStop = false;
@@ -846,10 +852,10 @@
 	    this.Arrow2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 	    this.Arrow2.Dock = System.Windows.Forms.DockStyle.Top;
 	    this.Arrow2.Image = ((System.Drawing.Image)(resources.GetObject("Arrow2.Image")));
-	    this.Arrow2.Location = new System.Drawing.Point(0, 30);
+	    this.Arrow2.Location = new System.Drawing.Point(0, 44);
 	    this.Arrow2.Name = "Arrow2";
 	    this.Arrow2.Padding = new System.Windows.Forms.Padding(0, 100, 0, 0);
-	    this.Arrow2.Size = new System.Drawing.Size(223, 130);
+	    this.Arrow2.Size = new System.Drawing.Size(223, 144);
 	    this.Arrow2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 	    this.Arrow2.TabIndex = 3;
 	    this.Arrow2.TabStop = false;
