@@ -15,7 +15,7 @@ namespace XtremeHackerman
         //Stores the user command into a string
         string TerminalInput;
         //Stores the user and machine name
-        string UserComp;
+        string UserComp = "Hackerman@Comp$ ";
         //Stores the current command
         string TerminalCommand;
         //Stores the current line number
@@ -25,14 +25,13 @@ namespace XtremeHackerman
         public Form_HackerTerminal()
         {
             InitializeComponent();
-            UserComp = "Hackerman@Comp$ ";
             HackerTerminal_TXT.AppendText(Environment.NewLine);
             HackerTerminal_TXT.AppendText(UserComp);
-            TerminalCurrentLine += 1;
         }
 
         private void HackerTerminal_TXT_TextChanged(object sender, EventArgs e)
         {
+            GetLinePos();
             // The current command is whatever is written on the current line
             TerminalCommand = HackerTerminal_TXT.Lines[TerminalCurrentLine];
         }
@@ -43,21 +42,18 @@ namespace XtremeHackerman
             //prompt for user password
             HackerTerminal_TXT.AppendText(Environment.NewLine +
                 "Password for Hackerman:");
-            //Increment the line counter
-            TerminalCurrentLine += 1;
             //get the password
             string userinput = TerminalCommand;
             //Check the password
             if (Classes.Class_HackerTerminal.Check_Pass(userinput) == true)
             {
-                HackerTerminal_TXT.AppendText(UserComp);
+                HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                 return true;
             }
             else
             {
                 HackerTerminal_TXT.AppendText(Environment.NewLine + 
                     "Incorrect password.");
-                TerminalCurrentLine += 1;
                 return false;
             }
         }
@@ -69,15 +65,20 @@ namespace XtremeHackerman
                 if (TerminalCurrentLine == 0) //If we are initializing the Command Line interface
                 { // Initialize CLI with default command
                     HackerTerminal_TXT.Select(HackerTerminal_TXT.Text.Length, 0);
-                    TerminalCurrentLine = 1;
                     return;
                 }
                 string terminalInput = TerminalCommand;
                 Eval_Commands(terminalInput);
-                TerminalCurrentLine += 1;
             }
         }
 
+        private void GetLinePos()
+        {
+            // Gets the position of the cursor
+            int cursorIndex = HackerTerminal_TXT.SelectionStart;
+            // Gets the line that the cursor index is in and sets TerminalCurrentLine to it
+            TerminalCurrentLine = HackerTerminal_TXT.GetLineFromCharIndex(cursorIndex);
+        }
 
         //If a known command is passed in run the associated command
         private void Eval_Commands(string command)
@@ -97,13 +98,11 @@ namespace XtremeHackerman
                     if (prompt_Pass() == true)
                     {
                         Classes.Class_HackerTerminal.ipforwarding = true;
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@comp$ ");
-                        TerminalCurrentLine += 1;
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     }
                     else
                     {
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@comp$ ");
-                        TerminalCurrentLine += 1;
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     }
                     break;
 
@@ -112,13 +111,11 @@ namespace XtremeHackerman
                     if (prompt_Pass() == true)
                     {
                         Classes.Class_HackerTerminal.ipforwarding = false;
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@comp$ ");
-                        TerminalCurrentLine += 1;
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     }
                     else
                     {
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@comp$ ");
-                        TerminalCurrentLine += 1;
+                        HackerTerminal_TXT.AppendText(Environment.NewLine +UserComp);
                     }
                     break;
 
@@ -128,16 +125,14 @@ namespace XtremeHackerman
                     {
                         // if ip forwarding is enabled display 1
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "1");
-                        TerminalCurrentLine += 1;
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                         break;
                     }
                     else
                     {
                         // if ip forwarding is off display 0
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "0");
-                        TerminalCurrentLine += 1;
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                         break;
                     }
 
@@ -145,31 +140,23 @@ namespace XtremeHackerman
                 case "Hackerman@Comp$ ifconfig":
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "wlp5s0: " +
                         "flags=4319<UP,BORADCASE,RUNNING,MULTICAST> mtu 1500");
-                    TerminalCurrentLine += 1;
                     // The user ip, netmask etc.
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "\t inet " +
                         Classes.Class_HackerTerminal.UserIP + "netmask 255.255.255.0  " +
                         "broadcast 192.171.0.100");
-                    TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "\t inet6 " +
                         "fe80::26e5:eef7:3e70:4b0c  prefixlen 64  scopeid 0x20<link>");
-                    TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "\t ether" +
                         "00:26:c7:77:88:48  txqueuelen 1000 (Ethernet)");
-                    TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "\t RX packets" +
                         " 164  bytes 34810  (34.8 KB");
-                    TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "\t RX errors " +
                         "0  dropped 1  overruns 0  frame 0");
-                    TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "\t TX Packets 49 " +
                         " bytes 7840 (7.8 KB)");
-                    TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "\t TX errors 0 " +
                         " dropped 0 overruns 0 carrier 0  collisions 0");
-                    TerminalCurrentLine += 1;
-                    HackerTerminal_TXT.AppendText(Environment.NewLine +"Hackerman@Comp$ ");
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     break;
 
                 // When telling the client you are the server
@@ -179,12 +166,11 @@ namespace XtremeHackerman
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "0:26:c7:77:88:48 " +
                         "8:0:27:5f:58:20 0806 42: arp reply 192.168.0.168 is-at " +
                         "0:26:c7:77:88:48");
-                        TerminalCurrentLine += 1;
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     }
                     else
                     {
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     }
                     break;
                 // When telling the server you are the client
@@ -194,12 +180,11 @@ namespace XtremeHackerman
                         HackerTerminal_TXT.AppendText(Environment.NewLine + "0:26:c7:77:88:48 " +
                                             "8:0:27:5f:58:20 0806 42: arp reply 192.168.0.168 is-at " +
                                             "0:26:c7:77:88:48");
-                        TerminalCurrentLine += 1;
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     }
                     else
                     {
-                        HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
+                        HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     }
                     break;
                 // Sniff network traffic
@@ -208,19 +193,14 @@ namespace XtremeHackerman
                     // Header
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "tcp 172.217.9.14.33322" +
                         " -> 138.93.0.10.21 (ftp)");
-                    TerminalCurrentLine += 1;
                     // Packet body
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "USER root");
-                    TerminalCurrentLine += 1;
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "PASS password123");
-                    TerminalCurrentLine += 1;
                     break;
 
                 default:
                     HackerTerminal_TXT.AppendText(Environment.NewLine + "Invalid command");
-                    TerminalCurrentLine += 1;
-                    HackerTerminal_TXT.AppendText(Environment.NewLine + "Hackerman@Comp$ ");
-                    TerminalCurrentLine += 1;
+                    HackerTerminal_TXT.AppendText(Environment.NewLine + UserComp);
                     break;
             }
         }
