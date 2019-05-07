@@ -9,7 +9,7 @@ namespace XtremeHackerman.Classes
     class Class_HackerTerminal
     {
         // Root_Password keeps track of the current root password
-        private static string Root_password;
+        public static string Root_password = "root";
 
         // Command History keeps a list of previous commands so we can
         // filter back through them
@@ -23,19 +23,11 @@ namespace XtremeHackerman.Classes
         // unique IPs.
         public static string UserIP;
         public string wirelessModule = "";
+        public static bool SCarp = false;
+        public static bool CSarp = false;
 
         public void Set_Password()
         {
-        }
-
-        // Check that the given password is equal to the root password
-        public static bool Check_Pass(string password)
-        {
-            if(password == Root_password)
-            {
-                return true;
-            }
-            return false;
         }
 
     }
