@@ -259,7 +259,7 @@ namespace XtremeHackerman
 	    // Handles simulation of a restart in the Desktop form by hiding the form for a few frames, updating, and then making it visible again
 	    BootOptions.enableSafeMode = false;
 	    BootOptions.enableNetworking = true;
-	    BootOptions.enableCommandPrompt = false;
+	    BootOptions.enableCommandPrompt = true;
 	    this.Opacity = 0;
 	    await Task.Delay(300);
 	    desktopBootOptions();
