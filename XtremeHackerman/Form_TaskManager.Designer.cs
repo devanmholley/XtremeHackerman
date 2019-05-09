@@ -49,6 +49,7 @@
 	    // 
 	    this.tabControl1.Controls.Add(this.TaskTab);
 	    this.tabControl1.Controls.Add(this.HistoryTab);
+	    this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.tabControl1.Location = new System.Drawing.Point(3, 0);
 	    this.tabControl1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.tabControl1.Name = "tabControl1";
@@ -59,11 +60,11 @@
 	    // TaskTab
 	    // 
 	    this.TaskTab.Controls.Add(this.TaskView);
-	    this.TaskTab.Location = new System.Drawing.Point(10, 48);
+	    this.TaskTab.Location = new System.Drawing.Point(10, 78);
 	    this.TaskTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.TaskTab.Name = "TaskTab";
 	    this.TaskTab.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.TaskTab.Size = new System.Drawing.Size(1500, 1232);
+	    this.TaskTab.Size = new System.Drawing.Size(1500, 1202);
 	    this.TaskTab.TabIndex = 0;
 	    this.TaskTab.Text = "Tasks";
 	    this.TaskTab.UseVisualStyleBackColor = true;
@@ -85,20 +86,21 @@
 	    // TaskProcessName
 	    // 
 	    this.TaskProcessName.Text = "Process Name";
-	    this.TaskProcessName.Width = 120;
+	    this.TaskProcessName.Width = 358;
 	    // 
 	    // TaskRuntime
 	    // 
 	    this.TaskRuntime.Text = "Runtime";
+	    this.TaskRuntime.Width = 1130;
 	    // 
 	    // HistoryTab
 	    // 
 	    this.HistoryTab.Controls.Add(this.HistoryView);
-	    this.HistoryTab.Location = new System.Drawing.Point(10, 48);
+	    this.HistoryTab.Location = new System.Drawing.Point(10, 78);
 	    this.HistoryTab.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.HistoryTab.Name = "HistoryTab";
 	    this.HistoryTab.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-	    this.HistoryTab.Size = new System.Drawing.Size(1500, 1232);
+	    this.HistoryTab.Size = new System.Drawing.Size(1500, 1202);
 	    this.HistoryTab.TabIndex = 1;
 	    this.HistoryTab.Text = "History";
 	    this.HistoryTab.UseVisualStyleBackColor = true;
@@ -120,11 +122,12 @@
 	    // HistoryProcessName
 	    // 
 	    this.HistoryProcessName.Text = "Process Name";
-	    this.HistoryProcessName.Width = 120;
+	    this.HistoryProcessName.Width = 358;
 	    // 
 	    // HistoryRuntime
 	    // 
 	    this.HistoryRuntime.Text = "Runtime";
+	    this.HistoryRuntime.Width = 1130;
 	    // 
 	    // BtnEndTask
 	    // 
