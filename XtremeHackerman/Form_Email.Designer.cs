@@ -102,8 +102,9 @@
 	    // 
 	    this.email_inbox.DataSource = this.emailInboxBindingSource;
 	    this.email_inbox.Dock = System.Windows.Forms.DockStyle.Fill;
+	    this.email_inbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_inbox.FormattingEnabled = true;
-	    this.email_inbox.ItemHeight = 31;
+	    this.email_inbox.ItemHeight = 61;
 	    this.email_inbox.Location = new System.Drawing.Point(0, 274);
 	    this.email_inbox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_inbox.Name = "email_inbox";
@@ -134,10 +135,11 @@
 	    this.email_trashBTN.FlatAppearance.BorderSize = 0;
 	    this.email_trashBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
 	    this.email_trashBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.email_trashBTN.Location = new System.Drawing.Point(8, 167);
+	    this.email_trashBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_trashBTN.Location = new System.Drawing.Point(8, 162);
 	    this.email_trashBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_trashBTN.Name = "email_trashBTN";
-	    this.email_trashBTN.Size = new System.Drawing.Size(141, 55);
+	    this.email_trashBTN.Size = new System.Drawing.Size(244, 77);
 	    this.email_trashBTN.TabIndex = 5;
 	    this.email_trashBTN.Text = "Trash";
 	    this.email_trashBTN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,7 +167,7 @@
 	    this.email_spamBTN.FlatAppearance.BorderSize = 0;
 	    this.email_spamBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
 	    this.email_spamBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.email_spamBTN.Location = new System.Drawing.Point(8, 119);
+	    this.email_spamBTN.Location = new System.Drawing.Point(547, 21);
 	    this.email_spamBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_spamBTN.Name = "email_spamBTN";
 	    this.email_spamBTN.Size = new System.Drawing.Size(141, 50);
@@ -173,6 +175,7 @@
 	    this.email_spamBTN.Text = "Spam";
 	    this.email_spamBTN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 	    this.email_spamBTN.UseVisualStyleBackColor = true;
+	    this.email_spamBTN.Visible = false;
 	    // 
 	    // email_flaggedBTN
 	    // 
@@ -181,10 +184,11 @@
 	    this.email_flaggedBTN.FlatAppearance.BorderSize = 0;
 	    this.email_flaggedBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
 	    this.email_flaggedBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	    this.email_flaggedBTN.Location = new System.Drawing.Point(8, 64);
+	    this.email_flaggedBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_flaggedBTN.Location = new System.Drawing.Point(8, 89);
 	    this.email_flaggedBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_flaggedBTN.Name = "email_flaggedBTN";
-	    this.email_flaggedBTN.Size = new System.Drawing.Size(160, 57);
+	    this.email_flaggedBTN.Size = new System.Drawing.Size(268, 74);
 	    this.email_flaggedBTN.TabIndex = 3;
 	    this.email_flaggedBTN.Text = "Flagged";
 	    this.email_flaggedBTN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,10 +201,11 @@
 	    this.email_inboxBTN.FlatAppearance.BorderSize = 0;
 	    this.email_inboxBTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
 	    this.email_inboxBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+	    this.email_inboxBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_inboxBTN.Location = new System.Drawing.Point(8, 12);
 	    this.email_inboxBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_inboxBTN.Name = "email_inboxBTN";
-	    this.email_inboxBTN.Size = new System.Drawing.Size(141, 57);
+	    this.email_inboxBTN.Size = new System.Drawing.Size(255, 74);
 	    this.email_inboxBTN.TabIndex = 2;
 	    this.email_inboxBTN.Text = "Inbox";
 	    this.email_inboxBTN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,11 +217,11 @@
 	    this.Link.BackColor = System.Drawing.Color.White;
 	    this.Link.ContextMenuStrip = this.rightClickLinkMenu;
 	    this.Link.Enabled = false;
-	    this.Link.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.Link.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.Link.Location = new System.Drawing.Point(25, 800);
 	    this.Link.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
 	    this.Link.Name = "Link";
-	    this.Link.Size = new System.Drawing.Size(168, 46);
+	    this.Link.Size = new System.Drawing.Size(227, 63);
 	    this.Link.TabIndex = 3;
 	    this.Link.TabStop = true;
 	    this.Link.Text = "link.com";
@@ -250,7 +255,7 @@
 	    // 
 	    this.email_bodyTXT.BackColor = System.Drawing.Color.White;
 	    this.email_bodyTXT.Dock = System.Windows.Forms.DockStyle.Fill;
-	    this.email_bodyTXT.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_bodyTXT.Font = new System.Drawing.Font("Consolas", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_bodyTXT.Location = new System.Drawing.Point(0, 412);
 	    this.email_bodyTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_bodyTXT.Multiline = true;
@@ -278,7 +283,7 @@
 	    // 
 	    // btn_Send
 	    // 
-	    this.btn_Send.Location = new System.Drawing.Point(1099, 10);
+	    this.btn_Send.Location = new System.Drawing.Point(877, 10);
 	    this.btn_Send.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.btn_Send.Name = "btn_Send";
 	    this.btn_Send.Size = new System.Drawing.Size(200, 55);
@@ -291,7 +296,7 @@
 	    // email_mvtrashBTN
 	    // 
 	    this.email_mvtrashBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-	    this.email_mvtrashBTN.Location = new System.Drawing.Point(883, 10);
+	    this.email_mvtrashBTN.Location = new System.Drawing.Point(661, 10);
 	    this.email_mvtrashBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_mvtrashBTN.Name = "email_mvtrashBTN";
 	    this.email_mvtrashBTN.Size = new System.Drawing.Size(200, 55);
@@ -302,13 +307,14 @@
 	    // email_mvspamBTN
 	    // 
 	    this.email_mvspamBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-	    this.email_mvspamBTN.Location = new System.Drawing.Point(664, 10);
+	    this.email_mvspamBTN.Location = new System.Drawing.Point(1093, 8);
 	    this.email_mvspamBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_mvspamBTN.Name = "email_mvspamBTN";
 	    this.email_mvspamBTN.Size = new System.Drawing.Size(200, 55);
 	    this.email_mvspamBTN.TabIndex = 4;
 	    this.email_mvspamBTN.Text = "Spam";
 	    this.email_mvspamBTN.UseVisualStyleBackColor = true;
+	    this.email_mvspamBTN.Visible = false;
 	    // 
 	    // email_rplyallBTN
 	    // 
@@ -324,7 +330,7 @@
 	    // email_forwardBTN
 	    // 
 	    this.email_forwardBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-	    this.email_forwardBTN.Location = new System.Drawing.Point(445, 7);
+	    this.email_forwardBTN.Location = new System.Drawing.Point(445, 10);
 	    this.email_forwardBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_forwardBTN.Name = "email_forwardBTN";
 	    this.email_forwardBTN.Size = new System.Drawing.Size(200, 55);
@@ -346,12 +352,12 @@
 	    // email_subjectTXT
 	    // 
 	    this.email_subjectTXT.BackColor = System.Drawing.Color.White;
-	    this.email_subjectTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_subjectTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_subjectTXT.Location = new System.Drawing.Point(11, 76);
 	    this.email_subjectTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_subjectTXT.Name = "email_subjectTXT";
 	    this.email_subjectTXT.ReadOnly = true;
-	    this.email_subjectTXT.Size = new System.Drawing.Size(1337, 61);
+	    this.email_subjectTXT.Size = new System.Drawing.Size(1337, 67);
 	    this.email_subjectTXT.TabIndex = 0;
 	    // 
 	    // email_header
@@ -396,12 +402,12 @@
 	    // email_dateSTXT
 	    // 
 	    this.email_dateSTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.email_dateSTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_dateSTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_dateSTXT.Location = new System.Drawing.Point(11, 184);
 	    this.email_dateSTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_dateSTXT.Name = "email_dateSTXT";
 	    this.email_dateSTXT.ReadOnly = true;
-	    this.email_dateSTXT.Size = new System.Drawing.Size(147, 43);
+	    this.email_dateSTXT.Size = new System.Drawing.Size(147, 60);
 	    this.email_dateSTXT.TabIndex = 5;
 	    this.email_dateSTXT.Text = "Date:";
 	    this.email_dateSTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -409,12 +415,12 @@
 	    // email_toSTXT
 	    // 
 	    this.email_toSTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.email_toSTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_toSTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_toSTXT.Location = new System.Drawing.Point(11, 103);
 	    this.email_toSTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_toSTXT.Name = "email_toSTXT";
 	    this.email_toSTXT.ReadOnly = true;
-	    this.email_toSTXT.Size = new System.Drawing.Size(147, 43);
+	    this.email_toSTXT.Size = new System.Drawing.Size(147, 60);
 	    this.email_toSTXT.TabIndex = 4;
 	    this.email_toSTXT.Text = "To:";
 	    this.email_toSTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -422,12 +428,12 @@
 	    // email_fromSTXT
 	    // 
 	    this.email_fromSTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.email_fromSTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_fromSTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_fromSTXT.Location = new System.Drawing.Point(11, 21);
 	    this.email_fromSTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_fromSTXT.Name = "email_fromSTXT";
 	    this.email_fromSTXT.ReadOnly = true;
-	    this.email_fromSTXT.Size = new System.Drawing.Size(147, 43);
+	    this.email_fromSTXT.Size = new System.Drawing.Size(147, 60);
 	    this.email_fromSTXT.TabIndex = 3;
 	    this.email_fromSTXT.Text = "From:";
 	    this.email_fromSTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -435,34 +441,34 @@
 	    // email_dateTXT
 	    // 
 	    this.email_dateTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.email_dateTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_dateTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_dateTXT.Location = new System.Drawing.Point(173, 184);
 	    this.email_dateTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_dateTXT.Name = "email_dateTXT";
 	    this.email_dateTXT.ReadOnly = true;
-	    this.email_dateTXT.Size = new System.Drawing.Size(1165, 43);
+	    this.email_dateTXT.Size = new System.Drawing.Size(1165, 60);
 	    this.email_dateTXT.TabIndex = 2;
 	    // 
 	    // email_destTXT
 	    // 
 	    this.email_destTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.email_destTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_destTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_destTXT.Location = new System.Drawing.Point(173, 103);
 	    this.email_destTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_destTXT.Name = "email_destTXT";
 	    this.email_destTXT.ReadOnly = true;
-	    this.email_destTXT.Size = new System.Drawing.Size(1165, 43);
+	    this.email_destTXT.Size = new System.Drawing.Size(1165, 60);
 	    this.email_destTXT.TabIndex = 1;
 	    // 
 	    // email_sourceTXT
 	    // 
 	    this.email_sourceTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.email_sourceTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.email_sourceTXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.email_sourceTXT.Location = new System.Drawing.Point(173, 21);
 	    this.email_sourceTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.email_sourceTXT.Name = "email_sourceTXT";
 	    this.email_sourceTXT.ReadOnly = true;
-	    this.email_sourceTXT.Size = new System.Drawing.Size(1165, 43);
+	    this.email_sourceTXT.Size = new System.Drawing.Size(1165, 60);
 	    this.email_sourceTXT.TabIndex = 0;
 	    // 
 	    // timer1

@@ -1265,7 +1265,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADq
-        DwAAAk1TRnQBSQFMAgEBAwEAAWgBAQFoAQEBHgEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBAwEAAXABAQFwAQEBHgEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABeAMAAR4DAAEBAQABCAUAARABDhgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -1391,20 +1391,6 @@
         tm5z66PeGW5be2H2Vmd8sbUXkV3GuVucqUxq6bI/TzT0Ro+GHihscMYitm3beuIzttNsF7TJ/FNZUzE9
         MWxH95v0X+Cd6EQnOtGJ/xs4Of0XqpjBR5hQaP0AAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="TB_Ransomeware_Description.Text" xml:space="preserve">
-    <value>Your important files have been ecrypted on this computer! Photos, videos, documents, etc have been ENCRYPTED!
-
-Encryption was produced using a unique public key generated for this computer. To decrypt files you need to obtain the PRIVATE KEY!
-
-The SINGLE COPY of the private key, which will allow you to decrypt the files, is located on a secret server upon the Internet. The server will DESTROY the key after a time specified in the window.
-After that, nobody and never will be able to retrieve those files!
-
-TO OBTAIN the private key for this computer, which will automatically decrypt files, you need to pay 300 USD / 300 EUR / or similar amount of another currency. I don't care which!
-
-Click &lt;Next&gt; to select the method of payment.
-
-ANY ATTEMPT TO REMOVE OR DAMAGE THIS SOFTWARE WILL LEAD TO THE IMEDIATE DESTRUCTION OF THE PRIVATE KEY BY SERVER!!!!</value>
   </data>
   <data name="PB_Ransom_Icon.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2311,6 +2297,20 @@ ANY ATTEMPT TO REMOVE OR DAMAGE THIS SOFTWARE WILL LEAD TO THE IMEDIATE DESTRUCT
         +7mA/djPBeyXkUjgQ0k8dajolXUosB/7uYD92M8F7Md+LoBeEj6KHdDv//7v/wHd7QJkfJGzuwAAAABJ
         RU5ErkJggg==
 </value>
+  </data>
+  <data name="TB_Ransomeware_Description.Text" xml:space="preserve">
+    <value>Your important files have been ecrypted on this computer! Photos, videos, documents, etc have been ENCRYPTED!
+
+Encryption was produced using a unique public key generated for this computer. To decrypt files you need to obtain the PRIVATE KEY!
+
+The SINGLE COPY of the private key, which will allow you to decrypt the files, is located on a secret server upon the Internet. The server will DESTROY the key after a time specified in the window.
+After that, nobody and never will be able to retrieve those files!
+
+TO OBTAIN the private key for this computer, which will automatically decrypt files, you need to pay 300 USD / 300 EUR / or similar amount of another currency. I don't care which!
+
+Click &lt;Next&gt; to select the method of payment.
+
+ANY ATTEMPT TO REMOVE OR DAMAGE THIS SOFTWARE WILL LEAD TO THE IMEDIATE DESTRUCTION OF THE PRIVATE KEY BY SERVER!!!!</value>
   </data>
   <data name="NextBTN.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

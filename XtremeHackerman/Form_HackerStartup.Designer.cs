@@ -36,14 +36,14 @@
 	    // 
 	    this.Hacker_WelcomeTXT.BackColor = System.Drawing.SystemColors.ControlText;
 	    this.Hacker_WelcomeTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-	    this.Hacker_WelcomeTXT.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+	    this.Hacker_WelcomeTXT.Font = new System.Drawing.Font("Consolas", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 	    this.Hacker_WelcomeTXT.ForeColor = System.Drawing.SystemColors.Window;
 	    this.Hacker_WelcomeTXT.Location = new System.Drawing.Point(40, 29);
 	    this.Hacker_WelcomeTXT.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
 	    this.Hacker_WelcomeTXT.Multiline = true;
 	    this.Hacker_WelcomeTXT.Name = "Hacker_WelcomeTXT";
 	    this.Hacker_WelcomeTXT.ReadOnly = true;
-	    this.Hacker_WelcomeTXT.Size = new System.Drawing.Size(2032, 768);
+	    this.Hacker_WelcomeTXT.Size = new System.Drawing.Size(2032, 1020);
 	    this.Hacker_WelcomeTXT.TabIndex = 0;
 	    this.Hacker_WelcomeTXT.TabStop = false;
 	    this.Hacker_WelcomeTXT.Text = resources.GetString("Hacker_WelcomeTXT.Text");
